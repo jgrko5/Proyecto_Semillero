@@ -8,7 +8,7 @@
 					<div class="panelHeader">
 						<h1 id="logoStart">
 							<center>
-								<img style="width: 60%;" src="/semilleros/web/imagenes/banner.jpg" >
+								<img style="width: 60%;" src="../../web/imagenes/banner.jpg" >
 								</center>
 						<h1>
 						
