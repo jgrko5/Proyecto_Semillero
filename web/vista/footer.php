@@ -4,47 +4,10 @@
 	
     function getFooter()
 	{
-		include_once '../controlador/funciones.php';
-		$productos=getProductos();
-		$servicios=getServicios();
 		?>	
-			<footer>
+			
 				<div id="contenedorFooter">
-					<div id="panelFooterServiciosHide" class="panelFooter">
-						<div class="itemPanelFooter">
-							<h3>PRODUCTOS</h3>
-							<?php
-							
-							for ($i=0; $i < sizeof($productos); $i++)
-							{ 			
-							?>
-							<p>
-								<a href="infoProducto?idproducto=<?php echo $productos[$i]['idproducto']; ?>"><?php echo $productos[$i]['nombre']; ?></a>
-							</p>
-							<?php
-							}
-							?>
-						</div>
 						
-					</div>
-					
-					<div id="panelFooterNosotrosHide" class="panelFooter">
-						<div class="itemPanelFooter">
-							<h3>SERVICIOS</h3>
-							<?php
-							$servicios=getServicios();
-							for ($i=0; $i < sizeof($servicios); $i++)
-							{ 			
-							?>
-							<p>
-								<a href="infoServicio?idservicio=<?php echo $servicios[$i]['idservicio']; ?>"><?php echo $servicios[$i]['nombre']; ?></a>
-							</p>
-							<?php
-							}
-							?>
-							
-						</div>
-					</div>
 					
 					<div class="panelFooter">
 						<div class="itemPanelFooter">
@@ -82,7 +45,7 @@
 								<div class="imgItemPanelFoter">
 									<img src="../../imagenes/contacto/web.png" />
 								</div>
-								<div class="textItemPanelFooter"> www.elitepublicidad.com.co</div>	
+								<div class="textItemPanelFooter"> Universidad del Quindio</div>	
 							</p>
 							<p>
 								<div class="imgItemPanelFoter">
@@ -121,7 +84,7 @@
 					
 				</div>
 		
-			</footer>
+			
 		<?php
 	}
 ?>

@@ -1,46 +1,131 @@
-<!DOCTYPE html>
-<html lang="es">
-	<head>
-		<meta charset="utf-8">
+<?php
+include_once ("imports.php");
+include_once ("header.php");
+include_once ("footer.php");
+getImports();
+?>
 
-		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-		Remove this if you use the .htaccess -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-		<title>modificarEstudiante</title>
-		<meta name="description" content="">
-		<meta name="author" content="bernal">
-
-		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	</head>
-
-	<body>
+<body>
+	<div id="main" class="wrapper">
+		<?php
+		getHeaderStart()
+		?>
+		<nav >
+			<h6>
+			<p>
+				<a href="/">Home</a>
+			</p>
+			<p>
+				<a href="/contact">Contact</a>
+			</p></h6>
+		</nav>
 		<div>
-			<header>
-				<h1>modificarEstudiante</h1>
-			</header>
-			<nav>
-				<p>
-					<a href="/">Home</a>
-				</p>
-				<p>
-					<a href="/contact">Contact</a>
-				</p>
-			</nav>
+			<section id="estudiante">
+				<article >
 
-			<div>
+					<header>
+						<h6>Modificar datos del estudiante</h6>
+					</header>
 
-			</div>
+					<div id="formulario">
+						<form action="../controlador/modificarEstudiante.php" method="post">
+							<center>
+								<div class="etiqueta">
+									<label>Tipo de documento:</label>
+								</div>
+								<div class="componente">
+									<select class="select" title="Tipo de documento">
+										<option>Cedula de ciudadania</option>
+										<option>Tarjeta de identidad</option>
+									</select>
+								</div>
 
-			<footer>
-				<p>
-					&copy; Copyright  by bernal
-				</p>
-			</footer>
+								</br>
+
+								<div class="etiqueta">
+									<label>Documento:</label>
+								</div>
+								<div class="componente">
+									<input class="textField" type="text" name="tipoEst" required="required" placeholder="Modifique documento del estudiante"/>
+								</div>
+								</br>
+
+								<div class="etiqueta">
+									<label>Nombres:</label>
+								</div>
+								<div class="componente">
+									<input class="textField" type="text" name="nombreEst" required="required" placeholder="Modifique los nombres del estudiante" readonly="true"/>
+								</div>
+								</br>
+
+								<div class="etiqueta">
+									<label>Apellidos:</label>
+								</div>
+								<div class="componente">
+									<input class="textField" type="text" name="apellidoEst" required="required" placeholder="Modifique los apellidos del estudiante" readonly="true"/>
+								</div>
+								</br>
+
+								<div class="etiqueta">
+									<label>Direccion:</label>
+								</div>
+								<div class="componente">
+									<input class="textField" type="text" name="direccionEst" required="required" placeholder="Modifique la direccion de residencia"/>
+								</div>
+								</br>
+
+								<div class="etiqueta">
+									<label>Telefono:</label>
+								</div>
+								<div class="componente">
+									<input class="textField" type="text" name="telefonoEst" required="required" placeholder="Modifique el telefono de contacto" />
+								</div>
+								</br>
+
+								<div class="etiqueta">
+									<label>Correo:</label>
+								</div>
+								<div class="componente">
+									<input class="textField" type="text" name="correoEst" required="required" placeholder="Modifique el correo electronico"/>
+								</div>
+								</br>
+
+								<div class="etiqueta">
+									<label>Semestre:</label>
+								</div>
+								<div class="componente">
+									<select class="select" title="Semestre">
+										<option>Primero</option>
+										<option>Segundo</option>
+										<option>Tercero</option>
+										<option>Cuarto</option>
+										<option>Quinto</option>
+										<option>Sexto</option>
+										<option>Septimo</option>
+										<option>Octavo</option>
+										<option>Noveno</option>
+										<option>Decimo</option>
+									</select>
+								</div>
+								</br>
+								</br>
+
+								<div align="center">
+									<input class="button" type="submit" value="Registrar" />
+								</div>
+							</center>
+						</form>
+					</div>
+
+				</article>
+			</section>
 		</div>
-	</body>
+
+		<footer>
+			<?php
+			//getFooter()
+			?>
+		</footer>
+	</div>
+</body>
 </html>

@@ -12,32 +12,39 @@ getImports();
 		?>
 		<!-- --------------------CÓDIGO HTML------------------------------------------------ -->
 
-		<section id="login" class="sec">
-
+		<section id="login">
+			<article >
 				<header>
 					<h6>¡Bienvenido!</h6>
 					<h6><label>Sistema de gestion de semilleros de investigación</label></h6>
 				</header>
 
-				<div id="formulario">
+				<div id="formulario" align="right">
+					
 					<form action="../controlador/login.php" method="post">
+
 						<div class="etiqueta">
 							<label> Usuario: </label>
 						</div>
-						<div class="componente">
+						<div class="componente" align="left">
 							<input class="textField"type="text" name="idusuario" required="required" />
-						</div></br>
+						</div>
+						</br>
+
 						<div class="etiqueta">
 							<label> Contraseña: </label>
 						</div>
-						<div class="componente">
+						<div class="componente" align="left">
 							<input class="password" type="password" name="password" required="required"/>
-						</div></br></br>
+						</div>
+						</br>
+
 						<div align="center">
 							<input class="button" type="submit" value="Ingresar" />
 						</div>
 					</form>
 				</div>
+			</article>
 		</section>
 
 		<!-- --------------------CÓDIGO HTML------------------------------------------------ -->

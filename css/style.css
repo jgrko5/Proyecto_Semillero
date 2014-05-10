@@ -35,6 +35,9 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
 	border-radius: 26px;
+	box-shadow: 0px 0px 5px #fff;
+    -webkit-box-shadow: 0px 0px 10px #ccc ;
+    -moz-box-shadow: 0px 0px 5px #fff;
 }
 
 
@@ -57,20 +60,36 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 }
 
 #estudiante article {
-	width: 60%;
-	margin: 70px auto 70px auto;
+	
+	width: 80%;
+	margin: 20px auto 20px auto;
 	background-color: rgb(101,167,57);
 	padding: 10px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
 	border-radius: 26px;
+	box-shadow: 0px 0px 5px #fff;
+    -webkit-box-shadow: 0px 0px 10px #ccc ;
+    -moz-box-shadow: 0px 0px 5px #fff;
 }
 #estudiante article header h6 {
+	
 	color: #ffffff;
 	font-weight: bold;
 	text-align: center;
 	margin: 5px;
 	font-size: 22px;
+	
+}
+
+.wrapper
+{
+    width: 80%;
+    margin: auto;
+    box-shadow: 0px 0px 5px #fff;
+    -webkit-box-shadow: 0px 0px 10px #ccc ;
+    -moz-box-shadow: 0px 0px 5px #fff;
+    background: #f0e0c0;
 }
 
 .textArea{
@@ -97,7 +116,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 {
 	font-size: 15;
 	display: block;
-	width: 100%;
+	width: 50%;
 	height: 30px;
 	padding: 5px;
 	border: 1px solid #d3bb8d;
@@ -110,7 +129,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 .textfield {
 	font-size: 15;
 	display: block;
-	width: 100%;
+	width: 50%;
 	height: 30px;
 	padding: 5px;
 	border: 1px solid #d3bb8d;
@@ -130,8 +149,8 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 .password {
 	font-size: 15;
 	display: block;
-	width: 100%;
-	height: 40px;
+	width: 50%;
+	height: 30px;
 	padding: 5px;
 	border: 1px solid #d3bb8d;
 	border-radius: 5px;
@@ -190,7 +209,109 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	top:1px;
 }
 
-	
-	
+.animated { 
+    -webkit-animation-duration: 2s; 
+    animation-duration: 2s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+    -webkit-animation-timing-function: linear; 
+    animation-timing-function: linear; 
+} 
 
+@-webkit-keyframes flip { 
+    0% { 
+        -webkit-transform: perspective(400px) rotateY(0); 
+        -webkit-animation-timing-function: ease-out; 
+    } 
+    40% { 
+        -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg); 
+        -webkit-animation-timing-function: ease-out; 
+    } 
+    50% { 
+        -webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1); 
+        -webkit-animation-timing-function: ease-in; 
+    } 
+    80% { 
+        -webkit-transform: perspective(400px) rotateY(360deg) scale(.95); 
+        -webkit-animation-timing-function: ease-in; 
+    } 
+    100% { 
+        -webkit-transform: perspective(400px) scale(1); 
+        -webkit-animation-timing-function: ease-in; 
+    } 
+} 
+@keyframes flip { 
+    0% { 
+        transform: perspective(400px) rotateY(0); 
+        animation-timing-function: ease-out; 
+    } 
+    40% { 
+        transform: perspective(400px) translateZ(150px) rotateY(170deg); 
+        animation-timing-function: ease-out; 
+    } 
+    50% { 
+        transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1); 
+        animation-timing-function: ease-in; 
+    } 
+    80% { 
+        transform: perspective(400px) rotateY(360deg) scale(.95); 
+        animation-timing-function: ease-in; 
+    } 
+    100% { 
+        transform: perspective(400px) scale(1); 
+        animation-timing-function: ease-in; 
+    } 
+} 
+.flip { 
+    -webkit-backface-visibility: visible !important; 
+    -webkit-animation-name: flip; 
+    backface-visibility: visible !important; 
+    animation-name: flip; 
+}
 
+#tabla article table thead th
+{
+	color: #222;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 5px;
+}
+
+#tabla article table td a{
+	text-decoration: none;
+	color: #9c0;
+}
+
+#tabla article table tr td
+{
+	text-align: justify;
+	background:#222;
+	color: #CCC;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 12px;
+	line-height: 1.5;
+	
+}
+.nav{
+	float: left
+}
+.nav .ul {
+         list-style-type:none;
+         margin: 0px;
+         padding: 0px;        
+}
+.nav .ul .li {
+    margin: 5px; padding: 10px; text-transform:capitalize; font-size: 20px;
+}
+.nav .ul .li .a {
+    color:#e34c26;
+    text-decoration: none;
+}
+
+.nav, .ul, .li {
+    margin: 5px; padding: 10px; text-transform:capitalize; font-size: 20px;
+    border-radius: 152px 304px 228px 152px;
+    border-style: solid;
+    border-width: 3px;
+    border-color:#ffffff
+}
