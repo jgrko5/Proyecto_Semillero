@@ -8,7 +8,17 @@ getImports();
 	<div id="izquierdo">
 		<ul id="menu" class="nav">
 			<li class="dash">
-				<a href="#">
+				<a href="../vista/inicioDelegado.php">
+					<span>Inicio</span>
+				</a>
+			</li>
+			<li class="charts">
+				<a href="../vista/inicioDelegado.php">
+					<span>Inicio</span>
+				</a>
+			</li>
+			<li class="charts">
+				<a href="../vista/inicioDelegado.php">
 					<span>Inicio</span>
 				</a>
 			</li>
@@ -20,7 +30,25 @@ getImports();
 		getHeaderStart();
 		?>
 		
-		
+		<nav class="nav">
+
+			<ul >
+				<h5>
+					<a href="listaEstudiantes.php">
+						<font color="black">Estudiantes</font>
+					</a></br>
+					<a href="listaProfesores.php">
+						<font color="black">Profesores</font>
+					</a></br>
+					<a href="listaTrabajoDeGrado.php">
+						<font color="black">Trabajo de Grado</font>
+					</a></br>
+					<a href="listaSolicitudes.php">
+						<font color="black">Solicitudes</font>
+					</a>
+					
+			</ul>
+		</nav>
 		<div>
 			<section id="estudiante">
 				<article >
