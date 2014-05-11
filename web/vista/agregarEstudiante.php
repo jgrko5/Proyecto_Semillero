@@ -9,8 +9,10 @@ getImports();
 		<?php
 		getHeaderStart();
 		getPanelSesion();
+		getMenuIzquierdo();
 		?>
-		<section id="estudiante">
+		<div id="contenido">
+			<section id="estudiante">
 			<article >
 				<header>
 					<h6>Registrar estudiante</h6></br>
@@ -105,6 +107,7 @@ getImports();
 				</div>
 			</article>
 		</section>
+		</div>
 	</div>
 </body>
 </html>

@@ -53,6 +53,7 @@ p.pclose a {
 
 /* THE NAVIGATION MENU STARTS HERE */
 .flyoutmenu {	
+	
 	float: left								/* This is the positioning block for the menu */
   position:absolute;
   width:160px;

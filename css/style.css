@@ -361,12 +361,11 @@ section#posts aside {
 }
 
 #indice {
-  height: 70%;
+	
   position: absolute;
 }
 
 #contenido {
-  height: 70%;
   left: 30%;
   overflow: hidden;
   position: absolute;
