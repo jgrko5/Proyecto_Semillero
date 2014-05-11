@@ -15,14 +15,12 @@
 			<a href="#"><span>Estudiante</span></a>
 			<ul>
 				<li class="lupper">
-					<a href="#nolink">Nikon Lenses</a>
+					<a href="agregarEstudiante.php">Registrar</a>
 				</li>
 				<li>
-					<a href="#nolink">Canon Lenses</a>
+					<a href="buscarEstudiante.php">Buscar</a>
 				</li>
-				<li>
-					<a href="#nolink">Sigma Lenses</a>
-				</li>
+				
 			</ul>
 		</li>
 		<li>
