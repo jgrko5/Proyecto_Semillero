@@ -6,18 +6,17 @@ include_once ("panelDelegados.php");
 getImports();
 ?>
 <body>
-	
+	<?php
+	getPanelDelegados();
+	?>
 	<div id="right" class="wrapper">
 		<?php
 		getHeaderStart();
 		?>
-		<?php
-	getPanelDelegados();
-	?>
+		
 
 		<div>
 			<section id="estudiante">
-				<article >
 
 					<header>
 						<h6>Buscar estudiante</h6>
@@ -52,7 +51,6 @@ getImports();
 						</br>
 					</div>
 
-				</article>
 			</section>
 		</div>
 

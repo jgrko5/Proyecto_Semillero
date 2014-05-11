@@ -1,59 +1,236 @@
-#right{
+#right {
 	overflow: hidden;
 	float: right;
 }
 
 /* Left navigation
-================================================== */
+ ================================================== */
 
 /* === Left navigation widgets === */
-#left{
+#left {
 	float: left;
 }
-.nav li.dash a span { background: #192226 }
-.nav li.charts span { background: #192226  }
-.nav li.forms a span { background: #192226  }
-.nav li.typo span { background: #192226  }
-.nav li.tables a span { background: #192226  }
-.nav li.errors a span { background: #192226  }
-.nav li.files a span { background: #192226  }
-.nav li.ui a span { background: #192226  }
-.nav li.widgets a span { background: #192226  }
+.nav li.dash a span {
+	background: #192226
+}
+.nav li.charts span {
+	background: #192226
+}
+.nav li.forms a span {
+	background: #192226
+}
+.nav li.typo span {
+	background: #192226
+}
+.nav li.tables a span {
+	background: #192226
+}
+.nav li.errors a span {
+	background: #192226
+}
+.nav li.files a span {
+	background: #192226
+}
+.nav li.ui a span {
+	background: #192226
+}
+.nav li.widgets a span {
+	background: #192226
+}
 
-.nav li a span { background-position: 12px 13px; background-repeat: no-repeat; }
-
-
+.nav li a span {
+	background-position: 12px 13px;
+	background-repeat: no-repeat;
+}
 
 /* === Left navigation classes === */
 
-.logo { border-top: 1px solid #3b4751; margin: 3px 1px 0 1px; padding: 20px 39px; }
+.logo {
+	border-top: 1px solid #3b4751;
+	margin: 3px 1px 0 1px;
+	padding: 20px 39px;
+}
 
-.nav { border-top: 1px solid #1c252b; }
-.nav li { position: relative; }
-.nav li a { display: block; background: #192226 ) repeat-x 0 0; border-bottom: 1px solid #1c252b; border-top: 1px solid #404950; }
-.nav li a:hover { background-position: 0 -43px; border-top: 1px solid #516271; }
-.nav li a.active, .nav li a:active { background-position: 0 -86px; border-top: 1px solid #657d92; }
-.nav li a span { padding: 10px 0 12px 42px; display: block; font-size: 10px; text-transform: uppercase; font-weight: bold; color: #efefef; }
+.nav {
+	border-top: 1px solid #1c252b;
+}
+.nav li {
+	position: relative;
+}
+.nav li a {
+	display: block;
+	background: #192226 ) repeat-x 0 0;
+	border-bottom: 1px solid #1c252b;
+	border-top: 1px solid #404950;
+}
+.nav li a:hover {
+	background-position: 0 -43px;
+	border-top: 1px solid #516271;
+}
+.nav li a.active, .nav li a:active {
+	background-position: 0 -86px;
+	border-top: 1px solid #657d92;
+}
+.nav li a span {
+	padding: 10px 0 12px 42px;
+	display: block;
+	font-size: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #efefef;
+}
 
-.nav li a strong { background: #1b232a; display: block; position: absolute; right: 10px; padding: 0 7px; top: 12px; box-shadow: 0 1px 1px #38444f; -webkit-box-shadow: 0 1px 1px #38444f; -moz-box-shadow: 0 1px 1px #38444f; font-size: 11px; color: #efefef; }
-.nav li a.active strong, .nav li a:active strong { background: #212a31; box-shadow: 0 1px 1px #557188; -webkit-box-shadow: 0 1px 1px #557188; -moz-box-shadow: 0 1px 1px #557188; }
+.nav li a strong {
+	background: #1b232a;
+	display: block;
+	position: absolute;
+	right: 10px;
+	padding: 0 7px;
+	top: 12px;
+	box-shadow: 0 1px 1px #38444f;
+	-webkit-box-shadow: 0 1px 1px #38444f;
+	-moz-box-shadow: 0 1px 1px #38444f;
+	font-size: 11px;
+	color: #efefef;
+}
+.nav li a.active strong, .nav li a:active strong {
+	background: #212a31;
+	box-shadow: 0 1px 1px #557188;
+	-webkit-box-shadow: 0 1px 1px #557188;
+	-moz-box-shadow: 0 1px 1px #557188;
+}
 
+.nav .last {
+	border-bottom: none;
+}
 
-.nav .last { border-bottom: none; }
+ul.sub {
+	border-bottom: 1px solid #1a2126;
+	border-top: none;
+	background: #192226
+}
+ul.sub li {
+	border-bottom: 1px solid #1c252a;
+	border-top: 1px solid #30373d;
+}
+ul.sub li.this {
+	background: #192226 border-bottom : 1px solid #192226;
+	border-top: 1px solid #192226;
+}
+ul.sub li.this:first-child {
+	border-top: 1px solid #30373D;
+}
+ul.sub li.this a {
+	color: #d5d5d5;
+}
+ul.sub li a {
+	background: #192226;
+	border: none;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #494949;
+	font-size: 11px;
+	padding: 8px 10px 8px 26px;
+	color: #9da1a5;
+}
+ul.sub li a:hover {
+	font-style: normal;
+	border: none;
+	color: #d5d5d5;
+	background: #192226
+}
 
-ul.sub { border-bottom: 1px solid #1a2126; border-top: none; background: #192226  }
-ul.sub li { border-bottom: 1px solid #1c252a; border-top: 1px solid #30373d; }
-ul.sub li.this { background: #192226  border-bottom: 1px solid #192226; border-top: 1px solid #192226; }
-ul.sub li.this:first-child { border-top: 1px solid #30373D; }
-ul.sub li.this a { color: #d5d5d5; }
-ul.sub li a { background: #192226  ; border: none; font-family: Arial, Helvetica, sans-serif; color: #494949; font-size: 11px; padding: 8px 10px 8px 26px; color: #9da1a5; }
-ul.sub li a:hover { font-style: normal; border: none; color: #d5d5d5; background: #192226  }
-
-ul.sub li ul { border: none; border-top: 1px solid #c9c9c9; }
-ul.sub li ul li { padding-left: 10px; }
+ul.sub li ul {
+	border: none;
+	border-top: 1px solid #c9c9c9;
+}
+ul.sub li ul li {
+	padding-left: 10px;
+}
 
 ul {
- 	list-style: none;
-	margin: 0; 
- 	padding: 0; 
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+#menu {
+	text-align: center;
+	font-size: 0.7em;
+	width: 320px;
+	margin: 20px;
+	float: left;
+}
+#menu ul {
+	list-style-type: none;
+}
+#menu ul li.nivel1 {
+	width: 162px;
+}
+#menu ul li.primera {
+	border-top: solid 1px #FFF;
+}
+#menu ul li a, #menu ul li span {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	background-color: #399;
+	border: solid 1px #fff;
+	border-top: none;
+	padding: 8px;
+	position: relative;
+}
+a:active {
+	position: relative;
+}
+#menu ul li a:active {
+	background-color: #6CC;
+	color: #000;
+	border-bottom: solid 1px #6CC;
+	position: relative;
+}
+#menu ul li span.nivel1 {
+	display: block;
+}
+#menu ul li:hover span.nivel1 {
+	cursor: pointer;
+}
+#menu ul li ul {
+	display: none;
+}
+#menu ul li a:hover ul, #menu ul li a:active ul {
+	display: block;
+	position: relative;
+	width: 162px;
+	background-color: #6CC;
+}
+#menu ul li a:link:hover ul {
+	display: none;
+}
+#menu ul li a:active:hover ul {
+	display: block;
+}
+#menu ul li ul li a {
+	width: 160px;
+	padding: 6px 0px 8px 0px;
+	border: none;
+	border-top: solid 1px #fff;
+	background-color: #3AB7CB;
+	font-weight: normal;
+}
+#menu ul li ul li a:hover {
+	position: relative;
+	text-decoration: underline;
+	border-bottom: none;
+	color: #000;
+	background-color: #359BB8;
+}
+#menu ul li ul li.primera {
+	border-top: none;
+}
+table.falsa {
+	border-collapse: collapse;
+	border: 0px;
+	float: left;
+	position: relative;
 }

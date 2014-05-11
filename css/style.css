@@ -24,7 +24,6 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
 	border-radius: 26px;
-	
 }
 
 #login article {
@@ -36,11 +35,9 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	-moz-border-radius: 26px;
 	border-radius: 26px;
 	box-shadow: 0px 0px 5px #fff;
-    -webkit-box-shadow: 0px 0px 10px #ccc ;
-    -moz-box-shadow: 0px 0px 5px #fff;
+	-webkit-box-shadow: 0px 0px 10px #ccc;
+	-moz-box-shadow: 0px 0px 5px #fff;
 }
-
-
 
 #login article header h6 {
 	color: #ffffff;
@@ -56,11 +53,10 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
 	border-radius: 26px;
-	
 }
 
 #estudiante article {
-	
+
 	width: 80%;
 	margin: 20px auto 20px auto;
 	background-color: rgb(101,167,57);
@@ -69,17 +65,16 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	-moz-border-radius: 26px;
 	border-radius: 26px;
 	box-shadow: 0px 0px 5px #fff;
-    -webkit-box-shadow: 0px 0px 10px #ccc ;
-    -moz-box-shadow: 0px 0px 5px #fff;
+	-webkit-box-shadow: 0px 0px 10px #ccc;
+	-moz-box-shadow: 0px 0px 5px #fff;
 }
 #estudiante article header h6 {
-	
+
 	color: #ffffff;
 	font-weight: bold;
 	text-align: center;
 	margin: 5px;
 	font-size: 22px;
-	
 }
 #proyecto {
 	width: 100%;
@@ -87,10 +82,9 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
 	border-radius: 26px;
-	
 }
 #proyecto article {
-	
+
 	width: 80%;
 	margin: 20px auto 20px auto;
 	background-color: rgb(101,167,57);
@@ -99,31 +93,29 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	-moz-border-radius: 26px;
 	border-radius: 26px;
 	box-shadow: 0px 0px 5px #fff;
-    -webkit-box-shadow: 0px 0px 10px #ccc ;
-    -moz-box-shadow: 0px 0px 5px #fff;
+	-webkit-box-shadow: 0px 0px 10px #ccc;
+	-moz-box-shadow: 0px 0px 5px #fff;
 }
 #proyecto article header h6 {
-	
+
 	color: #ffffff;
 	font-weight: bold;
 	text-align: center;
 	margin: 5px;
 	font-size: 22px;
-	
 }
 
-.wrapper
-{
-    width: 80%;
-    margin: auto;
-    box-shadow: 0px 0px 5px #fff;
-    -webkit-box-shadow: 0px 0px 10px #ccc ;
-    -moz-box-shadow: 0px 0px 5px #fff;
-    background: #f0e0c0;
+.wrapper {
+	width: 80%;
+	margin: auto;
+	box-shadow: 0px 0px 5px #fff;
+	-webkit-box-shadow: 0px 0px 10px #ccc;
+	-moz-box-shadow: 0px 0px 5px #fff;
+	background: #f0e0c0;
 }
 
-.textArea{
-	
+.textArea {
+
 }
 .etiqueta {
 	float: left;
@@ -142,8 +134,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	display: block;
 }
 
-.select
-{
+.select {
 	font-size: 15;
 	display: block;
 	width: 50%;
@@ -151,7 +142,8 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	padding: 5px;
 	border: 1px solid #d3bb8d;
 	border-radius: 5px;
-	margin: margin-bottom: 0px;margin-top: 0px;;
+	margin: margin-bottom : 0px;
+	margin-top: 0px;;
 	background: #FFFFFF;
 	color: #333;
 }
@@ -212,117 +204,121 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	outline: 0 none;
 }
 
-.button{
-	
-	
+.button {
+
 	-moz-box-shadow: 0px 10px 14px -7px #3e7327;
 	-webkit-box-shadow: 0px 10px 14px -7px #3e7327;
 	box-shadow: 0px 10px 14px -7px #3e7327;
-	background-color:#65a739;
-	-moz-border-radius:4px;
-	-webkit-border-radius:4px;
-	border-radius:4px;
-	border:2px solid #4b8f29;
-	color:#ffffff;
-	font-size:15;
-	font-weight:bold;
+	background-color: #65a739;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	border: 2px solid #4b8f29;
+	color: #ffffff;
+	font-size: 15;
+	font-weight: bold;
 	font-family: korinna bt;
-	padding:8px 16px;
-	text-shadow:0px 1px 0px #5b8a3c;
-	
+	padding: 8px 16px;
+	text-shadow: 0px 1px 0px #5b8a3c;
 }
 .button:hover {
-	background-color:#d3ba8d;
+	background-color: #d3ba8d;
 }
 .button:active {
-	position:relative;
-	top:1px;
+	position: relative;
+	top: 1px;
 }
 
-.animated { 
-    -webkit-animation-duration: 2s; 
-    animation-duration: 2s; 
-    -webkit-animation-fill-mode: both; 
-    animation-fill-mode: both; 
-    -webkit-animation-timing-function: linear; 
-    animation-timing-function: linear; 
-} 
-
-@-webkit-keyframes flip { 
-    0% { 
-        -webkit-transform: perspective(400px) rotateY(0); 
-        -webkit-animation-timing-function: ease-out; 
-    } 
-    40% { 
-        -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg); 
-        -webkit-animation-timing-function: ease-out; 
-    } 
-    50% { 
-        -webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1); 
-        -webkit-animation-timing-function: ease-in; 
-    } 
-    80% { 
-        -webkit-transform: perspective(400px) rotateY(360deg) scale(.95); 
-        -webkit-animation-timing-function: ease-in; 
-    } 
-    100% { 
-        -webkit-transform: perspective(400px) scale(1); 
-        -webkit-animation-timing-function: ease-in; 
-    } 
-} 
-@keyframes flip { 
-    0% { 
-        transform: perspective(400px) rotateY(0); 
-        animation-timing-function: ease-out; 
-    } 
-    40% { 
-        transform: perspective(400px) translateZ(150px) rotateY(170deg); 
-        animation-timing-function: ease-out; 
-    } 
-    50% { 
-        transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1); 
-        animation-timing-function: ease-in; 
-    } 
-    80% { 
-        transform: perspective(400px) rotateY(360deg) scale(.95); 
-        animation-timing-function: ease-in; 
-    } 
-    100% { 
-        transform: perspective(400px) scale(1); 
-        animation-timing-function: ease-in; 
-    } 
-} 
-.flip { 
-    -webkit-backface-visibility: visible !important; 
-    -webkit-animation-name: flip; 
-    backface-visibility: visible !important; 
-    animation-name: flip; 
+.animated {
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
 }
 
-#tabla article table thead th
-{
+@-webkit-keyframes flip {
+0% {
+-webkit-transform: perspective(400px) rotateY(0);
+-webkit-animation-timing-function: ease-out;
+}
+40% {
+-webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg);
+-webkit-animation-timing-function: ease-out;
+}
+50% {
+-webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+-webkit-animation-timing-function: ease-in;
+}
+80% {
+-webkit-transform: perspective(400px) rotateY(360deg) scale(.95);
+-webkit-animation-timing-function: ease-in;
+}
+100% {
+-webkit-transform: perspective(400px) scale(1);
+-webkit-animation-timing-function: ease-in;
+}
+}
+@keyframes flip {
+0% {
+transform: perspective(400px) rotateY(0);
+animation-timing-function: ease-out;
+}
+40% {
+transform: perspective(400px) translateZ(150px) rotateY(170deg);
+animation-timing-function: ease-out;
+}
+50% {
+transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+animation-timing-function: ease-in;
+}
+80% {
+transform: perspective(400px) rotateY(360deg) scale(.95);
+animation-timing-function: ease-in;
+}
+100% {
+transform: perspective(400px) scale(1);
+animation-timing-function: ease-in;
+}
+}
+.flip {
+	-webkit-backface-visibility: visible !important;
+	-webkit-animation-name: flip;
+	backface-visibility: visible !important;
+	animation-name: flip;
+}
+
+#tabla article table thead th {
 	color: #222;
 	background-color: rgba(255,255,255,0.5);
 	border-radius: 5px;
 }
 
-#tabla article table td a{
+#tabla article table td a {
 	text-decoration: none;
 	color: #9c0;
 }
 
-#tabla article table tr td
-{
+#tabla article table tr td {
 	text-align: justify;
-	background:#222;
+	background: #222;
 	color: #CCC;
 	padding: 10px;
 	border-radius: 5px;
 	font-size: 12px;
 	line-height: 1.5;
-	
+}
+section#posts {
+	float: left;
+	width: 74%;
 }
 
-
-
+section#posts aside {
+	float: right;
+	width: 35%;
+	margin-left: 5%;
+	font-size: 20px;
+	line-height: 40px;
+}
 
