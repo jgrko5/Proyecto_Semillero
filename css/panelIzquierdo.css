@@ -8,15 +8,17 @@
 }
 
 h1 {
+	
   font-size:16pt;
   font-weight:bold;
   margin-bottom:0px;
   margin-top:10px;
-  color:#646464;
+  color:#FFFFFF;
 }
 
 h1 a {
-  color:#646464;							/* because the h1 is an anchor we don't want it to change colour...*/
+	
+  color:#FFFFFF;							/* because the h1 is an anchor we don't want it to change colour...*/
   text-decoration:none;				/* ..or show underlined */
 }
 
@@ -24,6 +26,7 @@ h2 {
   margin-left:5px;
   font-size:12pt;
   fonr-weight:normal;
+  color: #FFFFFF;
 }
 
 .textbox {
@@ -33,7 +36,7 @@ h2 {
   height:auto;
 	margin-bottom:5px;
   text-align:left;
-  border:1px #919191 solid;
+  border:1px #ffffff solid;
 }
 
 p {margin:5px;margin-left:10px;}
@@ -67,6 +70,14 @@ p.pclose a {
   list-style-type:none;				/* no bullets or numbers */
   background-color:#e6e6e6;
   z-index:5;									/* ensures it will overlap other stuff on the page */
+ background: #222222;
+	/* Old browsers */
+
+	background: -moz-linear-gradient(bottom, #000000 0%, #222222 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+	background: -webkit-linear-gradient(bottom, #000000 0%, #222222 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+	background: -o-linear-gradient(bottom, #000000 0%, #222222 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+	background: -ms-linear-gradient(bottom, #000000 0%, #222222 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+	background: linear-gradient(to top, #000000 0%, #222222 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
 }
 
 .flyoutmenu li {
@@ -86,12 +97,20 @@ p.pclose a {
   font-size:12pt;
   color:black;
   border-top:#737373 1px solid;
+  background: #64a743;
+	/* Old browsers */
+
+	background: -moz-linear-gradient(bottom, #43702d 0%, #64a743 50%, #7ebf5e 51%, #7bbd5b 78%, #d6eacc 100%);
+	background: -webkit-linear-gradient(bottom, #43702d 0%, #64a743 50%, #7ebf5e 51%, #7bbd5b 78%, #d6eacc 100%);
+	background: -o-linear-gradient(bottom, #43702d 0%, #64a743 50%, #7ebf5e 51%, #7bbd5b 78%, #d6eacc 100%);
+	background: -ms-linear-gradient(bottom, #43702d 0%, #64a743 50%, #7ebf5e 51%, #7bbd5b 78%, #d6eacc 100%);
+	background: linear-gradient(to top, #43702d 0%, #64a743 50%, #7ebf5e 51%, #7bbd5b 78%, #d6eacc 100%);
 }
 
 .flyoutmenu li a {
   display:block;							/* the link works for the whole width of li, not just the text */
   text-decoration:none;				/* no underline wanted */
-  color:#484848;
+  color:#FFFFFF;
 }
 
 .flyoutmenu a:hover {color:#868686;}	    /* fade text when hovering */
@@ -104,9 +123,11 @@ p.pclose a {
   top:5px;										/* offsets the top edge of a sub-menu relative to the parent <li> */
   left:130px;									/* offsets the left edge of a sub-menu relative to the parent <li> */
   visibility:hidden;					/* by default the sub-menu list is HIDDEN if level > 1 */
+ 
 }
 
 /* Turn visibility of slide out menu ON when is is hovered - it is set HIDDEN by default above*/
 .flyoutmenu li:hover > ul {visibility:visible;}
+
 </style>
 
