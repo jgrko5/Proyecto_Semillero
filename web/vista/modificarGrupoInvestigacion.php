@@ -15,10 +15,10 @@ getMenuIzquierdo();
 		<section id="grupo">
 			<article>
 				<header>
-					<h6>Modificar datos del grupo de investigación</h6>
+					<h6>Actualizar grupo de investigación</h6>
 				</header>
 				<div id="formulario">
-					<form action="../controlador/registrarGrupoInvestigacion.php" method="post">
+					<form action="../controlador/modificarGrupoInvestigacion.php" method="post">
 						<center>
 							
 								<div class="etiqueta">
@@ -66,7 +66,7 @@ getMenuIzquierdo();
 
 							<div aling="center">
 								<input class="button" type="submit" value="Actualizar" />
-							</div>
+							</div></br>
 						</center>
 					</form>
 				</div>

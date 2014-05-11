@@ -79,6 +79,38 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	font-size: 22px;
 	
 }
+
+#tutor {
+	width: 100%;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+	
+}
+
+#tutor article {
+	
+	width: 80%;
+	margin: 80px 0 20px 0px;
+	background-color: rgb(101,167,57);
+	padding: 0px;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+	box-shadow: 0px 0px 5px #fff;
+	-webkit-box-shadow: 0px 0px 10px #ccc;
+	-moz-box-shadow: 0px 0px 5px #fff;
+	
+}
+#tutor article header h6 {
+	left:80%;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	margin: 0px;
+	font-size: 22px;
+	
+}
 #proyecto {
 	width: 100%;
 	-webkit-border-radius: 26px;
@@ -361,12 +393,11 @@ section#posts aside {
 }
 
 #indice {
-  height: 70%;
+	
   position: absolute;
 }
 
 #contenido {
-  height: 70%;
   left: 30%;
   overflow: hidden;
   position: absolute;

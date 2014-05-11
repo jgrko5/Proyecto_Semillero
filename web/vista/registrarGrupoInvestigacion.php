@@ -12,6 +12,7 @@ getImports();
 		getPanelSesion();
 		getMenuIzquierdo();
 		?>
+		<div id="contenido">
 		<section id="grupo">
 			<article>
 				<header>
@@ -75,6 +76,7 @@ getImports();
 				</div>
 			</article>
 		</section>
+		</div>
 	</div>
 </body>
 </html>
