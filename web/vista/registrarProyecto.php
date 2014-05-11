@@ -6,38 +6,58 @@ getImports();
 ?>
 
 <body>
-  <div id="main"  class="wrapper">
-  <?php
-  getHeaderStart();
-  ?>
-  <section id="proyecto">
-  	<article>
-  			
-	    <header>
-	      <h1>Registrar proyecto</h1>
-	    </header>
-    <nav>
-      <p><a href="/">Home</a></p>
-      <p><a href="/contact">Contact</a></p>
-    </nav>
+	<div id="main"  class="wrapper">
+		<?php
+		getHeaderStart();
+		?>
+		<section id="proyecto">
+			<article>
 
-    <div id="formulario">
-    	<form action="../controlador/registrarProyecto.php" method="post">
-		
-			<div class="etiqueta">
-				<label>Titulo:</label>
-			</div>
-			<div class="componente">	
-				<select class="select" title="Título">
-				<option>Cedula de ciudadania</option>
-				<option>Tgarjeta de identidad</option>
-				</select>
-			</div>	      
-    </div>
+				<header>
+					<h6>Registrar proyecto</h6></br>
+				</header>
 
-    <footer>
-     <p>&copy; Copyright  by DanielCruz</p>
-    </footer>
-  </div>
+				<div id="formulario">
+					<form action="../controlador/registrarProyecto.php" method="post">
+						<center>
+							<div class="etiqueta">
+								<label>Código:</label>
+							</div>
+							<div class="componente">
+								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el código"/>
+							</div></br>
+
+							<div class="etiqueta">
+								<label>Título:</label>
+							</div>
+							<div class="componente">
+								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el título"/>
+							</div></br>
+
+							<div class="etiqueta">
+								<label>Gasto efectivo:</label>
+							</div>
+							<div class="componente">
+								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el gasto efectivo"/>
+							</div></br>
+							<div class="etiqueta">
+								<label>Duración:</label>
+							</div>
+							<div class="componente">
+								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese la duración"/>
+							</div></br>
+							<div class="etiqueta">
+								<label>Fecha inicio:</label>
+							</div>
+							<div class="componente">
+								<input type="date" class="textField"/>
+							</div>
+							</div></br>
+						</center>
+					</form>
+				</div>
+			</article>
+		</section>
+	</div>
 </body>
 </html>
