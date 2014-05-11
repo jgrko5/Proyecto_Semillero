@@ -9,7 +9,10 @@ getImports();
 	<div id="main"  class="wrapper">
 		<?php
 		getHeaderStart();
+		getPanelSesion();
+		getMenuIzquierdo();
 		?>
+		<div id="contenido">
 		<section id="proyecto">
 			<article>
 
@@ -20,13 +23,7 @@ getImports();
 				<div id="formulario">
 					<form action="../controlador/registrarProyecto.php" method="post">
 						<center>
-							<div class="etiqueta">
-								<label>Código:</label>
-							</div>
-							<div class="componente">
-								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el código"/>
-							</div></br>
-
+							
 							<div class="etiqueta">
 								<label>Título:</label>
 							</div>
@@ -61,6 +58,7 @@ getImports();
 	</div>
 	</article>
 	</section>
+	</div>
 	</div>
 </body>
 </html>
