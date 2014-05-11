@@ -17,7 +17,7 @@ getImports();
 			<article>
 
 				<header>
-					<h6>Actualizar proyecto</h6></br>
+					<h6>Actualizar proyecto</h6>
 				</header>
 
 				<div id="formulario">
@@ -48,7 +48,7 @@ getImports();
 							</div>
 							<div class="componente">
 								<input type="date" class="textField"/>
-							</div></br>
+							</div></br></br>
 				</div></br>
 				<div align="center">
 					<input class="button" type="submit" value="Actualizar"/>
