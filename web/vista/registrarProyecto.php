@@ -51,13 +51,16 @@ getImports();
 							</div>
 							<div class="componente">
 								<input type="date" class="textField"/>
-							</div>
 							</div></br>
-						</center>
-					</form>
-				</div>
-			</article>
-		</section>
+				</div></br>
+				<div align="center">
+					<input class="button" type="submit" value="Buscar"/>
+				</div></br>
+				</center>
+				</form>
+	</div>
+	</article>
+	</section>
 	</div>
 </body>
 </html>
