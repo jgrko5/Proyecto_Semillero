@@ -23,36 +23,36 @@ getImports();
 						<center>
 							<div class="etiqueta">
 								<label>Código:</label>
-							</div>
+							</div></br>
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el código"/>
-							</div></br>
+							</div></br></br>
 
 							<div class="etiqueta">
 								<label>Título:</label>
-							</div>
+							</div></br>
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el título"/>
-							</div></br>
+							</div></br></br>
 
 							<div class="etiqueta">
 								<label>Gasto efectivo:</label>
-							</div>
+							</div></br>
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el gasto efectivo"/>
-							</div></br>
+							</div></br></br>
 							<div class="etiqueta">
 								<label>Duración:</label>
-							</div>
+							</div></br>
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese la duración"/>
-							</div></br>
+							</div></br></br>
 							<div class="etiqueta">
 								<label>Fecha inicio:</label>
-							</div>
+							</div></br>
 							<div class="componente">
 								<input type="date" class="textField"/>
-							</div></br>
+							</div></br></br>
 				</div></br>
 				<div align="center">
 					<input class="button" type="submit" value="Registrar"/>
