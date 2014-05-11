@@ -11,6 +11,7 @@ getHeaderStart();
 getPanelSesion();
 getMenuIzquierdo();
 		?>
+		<div id="contenido">
 		<section id="grupo">
 			<article>
 				<header>
@@ -71,6 +72,7 @@ getMenuIzquierdo();
 				</div>
 			</article>
 		</section>
+		</div>
 	</div>
 </body>
 </html>
