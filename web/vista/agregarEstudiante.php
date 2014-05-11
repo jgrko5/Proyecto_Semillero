@@ -5,21 +5,16 @@ include_once ("footer.php");
 getImports();
 ?>
 <body>
-
 	<div id="main" class="wrapper">
 		<?php
 		getHeaderStart();
 		getPanelSesion();
 		?>
-
 		<section id="estudiante">
-
 			<article >
-
 				<header>
 					<h6>Registrar estudiante</h6></br>
 				</header>
-
 				<div id="formulario">
 					<form action="../controlador/agregarEstudiante.php" method="post">
 						<center>
@@ -33,7 +28,7 @@ getImports();
 								</select>
 							</div>
 							</br>
-							
+
 							<div class="etiqueta">
 								<label>Documento:</label>
 							</div>
@@ -108,10 +103,8 @@ getImports();
 						</center>
 					</form>
 				</div>
-
 			</article>
 		</section>
-
 	</div>
 </body>
 </html>

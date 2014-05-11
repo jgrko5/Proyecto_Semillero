@@ -16,60 +16,62 @@ getImports();
 				<header>
 					<h6>Registrar grupo investigacion</h6></br>
 				</header>
-
 				<div id="formulario">
 					<form action="../controlador/registrarGrupoInvestigacion.php" method="post">
 						<center>
-							<div aling="&#x2190;">
+							
 							<div class="etiqueta">
 								<label>Código:</label>
-							</div>
 							</div></br>
+							
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el código"/>
-							</div></br>
+							</div></br></br>
 							
-							<div aling="&#x2190;">
+							
 							<div class="etiqueta">
 								<label>Nombre:</label>
-							</div>
 							</div></br>
+							
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el nombre"/>
-							</div></br>
+							</div></br></br>
 							
-							<div aling="&#x2190;">
+							
 							<div class="etiqueta">
 								<label>Clasificación:</label>
-							</div>
 							</div></br>
+							
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese la clasificación"/>
-							</div></br>
+							</div></br></br>
 							
-							<div aling="&#x2190;">
+							
 							<div class="etiqueta">
 								<label>Fecha conformación:</label>
-							</div>
 							</div></br>
-							<div class="componente">
-								<input  type="date" class="textField"/>
-							</div>
 							
-							<div aling="&#x2190;">
+							<div class="componente">
+								<input type="date" class="textField"/>
+							</div></br></br>
+							
+							
 							<div class="etiqueta">
 								<label>Facultad:</label>
-							</div>
 							</div></br>
+							
+							
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese la facultad"/>
-							</div>
-				</div></br>
+							</div></br></br>
+							
+			
 				<div aling="center">
 					<input class="button" type="submit" value="Registrar" />
-				</div></br>
+				</div>
 				</center>
 				</form>
+				</div>
 			</article>
 		</section>
 	</div>
