@@ -7,7 +7,8 @@ getImports();
 <body>
 	<div id="main" class="wrapper">
 		<?php
-getHeaderStart()
+getHeaderStart();
+getPanelSesion();
 		?>
 		<div>
 			<section id="grupo">

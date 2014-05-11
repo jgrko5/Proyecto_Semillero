@@ -4,16 +4,12 @@
 	{
 
 ?>
-<nav>
-        <!-- Listado de Navegación -->
-        <ul class="menu">  
-            <li><a href="#">Home</a></li>  
-            <li><a href="#">Quienes Somos</a></li>  
-            <li><a href="#">Que Hacemos</a></li>
-            <li><a href="#">Clientes</a></li>
-            <li><a href="#">Club Coolaboro</a></li> 
-        </ul>    
-</nav>
+<div id='cssmenu' class='align-right'>
+<ul>
+   <li class='active'><a href='inicioSesion.php'><span>Salir</span></a></li>
+   <li class='last'><a href='#'><span>Nombre de la facultad</span></a></li>
+</ul>
+</div>
 <?php
 }
 ?>

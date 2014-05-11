@@ -9,6 +9,7 @@ getImports();
 	<div id="main" class="wrapper">
 		<?php
 		getHeaderStart();
+		getPanelSesion();
 		?>
 
 		<section id="estudiante">

@@ -6,21 +6,16 @@ getImports();
 ?>
 
 <body>
-	<div id="main" class="wrapper">
+	<div id="main" class="wrapper" style="overflow: hidden" >
 		<?php
-		getHeaderStart()
+		getHeaderStart();
+		getPanelSesion();
+		getMenuIzquierdo();
 		?>
-		<nav >
-			<h6>
-			<p>
-				<a href="/">Home</a>
-			</p>
-			<p>
-				<a href="/contact">Contact</a>
-			</p></h6>
-		</nav>
-		<div>
-			<section id="estudiante">
+		
+		<div id="contenido">
+			
+			<section id="estudiante" >
 				<article >
 
 					<header>
@@ -33,6 +28,7 @@ getImports();
 								<div class="etiqueta">
 									<label>Tipo de documento:</label>
 								</div>
+								</br>
 								<div class="componente">
 									<select class="select" title="Tipo de documento">
 										<option>Cedula de ciudadania</option>
@@ -45,6 +41,7 @@ getImports();
 								<div class="etiqueta">
 									<label>Documento:</label>
 								</div>
+								</br>
 								<div class="componente">
 									<input class="textField" type="text" name="tipoEst" required="required" placeholder="Modifique documento del estudiante"/>
 								</div>
@@ -53,6 +50,7 @@ getImports();
 								<div class="etiqueta">
 									<label>Nombres:</label>
 								</div>
+								</br>
 								<div class="componente">
 									<input class="textField" type="text" name="nombreEst" required="required" placeholder="Modifique los nombres del estudiante" readonly="true"/>
 								</div>
@@ -61,6 +59,7 @@ getImports();
 								<div class="etiqueta">
 									<label>Apellidos:</label>
 								</div>
+								</br>
 								<div class="componente">
 									<input class="textField" type="text" name="apellidoEst" required="required" placeholder="Modifique los apellidos del estudiante" readonly="true"/>
 								</div>
@@ -69,6 +68,7 @@ getImports();
 								<div class="etiqueta">
 									<label>Direccion:</label>
 								</div>
+								</br>
 								<div class="componente">
 									<input class="textField" type="text" name="direccionEst" required="required" placeholder="Modifique la direccion de residencia"/>
 								</div>
@@ -77,6 +77,7 @@ getImports();
 								<div class="etiqueta">
 									<label>Telefono:</label>
 								</div>
+								</br>
 								<div class="componente">
 									<input class="textField" type="text" name="telefonoEst" required="required" placeholder="Modifique el telefono de contacto" />
 								</div>
@@ -85,6 +86,7 @@ getImports();
 								<div class="etiqueta">
 									<label>Correo:</label>
 								</div>
+								</br>
 								<div class="componente">
 									<input class="textField" type="text" name="correoEst" required="required" placeholder="Modifique el correo electronico"/>
 								</div>
@@ -93,6 +95,7 @@ getImports();
 								<div class="etiqueta">
 									<label>Semestre:</label>
 								</div>
+								</br>
 								<div class="componente">
 									<select class="select" title="Semestre">
 										<option>Primero</option>
@@ -120,6 +123,7 @@ getImports();
 				</article>
 			</section>
 		</div>
+		
 
 		<footer>
 			<?php

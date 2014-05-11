@@ -9,6 +9,7 @@
 			
 			<link href="../../css/style.css" rel="stylesheet">
 			<link href="../../css/panelSuperior.css" rel="stylesheet">
+			<link href="../../css/panelIzquierdo.css" rel="stylesheet">
 			
 			<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 			Remove this if you use the .htaccess -->
