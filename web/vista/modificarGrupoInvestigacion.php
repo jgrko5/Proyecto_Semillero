@@ -9,6 +9,7 @@ getImports();
 		<?php
 getHeaderStart();
 getPanelSesion();
+getMenuIzquierdo();
 		?>
 		<section id="grupo">
 			<article>
