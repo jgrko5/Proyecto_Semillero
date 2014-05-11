@@ -14,7 +14,7 @@ getImports();
 			<article>
 
 				<header>
-					<h6>Registrar proyecto</h6></br>  
+					<h6>Actualizar proyecto</h6></br>
 				</header>
 
 				<div id="formulario">
@@ -54,7 +54,7 @@ getImports();
 							</div></br>
 				</div></br>
 				<div align="center">
-					<input class="button" type="submit" value="Registrar"/>
+					<input class="button" type="submit" value="Actualizar"/>
 				</div></br>
 				</center>
 				</form>
