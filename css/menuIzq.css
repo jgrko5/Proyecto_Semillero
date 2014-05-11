@@ -1,0 +1,59 @@
+#right{
+	overflow: hidden;
+	float: right;
+}
+
+/* Left navigation
+================================================== */
+
+/* === Left navigation widgets === */
+#left{
+	float: left;
+}
+.nav li.dash a span { background: #192226 }
+.nav li.charts span { background: #192226  }
+.nav li.forms a span { background: #192226  }
+.nav li.typo span { background: #192226  }
+.nav li.tables a span { background: #192226  }
+.nav li.errors a span { background: #192226  }
+.nav li.files a span { background: #192226  }
+.nav li.ui a span { background: #192226  }
+.nav li.widgets a span { background: #192226  }
+
+.nav li a span { background-position: 12px 13px; background-repeat: no-repeat; }
+
+
+
+/* === Left navigation classes === */
+
+.logo { border-top: 1px solid #3b4751; margin: 3px 1px 0 1px; padding: 20px 39px; }
+
+.nav { border-top: 1px solid #1c252b; }
+.nav li { position: relative; }
+.nav li a { display: block; background: #192226 ) repeat-x 0 0; border-bottom: 1px solid #1c252b; border-top: 1px solid #404950; }
+.nav li a:hover { background-position: 0 -43px; border-top: 1px solid #516271; }
+.nav li a.active, .nav li a:active { background-position: 0 -86px; border-top: 1px solid #657d92; }
+.nav li a span { padding: 10px 0 12px 42px; display: block; font-size: 10px; text-transform: uppercase; font-weight: bold; color: #efefef; }
+
+.nav li a strong { background: #1b232a; display: block; position: absolute; right: 10px; padding: 0 7px; top: 12px; box-shadow: 0 1px 1px #38444f; -webkit-box-shadow: 0 1px 1px #38444f; -moz-box-shadow: 0 1px 1px #38444f; font-size: 11px; color: #efefef; }
+.nav li a.active strong, .nav li a:active strong { background: #212a31; box-shadow: 0 1px 1px #557188; -webkit-box-shadow: 0 1px 1px #557188; -moz-box-shadow: 0 1px 1px #557188; }
+
+
+.nav .last { border-bottom: none; }
+
+ul.sub { border-bottom: 1px solid #1a2126; border-top: none; background: #192226  }
+ul.sub li { border-bottom: 1px solid #1c252a; border-top: 1px solid #30373d; }
+ul.sub li.this { background: #192226  border-bottom: 1px solid #192226; border-top: 1px solid #192226; }
+ul.sub li.this:first-child { border-top: 1px solid #30373D; }
+ul.sub li.this a { color: #d5d5d5; }
+ul.sub li a { background: #192226  ; border: none; font-family: Arial, Helvetica, sans-serif; color: #494949; font-size: 11px; padding: 8px 10px 8px 26px; color: #9da1a5; }
+ul.sub li a:hover { font-style: normal; border: none; color: #d5d5d5; background: #192226  }
+
+ul.sub li ul { border: none; border-top: 1px solid #c9c9c9; }
+ul.sub li ul li { padding-left: 10px; }
+
+ul {
+ 	list-style: none;
+	margin: 0; 
+ 	padding: 0; 
+}

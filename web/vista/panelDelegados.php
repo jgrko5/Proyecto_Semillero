@@ -1,25 +1,28 @@
+
+
+
 <?php
 
-	function getPanelDel()
+	function getPanelDelegados()
 	{
 
 ?>
-<nav class="nav">
+<ul id="left" class="nav">
+	<li class="tables">
+		<a href="../vista/inicioDelegado.php"> <span>Inicio</span> </a>
+	</li>
+	<li class="charts">
+		<a href="../vista/inicioDelegado.php"> <span>Estudiantes</span> </a>
+	</li>
+	<li class="charts">
+		<a href="../vista/inicioDelegado.php"> <span>Proyectos de investigacion</span> </a>
+	</li>
+	<li class="charts">
+		<a href="../vista/inicioDelegado.php"> <span>Grupos de investigacion </span> </a>
+	</li>
 
-	<ul class="nav">
-		<article>
-			<ul class="ul" > <h5>
-					<a class="a" href="listaEstudiantes.php"><font color="black">Estudiantes</font></a>
-					<a class="a" href="listaProfesores.php"><font color="black">Profesores</font></a>
-					<a class="a" href="listaTrabajoDeGrado.php"><font color="black">Trabajo de Grado</font></a>
-					<a class="a" href="listaSolicitudes.php"><font color="black">Solicitudes</font></a>
-					<a class="a" href="listaPropuestas.php"><font color="black">Propuesta class="a"Trabajo de Grado</font></a>
-					<a class="a" href="listaInformesMensuales.php"><font color="black">Informes Mensuales</font></a>
-					<a class="a" href="listarConcepto.php"><font color="black">Conceptos</font></a>
-				</h5>
-			</ul>
-		</article>
-	</ul>
-</nav>
+</ul>
 <?php
 }
+
+?>

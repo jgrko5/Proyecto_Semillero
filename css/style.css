@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	width: 80%;
 	margin: 20px auto 20px auto;
 	background-color: rgb(101,167,57);
-	padding: 10px;
+	padding: 5px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
 	border-radius: 26px;
@@ -128,7 +128,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 .etiqueta {
 	float: left;
 	width: 22%;
-	margin: 5px;
+	margin: 5px 0px 0px 0px;
 	color: #FFFFFF;
 	display: block;
 	padding: 5px 5px 5px 5px;
@@ -151,7 +151,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	padding: 5px;
 	border: 1px solid #d3bb8d;
 	border-radius: 5px;
-	margin: 5px;
+	margin: margin-bottom: 0px;margin-top: 0px;;
 	background: #FFFFFF;
 	color: #333;
 }
@@ -322,26 +322,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	line-height: 1.5;
 	
 }
-.nav{
-	float: left
-}
-.nav .ul {
-         list-style-type:none;
-         margin: 0px;
-         padding: 0px;        
-}
-.nav .ul .li {
-    margin: 5px; padding: 10px; text-transform:capitalize; font-size: 20px;
-}
-.nav .ul .li .a {
-    color:#e34c26;
-    text-decoration: none;
-}
 
-.nav, .ul, .li {
-    margin: 5px; padding: 10px; text-transform:capitalize; font-size: 20px;
-    border-radius: 152px 304px 228px 152px;
-    border-style: solid;
-    border-width: 3px;
-    border-color:#ffffff
-}
+
+
+

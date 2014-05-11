@@ -2,53 +2,19 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
+include_once ("panelDelegados.php");
 getImports();
 ?>
 <body>
-	<div id="izquierdo">
-		<ul id="menu" class="nav">
-			<li class="dash">
-				<a href="../vista/inicioDelegado.php">
-					<span>Inicio</span>
-				</a>
-			</li>
-			<li class="charts">
-				<a href="../vista/inicioDelegado.php">
-					<span>Inicio</span>
-				</a>
-			</li>
-			<li class="charts">
-				<a href="../vista/inicioDelegado.php">
-					<span>Inicio</span>
-				</a>
-			</li>
-			
-		</ul>
-	</div>
-	<div id="main" class="wrapper">
+	
+	<div id="right" class="wrapper">
 		<?php
 		getHeaderStart();
 		?>
-		
-		<nav class="nav">
+		<?php
+	getPanelDelegados();
+	?>
 
-			<ul >
-				<h5>
-					<a href="listaEstudiantes.php">
-						<font color="black">Estudiantes</font>
-					</a></br>
-					<a href="listaProfesores.php">
-						<font color="black">Profesores</font>
-					</a></br>
-					<a href="listaTrabajoDeGrado.php">
-						<font color="black">Trabajo de Grado</font>
-					</a></br>
-					<a href="listaSolicitudes.php">
-						<font color="black">Solicitudes</font>
-					</a>
-					
-			</ul>
-		</nav>
 		<div>
 			<section id="estudiante">
 				<article >
@@ -69,17 +35,21 @@ getImports();
 									<option>Nombre</option>
 								</select>
 							</div>
+							</br>
 
 							<div class="etiqueta">
 								<label>Palabra clave:</label>
 							</div>
 							<div class="componente">
 								<input class="textField" type="text" name="correoEst" required="required" placeholder="Busqueda por C.C., T.I. o Nombre"/>
-								<input class="button" type="submit" value="Buscar" src="/vista/resultadoEstudiantes.php" />
 							</div>
-							</br>
 
 						</center>
+						<div class="componente">
+							<input class="button" type="submit" value="Buscar" src="/vista/resultadoEstudiantes.php" />
+						</div>
+						</br>
+						</br>
 					</div>
 
 				</article>

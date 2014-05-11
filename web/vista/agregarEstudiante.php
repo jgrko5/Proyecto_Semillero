@@ -31,9 +31,8 @@ getImports();
 									<option>Tarjeta de identidad</option>
 								</select>
 							</div>
-
 							</br>
-
+							
 							<div class="etiqueta">
 								<label>Documento:</label>
 							</div>
