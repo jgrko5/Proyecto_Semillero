@@ -121,7 +121,7 @@ p.pclose a {
 .flyoutmenu li ul {
   position:absolute;					/* fixes the flyouts relative to the parent */
   top:5px;										/* offsets the top edge of a sub-menu relative to the parent <li> */
-  left:130px;									/* offsets the left edge of a sub-menu relative to the parent <li> */
+  left:215px;									/* offsets the left edge of a sub-menu relative to the parent <li> */
   visibility:hidden;					/* by default the sub-menu list is HIDDEN if level > 1 */
  
 }

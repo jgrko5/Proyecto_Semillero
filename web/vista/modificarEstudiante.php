@@ -12,16 +12,12 @@ getImports();
 		getPanelSesion();
 		getMenuIzquierdo();
 		?>
-		
 		<div id="contenido">
-			
 			<section id="estudiante" >
 				<article >
-
 					<header>
 						<h6>Modificar datos del estudiante</h6>
 					</header>
-
 					<div id="formulario">
 						<form action="../controlador/modificarEstudiante.php" method="post">
 							<center>
@@ -107,20 +103,17 @@ getImports();
 										<option>Septimo</option>
 										<option>Octavo</option>
 										<option>Noveno</option>
-										<op
-										tion>Decimo</option>
+										<option>Decimo</option>
 									</select>
 								</div>
 								</br>
-								</br>
-
 								<div align="center">
 									<input class="button" type="submit" value="Registrar" />
 								</div>
+								</br>
 							</center>
 						</form>
 					</div>
-
 				</article>
 			</section>
 		</div>
