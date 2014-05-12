@@ -60,7 +60,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgb(101,167,57);
+	background-color: rgba(101,167,57,0.4);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -214,7 +214,6 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 #eventoarticle {
 	
->>>>>>> 9766b66f564800385af53693d59073a044b0062c
 	width: 80%;
 	margin: 80px 0 20px 0px;
 	background-color: rgb(101,167,57);
