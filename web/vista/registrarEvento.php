@@ -17,7 +17,7 @@ getImports();
 			<section id="evento">
 				<article>
 					<header>
-						<h6>Registrar evento</h6>
+						</br><h6>Registrar evento</h6>
 					</header>
 
 					<div id="formulario">

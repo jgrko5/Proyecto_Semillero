@@ -17,7 +17,7 @@ getImports();
 			<section id="estudiante" >
 				<article >
 					<header>
-						<h6>Modificar datos del estudiante</h6>
+						</br><h6>Modificar datos del estudiante</h6>
 					</header>
 					<div id="formulario">
 						<form action="../controlador/modificarEstudiante.php" method="post">

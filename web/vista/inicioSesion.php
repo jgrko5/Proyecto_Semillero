@@ -16,7 +16,7 @@ getImports();
 		<section id="login">
 			<article >
 				<header>
-					<h6>¡Bienvenido!</h6>
+					</br><h6>¡Bienvenido!</h6>
 					<h6><label>Sistema de gestion de semilleros de investigación</label></h6>
 				</header>
 

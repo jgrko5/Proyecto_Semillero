@@ -15,7 +15,7 @@ getImports();
 			<section id="premio">
 				<article>
 					<header>
-						<h6>Registrar premio</h6>
+						</br><h6>Registrar premio</h6>
 					</header>
 					<div id="formulario">
 						<form action="../controlador/agregarEstudiante.php" method="post">

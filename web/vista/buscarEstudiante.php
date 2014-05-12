@@ -16,7 +16,7 @@ getImports();
 			<section id="estudiante">
 				<article>
 					<header>
-						<h6>Buscar estudiante</h6></br>
+					</br><h6>Buscar estudiante</h6>
 					</header>
 					
 					<div id="formulario">

@@ -15,7 +15,7 @@ getImports();
 			<section id="grupo">
 				<article>
 					<header>
-						<h6>Buscar grupo de investigación</h6>
+						</br><h6>Buscar grupo de investigación</h6>
 					</header>
 					<div id="formulario">
 						<form action="../controlador/buscarGrupoInvestigacion.php" method="post">

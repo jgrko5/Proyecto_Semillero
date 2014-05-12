@@ -15,7 +15,7 @@ getImports();
 				<section id="linea">
 					<article>
 						<header>
-				<h6>Actualizar línea investigación</h6></br>
+				</br><h6>Actualizar línea investigación</h6>
 			</header>
 			<div id="formulario">
 				<form action="../controlador/actualizarLineaInvestigacion.php" method="post">

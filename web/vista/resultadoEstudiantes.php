@@ -7,7 +7,7 @@ getImports();
 	<body>
 		<div>
 			<header>
-				<h1>resultadoEstudiantes</h1>
+				</br><h1>resultadoEstudiantes</h1>
 			</header>
 			<nav class="nav">
 				<p>

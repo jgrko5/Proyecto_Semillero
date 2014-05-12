@@ -16,7 +16,7 @@ getImports();
 		<section id="grupo">
 			<article>
 				<header>
-					<h6>Registrar grupo investigacion</h6>
+					</br><h6>Registrar grupo investigacion</h6>
 				</header>
 				<div id="formulario">
 					<form action="../controlador/registrarGrupoInvestigacion.php" method="post">

@@ -15,7 +15,7 @@ getImports();
 			<section id="tutor">
 				<article>
 					<header>
-						<h6>Buscar tutor</h6>
+						</br><h6>Buscar tutor</h6>
 					</header>
 					<div id="formulario">
 						<form action="../controlador/buscarTutor.php" method="post">
