@@ -1,4 +1,5 @@
 <?php
+include_once ("menuDerecho.php");
     function getMenuIzquierdo()
 	{
 
@@ -58,7 +59,10 @@
 </div>
 
 <?php
+getMenuDerecho();
 }
+	
+	
 ?>
 <?php
     function getMenuIzquierdoVice()

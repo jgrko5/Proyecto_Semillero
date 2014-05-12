@@ -103,7 +103,7 @@ getImports();
 									<option>Decimo</option>
 								</select>
 							</div>
-							</br>
+							</br></br>
 
 							<div align="center">
 								<input class="button" type="submit" value="Registrar" />
