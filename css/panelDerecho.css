@@ -1,71 +1,15 @@
-
-
-#layout {
-  position:a;
-  margin-right:auto;
-  width:900px;
-  text-align:center;
-}
-
-h1 {
-	
-  font-size:16pt;
-  font-weight:bold;
-  margin-bottom:0px;
-  margin-top:10px;
-  color:#FFFFFF;
-}
-
-h1 a {
-	
-  color:#FFFFFF;							/* because the h1 is an anchor we don't want it to change colour...*/
-  text-decoration:none;				/* ..or show underlined */
-}
-
-h2 {
-  margin-left:5px;
-  font-size:12pt;
-  fonr-weight:normal;
-  color: #FFFFFF;
-}
-
-.textbox {
-  position:relative;
-  left:180px;
-  width:720px;
-  height:auto;
-	margin-bottom:5px;
-  text-align:left;
-  border:1px #ffffff solid;
-}
-
-p {margin:5px;margin-left:10px;}
-p.inset {margin-left:25px;}
-
-p.pclose {
-  width:700px;
-  text-align:center;
-	margin-top:4px;
-}
-
-p.pclose a {
-  font-weight:bold;
-  color:red;
-  text-decoration:none;
-}
-
 /* THE NAVIGATION MENU STARTS HERE */
-.flyoutmenu {	
+.flyoutmenuDer {	
 	
-	float: left								/* This is the positioning block for the menu */
+	float: left	;							/* This is the positioning block for the menu */
   position:absolute;
   width:160px;
   text-align:left;
 }
 
-.flyoutmenu ul {
-  position:absolute;					/* to the flyoutmenu block */
-  margin: 30 0 0 0;										/* needed to position the sub menus */
+.flyoutmenuDer ul {
+  position:absolute;					/* to the flyoutmenuDer block */
+  margin:0;										/* needed to position the sub menus */
   padding:0;									/* needed to keep the menu tight to the left edge of the block */
   list-style-type:none;				/* no bullets or numbers */
   background-color:#e6e6e6;
@@ -80,7 +24,7 @@ p.pclose a {
 	background: linear-gradient(to top, #000000 0%, #222222 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
 }
 
-.flyoutmenu li {
+.flyoutmenuDer li {
   font-size:12pt;
   font-weight:bold;
   width:200px;
@@ -90,9 +34,9 @@ p.pclose a {
   border-top:0;								/* but only the li at the top (lupper) has a top border */
 }
 
-.flyoutmenu li.lupper {border-top:#5f5f5f 1px solid;}
+.flyoutmenuDer li.lupper {border-top:#5f5f5f 1px solid;}
 
-.flyoutmenu li.mheader {			/* for a header on the menu, if we want one */
+.flyoutmenuDer li.mheader {			/* for a header on the menu, if we want one */
   font-weight:bold;
   font-size:12pt;
   color:black;
@@ -107,18 +51,18 @@ p.pclose a {
 	background: linear-gradient(to top, #43702d 0%, #64a743 50%, #7ebf5e 51%, #7bbd5b 78%, #d6eacc 100%);
 }
 
-.flyoutmenu li a {
+.flyoutmenuDer li a {
   display:block;							/* the link works for the whole width of li, not just the text */
   text-decoration:none;				/* no underline wanted */
   color:#FFFFFF;
 }
 
-.flyoutmenu a:hover {color:#868686;}	    /* fade text when hovering */
-.flyoutmenu li:hover {position:relative;} /* fixes the flyouts relative to the parent */
+.flyoutmenuDer a:hover {color:#868686;}	    /* fade text when hovering */
+.flyoutmenuDer li:hover {position:relative;} /* fixes the flyouts relative to the parent */
 
 /* give the sub levels an absolute positon from top left of the <li> above,
    and hide them until they  are hovered over */
-.flyoutmenu li ul {
+.flyoutmenuDer li ul {
   position:absolute;					/* fixes the flyouts relative to the parent */
   top:5px;										/* offsets the top edge of a sub-menu relative to the parent <li> */
   left:215px;									/* offsets the left edge of a sub-menu relative to the parent <li> */
@@ -127,7 +71,7 @@ p.pclose a {
 }
 
 /* Turn visibility of slide out menu ON when is is hovered - it is set HIDDEN by default above*/
-.flyoutmenu li:hover > ul {visibility:visible;}
+.flyoutmenuDer li:hover > ul {visibility:visible;}
 
 </style>
 

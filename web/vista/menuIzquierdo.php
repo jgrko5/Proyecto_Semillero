@@ -8,7 +8,7 @@
 	<nav>
 	<ul>
 		<li class="mheader">
-			Nombre facultad88
+			Nombre facultad
 		</li>
 		
 		<li>

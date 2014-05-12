@@ -1,6 +1,7 @@
 <?php
 include_once ("panelDelegados.php");
 include_once ("menuIzquierdo.php");
+include_once ("menuDerecho.php");
 
 	function getHeaderStart()
 	{

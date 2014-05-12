@@ -1,7 +1,7 @@
 
 body {
 	font-family: korinna bt;
-	font-size: 40px;
+	font-size: 32px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	background: #FFFFFF;
@@ -45,7 +45,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	font-weight: bold;
 	text-align: center;
 	margin: 5px;
-	font-size: 22px;
+	font-size: 20px;
 }
 
 #estudiante {
@@ -68,6 +68,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	box-shadow: 0px 0px 5px #fff;
 	-webkit-box-shadow: 0px 0px 10px #ccc;
 	-moz-box-shadow: 0px 0px 5px #fff;
+	height: auto;
 	
 }
 #estudiante article header h6 {
@@ -170,6 +171,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	font-size: 22px;
 }
 
+<<<<<<< HEAD
 #evento {
 	width: 100%;
 	-webkit-border-radius: 26px;
@@ -200,6 +202,11 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	margin: 0px;
 	font-size: 22px;
 	
+=======
+h6 h5{
+	margin: margin-bottom: 5px;
+	-webkit-margin-bottom: 4;
+>>>>>>> 304767de6a5b9be405cceee5f8887d35e3d06735
 }
 
 .wrapper {
@@ -428,11 +435,11 @@ section#posts aside {
 }
 
 #contenido {
-  left: 25%;
+  left: 21%;
   overflow: hidden;
   position: relative;
   top: -50;
-  width: 70%;
+  width: 73%;
 }
 
 
