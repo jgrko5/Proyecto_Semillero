@@ -4,57 +4,22 @@
 
 ?>
 
-<div id="indice" class="flyoutmenu" >
+<div id="indice" class="flyoutmenu" style="position: relative;width: 63%" >
 	<nav>
-	<ul>
-		<li class="mheader">
-			Nombre facultad
-		</li>
-		
-		<li>
-			<a href="#"><span>Estudiante</span></a>
-			<ul>
-				<li class="lupper">
-					<a href="agregarEstudiante.php">Registrar</a>
-				</li>
-				<li>
-					<a href="buscarEstudiante.php">Buscar</a>
-				</li>
-				
-			</ul>
-		</li>
-		<li>
-			<a href="#"><span>Evento</span></a>
-		</li>
-		<li>
-			<a href="#"><span>Grupo de investigación</span></a>
-		</li>
-		<li>
-			<a href="#"><span>Materia</span></a>
-		</li>
-		<li>
-			<a href="#"><span>Premio</span></a>
-			<ul>
-				<li class="lupper">
-					<a href="#nolink">Nikon Lenses</a>
-				</li>
-				<li>
-					<a href="#nolink">Canon Lenses</a>
-				</li>
-				<li>
-					<a href="#nolink">Sigma Lenses</a>
-				</li>
-			</ul>
-		</li>
-		<li>
-			<a href="#"><span>Proyecto de investigación</span></a>
-		</li>
-		<li class="last">
-			<a href="#"><span>Tutor</span></a>
-		</li>
-		
-	</ul>
-</nav>
+		<ul style="left: 127%; float: right">
+			<li class="mheader">
+				Nombre facultad
+			</li>
+
+			<li>
+				<embed src=http://flash-clocks.com/free-flash-clocks-blog-topics/free-flash-clock-183.swf width=200 height=200
+				wmode=transparent type=application/x-shockwave-flash>
+				</embed>
+
+			</li>
+
+		</ul>
+	</nav>
 </div>
 
 <?php
