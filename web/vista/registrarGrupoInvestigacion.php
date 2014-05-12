@@ -28,7 +28,7 @@ getImports();
 							
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el código"/>
-							</div></br></br>
+							</div></br>
 							
 							
 							<div class="etiqueta">
@@ -37,7 +37,7 @@ getImports();
 							
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el nombre"/>
-							</div></br></br>
+							</div></br>
 							
 							
 							<div class="etiqueta">
@@ -46,7 +46,7 @@ getImports();
 							
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese la clasificación"/>
-							</div></br></br>
+							</div></br>
 							
 							
 							<div class="etiqueta">
@@ -55,7 +55,7 @@ getImports();
 							
 							<div class="componente">
 								<input type="date" class="textField"/>
-							</div></br></br>
+							</div></br>
 							
 							
 							<div class="etiqueta">
@@ -65,7 +65,7 @@ getImports();
 							
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese la facultad"/>
-							</div></br></br>
+							</div></br>
 							
 			
 				<div aling="center">

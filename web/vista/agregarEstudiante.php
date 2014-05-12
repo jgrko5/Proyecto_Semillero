@@ -25,7 +25,7 @@ getImports();
 							</br>
 							<div class="componente">
 								<select class="select" title="Tipo de documento">
-									<option>Cedula de ciudadania</option>
+									<option>Cédula de ciudadania</option>
 									<option>Tarjeta de identidad</option>
 								</select>
 							</div>
@@ -102,7 +102,8 @@ getImports();
 									<option>Decimo</option>
 								</select>
 							</div>
-							</br></br>
+							</br>
+							</br>
 
 							<div align="center">
 								<input class="button" type="submit" value="Registrar" />

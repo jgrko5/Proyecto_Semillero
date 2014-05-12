@@ -26,7 +26,7 @@ getImports();
 								<label>Nombre:</label>
 							</div></br>
 							<div class="componente">
-								<input class="textfield" type="text"name="te" placeholder="Ingrese el nommbre"/>
+								<input class="textfield" type="text"name="te" placeholder="Ingrese el nombre"/>
 							</div>
 
 							<div class="etiqueta">

@@ -29,7 +29,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 #login article {
 	width: 60%;
 	margin: 70px auto 70px auto;
-	background-color: rgb(101,167,57);
+	background-color: rgba(101,167,57,0.4);
 	padding: 10px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -40,7 +40,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 }
 
 #login article header h6 {
-	color: #ffffff;
+	color: #000000;
 	font-weight: bold;
 	text-align: center;
 	margin: 5px;
@@ -70,7 +70,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 }
 #estudiante article header h6 {
 	left: 80%;
-	color: #ffffff;
+	color: #000000;
 	font-weight: bold;
 	text-align: center;
 	margin: 0px;
@@ -88,7 +88,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgb(101,167,57);
+	background-color: rgba(101,167,57,0.4);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -99,7 +99,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 }
 #tutor article header h6 {
 	left: 80%;
-	color: #ffffff;
+	color: #000000;
 	font-weight: bold;
 	text-align: center;
 	margin: 0px;
@@ -115,7 +115,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgb(101,167,57);
+	background-color: rgba(101,167,57,0.4);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -127,7 +127,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 #proyecto article header h6 {
 
 	left: 80%;
-	color: #ffffff;
+	color: #000000;
 	font-weight: bold;
 	text-align: center;
 	margin: 0px;
@@ -144,7 +144,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgb(101,167,57);
+	background-color: rgba(101,167,57,0.4);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -152,20 +152,19 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	box-shadow: 0px 0px 5px #fff;
 	-webkit-box-shadow: 0px 0px 10px #ccc;
 	-moz-box-shadow: 0px 0px 5px #fff;
+	height: auto;
 }
 #grupo article header h6 {
 
 	left: 80%;
-	color: #ffffff;
+	color: #000000;
 	font-weight: bold;
 	text-align: center;
 	margin: 0px;
 	font-size: 22px;
 }
 
-#linea {
 
-}
 #evento {
 	width: 100%;
 	-webkit-border-radius: 26px;
@@ -173,7 +172,8 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	border-radius: 26px;
 }
 
-#linea {
+#linea
+ {
 	width: 100%;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -183,7 +183,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgb(101,167,57);
+	background-color: rgba(101,167,57,0.4);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -195,7 +195,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 #linea article header h6 {
 
 	left: 80%;
-	color: #ffffff;
+	color: #000000;
 	font-weight: bold;
 	text-align: center;
 	margin: 0px;
@@ -206,7 +206,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgb(101,167,57);
+	background-color: rgba(101,167,57,0.4);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -221,7 +221,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 #evento article header h6 {>>>>>>> 9766b66f564800385af53693d59073a044b0062c
 	left: 80%;
-	color: #ffffff;
+	color: #000000;
 	font-weight: bold;
 	text-align: center;
 	margin: 0px;
@@ -239,7 +239,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgb(101,167,57);
+	background-color: rgba(101,167,57,0.4);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -251,7 +251,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 }
 #premio article header h6 {
 	left: 80%;
-	color: #ffffff;
+	color: #000000;
 	font-weight: bold;
 	text-align: center;
 	margin: 0px;
@@ -289,7 +289,7 @@ h6 h5 {
 .etiqueta {
 	float: left;
 	width: 100%;
-	color: #FFFFFF;
+	color: #000000;
 	display: block;
 	padding: 5px 5px 5px 5px;
 	font-size: 15px;
@@ -385,7 +385,7 @@ h6 h5 {
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
 	border: 2px solid #4b8f29;
-	color: #ffffff;
+	color: #000000;
 	font-size: 15;
 	font-weight: bold;
 	font-family: korinna bt;
