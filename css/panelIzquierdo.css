@@ -92,15 +92,15 @@ p.pclose a {
   width:200px;
   padding:8px;
   text-align:left;
-  border-top:0;								/* but only the li at the top (lupper) has a top border */
+  border-top:0;	
+  							/* but only the li at the top (lupper) has a top border */
 }
 
-.flyoutmenu li.lupper {border-top:#5f5f5f 1px solid;}
 
 .flyoutmenu li.mheader {			/* for a header on the menu, if we want one */
   font-weight:bold;
   font-size:12pt;
-  color:black;
+  color:black;	
   /*border-top:#737373 1px solid;*/
   background: #64a743;
 	/* Old browsers */
@@ -125,10 +125,29 @@ p.pclose a {
    and hide them until they  are hovered over */
 .flyoutmenu li ul {
   position:absolute;					/* fixes the flyouts relative to the parent */
-  top:5px;										/* offsets the top edge of a sub-menu relative to the parent <li> */
   left:215px;									/* offsets the left edge of a sub-menu relative to the parent <li> */
   visibility:hidden;					/* by default the sub-menu list is HIDDEN if level > 1 */
  
+ 
+	
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:26px;
+	-moz-border-radius-topright:26px;
+	border-top-right-radius:26px;
+	-webkit-border-bottom-right-radius:26px;
+	-moz-border-radius-bottomright:26px;
+	border-bottom-right-radius:26px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 5px #fff;
+	-webkit-box-shadow: 0px 0px 10px #ccc;
+	-moz-box-shadow: 0px 0px 5px #fff;
+	margin: margin-top: -40;;
+	
 }
 
 /* Turn visibility of slide out menu ON when is is hovered - it is set HIDDEN by default above*/

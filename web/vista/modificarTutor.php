@@ -21,14 +21,6 @@ getImports();
 						<form action="../controlador/modificarTutor.php" method="post">
 							<center>
 								<div class="etiqueta">
-									<label>Documento:</label>
-								</div></br>
-
-								<div class="componente">
-									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el documento" />
-								</div></br></br>
-
-								<div class="etiqueta">
 									<label>Nombre:</label>
 								</div></br>
 

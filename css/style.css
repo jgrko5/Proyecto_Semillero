@@ -171,16 +171,50 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	font-size: 22px;
 }
 
+<<<<<<< HEAD
+#linea {
+=======
 #evento {
+>>>>>>> 9766b66f564800385af53693d59073a044b0062c
 	width: 100%;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
 	border-radius: 26px;
-	
+<<<<<<< HEAD
 }
+	#linea {
+		width: 100%;
+		-webkit-border-radius: 26px;
+		-moz-border-radius: 26px;
+		border-radius: 26px;
+	}
+	#linea article {
+	
+		width: 80%;
+		margin: 80px 0 20px 0px;
+		background-color: rgb(101,167,57);
+		padding: 0px;
+		-webkit-border-radius: 26px;
+		-moz-border-radius: 26px;
+		border-radius: 26px;
+		box-shadow: 0px 0px 5px #fff;
+		-webkit-box-shadow: 0px 0px 10px #ccc;
+		-moz-box-shadow: 0px 0px 5px #fff;
+	}
+	#linea article header h6 {
+	
+		left:80%;
+		color: #ffffff;
+		font-weight: bold;
+		text-align: center;
+		margin: 0px;
+		font-size: 22px;
+	}
+
 
 #eventoarticle {
 	
+>>>>>>> 9766b66f564800385af53693d59073a044b0062c
 	width: 80%;
 	margin: 80px 0 20px 0px;
 	background-color: rgb(101,167,57);
@@ -191,19 +225,29 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	box-shadow: 0px 0px 5px #fff;
 	-webkit-box-shadow: 0px 0px 10px #ccc;
 	-moz-box-shadow: 0px 0px 5px #fff;
+<<<<<<< HEAD
+}
+#linea article header h6 {
+
+=======
 	height: auto;
 	
 }
 #evento article header h6 {
+>>>>>>> 9766b66f564800385af53693d59073a044b0062c
 	left:80%;
 	color: #ffffff;
 	font-weight: bold;
 	text-align: center;
 	margin: 0px;
 	font-size: 22px;
+<<<<<<< HEAD
+}
+=======
 	
 }
 
+<<<<<<< HEAD
 #premio {
 	width: 100%;
 	-webkit-border-radius: 26px;
@@ -237,6 +281,9 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	
 }
 
+=======
+>>>>>>> 9766b66f564800385af53693d59073a044b0062c
+>>>>>>> 93053dfb489fa20c44298402e287ee80156a3f62
 h6 h5{
 	margin: margin-bottom: 5px;
 	-webkit-margin-bottom: 4;
@@ -290,7 +337,7 @@ h6 h5{
 .select {
 	font-size: 15;
 	display: block;
-	width: 80%;
+	width: 90%;
 	height: 30px;
 	padding: 0px;
 	border: 1px solid #d3bb8d;
@@ -302,7 +349,7 @@ h6 h5{
 .textfield {
 	font-size: 15;
 	display: block;
-	width: 80%;
+	width: 90%;
 	height: 30px;
 	padding: 5px;
 	border: 1px solid #d3bb8d;
@@ -322,7 +369,7 @@ h6 h5{
 .password {
 	font-size: 15;
 	display: block;
-	width: 50%;
+	width: 90%;
 	height: 30px;
 	padding: 5px;
 	border: 1px solid #d3bb8d;

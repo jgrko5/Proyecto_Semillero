@@ -12,13 +12,13 @@ getImports();
 		getMenuIzquierdo();
 		?>
 		<div id="contenido">
-			<section id="grupo">
+			<section id="linea">
 				<article>
 					<header>
-						<h6>Buscar grupo de investigación</h6>
+						<h6>Buscar línea de investigación</h6></br>
 					</header>
 					<div id="formulario">
-						<form action="../controlador/buscarGrupoInvestigacion.php" method="post">
+						<form action="../controlador/buscarLineaInvestigacion.php" method="post">
 							<center>
 								<div class="etiqueta">
 									<label>Ingrese el código</label>
@@ -27,12 +27,11 @@ getImports();
 								<div class="componente">
 									<input class="textfield" type="text" name="tipo" required="required" placeholder="Código" />
 								</div>
-
 								<div align="center">
 									<input class="button" type="submit" value="Buscar"/>
 								</div></br>
 								<header>
-									<h2>Grupos de investigación</h2>
+									<h1>Líneas de investigación</h1>
 								</header>
 
 								<div class="tabla">
@@ -49,6 +48,9 @@ getImports();
 					</div>
 				</article>
 			</section>
+		</div>
+		<div>
+
 		</div>
 	</div>
 </body>
