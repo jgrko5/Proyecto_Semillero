@@ -26,6 +26,15 @@ include_once ("menuDerecho.php");
 		</li>
 		<li>
 			<a href="#"><span>Evento</span></a>
+			<ul>
+				<li class="lupper">
+					<a href="registrarEvento.php">Registrar</a>
+				</li>
+				<li>
+					<a href="#">Asignar</a>
+				</li>
+				
+			</ul>
 		</li>
 		<li>
 			<a href="#"><span>Grupo de investigación</span></a>

@@ -1,4 +1,3 @@
-
 body {
 	font-family: korinna bt;
 	font-size: 32px;
@@ -53,11 +52,10 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
 	border-radius: 26px;
-	
 }
 
 #estudiante article {
-	
+
 	width: 80%;
 	margin: 80px 0 20px 0px;
 	background-color: rgba(101,167,57,0.4);
@@ -69,16 +67,14 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	-webkit-box-shadow: 0px 0px 10px #ccc;
 	-moz-box-shadow: 0px 0px 5px #fff;
 	height: auto;
-	
 }
 #estudiante article header h6 {
-	left:80%;
+	left: 80%;
 	color: #ffffff;
 	font-weight: bold;
 	text-align: center;
 	margin: 0px;
 	font-size: 22px;
-	
 }
 
 #tutor {
@@ -86,11 +82,10 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
 	border-radius: 26px;
-	
 }
 
 #tutor article {
-	
+
 	width: 80%;
 	margin: 80px 0 20px 0px;
 	background-color: rgb(101,167,57);
@@ -101,16 +96,14 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	box-shadow: 0px 0px 5px #fff;
 	-webkit-box-shadow: 0px 0px 10px #ccc;
 	-moz-box-shadow: 0px 0px 5px #fff;
-	
 }
 #tutor article header h6 {
-	left:80%;
+	left: 80%;
 	color: #ffffff;
 	font-weight: bold;
 	text-align: center;
 	margin: 0px;
 	font-size: 22px;
-	
 }
 #proyecto {
 	width: 100%;
@@ -133,13 +126,12 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 }
 #proyecto article header h6 {
 
-	left:80%;
+	left: 80%;
 	color: #ffffff;
 	font-weight: bold;
 	text-align: center;
 	margin: 0px;
 	font-size: 22px;
-	
 }
 
 #grupo {
@@ -163,7 +155,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 }
 #grupo article header h6 {
 
-	left:80%;
+	left: 80%;
 	color: #ffffff;
 	font-weight: bold;
 	text-align: center;
@@ -171,49 +163,24 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	font-size: 22px;
 }
 
-<<<<<<< HEAD
 #linea {
-=======
+
+}
 #evento {
->>>>>>> 9766b66f564800385af53693d59073a044b0062c
 	width: 100%;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
 	border-radius: 26px;
-<<<<<<< HEAD
 }
-	#linea {
-		width: 100%;
-		-webkit-border-radius: 26px;
-		-moz-border-radius: 26px;
-		border-radius: 26px;
-	}
-	#linea article {
-	
-		width: 80%;
-		margin: 80px 0 20px 0px;
-		background-color: rgb(101,167,57);
-		padding: 0px;
-		-webkit-border-radius: 26px;
-		-moz-border-radius: 26px;
-		border-radius: 26px;
-		box-shadow: 0px 0px 5px #fff;
-		-webkit-box-shadow: 0px 0px 10px #ccc;
-		-moz-box-shadow: 0px 0px 5px #fff;
-	}
-	#linea article header h6 {
-	
-		left:80%;
-		color: #ffffff;
-		font-weight: bold;
-		text-align: center;
-		margin: 0px;
-		font-size: 22px;
-	}
 
+#linea {
+	width: 100%;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+}
+#linea article {
 
-#eventoarticle {
-	
 	width: 80%;
 	margin: 80px 0 20px 0px;
 	background-color: rgb(101,167,57);
@@ -224,39 +191,52 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	box-shadow: 0px 0px 5px #fff;
 	-webkit-box-shadow: 0px 0px 10px #ccc;
 	-moz-box-shadow: 0px 0px 5px #fff;
-<<<<<<< HEAD
 }
 #linea article header h6 {
 
-=======
-	height: auto;
-	
-}
-#evento article header h6 {
->>>>>>> 9766b66f564800385af53693d59073a044b0062c
-	left:80%;
+	left: 80%;
 	color: #ffffff;
 	font-weight: bold;
 	text-align: center;
 	margin: 0px;
 	font-size: 22px;
-<<<<<<< HEAD
-}
-=======
-	
 }
 
-<<<<<<< HEAD
+#evento article {
+
+	width: 80%;
+	margin: 80px 0 20px 0px;
+	background-color: rgb(101,167,57);
+	padding: 0px;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+	box-shadow: 0px 0px 5px #fff;
+	-webkit-box-shadow: 0px 0px 10px #ccc;
+	-moz-box-shadow: 0px 0px 5px #fff;<<<<<<< HEAD
+}
+#linea article header h6 {=======
+	height: auto;
+}
+
+#evento article header h6 {>>>>>>> 9766b66f564800385af53693d59073a044b0062c
+	left: 80%;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	margin: 0px;
+	font-size: 22px;
+}
+
 #premio {
 	width: 100%;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
 	border-radius: 26px;
-	
 }
 
 #premio article {
-	
+
 	width: 80%;
 	margin: 80px 0 20px 0px;
 	background-color: rgb(101,167,57);
@@ -268,23 +248,18 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	-webkit-box-shadow: 0px 0px 10px #ccc;
 	-moz-box-shadow: 0px 0px 5px #fff;
 	height: auto;
-	
 }
 #premio article header h6 {
-	left:80%;
+	left: 80%;
 	color: #ffffff;
 	font-weight: bold;
 	text-align: center;
 	margin: 0px;
 	font-size: 22px;
-	
 }
 
-=======
->>>>>>> 9766b66f564800385af53693d59073a044b0062c
->>>>>>> 93053dfb489fa20c44298402e287ee80156a3f62
-h6 h5{
-	margin: margin-bottom: 5px;
+h6 h5 {
+	margin: margin-bottom : 5px;
 	-webkit-margin-bottom: 4;
 }
 
@@ -309,8 +284,7 @@ h6 h5{
 	margin: 0px;
 	background: #FFFFFF;
 	color: #333;
-	resize:none;
-
+	resize: none;
 }
 .etiqueta {
 	float: left;
@@ -319,18 +293,18 @@ h6 h5{
 	display: block;
 	padding: 5px 5px 5px 5px;
 	font-size: 15px;
-	text-align:left;
+	text-align: left;
 	margin: 20px;
 	margin-bottom: 0;
 }
 
 .componente {
-	
+
 	float: left;
 	width: 60%;
 	margin: 0 0 0 20;
 	display: block;
-	text-align:left;
+	text-align: left;
 }
 
 .select {
@@ -520,16 +494,15 @@ section#posts aside {
 }
 
 #indice {
-	
-  position: absolute;
+
+	position: absolute;
 }
 
 #contenido {
-  left: 21%;
-  overflow: hidden;
-  position: relative;
-  top: -50;
-  width: 73%;
+	left: 21%;
+	overflow: hidden;
+	position: relative;
+	top: -50;
+	width: 73%;
 }
-
 
