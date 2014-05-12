@@ -18,18 +18,17 @@ getImports();
 				<article>
 
 					<header>
-						<h6>Registrar proyecto</h6></br>
+						<h6>Registrar proyecto</h6>
 					</header>
 
 					<div id="formulario">
 						<form action="../controlador/registrarProyecto.php" method="post">
-							<center>
 								<div class="etiqueta">
 									<label>Código:</label>
-								</div></br>
+								</div>
 								<div class="componente">
 									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el código"/>
-								</div></br>
+								</div>
 
 								<div class="etiqueta">
 									<label>Título:</label>
@@ -55,12 +54,11 @@ getImports();
 								</div></br>
 								<div class="componente">
 									<input type="date" class="textField"/>
-								</div></br>
+								</div>
 					</div></br>
 					<div align="center">
 						<input class="button" type="submit" value="Registrar"/>
 					</div></br>
-					</center>
 					</form>
 		</div>
 		</article>

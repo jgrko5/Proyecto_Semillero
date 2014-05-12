@@ -26,15 +26,15 @@ getImports();
 
 								<div class="componente">
 									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el documento" />
-								</div></br></br>
+								</div></br>
 
 								<div class="etiqueta">
 									<label>Nombre:</label>
-								</div></br>
+								</div>
 
 								<div class="componente">
 									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el nombre" />
-								</div></br></br>
+								</div></br>
 
 								<div class="etiqueta">
 									<label>Apellidos:</label>
@@ -42,7 +42,7 @@ getImports();
 
 								<div class="componente">
 									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese los apellidos" />
-								</div></br></br>
+								</div></br>
 
 								<div class="etiqueta">
 									<label>Género:</label>
@@ -50,7 +50,7 @@ getImports();
 
 								<div class="componente">
 									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el género" />
-								</div></br></br>
+								</div></br>
 
 								<div class="etiqueta">
 									<label>Categoría:</label>
@@ -58,7 +58,7 @@ getImports();
 
 								<div class="componente">
 									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese la categoría" />
-								</div></br></br>
+								</div></br>
 
 								<div class="etiqueta">
 									<label>Grupo de investigación:</label>
@@ -66,7 +66,7 @@ getImports();
 
 								<div class="componente">
 									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el grupo de investigación" />
-								</div></br></br>
+								</div></br>
 								
 								<div align="center">
 									<input class="button" type="sumit" value="Actualizar" />
