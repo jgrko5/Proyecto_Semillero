@@ -43,7 +43,7 @@ getImports();
 							<div class="componente">
 								<input class="textfield" type="text"name="te" placeholder="Ingrese el año"/>
 							</div>
-							<br/>
+							<br/></br>
 
 					</div>
 					<div align="center">
