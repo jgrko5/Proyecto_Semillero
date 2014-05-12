@@ -19,7 +19,6 @@ getImports();
 					</header>
 					<div id="formulario">
 						<form action="../controlador/agregarEstudiante.php" method="post">
-							<center>
 							<div class="etiqueta">
 								<label>Tipo de documento:</label>
 							</div>
@@ -109,7 +108,6 @@ getImports();
 								<input class="button" type="submit" value="Registrar" />
 							</div>
 							</br>
-							</center>
 						</form>
 					</div>
 				</article>

@@ -179,7 +179,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	
 }
 
-#evento article {
+#eventoarticle {
 	
 	width: 80%;
 	margin: 80px 0 20px 0px;
@@ -195,6 +195,39 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	
 }
 #evento article header h6 {
+	left:80%;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	margin: 0px;
+	font-size: 22px;
+	
+}
+
+#premio {
+	width: 100%;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+	
+}
+
+#premio article {
+	
+	width: 80%;
+	margin: 80px 0 20px 0px;
+	background-color: rgb(101,167,57);
+	padding: 0px;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+	box-shadow: 0px 0px 5px #fff;
+	-webkit-box-shadow: 0px 0px 10px #ccc;
+	-moz-box-shadow: 0px 0px 5px #fff;
+	height: auto;
+	
+}
+#premio article header h6 {
 	left:80%;
 	color: #ffffff;
 	font-weight: bold;
@@ -220,6 +253,17 @@ h6 h5{
 }
 
 .textArea {
+	font-size: 15;
+	display: block;
+	width: 80%;
+	height: 100px;
+	padding: 5px;
+	border: 1px solid #d3bb8d;
+	border-radius: 5px;
+	margin: 0px;
+	background: #FFFFFF;
+	color: #333;
+	resize:none;
 
 }
 .etiqueta {
