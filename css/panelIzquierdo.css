@@ -36,7 +36,6 @@ h2 {
   height:auto;
 	margin-bottom:5px;
   text-align:left;
-  border:1px #ffffff solid;
 }
 
 p {margin:5px;margin-left:10px;}
@@ -61,6 +60,7 @@ p.pclose a {
   position:absolute;
   width:160px;
   text-align:left;
+  
 }
 
 .flyoutmenu ul {
@@ -78,6 +78,12 @@ p.pclose a {
 	background: -o-linear-gradient(bottom, #000000 0%, #222222 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
 	background: -ms-linear-gradient(bottom, #000000 0%, #222222 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
 	background: linear-gradient(to top, #000000 0%, #222222 50%, #3c3c3c 51%, #393939 78%, #888888 100%);
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 5px #fff;
+	-webkit-box-shadow: 0px 0px 10px #ccc;
+	-moz-box-shadow: 0px 0px 5px #fff;
 }
 
 .flyoutmenu li {
@@ -86,7 +92,6 @@ p.pclose a {
   width:200px;
   padding:8px;
   text-align:left;
-  border:#737373 1px solid;		/* a little outline might be nice */
   border-top:0;								/* but only the li at the top (lupper) has a top border */
 }
 
@@ -96,7 +101,7 @@ p.pclose a {
   font-weight:bold;
   font-size:12pt;
   color:black;
-  border-top:#737373 1px solid;
+  /*border-top:#737373 1px solid;*/
   background: #64a743;
 	/* Old browsers */
 
