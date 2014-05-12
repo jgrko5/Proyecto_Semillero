@@ -1,7 +1,7 @@
 
 body {
 	font-family: korinna bt;
-	font-size: 32px;
+	font-size: 40px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	background: #FFFFFF;
@@ -45,7 +45,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	font-weight: bold;
 	text-align: center;
 	margin: 5px;
-	font-size: 20px;
+	font-size: 22px;
 }
 
 #estudiante {
@@ -435,11 +435,11 @@ section#posts aside {
 }
 
 #contenido {
-  left: 21%;
+  left: 25%;
   overflow: hidden;
   position: relative;
   top: -50;
-  width: 73%;
+  width: 70%;
 }
 
 

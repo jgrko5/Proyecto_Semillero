@@ -11,7 +11,6 @@ getImports();
 		getHeaderStart();
 		getPanelSesion();
 		getMenuIzquierdo();
-		getMenuDerecho();
 		?>
 		<div id="contenido">
 			<section id="estudiante" >
@@ -108,7 +107,6 @@ getImports();
 									</select>
 								</div>
 								</br>
-								</br>
 								<div align="center">
 									<input class="button" type="submit" value="Registrar" />
 								</div>
@@ -119,9 +117,7 @@ getImports();
 				</article>
 			</section>
 		</div>
-		<?php
 		
-		?>
 
 		<footer>
 			<?php

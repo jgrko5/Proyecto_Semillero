@@ -65,7 +65,7 @@ p.pclose a {
 
 .flyoutmenu ul {
   position:absolute;					/* to the flyoutmenu block */
-  margin: 30 0 0 0;										/* needed to position the sub menus */
+  margin:0;										/* needed to position the sub menus */
   padding:0;									/* needed to keep the menu tight to the left edge of the block */
   list-style-type:none;				/* no bullets or numbers */
   background-color:#e6e6e6;
