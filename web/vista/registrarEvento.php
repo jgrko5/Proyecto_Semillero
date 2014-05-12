@@ -11,6 +11,7 @@ getImports();
 		getHeaderStart();
 		getPanelSesion();
 		getMenuIzquierdo();
+		getMenuDerecho();
 		?>
 		<div id="contenido">
 
