@@ -20,15 +20,6 @@ getMenuIzquierdo();
 				<div id="formulario">
 					<form action="../controlador/modificarGrupoInvestigacion.php" method="post">
 						<center>
-							
-								<div class="etiqueta">
-									<label>Código:</label>
-								</div></br>
-							
-							<div class="componente">
-								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el código"/>
-							</div></br></br>
-							
 								<div class="etiqueta">
 									<label>Nombre:</label>
 								</div></br>
