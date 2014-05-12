@@ -171,6 +171,39 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	font-size: 22px;
 }
 
+#evento {
+	width: 100%;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+	
+}
+
+#evento article {
+	
+	width: 80%;
+	margin: 80px 0 20px 0px;
+	background-color: rgb(101,167,57);
+	padding: 0px;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+	box-shadow: 0px 0px 5px #fff;
+	-webkit-box-shadow: 0px 0px 10px #ccc;
+	-moz-box-shadow: 0px 0px 5px #fff;
+	height: auto;
+	
+}
+#evento article header h6 {
+	left:80%;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	margin: 0px;
+	font-size: 22px;
+	
+}
+
 h6 h5{
 	margin: margin-bottom: 5px;
 	-webkit-margin-bottom: 4;
