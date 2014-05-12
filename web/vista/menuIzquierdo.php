@@ -40,7 +40,7 @@ include_once ("menuDerecho.php");
 				<a href="#"><span>Grupo de investigación</span></a>
 				<ul>
 					<li class="lupper">
-						<a href="registrarGrupoInvestigacion.php">Actualizar</a>
+						<a href="actualizarGrupoInvestigacion.php">Actualizar</a>
 					</li>
 					<li>
 						<a href="buscarGrupoInvestigacion.php">Buscar</a>
@@ -58,21 +58,31 @@ include_once ("menuDerecho.php");
 				<a href="#"><span>Premio</span></a>
 				<ul>
 					<li class="lupper">
-						<a href="#nolink">Nikon Lenses</a>
-					</li>
-					<li>
-						<a href="#nolink">Canon Lenses</a>
-					</li>
-					<li>
-						<a href="#nolink">Sigma Lenses</a>
+						<a href="registrarPremio.php">Registrar</a>
 					</li>
 				</ul>
 			</li>
 			<li>
 				<a href="#"><span>Proyecto de investigación</span></a>
+				<ul>
+					<li class="lupper">
+						<a href="actualizarProyecto.php">Actualizar</a>
+					</li>
+					<li>
+						<a href="registrarProyecto.php">Registrar</a>
+					</li>
+				</ul>
 			</li>
 			<li class="last">
 				<a href="#"><span>Tutor</span></a>
+				<ul>
+					<li class="lupper">
+						<a href="buscarTutor.php">Buscar</a>
+					</li>
+					<li>
+						<a href="registrarTutor.php">Registrar</a>
+					</li>
+				</ul>
 			</li>
 
 		</ul>

@@ -18,7 +18,7 @@ getImports();
 				<article>
 
 					<header>
-						<h6>Registrar proyecto</h6></br>
+						<h6>Registrar proyecto</h6>
 					</header>
 
 					<div id="formulario">
