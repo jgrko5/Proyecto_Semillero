@@ -115,8 +115,8 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgba(101,167,57,0.4);
 	padding: 0px;
+	background-color: rgba(101,167,57,0.4);
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
 	border-radius: 26px;
@@ -506,3 +506,150 @@ section#posts aside {
 	width: 73%;
 }
 
+/*
+ * ----------------------------------------------------------------------------------------------------------------------------------
+ * -------------------------------------------------------------FOOTER---------------------------------------------------------------
+ * ----------------------------------------------------------------------------------------------------------------------------------
+ */
+
+#contenedorFooter
+{
+	
+	width: 100%;
+	background-color: rgba(101,167,57,0.4);
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+	box-shadow: 0px 0px 5px #fff;
+	-webkit-box-shadow: 0px 0px 10px #ccc;
+	-moz-box-shadow: 0px 0px 5px #fff; 
+	display: inline-block;
+}
+
+.panelFooter
+{
+	width: 100%;
+	float: left;
+}
+
+.itemPanelFooter
+{
+	width: 24%;
+	margin: auto;
+}
+
+.itemPanelFooter h3
+{
+	color: #000000;
+}
+
+.itemPanelFooter h3:hover
+{
+	color: #000000;
+}
+
+.itemPanelFooter p a
+{
+	text-decoration: none;
+	color:#000000;
+}
+
+.itemPanelFooter p a:hover
+{
+	color: #000000;
+}
+
+.itemPanelFooter  .imgItemPanelFoter 
+{
+	float:left;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+.itemPanelFooter .enlace 
+{
+	text-decoration: none;
+}
+
+.itemPanelFooter  .enlace .textItemPanelFooter:hover
+{
+	color: #000000;
+}
+
+.itemPanelFooter  .textItemPanelFooter 
+{
+	color: #000000;
+}
+
+.itemPanelFooter  .imgItemPanelFoter img
+{
+	width: 100%;
+}
+
+#subFooter
+{
+	width: 100%;
+	background: #333;
+	margin-top:5px;
+	display: inline-block;
+}
+
+.itemSubFooter
+{
+	width: 5%;
+	float: left;
+	padding: 5px 10px 5px 10px;
+}
+
+.itemSubFooter p
+{
+	color: #CCC;
+}
+
+.itemSubFooter #logoSubFooter
+{
+	float:left;
+	width: 200px;
+}
+
+@media screen and (max-width:820px)
+{
+	#panelFooterServiciosHide
+	{
+		display: none;
+	}
+	
+	#panelFooterNosotrosHide
+	{
+		display: none;
+	}
+	
+	.panelFooter
+	{
+		float: none;
+		width: 90%;
+		margin:auto;
+		text-align: left;
+	}
+	
+	.itemSubFooter
+	{
+		width: 80%;
+		float: none;
+		margin:auto;
+		padding: 5px 10px 5px 10px;
+	}
+	
+	.itemSubFooter p
+	{
+		text-align: left;
+	}
+	
+	.itemSubFooter #logoSubFooter
+	{
+		float: none;
+		width: 200px;
+		margin:auto,
+	}
+}
