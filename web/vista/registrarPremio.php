@@ -47,13 +47,10 @@ getImports();
 					</div>
 
 					</form>
-		</div>
 		</article>
 		</section>
-		<?php
-		getFooter();
-		?>
-	</div>
+		</div>
+		<?php getFooter(); ?>
 	</div>
 </body>
 </html>

@@ -46,10 +46,10 @@ getImports();
 					</div>
 				</article>
 			</section>
-			<?php
-			getFooter();
-			?>
 		</div>
+<?php
+getFooter();
+		?>
 
 	</div>
 </body>

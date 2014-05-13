@@ -48,13 +48,11 @@ getImports();
 					</div>
 				</article>
 			</section>
+		</div>
 			<?php
 			getFooter();
 			?>
-		</div>
-		<div>
-
-		</div>
+		
 	</div>
 </body>
 </html>
