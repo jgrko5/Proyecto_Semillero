@@ -16,7 +16,7 @@ include_once ("menuDerecho.php");
 				<a href="#"><span>Estudiante</span></a>
 				<ul>
 					<li class="lupper">
-						<a href="agregarEstudiante.php">Registrar</a>
+						<a href="registrarEstudiante.php">Registrar</a>
 					</li>
 					<li>
 						<a href="buscarEstudiante.php">Buscar</a>
