@@ -118,9 +118,14 @@ getImports();
 					</div>
 				</article>
 			</section>
-			<?php
-			getFooter();
-			?>
+<<<<<<< HEAD
+=======
+		</div>
+		<?php
+		getFooter();
+		?>
+
+		
 		</div>
 	</div>
 </body>

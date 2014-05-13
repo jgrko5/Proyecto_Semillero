@@ -36,25 +36,24 @@ getImports();
 								<textarea rows="3" cols="5" class="textArea" type="text" name="observaciones" >
 									</textarea>
 							</div>
-							<br/><br/><br/><br/>
-							
+							<br/>
+							<br/>
+							<br/>
+							<br/>
+
 							<div align="center">
 								<input class="button" type="submit" value="Registrar" />
 							</div></br>
-							</div>
-							
-						</form>
 					</div>
-				</article>
-			</section>
 
+					</form>
 		</div>
+		</article>
+		</section>
+		<?php
+		getFooter();
+		?>
 	</div>
-	<div>
-		<div>
-
-		</div>
-
 	</div>
 </body>
 </html>
