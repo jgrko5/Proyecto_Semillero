@@ -59,7 +59,7 @@ getImports();
 								<div class="componente">
 									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el grupo de investigación" />
 								</div></br></br>
-								
+
 								<div align="center">
 									<input class="button" type="sumit" value="Actualizar" />
 								</div></br>
@@ -68,6 +68,9 @@ getImports();
 					</div>
 				</article>
 			</section>
+			<?php
+			getFooter();
+			?>
 		</div>
 	</div>
 </body>

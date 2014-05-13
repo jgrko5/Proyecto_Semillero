@@ -116,7 +116,7 @@ getImports();
 		</div>
 		<footer>
 			<?php
-			//getFooter()
+			getFooter()
 			?>
 		</footer>
 	</div>

@@ -120,7 +120,7 @@ getImports();
 			</section>
 		</div>
 		<?php
-		
+		getFooter();
 		?>
 
 		<footer>
