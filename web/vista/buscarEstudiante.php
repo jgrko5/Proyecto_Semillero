@@ -33,7 +33,7 @@ getImports();
 								<input class="button" type="submit" value="Buscar"/>
 							</div></br>
 							<header>
-								<h6>Estudiantes</h6>
+								<h1>Estudiantes</h1>
 							</header>
 
 							<div class="tabla">
