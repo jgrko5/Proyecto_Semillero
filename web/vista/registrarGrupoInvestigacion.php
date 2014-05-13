@@ -16,7 +16,7 @@ getImports();
 		<section id="grupo">
 			<article>
 				<header>
-					</br><h6>Registrar grupo investigacion</h6>
+					</br><h6>Registrar grupo investigación</h6>
 				</header>
 				<div id="formulario">
 					<form action="../controlador/registrarGrupoInvestigacion.php" method="post">
@@ -65,12 +65,12 @@ getImports();
 							
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese la facultad"/>
-							</div></br>
+							</div></br></br>
 							
 			
 				<div aling="center">
 					<input class="button" type="submit" value="Registrar" />
-				</div>
+				</div></br>
 				</center>
 				</form>
 				</div>
