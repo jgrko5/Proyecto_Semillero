@@ -118,16 +118,10 @@ getImports();
 					</div>
 				</article>
 			</section>
-		</div>
-		<?php
-		
-		?>
-
-		<footer>
 			<?php
-			//getFooter()
+			getFooter();
 			?>
-		</footer>
+		</div>
 	</div>
 </body>
 </html>

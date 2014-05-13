@@ -58,6 +58,9 @@ getImports();
 
 				</article>
 			</section>
+			<?php
+			getFooter();
+			?>
 		</div>
 	</div>
 </body>
