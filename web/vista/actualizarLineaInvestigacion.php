@@ -39,7 +39,7 @@ getImports();
 								</div></br></br>
 
 								<div aling="center">
-									<input class="button" type="submit" value="Registrar" />
+									<input class="button" type="submit" value="Registrar" href="#openModal"/>
 								</div></br>
 							</center>
 						</form>
@@ -47,10 +47,11 @@ getImports();
 				</article>
 			</section>
 		</div>
-<?php
-getFooter();
-		?>
+		
 
+		<?php
+		getFooter();
+		?>
 	</div>
 </body>
 </html>
