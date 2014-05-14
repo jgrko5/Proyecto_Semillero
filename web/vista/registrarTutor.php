@@ -75,10 +75,10 @@ getImports();
 					</div>
 				</article>
 			</section>
+		</div>
 			<?php
 		getFooter();
 		?>
-		</div>
 	</div>
 </body>
 </html>
