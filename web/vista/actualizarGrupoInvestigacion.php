@@ -60,8 +60,8 @@ getImports();
 				</article>
 			</section>
 		</div>
-<?php
-getFooter();
+		<?php
+		getFooter();
 		?>
 	</div>
 </body>
