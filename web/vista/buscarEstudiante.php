@@ -14,10 +14,9 @@ getImports();
 		<div id="contenido">
 			<section id="estudiante">
 				<article>
-					<header>
-						</br><h6>Buscar estudiante</h6>
-					</header>
-
+					<li class="mheader">
+						Buscar estudiante
+					</li>
 					<div id="formulario">
 						<form action="../controlador/registrarProyecto.php" method="post" ></form>
 						<center>
