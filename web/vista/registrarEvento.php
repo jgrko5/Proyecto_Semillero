@@ -36,14 +36,15 @@ getImports();
 								<input class="textfield" type="text"name="te" placeholder="Ingrese la ciudad"/>
 							</div>
 							<br/>
-							
+
 							<div class="etiqueta">
 								<label>Año:</label>
 							</div></br>
 							<div class="componente">
 								<input class="textfield" type="text"name="te" placeholder="Ingrese el año"/>
 							</div>
-							<br/></br>
+							<br/>
+							</br>
 
 					</div>
 					<div align="center">
@@ -54,10 +55,9 @@ getImports();
 
 			</section>
 		</div>
-<?php
+		<?php
 		getFooter();
 		?>
-
 	</div>
 </body>
 </html>
