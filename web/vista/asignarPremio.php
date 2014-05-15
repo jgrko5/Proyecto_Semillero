@@ -18,7 +18,7 @@ getImports();
 					</header>
 					<div id="formulario">
 						<form action="../controlador/asirnarPremio.php" method="post">
-							
+
 							<div class="etiqueta">
 								<label>Ingrese el código del estudiante:</label>
 							</div>
@@ -26,11 +26,11 @@ getImports();
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required" placeholder="Código">
 							</div>
-							
+
 							<div align="left">
 								<input class="button" type="submit" value="Buscar" />
 							</div>
-							
+
 							<div class="etiqueta">
 								<label>Nombres y apellidos:</label>
 							</div></br>
@@ -38,9 +38,9 @@ getImports();
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required">
 							</div></br>
-							
+
 							<div class="etiqueta">
-								<label>Premios</label>
+								<label>Premios:</label>
 							</div></br>
 
 							<div class="componente">
@@ -53,15 +53,14 @@ getImports();
 								<input class="button" type="submit" value="Asignar" />
 							</div></br>
 
+						</form>
 					</div>
-					</form>
+				</article>
+			</section>
 		</div>
-		</article>
-		</section>
-	</div>
-	<?php
-	getFooter();
-	?>
+		<?php
+		getFooter();
+		?>
 	</div>
 </body>
 </html>

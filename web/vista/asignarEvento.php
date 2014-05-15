@@ -38,7 +38,7 @@ getImports();
 							</div></br>
 
 							<div class="etiqueta">
-								<label>Eventos</label>
+								<label>Eventos:</label>
 							</div></br>
 
 							<div class="componente">
@@ -55,6 +55,9 @@ getImports();
 				</article>
 			</section>
 		</div>
+		<?php
+		getFooter();
+		?>
 	</div>
 </body>
 </html>
