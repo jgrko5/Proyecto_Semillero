@@ -19,6 +19,7 @@ getImports();
 					</header>
 					<div id="formulario">
 						<form action="../controlador/registrarSemilleroConsolidacion.php" method="post">
+<<<<<<< HEAD
 							<center>
 								<div class="etiqueta">
 									<label>Grupo de investigación:</label>
@@ -84,6 +85,74 @@ getImports();
 									<input class="button" type="submit" value="Registrar" />
 								</div></br>
 							</center>
+=======
+							
+							<div class="etiqueta">
+								<label>Grupo de investigación:</label>
+							</div></br>
+							
+							<div class="componente">
+								<select class="select" title="Grupos de investigación">
+									<option>sinfoci</option>
+								</select>
+							</div></br>
+							
+							<div class="etiqueta">
+								<label>Proyecto de investigación:</label>
+							</div></br>
+							
+							<div class="componente">
+								<select class="select" title="Proyecto de investigación">
+									<option> </option>
+								</select>
+							</div></br>
+							
+							<div class="etiqueta">
+								<label>Año:</label>
+							</div></br>
+							
+							<div class="componente">
+								<input class="textField" type="text" name="tipo" placeholder="Año"/>
+							</div></br>
+							
+							<div class="etiqueta">
+								<label>Período:</label>
+							</div></br>
+							
+							<div class="componente">
+								<input class="textField" type="text" name="tipo" placeholder="Período"/>
+							</div></br>
+										
+							
+							<div class="etiqueta">
+								<label>Nota:</label>
+							</div></br>
+							
+							<div class="componente">
+								<input class="textField" type="text" name="tipo" placeholder="Nota"/>
+							</div></br>
+							
+							<div class="etiqueta">
+								<label>Horas empleadas del docente:</label>
+							</div></br>
+							
+							<div class="componente">
+								<input class="textField" type="text" name="tipo" placeholder="Horas empleadas docente"/>
+							</div></br>
+							
+							<div class="etiqueta">
+								<label>Homologación:</label>
+							</div></br>
+							
+							<div class="componente">
+							<input type="checkbox" id="homologacion" value="3" onChange="total()"/> 
+							</div></br>
+							
+							<div align="center">
+								<input class="button" type="submit" value="Registrar" />
+							</div></br>
+							
+>>>>>>> fb787139d34b67bce87632ba58e4dbc5980877c4
 						</form>
 					</div>
 				</article>
