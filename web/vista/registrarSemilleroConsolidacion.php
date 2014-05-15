@@ -21,7 +21,7 @@ getImports();
 							
 							<div class="etiqueta">
 								<label>Grupo de investigación:</label>
-							</div>
+							</div></br>
 							
 							<div class="componente">
 								<select class="select" title="Grupos de investigación">
@@ -31,7 +31,7 @@ getImports();
 							
 							<div class="etiqueta">
 								<label>Proyecto de investigación:</label>
-							</div>
+							</div></br>
 							
 							<div class="componente">
 								<select class="select" title="Proyecto de investigación">
@@ -41,7 +41,7 @@ getImports();
 							
 							<div class="etiqueta">
 								<label>Año:</label>
-							</div>
+							</div></br>
 							
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" placeholder="Año"/>
@@ -49,7 +49,7 @@ getImports();
 							
 							<div class="etiqueta">
 								<label>Período:</label>
-							</div>
+							</div></br>
 							
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" placeholder="Período"/>
@@ -58,7 +58,7 @@ getImports();
 							
 							<div class="etiqueta">
 								<label>Nota:</label>
-							</div>
+							</div></br>
 							
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" placeholder="Nota"/>
@@ -66,7 +66,7 @@ getImports();
 							
 							<div class="etiqueta">
 								<label>Horas empleadas del docente:</label>
-							</div>
+							</div></br>
 							
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" placeholder="Horas empleadas docente"/>
@@ -74,11 +74,11 @@ getImports();
 							
 							<div class="etiqueta">
 								<label>Homologación:</label>
-							</div>
+							</div></br>
 							
 							<div class="componente">
 							<input type="checkbox" id="homologacion" value="3" onChange="total()"/> 
-							</div></br></br>
+							</div></br>
 							
 							<div align="center">
 								<input class="button" type="submit" value="Registrar" />
