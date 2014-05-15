@@ -1,26 +1,19 @@
 <?php
-	
-	$user = "admin";
-	$pass = "semilleros";
-	$db = "xe";
-	
-	// Conecta al servicio XE (esto es, una base de datos) en la mÃ¡quina "localhost"
-$conn = oci_pconnect('admin', 'semilleros', 'localhost/xe');
+// Create connection to Oracle
+$conn = oci_connect("admin", "semillero", "xe");
 if (!$conn) {
-    $e = oci_error();
-    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+   $m = oci_error();
+   echo $m['message'], "\n";
+   exit;
 }
-
-$stid = oci_parse($conn, 'SELECT * FROM employees');
-oci_execute($stid);
-
-echo "<table border='1'>\n";
-while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
-    echo "<tr>\n";
-    foreach ($row as $item) {
-        echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "") . "</td>\n";
-    }
-    echo "</tr>\n";
+else {
+	?>
+	<div>
+	Conexion con exito
+	</div>
+	<?php
+	
 }
-echo "</table>\n";
+// Close the Oracle connection
+oci_close($conn);
 ?>

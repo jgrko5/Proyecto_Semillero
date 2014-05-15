@@ -43,9 +43,9 @@ getImports();
 								<div class="componente">
 									<select class="select" title="Grupo de investigación"/>
 									<option>Sinfoci</option>
-								</select>
-							</div></br></br>
-								
+									</select>
+								</div></br></br>
+
 								<div aling="center">
 									<input class="button" type="submit" value="Registrar" />
 								</div></br>
@@ -55,8 +55,8 @@ getImports();
 				</article>
 			</section>
 			<?php
-		getFooter();
-		?>
+			getFooter();
+			?>
 		</div>
 	</div>
 </body>

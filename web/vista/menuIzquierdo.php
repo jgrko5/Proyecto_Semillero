@@ -42,6 +42,26 @@ include_once ("menuDerecho.php");
 					</li>
 				</ul>
 			</li>
+			<li>
+				<a href="#"><span>Semillero en consolidación</span></a>
+				<ul>
+					<li class="lupper">
+						<a href="registrarSemilleroConsolidacion.php">Registrar</a>
+					</li>
+					
+				</ul>
+			</li>
+			
+			<li class="last">
+				<a href="#"><span>Semillero en ejecución</span></a>
+				<ul>
+					
+					<li>
+						<a href="registrarSemilleroEjecucion.php">Registrar</a>
+					</li>
+				</ul>
+			</li>
+
 			<li class="last">
 				<a href="#"><span>Tutor</span></a>
 				<ul>
