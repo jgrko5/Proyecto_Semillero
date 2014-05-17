@@ -89,7 +89,7 @@ getImports();
 							</div>
 							</br>
 							<div class="componente">
-								<select class="select" title="Semestre">
+								<select class="select" title="Semestre" name="semestreEst">
 									<option>Primero</option>
 									<option>Segundo</option>
 									<option>Tercero</option>
