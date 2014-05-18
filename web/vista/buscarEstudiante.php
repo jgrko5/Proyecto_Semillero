@@ -4,7 +4,7 @@ include_once ("header.php");
 include_once ("footer.php");
 getImports();
 ?>
-<body>
+<body onload="tunCalendario();">
 	<div id="main" class="wrapper">
 		<?php
 		getHeaderStart();

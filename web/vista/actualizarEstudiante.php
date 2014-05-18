@@ -5,7 +5,7 @@ include_once ("footer.php");
 getImports();
 ?>
 
-<bodyonload="tunCalendario();">
+<body onload="tunCalendario();">
 	<div id="main" class="wrapper" style="overflow: hidden" >
 		<?php
 		getHeaderStart();
