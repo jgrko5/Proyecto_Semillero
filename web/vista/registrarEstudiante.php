@@ -18,25 +18,22 @@ getImports();
 						</br><h6>Registrar estudiante</h6>
 					</header>
 					<div id="formulario">
-						<form action="../controlador/agregarEstudiante.php" method="post">
+						<form action="../controlador/registrarEstudiante.php" method="post">
 							<div class="etiqueta">
-								<label>Tipo de documento:</label>
+								<label>Tarjeta de identidad:</label>
 							</div>
 							</br>
 							<div class="componente">
-								<select class="select" title="Tipo de documento">
-									<option>Cédula de ciudadania</option>
-									<option>Tarjeta de identidad</option>
-								</select>
+								<input class="textField" type="text" name="tarjetaEst"   placeholder="Ingrese la tarjeta de identidad del estudiante"/>
 							</div>
 							</br>
-
+							
 							<div class="etiqueta">
-								<label>Documento:</label>
+								<label>Cedula de ciudadania:</label>
 							</div>
 							</br>
 							<div class="componente">
-								<input class="textField" type="text" name="tipoEst" required="required" placeholder="Ingrese documento del estudiante"/>
+								<input class="textField" type="text" name="cedulaEst"   placeholder="Ingrese la cedula del estudiante"/>
 							</div>
 							</br>
 
@@ -45,7 +42,7 @@ getImports();
 							</div>
 							</br>
 							<div class="componente">
-								<input class="textField" type="text" name="nombreEst" required="required" placeholder="Ingrese los nombres del estudiante" />
+								<input class="textField" type="text" name="nombreEst"   placeholder="Ingrese los nombres del estudiante" />
 							</div>
 							</br>
 
@@ -54,7 +51,7 @@ getImports();
 							</div>
 							</br>
 							<div class="componente">
-								<input class="textField" type="text" name="apellidoEst" required="required" placeholder="Ingrese los apellidos del estudiante"/>
+								<input class="textField" type="text" name="apellidoEst"   placeholder="Ingrese los apellidos del estudiante"/>
 							</div>
 							</br>
 
@@ -63,7 +60,7 @@ getImports();
 							</div>
 							</br>
 							<div class="componente">
-								<input class="textField" type="text" name="direccionEst" required="required" placeholder="Ingrese la direccion de residencia"/>
+								<input class="textField" type="text" name="direccionEst" placeholder="Ingrese la direccion de residencia"/>
 							</div>
 							</br>
 
@@ -71,7 +68,7 @@ getImports();
 								<label>Telefono:</label>
 							</div></br>
 							<div class="componente">
-								<input class="textField" type="text" name="telefonoEst" required="required" placeholder="Ingrese el telefono de contacto" />
+								<input class="textField" type="text" name="telefonoEst"  placeholder="Ingrese el telefono de contacto" />
 							</div>
 							</br>
 
@@ -80,7 +77,17 @@ getImports();
 							</div>
 							</br>
 							<div class="componente">
-								<input class="textField" type="text" name="correoEst" required="required" placeholder="Ingrese el correo electronico"/>
+								<input class="textField" type="text" name="correoEst"  placeholder="Ingrese el correo electronico"/>
+							</div>
+							</br>
+							<div class="etiqueta">
+								<label>Programa academico:</label>
+							</div>
+							</br>
+							<div class="componente">
+								<select class="select" title="Programa academico" name="programaEst">
+									<option>Programa</option>
+								</select>
 							</div>
 							</br>
 
