@@ -103,5 +103,12 @@ oci_free_statement($stid);
 
 oci_close($conexion);
 
+
+echo "<script type='text/javascript'>
+    alert('Estudiante registrado con exito'); 
+    document.location.href='../vista/registrarEstudiante.php';
+    </script>";
+
+
 ?>
 

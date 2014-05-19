@@ -2,6 +2,7 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
+include_once ("../controlador/listaFacultades.php");
 getImports();
 ?>
 
@@ -27,7 +28,7 @@ getImports();
 							</div></br>
 							
 							<div class="componente">
-								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el código"/>
+								<input class="textField" type="text" name="codigo" required="required" placeholder="Ingrese el código"/>
 							</div></br>
 							
 							
@@ -36,7 +37,7 @@ getImports();
 							</div></br>
 							
 							<div class="componente">
-								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el nombre"/>
+								<input class="textField" type="text" name="nombre" required="required" placeholder="Ingrese el nombre"/>
 							</div></br>
 							
 							
@@ -45,7 +46,7 @@ getImports();
 							</div></br>
 							
 							<div class="componente">
-								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese la clasificación"/>
+								<input class="textField" type="text" name="clasificacion" required="required" placeholder="Ingrese la clasificación"/>
 							</div></br>
 							
 							
@@ -54,7 +55,7 @@ getImports();
 							</div></br>
 							
 							<div class="componente">
-								<input type="date" class="textField"/>
+								<input type="date" name="fecha" class="textField"/>
 							</div></br>
 							
 							
@@ -64,7 +65,11 @@ getImports();
 							
 							
 							<div class="componente">
-								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese la facultad"/>
+								<select class="select" title="Facultad" name="facultad">
+                                    <?php
+                                       echo $comboboxFacultad;
+                                    ?>
+                                </select>
 							</div></br></br>
 							
 			
