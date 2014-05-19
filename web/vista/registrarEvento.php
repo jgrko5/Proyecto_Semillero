@@ -21,19 +21,19 @@ getImports();
 					</header>
 
 					<div id="formulario">
-						<form action="../controlador/registrarProyecto.php" method="post">
+						<form action="../controlador/registrarEvento.php" method="post">
 							<div class="etiqueta">
 								<label>Nombre:</label>
 							</div></br>
 							<div class="componente">
-								<input class="textfield" type="text"name="te" placeholder="Ingrese el nombre"/>
+								<input class="textfield" type="text"name="nombreEv" placeholder="Ingrese el nombre"/>
 							</div>
 
 							<div class="etiqueta">
 								<label>Ciudad:</label>
 							</div></br>
 							<div class="componente">
-								<input class="textfield" type="text"name="te" placeholder="Ingrese la ciudad"/>
+								<input class="textfield" type="text"name="ciudadEv" placeholder="Ingrese la ciudad"/>
 							</div>
 							<br/>
 
@@ -41,7 +41,7 @@ getImports();
 								<label>Año:</label>
 							</div></br>
 							<div class="componente">
-								<input class="textfield" type="text"name="te" placeholder="Ingrese el año"/>
+								<input class="textfield" type="text"name="añoEv" placeholder="Ingrese el año"/>
 							</div>
 							<br/>
 							</br>
