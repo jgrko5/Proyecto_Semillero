@@ -6,8 +6,8 @@
 
 <html lang="es">
 	<head>
-		<meta charset="utf-8">
-
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+ 
 		<link href="../../css/style.css" rel="stylesheet">
 		<link href="../../css/panelSuperior.css" rel="stylesheet">
 		<link href="../../css/panelIzquierdo.css" rel="stylesheet">

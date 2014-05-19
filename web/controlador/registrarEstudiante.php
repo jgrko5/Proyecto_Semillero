@@ -3,7 +3,7 @@ include_once ('oracle.php');
 
 session_start();
 
-$idFacultad=1;
+$idFacultad=2;
 $_SESSION['idFacultad']=(int)$idFacultad;
 $tarjetaEst = $_POST['tarjetaEst'];
 $cedulaEst = $_POST['cedulaEst'];
@@ -93,7 +93,6 @@ oci_bind_by_name($stid, ':direccionEst', $direccionEst);
 oci_bind_by_name($stid, ':telefonoEst', $telefonoEst);
 oci_bind_by_name($stid, ':correoEst', $correoEst);
 oci_bind_by_name($stid, ':semestreEst', $semestreEst);
-$programaEst = 7;
 oci_bind_by_name($stid, ':programaEst', $programaEst);
 
 
@@ -101,10 +100,7 @@ $r = oci_execute($stid);
 
 oci_free_statement($stid);
 
-echo "<script type='text/javascript'>
-            alert('Estudiante registrado con exito'); 
-            document.location.href='../vista/registrarEstudiante.php';
-            </script>";
+
 oci_close($conexion);
 
 ?>

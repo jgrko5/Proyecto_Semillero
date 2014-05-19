@@ -9,8 +9,8 @@
 		if (!$conn)
 		{
    			$m = oci_error();
-   			echo $m['message'], "\n";
-   			exit;
+            echo $m['message'], "\n";
+            exit;
 		}
 		else 
 		{

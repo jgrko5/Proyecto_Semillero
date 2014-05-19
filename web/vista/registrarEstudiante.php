@@ -2,6 +2,7 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
+include_once ("../controlador/listaProgramasAcademicos.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -86,7 +87,9 @@ getImports();
 							</br>
 							<div class="componente">
 								<select class="select" title="Programa academico" name="programaEst">
-									<option>Programa</option>
+									<?php
+									   echo $combobit;
+									?>
 								</select>
 							</div>
 							</br>
