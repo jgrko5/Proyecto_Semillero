@@ -25,7 +25,7 @@ getImports();
 							</div>
 
 							<div class="componente">
-								<input class="textfield" type="text" name="tipo" required="required" placeholder="Código" />
+								<input class="textfield" type="text" name="codigoP" required="required" placeholder="Código" />
 							</div>
 							
 							<div align="center">

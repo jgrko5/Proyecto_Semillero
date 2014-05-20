@@ -19,14 +19,14 @@ getImports();
 					</header>
 
 					<div id="formulario">
-						<form action="../controlador/registrarProyecto.php" method="post" ></form>
+						<form action="../controlador/buscarEvento.php" method="post" ></form>
 						<center>
 							<div class="etiqueta">
 								<label>Ingrese el nombre del evento</label>
 							</div></br>
 
 							<div class="componente">
-								<input class="textfield" type="text" name="tipo" required="required" placeholder="nonmbre evento" />
+								<input class="textfield" type="text" name="nombreEv" required="required" placeholder="nonmbre evento" />
 							</div>
 
 							<div align="center">

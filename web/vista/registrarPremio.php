@@ -18,7 +18,7 @@ getImports();
 						</br><h6>Registrar premio</h6>
 					</header>
 					<div id="formulario">
-						<form action="../controlador/agregarEstudiante.php" method="post">
+						<form action="../controlador/registrarPremio.php" method="post">
 							<div class="etiqueta">
 								<label>Nombre:</label>
 							</div>
