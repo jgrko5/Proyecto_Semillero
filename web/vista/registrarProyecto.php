@@ -54,7 +54,7 @@ getImports();
 									<label>Fecha inicio:</label>
 								</div></br>
 								<div class="componente">
-									<input type="date" class="textField"/>
+									<input type="date" class="textField" name="fechaIProyecto"/>
 								</div></br>
 					</div></br>
 					<div align="center">
