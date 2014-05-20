@@ -4,7 +4,7 @@ include_once ('oracle.php');
 session_start();
 
 $idFacultad=2;
-$_SESSION['idFacultad']=(int)$idFacultad;
+$_SESSION['idFacultad']=(int)$idFacultad;	
 $tarjetaEst = $_POST['tarjetaEst'];
 $cedulaEst = $_POST['cedulaEst'];
 $nombreEst = $_POST['nombreEst'] ." " . $_POST['apellidoEst'];

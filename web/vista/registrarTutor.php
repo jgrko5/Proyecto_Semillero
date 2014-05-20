@@ -25,15 +25,15 @@ getImports();
 								</div></br>
 
 								<div class="componente">
-									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el documento" />
+									<input class="textField" type="text" name="docTutor" required="required" placeholder="Ingrese el documento" />
 								</div></br>
 
 								<div class="etiqueta">
-									<label>Nombre:</label>
+									<label>Nombres:</label>
 								</div></br>
 
 								<div class="componente">
-									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el nombre" />
+									<input class="textField" type="text" name="nombTutor" required="required" placeholder="Ingrese el nombre" />
 								</div></br>
 
 								<div class="etiqueta">
@@ -41,7 +41,7 @@ getImports();
 								</div></br>
 
 								<div class="componente">
-									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese los apellidos" />
+									<input class="textField" type="text" name="apeTutor" required="required" placeholder="Ingrese los apellidos" />
 								</div></br>
 
 								<div class="etiqueta">
@@ -49,7 +49,7 @@ getImports();
 								</div></br>
 
 								<div class="componente">
-									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el género" />
+									<input class="textField" type="text" name="genTutor" required="required" placeholder="Ingrese el género" />
 								</div></br>
 
 								<div class="etiqueta">
@@ -57,7 +57,11 @@ getImports();
 								</div></br>
 
 								<div class="componente">
-									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese la categoría" />
+									<select class="select" title="Categoría" name="catTutor">
+									<?php
+									   echo $combobit;
+									?>
+								</select>
 								</div></br>
 
 								<div class="etiqueta">
@@ -65,7 +69,11 @@ getImports();
 								</div></br>
 
 								<div class="componente">
-									<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el grupo de investigación" />
+									<select class="select" title="Grupo de investigación" name="grupoTutor">
+									<?php
+									   echo $combobit;
+									?>
+								</select>
 								</div></br>
 								
 								<div align="center">
