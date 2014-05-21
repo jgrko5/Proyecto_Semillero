@@ -3,6 +3,11 @@ include_once ('oracle.php');
 
 session_start();
 
+<<<<<<< HEAD
+=======
+$idFacultad=2;
+$_SESSION['idFacultad']=(int)$idFacultad;	
+>>>>>>> 5d0a151beb7bc84e5d716635e0bc61ab8b59c892
 $tarjetaEst = $_POST['tarjetaEst'];
 $cedulaEst = $_POST['cedulaEst'];
 $nombreEst = $_POST['nombreEst'] ." " . $_POST['apellidoEst'];
