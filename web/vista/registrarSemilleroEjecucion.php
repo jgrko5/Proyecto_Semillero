@@ -24,6 +24,7 @@ getImports();
 								<label>Grupo de investigación:</label>
 							</div></br>
 
+<<<<<<< HEAD
 							<div class="componente">
 								<select class="select" title="Grupos de investigación" name="grupo">
                                     <?php
@@ -31,35 +32,59 @@ getImports();
                                     ?>
 								</select>
 							</div></br>
+=======
+								<div class="componente">
+									<input class="textField" type="text" name="codigoPE" placeholder="Código"/>
+								</div></br>
+>>>>>>> 6f6e1057c5ac308edd2c335d329f5325823600b7
 
 							<div class="etiqueta">
 								<label>Fecha inicio:</label>
 							</div></br>
 
+<<<<<<< HEAD
 							<div class="componente">
 								<input type="date" class="textField" name="fecha"/>
 							</div></br>
+=======
+								<div class="componente">
+									<input class="textField" type="text" name="tituloPE" placeholder="Título"/>
+								</div></br>
+>>>>>>> 6f6e1057c5ac308edd2c335d329f5325823600b7
 
 							<div class="etiqueta">
 								<label>Duración del proyecto de investigación:</label>
 							</div></br>
 
+<<<<<<< HEAD
 							<div class="componente">
 								<input class="textField" type="text" name="duracion" placeholder="Duración"/>
 							</div></br>
+=======
+								<div class="componente">
+									<input type="date" class="textField" name="fechaPE"/>
+								</div></br>
+>>>>>>> 6f6e1057c5ac308edd2c335d329f5325823600b7
 
 							<div class="etiqueta">
 								<label>Gasto:</label>
 							</div></br>
 
+<<<<<<< HEAD
 							<div class="componente">
 								<input class="textField" type="text" name="gasto" placeholder="Gasto"/>
 							</div></br>
+=======
+								<div class="componente">
+									<input class="textField" type="text" name="duracionPE" placeholder="Duración"/>
+								</div></br>
+>>>>>>> 6f6e1057c5ac308edd2c335d329f5325823600b7
 
 							<div class="etiqueta">
 								<label>Nombre del estudiante:</label>
 							</div></br>
 
+<<<<<<< HEAD
 							<div class="componente">
 								<input class="textField" type="text" name="nombre" placeholder="Nombre"/>
 							</div></br></br></br>
@@ -67,6 +92,24 @@ getImports();
 							<div aling="center">
 								<input class="button" type="submit" value="Registrar" />
 							</div></br>
+=======
+								<div class="componente">
+									<input class="textField" type="text" name="gastoPE" placeholder="Gasto"/>
+								</div></br>
+								
+								<div class="etiqueta">
+									<label>Nombre del estudiante:</label>
+								</div></br>
+
+								<div class="componente">
+									<input class="textField" type="text" name="nombreestPE" placeholder="Nombre"/>
+								</div></br></br></br>
+
+								<div aling="center">
+									<input class="button" type="submit" value="Registrar" />
+								</div></br>
+							</center>
+>>>>>>> 6f6e1057c5ac308edd2c335d329f5325823600b7
 						</form>
 					</div>
 				</article>

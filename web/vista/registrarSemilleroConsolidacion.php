@@ -51,7 +51,7 @@ getImports();
 							</div></br>
 
 							<div class="componente">
-								<input class="textField" type="text" name="tipo" placeholder="Año"/>
+								<input class="textField" type="text" name="año" placeholder="Año"/>
 							</div></br>
 
 							<div class="etiqueta">
@@ -59,7 +59,7 @@ getImports();
 							</div></br>
 
 							<div class="componente">
-								<input class="textField" type="text" name="tipo" placeholder="Período"/>
+								<input class="textField" type="text" name="periodo" placeholder="Período"/>
 							</div></br>
 
 							<div class="etiqueta">
@@ -67,7 +67,7 @@ getImports();
 							</div></br>
 
 							<div class="componente">
-								<input class="textField" type="text" name="tipo" placeholder="Nota"/>
+								<input class="textField" type="text" name="nota" placeholder="Nota"/>
 							</div></br>
 
 							<div class="etiqueta">
@@ -75,7 +75,7 @@ getImports();
 							</div></br>
 
 							<div class="componente">
-								<input class="textField" type="text" name="tipo" placeholder="Horas empleadas docente"/>
+								<input class="textField" type="text" name="horasDocente" placeholder="Horas empleadas docente"/>
 							</div></br>
 
 							<div class="etiqueta">
@@ -83,7 +83,7 @@ getImports();
 							</div></br>
 
 							<div class="componente">
-								<input type="checkbox" id="homologacion" value="3" onChange="total()"/>
+								<input type="checkbox" id="homologacion" value="3" onChange="total()" name="valido" />
 							</div></br></br>
 
 							<div align="center">
