@@ -22,14 +22,14 @@ getImports();
 
 				<div id="formulario" align="right">
 
-					<form action="../controlador/login.php" method="post">
+					<form action="../controlador/ingreso.php" method="post">
 
 						<div class="etiqueta">
 							<label> Usuario: </label>
 						</div>
 						</br>
 						<div class="componente" align="left">
-							<input class="textField"type="text" name="idusuario" required="required" />
+							<input class="textField"type="text" name="usuario" required="required" />
 						</div>
 						</br>
 
@@ -38,7 +38,7 @@ getImports();
 						</div>
 						</br>
 						<div class="componente" align="left">
-							<input class="password" type="password" name="password" required="required"/>
+							<input class="password" type="password" name="contrasena" required="required"/>
 						</div>
 						</br>
 						</br>
