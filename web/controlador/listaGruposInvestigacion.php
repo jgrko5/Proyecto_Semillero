@@ -41,10 +41,13 @@ oci_execute($stid);
 
 $combobit = "";
 $i = 0;
-
+$comboGrupo = "";
 while ($row = oci_fetch_array($stid)) 
 {
+    
     if ($row[0] != '0019') {
+        
+        $comboGrupo .= " <option value='" . $row[0] . "'>" . $row[1] . "</option>";
         if ($i == 1) {
             $combobit .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td>" . $row[3] . "</td></tr>";
             $i = 0;

@@ -16,10 +16,10 @@ if ($_SESSION['idFacultad'] == 1) {
         $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_educacion e order by e.titulo');
     } else {
         if ($_SESSION['idFacultad'] == 21) {
-            $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_salud e ');
+            $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_salud e order by e.titulo');
         } else {
             if ($_SESSION['idFacultad'] == 22) {
-                $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_basicas e ');
+                $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_basicas e order by e.titulo');
             } else {
                 if ($_SESSION['idFacultad'] == 23) {
                     $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_agroindustria e order by e.titulo');
@@ -43,6 +43,7 @@ $combobit = "";
 $i = 0;
 
 while ($row = oci_fetch_array($stid)) {
+    $comboProyecto .= " <option value='" . $row[0] . "'>" . $row[1] . "</option>";
     if ($i == 1) {
         $combobit .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td>" . $row[3] . "</td> <td>" . $row[4] . "</td></tr>";
         $i = 0;

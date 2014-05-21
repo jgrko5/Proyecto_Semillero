@@ -2,6 +2,8 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
+include_once ("../controlador/listaGruposInvestigacion.php");
+include_once ("../controlador/listaCategorias.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -19,7 +21,6 @@ getImports();
 					</header>
 					<div id="formulario">
 						<form action="../controlador/registrarTutor.php" method="post">
-							<center>
 								<div class="etiqueta">
 									<label>Documento:</label>
 								</div></br>
@@ -59,7 +60,7 @@ getImports();
 								<div class="componente">
 									<select class="select" title="Categoría" name="catTutor">
 									<?php
-									   echo $combobit;
+									   echo $comboCate;
 									?>
 								</select>
 								</div></br>
@@ -71,15 +72,15 @@ getImports();
 								<div class="componente">
 									<select class="select" title="Grupo de investigación" name="grupoTutor">
 									<?php
-									   echo $combobit;
+									   echo $comboGrupo;
 									?>
 								</select>
-								</div></br>
+								</div></br></br>
 								
 								<div align="center">
-									<input class="button" type="sumit" value="Registrar" />
-								</div></br>
-							</center>
+                                <input class="button" type="submit" value="Registrar" />
+                            </div>
+                            </br>
 					</div>
 				</article>
 			</section>

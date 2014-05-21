@@ -2,6 +2,8 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
+include_once ("../controlador/listaGruposInvestigacion.php");
+include_once ("../controlador/listaProyecto.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -25,8 +27,10 @@ getImports();
 							</div></br>
 
 							<div class="componente">
-								<select class="select" title="Grupos de investigación">
-									<option>sinfoci</option>
+								<select class="select" title="Grupos de investigación" name="grupo">
+									 <?php
+                                        echo $comboGrupo;
+                                    ?>
 								</select>
 							</div></br>
 
@@ -36,7 +40,9 @@ getImports();
 
 							<div class="componente">
 								<select class="select" title="Proyecto de investigación">
-									<option></option>
+									 <?php
+                                        echo $comboProyecto;
+                                    ?>
 								</select>
 							</div></br>
 

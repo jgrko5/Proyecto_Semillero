@@ -42,8 +42,7 @@ oci_execute($stid);
 $combobit = "";
 $i = 0;
 
-while ($row = oci_fetch_array($stid)) 
-{
+while ($row = oci_fetch_array($stid)) {
     if ($row[0] != '0019') {
         if ($i == 1) {
             $combobit .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td>" . $row[3] . "</td></tr>";
@@ -52,8 +51,7 @@ while ($row = oci_fetch_array($stid))
             $combobit .= " <tr ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td>" . $row[3] . "</td></tr>";
             $i++;
         }
-    }
-    else {
+    } else {
         continue;
     }
 

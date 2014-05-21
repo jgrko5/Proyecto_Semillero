@@ -2,6 +2,7 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
+include_once ("../controlador/listaTutor.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -19,7 +20,6 @@ getImports();
 					</header>
 					<div id="formulario">
 						<form action="../controlador/buscarTutor.php" method="post">
-							<center>
 								<div class="etiqueta">
 									<label>Ingrese el número de identificación</label>
 								</div></br>
@@ -32,19 +32,24 @@ getImports();
 									<input class="button" type="submit" value="Buscar"/>
 								</div></br>
 								<header>
-									<h6>Tutores</h6>
+									<h6>Tutores</h6></br>
 								</header>
-								
-								<div class="tabla">
-								<table style="border:1px solid #666;">
-									<tr>
-										<td style="border:1px inset #666;">Documento</td><td style="border:1px inset #666;">Nombre</td>
-										<td style="border:1px inset #666;">Apellidos</td><td style="border:1px inset #666;">Género</td>
-										<td style="border:1px inset #666;">Categoría</td><td style="border:1px inset #666;">Grupo de investigación</td>
-									</tr>
-								</table>
-								</div></br>
-							</center>
+								<div id="resultado" class="datagrid">
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Documento</th><th>Nombre</th><th>Apellido</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+
+                                            echo $combobit;
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                </div></br>
 						</form>
 					</div>
 				</article>
