@@ -2,14 +2,15 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
+include_once ("../controlador/listaGruposInvestigacion.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
 	<div id="main" class="wrapper">
 		<?php
-		getHeaderStart();
-		getPanelSesion();
-		getMenuIzquierdo();
+        getHeaderStart();
+        getPanelSesion();
+        getMenuIzquierdo();
 		?>
 		<div id="contenido">
 			<section id="grupo">
@@ -34,25 +35,35 @@ getImports();
 								<header>
 									<h2>Grupos de investigación</h2>
 								</header>
+								<div id="resultado" class="datagrid">
 
-								<div class="tabla">
-									<table style="border:1px solid #666;">
-										<tr>
-											<td style="border:1px inset #666;">Código</td><td style="border:1px inset #666;">Nombre</td>
-											<td style="border:1px inset #666;">Clasificación</td><td style="border:1px inset #666;">Fecha conformación</td>
-											<td style="border:1px inset #666;">Facultad</td>
-										</tr>
+									<?php
+                                        include ('../controlador/buscarGruposInvestigacion.php');
+									?>
+									<table>
+										<thead>
+											<tr>
+												<th>Codigo</th><th>Nombre</th><th>Clasificacion</th><th>fecha de Creacion</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php
+
+                                            echo $combobit;
+											?>
+										</tbody>
 									</table>
-								</div></br>
+								</div>
+								</br>
 							</center>
 						</form>
 					</div>
 				</article>
 			</section>
 		</div>
-			<?php
-			getFooter();
-			?>
+		<?php
+        getFooter();
+		?>
 	</div>
 </body>
 </html>

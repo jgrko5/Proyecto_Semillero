@@ -22,11 +22,11 @@ oci_bind_by_name($stid, ':facultad', $facultad);
 
 $r = oci_execute($stid);
 
-/*echo "<script type='text/javascript'>
+echo "<script type='text/javascript'>
     alert('Estudiante registrado con exito'); 
     document.location.href='../vista/registrarGrupoInvestigacion.php';
     </script>";
-*/
+
 oci_free_statement($stid);
 
 oci_close($conexion);

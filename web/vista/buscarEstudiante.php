@@ -2,7 +2,7 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
-include_once ("../controlador/listarEstudiante.php");
+include_once ("../controlador/listaEstudiante.php");
 getImports();
 ?>
 <body onload="tunCalendario();">

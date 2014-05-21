@@ -3,7 +3,6 @@ include_once ('oracle.php');
 
 session_start();
 
-
 $tarjetaEst = $_POST['tarjetaEst'];
 $cedulaEst = $_POST['cedulaEst'];
 $nombreEst = $_POST['nombreEst'] ." " . $_POST['apellidoEst'];

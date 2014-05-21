@@ -14,7 +14,7 @@ oci_bind_by_name($stid, ':pass', $contrasena);
 
 $r = oci_execute($stid);
 
-while ($row = oci_fetch_array($stid)) {
+if ($row = oci_fetch_array($stid)) {
     if ($row[0] == 1) {
         $_SESSION['idFacultad'] = $row[1];
         $_SESSION['nomFacultad'] = $row[2];
@@ -61,6 +61,7 @@ while ($row = oci_fetch_array($stid)) {
     document.location.href='../vista/inicioSesion.php';
     </script>";
     }
+        
     oci_free_statement($stid);
 
     oci_close($conexion);
