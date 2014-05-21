@@ -9,6 +9,7 @@ error_reporting("E_ERROR && E_WARNING");
 header("Content-Type: text / html; charset =UTF-8");
 $conexion = conectar();
 
+
 if ($_SESSION['idFacultad'] == 1) {
     $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_INGENIERIA e order by e.titulo');
 } else {
@@ -53,6 +54,6 @@ while ($row = oci_fetch_array($stid)) {
     }
 
 }
-
+ oci_free_statement($stid);
 oci_close($conexion);
 ?>

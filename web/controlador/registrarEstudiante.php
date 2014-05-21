@@ -14,46 +14,7 @@ $programaEst = $_POST['programaEst'];
 
 $conexion = conectar();
 
-if($semestreEst=='Primero')
-{
-	$semestreEst=1;
-}
-if($semestreEst=='Segundo')
-{
-	$semestreEst=2;
-}
-if($semestreEst=='Tercero')
-{
-	$semestreEst=3;
-}
-if($semestreEst=='Cuarto')
-{
-	$semestreEst=4;
-}
-if($semestreEst=='Quinto')
-{
-	$semestreEst=5;
-}
-if($semestreEst=='Sexto')
-{
-	$semestreEst=6;
-}
-if($semestreEst=='Septimo')
-{
-	$semestreEst=7;
-}
-if($semestreEst=='Octavo')
-{
-	$semestreEst=8;
-}
-if($semestreEst=='Noveno')
-{
-	$semestreEst=9;
-}
-if($semestreEst=='Decimo')
-{
-	$semestreEst=10;
-}
+
 
 
 if ($_SESSION['idFacultad'] == 1) {

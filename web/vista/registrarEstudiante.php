@@ -3,6 +3,7 @@ include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
 include_once ("../controlador/listaProgramasAcademicos.php");
+include_once ("../controlador/listasemestres.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -100,16 +101,7 @@ getImports();
 							</br>
 							<div class="componente">
 								<select class="select" title="Semestre" name="semestreEst">
-									<option>Primero</option>
-									<option>Segundo</option>
-									<option>Tercero</option>
-									<option>Cuarto</option>
-									<option>Quinto</option>
-									<option>Sexto</option>
-									<option>Septimo</option>
-									<option>Octavo</option>
-									<option>Noveno</option>
-									<option>Decimo</option>
+									<?php echo $combosemestre; ?>
 								</select>
 							</div>
 							</br>

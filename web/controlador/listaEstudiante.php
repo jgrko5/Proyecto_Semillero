@@ -53,6 +53,7 @@ header( "Content-Type: text / html; charset =UTF-8") ;
             $i++;
         }
     }
+	 oci_free_statement($stid);
    
     oci_close($conexion);
 ?>
