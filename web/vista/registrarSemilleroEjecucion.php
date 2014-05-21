@@ -25,7 +25,7 @@ getImports();
 								</div></br>
 
 								<div class="componente">
-									<input class="textField" type="text" name="tipo" placeholder="Código"/>
+									<input class="textField" type="text" name="codigoPE" placeholder="Código"/>
 								</div></br>
 
 								<div class="etiqueta">
@@ -33,7 +33,7 @@ getImports();
 								</div></br>
 
 								<div class="componente">
-									<input class="textField" type="text" name="tipo" placeholder="Título"/>
+									<input class="textField" type="text" name="tituloPE" placeholder="Título"/>
 								</div></br>
 
 								<div class="etiqueta">
@@ -41,7 +41,7 @@ getImports();
 								</div></br>
 
 								<div class="componente">
-									<input type="date" class="textField"/>
+									<input type="date" class="textField" name="fechaPE"/>
 								</div></br>
 
 								<div class="etiqueta">
@@ -49,7 +49,7 @@ getImports();
 								</div></br>
 
 								<div class="componente">
-									<input class="textField" type="text" name="tipo" placeholder="Duración"/>
+									<input class="textField" type="text" name="duracionPE" placeholder="Duración"/>
 								</div></br>
 
 								<div class="etiqueta">
@@ -57,7 +57,7 @@ getImports();
 								</div></br>
 
 								<div class="componente">
-									<input class="textField" type="text" name="tipo" placeholder="Gasto"/>
+									<input class="textField" type="text" name="gastoPE" placeholder="Gasto"/>
 								</div></br>
 								
 								<div class="etiqueta">
@@ -65,7 +65,7 @@ getImports();
 								</div></br>
 
 								<div class="componente">
-									<input class="textField" type="text" name="tipo" placeholder="Nombre"/>
+									<input class="textField" type="text" name="nombreestPE" placeholder="Nombre"/>
 								</div></br></br></br>
 
 								<div aling="center">
