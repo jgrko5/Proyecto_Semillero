@@ -34,7 +34,7 @@ getImports();
 								</div></br>
 
 								<header>
-									<h1>Proyectos de investigación</h1>
+									<h1>Proyectos de investigación</h1></br>
 								</header>
 								<div id="resultado" class="datagrid">
 

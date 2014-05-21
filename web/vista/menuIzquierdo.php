@@ -9,7 +9,14 @@ include_once ("menuDerecho.php");
 	<nav>
 		<ul>
 			<li class="mheader">
-				Nombre facultad
+				  <?php
+    if (isset($_SESSION)) {
+        echo "Facultad de " . $_SESSION['nomFacultad'];
+    } else { {
+            echo "Bienvenido";
+        }
+    }
+       ?>
 			</li>
 
 			<li>
