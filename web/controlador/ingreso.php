@@ -18,6 +18,11 @@ if ($row = oci_fetch_array($stid)) {
     if ($row[0] == 1) {
         $_SESSION['idFacultad'] = $row[1];
         $_SESSION['nomFacultad'] = $row[2];
+        
+        if($row[1] != 'vicerrectoria')
+        {
+            $_SESSION['seleccion'] = $row[1];
+        }
 
         if ($usuario == 'ingenieria') {
             echo "<script type='text/javascript'>

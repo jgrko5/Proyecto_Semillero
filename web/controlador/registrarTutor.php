@@ -13,25 +13,25 @@ $grupoInTut = $_POST['giTutor'];
 
 $conexion = conectar();
 
-if ($_SESSION['idFacultad'] == 1) {
+if ($_SESSION['seleccion'] == 1) {
     $stid = oci_parse($conexion, 'INSERT INTO crud_tutores_ingenieria(documento, nombre,apellido,genero,categorias_id,grupos_investigacion_codigo) values ( :docTutor,:nombreTutor, :apeTutor,  :genTutor, :catTutor, :giTutor)');
 } else {
-    if ($_SESSION['idFacultad'] == 2) {
+    if ($_SESSION['seleccion'] == 2) {
         $stid = oci_parse($conexion, 'INSERT INTO crud_tutores_educacion(documento, nombre,apellido,genero,categorias_id,grupos_investigacion_codigo) values ( :docTutor,:nombreTutor, :apeTutor,  :genTutor, :catTutor, :giTutor)');
     } else {
-        if ($_SESSION['idFacultad'] == 21) {
+        if ($_SESSION['seleccion'] == 21) {
             $stid = oci_parse($conexion, 'INSERT INTO crud_tutores_salud(documento, nombre,apellido,genero,categorias_id,grupos_investigacion_codigo) values ( :docTutor,:nombreTutor, :apeTutor,  :genTutor, :catTutor, :giTutor)');
         } else {
-            if ($_SESSION['idFacultad'] == 22) {
+            if ($_SESSION['seleccion'] == 22) {
                 $stid = oci_parse($conexion, 'INSERT INTO crud_tutores_basicas(documento, nombre,apellido,genero,categorias_id,grupos_investigacion_codigo) values ( :docTutor,:nombreTutor, :apeTutor,  :genTutor, :catTutor, :giTutor)');
             } else {
-                if ($_SESSION['idFacultad'] == 23) {
+                if ($_SESSION['seleccion'] == 23) {
                     $stid = oci_parse($conexion, 'INSERT INTO crud_tutores_agroindustria(documento, nombre,apellido,genero,categorias_id,grupos_investigacion_codigo) values ( :docTutor,:nombreTutor, :apeTutor,  :genTutor, :catTutor, :giTutor)');
                 } else {
-                    if ($_SESSION['idFacultad'] == 24) {
+                    if ($_SESSION['seleccion'] == 24) {
                         $stid = oci_parse($conexion, 'INSERT INTO crud_tutores_bellas_artes(documento, nombre,apellido,genero,categorias_id,grupos_investigacion_codigo) values ( :docTutor,:nombreTutor, :apeTutor,  :genTutor, :catTutor, :giTutor)');
                     } else {
-                        if ($_SESSION['idFacultad'] == 25) {
+                        if ($_SESSION['seleccion'] == 25) {
                             $stid = oci_parse($conexion, 'INSERT INTO crud_tutores_economica(documento, nombre,apellido,genero,categorias_id,grupos_investigacion_codigo) values ( :docTutor,:nombreTutor, :apeTutor,  :genTutor, :catTutor, :giTutor)');
                         }
                     }

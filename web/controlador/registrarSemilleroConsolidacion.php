@@ -3,8 +3,8 @@ include_once ('oracle.php');
 
 session_start();
 
-$idFacultad='';
-$_SESSION['idFacultad']=(int)$idFacultad;
+$seleccion='';
+$_SESSION['seleccion']=(int)$seleccion;
 
 $añoSC = $_POST['año'];
 $periodoSC = $_POST['periodo'];
@@ -14,26 +14,26 @@ $homologacionSC = $_POST['valido'];
 
 $conexion = conectar();
 
-if ($_SESSION['idFacultad'] == 1) {
+if ($_SESSION['seleccion'] == 1) {
 	$stid = oci_parse($conexion, 'INSERT INTO crud_consolidacion_ingenieria(año, periodo, nota, horasDocente, valido) values (:año, :periodo, :nota, :horasDocente, :valido)');
 }
  else {
-	if ($_SESSION['idFacultad'] == 2) {
+	if ($_SESSION['seleccion'] == 2) {
 		$stid = oci_parse($conexion, 'INSERT INTO crud_consolidacion_educacion(año, periodo, nota, horasDocente, valido) values (:año, :periodo, :nota, :horasDocente, :valido)');
 	} else {
-		if ($_SESSION['idFacultad'] == 21) {
+		if ($_SESSION['seleccion'] == 21) {
 			$stid = oci_parse($conexion, 'INSERT INTO crud_consolidacion_salud(año, periodo, nota, horasDocente, valido) values (:año, :periodo, :nota, :horasDocente, :valido)');
 		} else {
-			if ($_SESSION['idFacultad'] == 22) {
+			if ($_SESSION['seleccion'] == 22) {
 				$stid = oci_parse($conexion, 'INSERT INTO crud_consolidacion_basicas(año, periodo, nota, horasDocente, valido) values (:año, :periodo, :nota, :horasDocente, :valido)');
 			} else {
-				if ($_SESSION['idFacultad'] == 23) {
+				if ($_SESSION['seleccion'] == 23) {
 					$stid = oci_parse($conexion, 'INSERT INTO crud_consolidacion_agroindustria(año, periodo, nota, horasDocente, valido) values (:año, :periodo, :nota, :horasDocente, :valido)');
 				} else {
-					if ($_SESSION['idFacultad'] == 24) {
+					if ($_SESSION['seleccion'] == 24) {
 						$stid = oci_parse($conexion, 'INSERT INTO crud_consolidacion_bellas_artes(año, periodo, nota, horasDocente, valido) values (:año, :periodo, :nota, :horasDocente, :valido)');
 					} else {
-						if ($_SESSION['idFacultad'] == 25) {
+						if ($_SESSION['seleccion'] == 25) {
 							$stid = oci_parse($conexion, 'INSERT INTO crud_consolidacion_economica(año, periodo, nota, horasDocente, valido) values (:año, :periodo, :nota, :horasDocente, :valido)');
 						} 
 					}

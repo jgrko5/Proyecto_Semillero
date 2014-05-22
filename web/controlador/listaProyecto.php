@@ -10,25 +10,25 @@ header("Content-Type: text / html; charset =UTF-8");
 $conexion = conectar();
 
 
-if ($_SESSION['idFacultad'] == 1) {
+if ($_SESSION['seleccion'] == 1) {
     $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_INGENIERIA e order by e.titulo');
 } else {
-    if ($_SESSION['idFacultad'] == 2) {
+    if ($_SESSION['seleccion'] == 2) {
         $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_educacion e order by e.titulo');
     } else {
-        if ($_SESSION['idFacultad'] == 21) {
+        if ($_SESSION['seleccion'] == 21) {
             $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_salud e order by e.titulo');
         } else {
-            if ($_SESSION['idFacultad'] == 22) {
+            if ($_SESSION['seleccion'] == 22) {
                 $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_basicas e order by e.titulo');
             } else {
-                if ($_SESSION['idFacultad'] == 23) {
+                if ($_SESSION['seleccion'] == 23) {
                     $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_agroindustria e order by e.titulo');
                 } else {
-                    if ($_SESSION['idFacultad'] == 24) {
+                    if ($_SESSION['seleccion'] == 24) {
                         $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_bellas_artes e order by e.titulo');
                     } else {
-                        if ($_SESSION['idFacultad'] == 25) {
+                        if ($_SESSION['seleccion'] == 25) {
                             $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_economica e order by e.titulo');
                         }
                     }

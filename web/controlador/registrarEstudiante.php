@@ -10,7 +10,7 @@ $homologo = $_POST['homologacion'];
 $año = date("Y");
 $mes = date("m");
 
-if(6<$mes)
+if(7>$mes)
 {
     $periodo=1;
 }
@@ -21,7 +21,12 @@ else {
 $conexion1 = conectar();
 
 $stid = oci_parse($conexion1, 
-'INSERT INTO SEMILLEROS_FORMACION(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst)');
+'INSERT INTO SEMILLEROS_FORMACION(nota, homologo, año, periodos_id) values (:nota, :homologo, :año,:periodo )');
+
+ocibindbyname($stid,':nota',$nota);
+ocibindbyname($stid,':homologo',$homologo);
+ocibindbyname($stid,':año',$añoa);
+ocibindbyname($stid,':periodo',$periodoSC);
 
 oci_execute($stid);
 
