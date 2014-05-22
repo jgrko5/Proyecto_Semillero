@@ -35,7 +35,7 @@ include_once ("menuDerecho.php");
 
 				</ul>
 			</li>
-			
+
 			<li>
 				<a href="#"><span>Grupo de investigación</span></a>
 				<ul>
@@ -59,14 +59,14 @@ include_once ("menuDerecho.php");
 					<li class="lupper">
 						<a href="registrarSemilleroConsolidacion.php">Registrar</a>
 					</li>
-					
+
 				</ul>
 			</li>
-			
+
 			<li class="last">
 				<a href="#"><span>Semillero en ejecución</span></a>
 				<ul>
-					
+
 					<li>
 						<a href="registrarSemilleroEjecucion.php">Registrar</a>
 					</li>
@@ -93,6 +93,7 @@ include_once ("menuDerecho.php");
 getMenuDerecho();
 }
 ?>
+<<<<<<< HEAD
 <?php
 function getMenuIzquierdoVice()
 {
@@ -209,3 +210,5 @@ getMenuDerecho();
     }
 }
 ?>
+=======
+>>>>>>> 9cbc6d9e481d79d2f584b96195936f655626d1c9
