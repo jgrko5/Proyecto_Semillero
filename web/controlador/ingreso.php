@@ -54,6 +54,12 @@ if ($row = oci_fetch_array($stid)) {
             document.location.href='../vista/registrarEstudiante.php';
             </script>";
         }
+        if($usuario == 'vicerrectoria')
+        {
+            echo "<script type='text/javascript'>
+            document.location.href='../vista/registrarEstudiante.php';
+            </script>";
+        }
 
     } else {
         echo "<script type='text/javascript'>

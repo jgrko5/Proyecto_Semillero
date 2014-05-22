@@ -3,15 +3,15 @@ include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
 include_once ("../controlador/listaProgramasAcademicos.php");
-include_once ("../controlador/listasemestres.php");
+include_once ("../controlador/listarSemestres.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
 	<div id="main" class="wrapper">
 		<?php
-		getHeaderStart();
-		getPanelSesion();
-		getMenuIzquierdo();
+        getHeaderStart();
+        getPanelSesion();
+        getMenuIzquierdo();
 		?>
 		<div id="contenido">
 			<section id="estudiante">
@@ -29,7 +29,7 @@ getImports();
 								<input class="textField" type="text" name="tarjetaEst"   placeholder="Ingrese la tarjeta de identidad del estudiante"/>
 							</div>
 							</br>
-							
+
 							<div class="etiqueta">
 								<label>Cedula de ciudadania:</label>
 							</div>
@@ -89,7 +89,7 @@ getImports();
 							<div class="componente">
 								<select class="select" title="Programa academico" name="programaEst">
 									<?php
-									   echo $combobit;
+                                    echo $combobit;
 									?>
 								</select>
 							</div>
@@ -105,6 +105,21 @@ getImports();
 								</select>
 							</div>
 							</br>
+
+							<div class="etiqueta">
+								<label>Nota:</label>
+							</div>
+							</br>
+							<div class="componente">
+								<input class="textField" type="text" name="nota"  placeholder="Nota de la fase de formacion"/>
+							</div>
+							<div class="etiqueta">
+								<label>Homologo:</label>
+							</div></br>
+
+							<div class="componente">
+								<input type="checkbox" id="homologacion" value="3" onChange="total()" name="valido" />
+							</div></br>
 							</br>
 
 							<div align="center">

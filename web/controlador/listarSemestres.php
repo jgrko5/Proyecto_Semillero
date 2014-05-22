@@ -1,7 +1,6 @@
 <?php
 	include_once('oracle.php');
 	
-	session_start();
 	$conexion = conectar();
 	
 	
@@ -9,6 +8,7 @@
 	
 	oci_execute($stid);
 	
+    $combosemestre ="";
 	
 	while($row = oci_fetch_array($stid))
 	{
