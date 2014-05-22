@@ -93,7 +93,6 @@ include_once ("menuDerecho.php");
 getMenuDerecho();
 }
 ?>
-<<<<<<< HEAD
 <?php
 function getMenuIzquierdoVice()
 {
@@ -210,5 +209,3 @@ getMenuDerecho();
     }
 }
 ?>
-=======
->>>>>>> 9cbc6d9e481d79d2f584b96195936f655626d1c9
