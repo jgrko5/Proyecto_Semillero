@@ -105,6 +105,35 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	margin: 0px;
 	font-size: 22px;
 }
+
+#materia {
+	width: 100%;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+}
+
+#materia article {
+
+	width: 80%;
+	margin: 80px 0 20px 0px;
+	background-color: rgba(101,167,57,0.4);
+	padding: 0px;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+	box-shadow: 0px 0px 5px #fff;
+	-webkit-box-shadow: 0px 0px 10px #ccc;
+	-moz-box-shadow: 0px 0px 5px #fff;
+}
+#materia article header h6 {
+	left: 80%;
+	color: #000000;
+	font-weight: bold;
+	text-align: center;
+	margin: 0px;
+	font-size: 22px;
+}
 #proyecto {
 	width: 100%;
 	-webkit-border-radius: 26px;

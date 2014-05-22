@@ -24,7 +24,6 @@ getImports();
 								<label>Grupo de investigación:</label>
 							</div></br>
 
-<<<<<<< HEAD
 							<div class="componente">
 								<select class="select" title="Grupos de investigación" name="grupo">
                                     <?php
@@ -32,17 +31,14 @@ getImports();
                                     ?>
 								</select>
 							</div></br>
-=======
 								<div class="componente">
 									<input class="textField" type="text" name="codigoPE" placeholder="Código"/>
 								</div></br>
->>>>>>> 6f6e1057c5ac308edd2c335d329f5325823600b7
 
 							<div class="etiqueta">
 								<label>Fecha inicio:</label>
 							</div></br>
 
-<<<<<<< HEAD
 							<div class="componente">
 								<input type="date" class="textField" name="fecha"/>
 							</div></br>

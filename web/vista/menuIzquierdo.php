@@ -24,9 +24,6 @@ include_once ("menuDerecho.php");
 				<ul>
 					<li class="lupper">
 						<a href="registrarEstudiante.php">Registrar
-						    <?php
-                              $_SESSION['seleccion']="ingenieria";
-                            ?>
                             </a>
 					</li>
 					<li>
@@ -199,7 +196,7 @@ getMenuDerecho();
 
 <?php function getMenuIzquierdo() 
 {
-    if($_SESSION ['idFacultad'] == 83)
+    if($_SESSION['idFacultad'] == 83)
     {
         getMenuIzquierdoVice();
     }
