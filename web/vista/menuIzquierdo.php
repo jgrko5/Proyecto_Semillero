@@ -88,6 +88,10 @@ if($_SESSION['idFacultad']==83)
 					<li>
 						<a href="actualizarGrupoInvestigacion.php">Actualizar</a>
 					</li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
 					<a href="asigarGrupoInvestigacion.php">Asignar estudiante</a>
 					</li>
@@ -97,11 +101,15 @@ if($_SESSION['idFacultad']==83)
 					<li class="lupper">
 						<a href="buscarGrupoInvestigacion.php">Buscar</a>
 					</li>
+<<<<<<< HEAD
 					<?php
 if($_SESSION['idFacultad']==83)
 {
 
 					?>
+=======
+
+>>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
 					<a href="registrarGrupoInvestigacion.php">Registrar</a>
 					</li>
@@ -112,6 +120,26 @@ if($_SESSION['idFacultad']==83)
 
 			</li>
 
+<<<<<<< HEAD
+=======
+			<li class="last">
+				<a href="#"><span>Espacios académicos</span></a>
+				<ul>
+					<li>
+						<a href="actualizarEspacioAcademico.php">Actualizar</a>
+					</li>
+
+					<li class="lupper">
+						<a href="listarEspaciosAcademicos.php">Lista espacios académicos</a>
+					</li>
+
+					<li>
+						<a href="registrarEspaciosAcademicos.php">Registrar</a>
+					</li>
+				</ul>
+			</li>
+
+>>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 			<li class="last">
 				<a href="#"><span>Premios</span></a>
 				<ul>
@@ -127,9 +155,13 @@ if($_SESSION['idFacultad']==83)
 					<li class="lupper">
 					<a href="asigarPremios.php">Asignar estudiante </a>
 					</li>
+<<<<<<< HEAD
 					<?php
                     }
 					?>
+=======
+
+>>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
 						<a href="listarPremios.php">Lista premios</a>
 					</li>
@@ -159,12 +191,19 @@ if($_SESSION['idFacultad']==83)
 						<a href="actualizarProyecto.php">Actualizar</a>
 					</li>
 
+<<<<<<< HEAD
                     <?php
                     }
                     ?>
 					<li class="lupper">
 						<a href="asigarProyecto.php">Asignar estudiantes</a>
 					</li>
+=======
+					<li class="lupper">
+						<a href="asigarProyecto.php">Asignar estudiantes</a>
+					</li>
+
+>>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
 						<a href="buscarProyecto.php">Buscar</a>
 					</li>
@@ -186,9 +225,13 @@ if($_SESSION['idFacultad']==83)
 					<li>
 						<a href="actualizarSemilleroConsolidacion.php">Actualizar</a>
 					</li>
+<<<<<<< HEAD
 <?php
                     }
                     ?>
+=======
+
+>>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
 						<a href="listarSemilleroConsolidacion.php">Lista proyectos consolidación</a>
 					</li>
@@ -211,9 +254,13 @@ if($_SESSION['idFacultad']==83)
 					<li>
 						<a href="actualizarSemilleroEjecucion.php">Actualizar</a>
 					</li>
+<<<<<<< HEAD
 <?php
 }
 ?>
+=======
+
+>>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
 						<a href="listarSemilleroEjecucion.php">Lista proyectos ejecución</a>
 					</li>
@@ -227,6 +274,7 @@ if($_SESSION['idFacultad']==83)
 			<li class="last">
 				<a href="#"><span>Tutor</span></a>
 				<ul>
+<<<<<<< HEAD
     <?php
 if($_SESSION['idFacultad']==83)
 {
@@ -238,6 +286,13 @@ if($_SESSION['idFacultad']==83)
 <?php
 }
 ?>
+=======
+
+					<li>
+						<a href="actualizarTutor.php">Actualizar</a>
+					</li>
+
+>>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
 						<a href="asigarutor.php">Asignar proyecto de investigación</a>
 					</li>
@@ -271,77 +326,47 @@ function getMenuIzquierdoVice()
 			<li class="mheader">
 				Inicio
 			</li>
-
 			<li>
-				<a  href="#"><span >Facultad</span></a>
+				<a href="#"><span>Administración de cuentas</span></a>
 				<ul>
 					<li class="lupper">
-						<a href="buscarEstudiante.php">Ingenieria</a>
+						<a href="enn.php" >En construcción</a>
 					</li>
 					<li>
-						<a href="actualizarEstudiante.php">Modificar</a>
-					</li>
-					<li>
-						<a href="registrarEstudiante.php">Registrar</a>
-					</li>
-
-				</ul>
-			</li>
-			<li>
-				<a href="#"><span>Evento</span></a>
-				<ul>
-					<li class="lupper">
-						<a href="registrarEvento.php" >Registrar</a>
-					</li>
-					<li>
-						<a href="asignarEvento.php">Asignar</a>
-					</li>
-
-				</ul>
-			</li>
-			<li>
-				<a href="#"><span>Grupo de investigación</span></a>
-				<ul>
-					<li class="lupper">
-						<a href="actualizarGrupoInvestigacion.php">Actualizar</a>
-					</li>
-					<li>
-						<a href="buscarGrupoInvestigacion.php">Buscar</a>
-					</li>
-					<li>
-						<a href="registrarGrupoInvestigacion.php">Registrar</a>
-					</li>
-				</ul>
-
-			</li>
-			<li>
-				<a href="#"><span>Materia</span></a>
-			</li>
-			<li>
-				<a href="#"><span>Premio</span></a>
-				<ul>
-					<li class="lupper">
-						<a href="registrarPremio.php">Registrar</a>
+						<a href="enn.php">En cons...</a>
 					</li>
 				</ul>
 			</li>
 			<li>
-				<a href="#"><span>Proyecto de investigación</span></a>
+				<a  href="#"><span >Facultades</span></a>
 				<ul>
+					<li>
+						<a href="inicioCienciasAdmin.php">Ciencias administrativas y económicas</a>
+					</li>
+					<li>
+						<a href="inicioCienciasAgro.php">Ciencias agroindustriales</a>
+					</li>
+					<li>
+						<a href="inicioCienciasBasicas.php">Ciencias básicas y tecnológicas</a>
+					</li>
+					<li>
+						<a href="inicioCienciasSalud.php">Ciencias de la salud</a>
+					</li>
+					<li>
+						<a href="inicioCienciasHumanas.php">Ciencias humanas y bellas artes</a>
+					</li>
+					<li>
+						<a href="inicioCienciasEducacion.php">Educación</a>
+					</li>
 					<li class="lupper">
-						<a href="actualizarProyecto.php">Actualizar</a>
-					</li>
-					<li>
-						<a href="registrarProyecto.php">Registrar</a>
-					</li>
-					<li>
-						<a href="buscarProyecto.php">Registrar</a>
+						<a href="inicioIngenieria.php">Ingenieria</a>
 					</li>
 				</ul>
 			</li>
-			<li class="last">
-				<a href="#"><span>Tutor</span></a>
+			<li>
+				<a href="#"><span>Reportes</span></a>
 				<ul>
+<<<<<<< HEAD
 					<?php
                     if (true) {
 
@@ -351,19 +376,24 @@ function getMenuIzquierdoVice()
 						<a href="actualizarTutor.php">Actualizar</a>
 					</li>
 
+=======
+>>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
-						<a href="buscarTutor.php">Buscar</a>
+						<a href="enn.php" >En construcción</a>
 					</li>
 
 					<li>
+<<<<<<< HEAD
 						<a href="asignarTutor.php">Asignar</a>
 					</li>
 					<li>
 					<a href="registrarTutor.php">Registrar</a>
+=======
+						<a href="enn.php">En cons...</a>
+>>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					</li>
 				</ul>
 			</li>
-
 		</ul>
 	</nav>
 </div>
