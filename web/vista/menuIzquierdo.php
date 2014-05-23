@@ -28,7 +28,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-					<a href="actualizarEstudiante.php">Actualizar</a>
+						<a href="actualizarEstudiante.php">Actualizar</a>
 					</li>
 					<?php
                     }
@@ -51,11 +51,11 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-					<a href="actualizarEvento.php">Actualizar</a>
+						<a href="actualizarEvento.php">Actualizar</a>
 					</li>
 
 					<li>
-					<a href="asignarEvento.php">Asignar</a>
+						<a href="asignarEvento.php">Asignar</a>
 					</li>
 					<?php
                     }
@@ -69,7 +69,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li class="lupper">
-					<a href="registrarEvento.php">Registrar</a>
+						<a href="registrarEvento.php">Registrar</a>
 					</li>
 					<?php
                     }
@@ -88,12 +88,8 @@ if($_SESSION['idFacultad']==83)
 					<li>
 						<a href="actualizarGrupoInvestigacion.php">Actualizar</a>
 					</li>
-<<<<<<< HEAD
-=======
-
->>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
-					<a href="asigarGrupoInvestigacion.php">Asignar estudiante</a>
+						<a href="asigarGrupoInvestigacion.php">Asignar estudiante</a>
 					</li>
 					<?php
                     }
@@ -101,17 +97,14 @@ if($_SESSION['idFacultad']==83)
 					<li class="lupper">
 						<a href="buscarGrupoInvestigacion.php">Buscar</a>
 					</li>
-<<<<<<< HEAD
 					<?php
 if($_SESSION['idFacultad']==83)
 {
 
 					?>
-=======
 
->>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
-					<a href="registrarGrupoInvestigacion.php">Registrar</a>
+						<a href="registrarGrupoInvestigacion.php">Registrar</a>
 					</li>
 					<?php
                     }
@@ -120,26 +113,37 @@ if($_SESSION['idFacultad']==83)
 
 			</li>
 
-<<<<<<< HEAD
-=======
 			<li class="last">
 				<a href="#"><span>Espacios académicos</span></a>
 				<ul>
+					<?php
+if($_SESSION['idFacultad']==83)
+{
+
+					?>
 					<li>
 						<a href="actualizarEspacioAcademico.php">Actualizar</a>
 					</li>
-
+					<?php
+                    }
+					?>
 					<li class="lupper">
 						<a href="listarEspaciosAcademicos.php">Lista espacios académicos</a>
 					</li>
+					<?php
+if($_SESSION['idFacultad']==83)
+{
 
+					?>
 					<li>
 						<a href="registrarEspaciosAcademicos.php">Registrar</a>
 					</li>
+					<?php
+                    }
+					?>
 				</ul>
 			</li>
 
->>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 			<li class="last">
 				<a href="#"><span>Premios</span></a>
 				<ul>
@@ -153,15 +157,11 @@ if($_SESSION['idFacultad']==83)
 					</li>
 
 					<li class="lupper">
-					<a href="asigarPremios.php">Asignar estudiante </a>
+						<a href="asigarPremios.php">Asignar estudiante </a>
 					</li>
-<<<<<<< HEAD
 					<?php
                     }
 					?>
-=======
-
->>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
 						<a href="listarPremios.php">Lista premios</a>
 					</li>
@@ -171,7 +171,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-					<a href="registrarPremios.php">Registrar</a>
+						<a href="registrarPremios.php">Registrar</a>
 					</li>
 					<?php
                     }
@@ -182,28 +182,22 @@ if($_SESSION['idFacultad']==83)
 			<li>
 				<a href="#"><span>Proyecto de investigación</span></a>
 				<ul>
-				            <?php
+					<?php
 if($_SESSION['idFacultad']==83)
 {
 
-                    ?>
+					?>
 					<li>
 						<a href="actualizarProyecto.php">Actualizar</a>
 					</li>
 
-<<<<<<< HEAD
-                    <?php
+					<?php
                     }
-                    ?>
+					?>
 					<li class="lupper">
-						<a href="asigarProyecto.php">Asignar estudiantes</a>
-					</li>
-=======
-					<li class="lupper">
-						<a href="asigarProyecto.php">Asignar estudiantes</a>
+						<a href="asingarProyecto.php">Asignar estudiantes</a>
 					</li>
 
->>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
 						<a href="buscarProyecto.php">Buscar</a>
 					</li>
@@ -217,21 +211,18 @@ if($_SESSION['idFacultad']==83)
 			<li>
 				<a href="#"><span>Semillero en consolidación</span></a>
 				<ul>
-				             <?php
+					<?php
 if($_SESSION['idFacultad']==83)
 {
 
-                    ?>
+					?>
 					<li>
 						<a href="actualizarSemilleroConsolidacion.php">Actualizar</a>
 					</li>
-<<<<<<< HEAD
-<?php
+					<?php
                     }
-                    ?>
-=======
+					?>
 
->>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
 						<a href="listarSemilleroConsolidacion.php">Lista proyectos consolidación</a>
 					</li>
@@ -246,21 +237,18 @@ if($_SESSION['idFacultad']==83)
 			<li class="last">
 				<a href="#"><span>Semillero en ejecución</span></a>
 				<ul>
-				        <?php
+					<?php
 if($_SESSION['idFacultad']==83)
 {
 
-                    ?>
+					?>
 					<li>
 						<a href="actualizarSemilleroEjecucion.php">Actualizar</a>
 					</li>
-<<<<<<< HEAD
-<?php
-}
-?>
-=======
+					<?php
+                    }
+					?>
 
->>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
 						<a href="listarSemilleroEjecucion.php">Lista proyectos ejecución</a>
 					</li>
@@ -274,27 +262,20 @@ if($_SESSION['idFacultad']==83)
 			<li class="last">
 				<a href="#"><span>Tutor</span></a>
 				<ul>
-<<<<<<< HEAD
-    <?php
+					<?php
 if($_SESSION['idFacultad']==83)
 {
 
-                    ?>
+					?>
 					<li>
 						<a href="actualizarTutor.php">Actualizar</a>
 					</li>
-<?php
-}
-?>
-=======
+					<?php
+                    }
+					?>
 
-					<li>
-						<a href="actualizarTutor.php">Actualizar</a>
-					</li>
-
->>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
-						<a href="asigarutor.php">Asignar proyecto de investigación</a>
+						<a href="asignartutor.php">Asignar proyecto de investigación</a>
 					</li>
 
 					<li class="lupper">
@@ -366,7 +347,6 @@ function getMenuIzquierdoVice()
 			<li>
 				<a href="#"><span>Reportes</span></a>
 				<ul>
-<<<<<<< HEAD
 					<?php
                     if (true) {
 
@@ -376,21 +356,16 @@ function getMenuIzquierdoVice()
 						<a href="actualizarTutor.php">Actualizar</a>
 					</li>
 
-=======
->>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					<li class="lupper">
 						<a href="enn.php" >En construcción</a>
 					</li>
 
 					<li>
-<<<<<<< HEAD
 						<a href="asignarTutor.php">Asignar</a>
 					</li>
 					<li>
-					<a href="registrarTutor.php">Registrar</a>
-=======
+						<a href="registrarTutor.php">Registrar</a>
 						<a href="enn.php">En cons...</a>
->>>>>>> 3a735afd480d9f5875a431a6a26e632872b160cb
 					</li>
 				</ul>
 			</li>
@@ -409,6 +384,6 @@ function getMenuIzquierdo() {
     } else {
         getMenuIzquierdoFacultad();
     }
-getMenuDerecho();
+    getMenuDerecho();
 }
 ?>

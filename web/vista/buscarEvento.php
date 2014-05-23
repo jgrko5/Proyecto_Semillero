@@ -7,9 +7,9 @@ getImports();
 <body onload="tunCalendario();">
 	<div id="main" class="wrapper">
 		<?php
-		getHeaderStart();
-		getPanelSesion();
-		getMenuIzquierdo();
+        getHeaderStart();
+        getPanelSesion();
+        getMenuIzquierdo();
 		?>
 		<div id="contenido">
 			<section id="estudiante">
@@ -19,41 +19,34 @@ getImports();
 					</header>
 
 					<div id="formulario">
-						<form action="../controlador/buscarEvento.php" method="post" ></form>
-						<center>
-							<div class="etiqueta">
-								<label>Ingrese el nombre del evento</label>
-							</div></br>
+						<header>
+							<h1>Lista de eventos</h1>
+						</header>
+						<div id="resultado" class="datagrid">
 
-							<div class="componente">
-								<input class="textfield" type="text" name="nombreEv" required="required" placeholder="nonmbre evento" />
-							</div>
-
-							<div align="center">
-								<input class="button" type="submit" value="Buscar"/>
-							</div></br>
-							<header>
-								<h1>Estudiantes</h1>
-							</header>
-
-							<div class="tabla">
-								<table style="border:1px solid #666;">
+							<table>
+								<thead>
 									<tr>
-										<td style="border:1px inset #666;">Nombre</td>
-										<td style="border:1px inset #666;">Ciudad</td>
-										<td style="border:1px inset #666;">Año</td>
+										<th>Nombre</th><th>Tarjeta de Identidad</th><th>Nombres y apellidos</th><th>Modificar</th>
 									</tr>
-								</table>
-							</div></br>
-						</center>
+								</thead>
+								<tbody>
+									<?php
+
+                                    echo $combobit;
+									?>
+								</tbody>
+							</table>
+						</div>
+						</br>
 					</div>
 				</article>
 			</section>
 		</div
 
-	<?php 
-		getFooter();
-	?>
+		<?php
+        getFooter();
+		?>
 	</div>
 </body>
 </html>
