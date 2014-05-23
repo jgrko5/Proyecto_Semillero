@@ -38,7 +38,6 @@ getImports();
 
 								<div id="resultado" class="datagrid">
 								    
-								    <?php include('../controlador/buscarEstudiante.php');?>
 									<table>
 										<thead>
 											<tr>

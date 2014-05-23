@@ -44,7 +44,7 @@ getImports();
 									<table>
 										<thead>
 											<tr>
-												<th>Codigo</th><th>Título</th><th>Gasto efectivo</th><th>Duracion</th><th>Fecha inicio</th>
+												<th>Código</th><th>Título</th><th>Gasto efectivo</th><th>Duración</th><th>Fecha inicio</th>
 											</tr>
 										</thead>
 										<tbody>
