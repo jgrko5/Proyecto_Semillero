@@ -11,26 +11,22 @@ getImports();
 		getMenuIzquierdo();
 		?>
 		<div id="contenido">
-			<section id="premio">
+			<section id="proyecto">
 				<article>
 					<header>
-						</br><h6>Asignar premio</h6>
+					</br><h6>Asignar proyecto de investigación</h6>
 					</header>
 					<div id="formulario">
-						<form action="../controlador/asirnarPremio.php" method="post">
-
+						<form action="../controlador/asignarProyectoEstudiante.php" method="post">
 							<div class="etiqueta">
-								<label>Ingrese el código del estudiante:</label>
+								<label>Ingrese el código del estudiante</label>
 							</div>
-
 							<div class="componente">
-								<input class="textField" type="text" name="tipo" required="required" placeholder="Código"/>
+								<input class="textField"  type="text" name="codigoEst" required="required" placeholder="Código"  />
 							</div>
-
 							<div align="left">
 								<input class="button" type="submit" value="Buscar" />
 							</div>
-
 							<div class="etiqueta">
 								<label>Nombres y apellidos:</label>
 							</div></br>
@@ -38,21 +34,21 @@ getImports();
 							<div class="componente">
 								<input class="textField" type="text" name="tipo" required="required">
 							</div></br>
-
 							<div class="etiqueta">
-								<label>Premios:</label>
+								<label>Proyectos:</label>
 							</div></br>
-
-							<div class="componente">
-								<select class="select" title="Premios">
-									<option>uno</option>
-								</select>
-							</div></br></br>
+							
+								<div class="componente">
+									<select class="select" title="Proyectos" name="proEstudiante">
+									<?php
+										echo $comboCate;
+									?>
+									</select>
+							    </div></br></br>
 
 							<div align="center">
 								<input class="button" type="submit" value="Asignar" />
 							</div></br>
-
 						</form>
 					</div>
 				</article>
@@ -63,4 +59,3 @@ getImports();
 		?>
 	</div>
 </body>
-</html>
