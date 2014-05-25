@@ -2,6 +2,7 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
+include_once ("/../controlador/buscarEvento.php");
 getImports();
 ?>
 <body onload="tunCalendario();">

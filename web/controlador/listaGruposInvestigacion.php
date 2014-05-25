@@ -38,7 +38,7 @@ if ($_SESSION['seleccion'] == 1) {
 
 oci_execute($stid);
 
-$combobit = "";
+$tabla = "<table><thead><tr><th>Codigo</th><th>Nombre</th><th>Clasificacion</th><th>fecha de Creacion</th></tr></thead><tbody>";
 $i = 0;
 $comboGrupo = "";
 while ($row = oci_fetch_array($stid)) 
@@ -48,10 +48,10 @@ while ($row = oci_fetch_array($stid))
         
         $comboGrupo .= " <option value='" . $row[0] . "'>" . $row[1] . "</option>";
         if ($i == 1) {
-            $combobit .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td>" . $row[3] . "</td></tr>";
+            $tabla .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td>" . $row[3] . "</td></tr>";
             $i = 0;
         } else {
-            $combobit .= " <tr ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td>" . $row[3] . "</td></tr>";
+            $tabla .= " <tr ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td>" . $row[3] . "</td></tr>";
             $i++;
         }
     }
@@ -61,5 +61,6 @@ while ($row = oci_fetch_array($stid))
 
 }
 
+$tabla.="</tbody></table>";
 oci_close($conexion);
 ?>

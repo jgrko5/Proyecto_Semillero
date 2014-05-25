@@ -30,7 +30,7 @@ getImports();
 								</div>
 
 								<div align="center">
-									<input class="button" type="submit" value="Buscar"/>
+									<input class="button" type="submit" value="Buscar" onclick="cambiacat('')"/>
 								</div></br>
 								<header>
 									<h1 style="color: #000000">Estudiantes</h1></br>
@@ -39,7 +39,7 @@ getImports();
 								<div id="resultado" class="datagrid">
 								    
 								    <?php include('../controlador/buscarEstudiante.php');?>
-									<table>
+									<table id="tablaEst" name = "tablaEst">
 										<thead>
 											<tr>
 												<th>Cedula</th><th>Tarjeta de Identidad</th><th>Nombres y apellidos</th><th>Modificar</th>

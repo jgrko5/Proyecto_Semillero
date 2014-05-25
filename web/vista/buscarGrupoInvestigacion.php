@@ -3,6 +3,7 @@ include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
 include_once ("../controlador/listaGruposInvestigacion.php");
+include_once ("../controlador/buscarGrupoInvestigacion.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -19,40 +20,29 @@ getImports();
 						</br><h6>Buscar grupo de investigación</h6>
 					</header>
 					<div id="formulario">
-						<form action="../controlador/buscarGrupoInvestigacion.php" method="post">
+						<form method="post">
 							<center>
 								<div class="etiqueta">
 									<label>Ingrese el código</label>
 								</div></br>
 
 								<div class="componente">
-									<input class="textfield" type="text" name="tipo" required="required" placeholder="Código" />
+									<input class="textfield" type="text" name="service" required="required" placeholder="Código" />
 								</div>
 
 								<div align="center">
-									<input class="button" type="submit" value="Buscar"/>
+									<input class="button" type="submit" name="boton" onclick="showService(service.value);location.href='#openModal'" value="Buscar" />
 								</div></br>
+
 								<header>
 									<h2>Grupos de investigación</h2>
 								</header>
 								<div id="resultado" class="datagrid">
 
 									<?php
-                                        include ('../controlador/buscarGruposInvestigacion.php');
+                                    echo $tabla;
+                                    echo $emergenteGrupos;
 									?>
-									<table>
-										<thead>
-											<tr>
-												<th>Codigo</th><th>Nombre</th><th>Clasificacion</th><th>fecha de Creacion</th>
-											</tr>
-										</thead>
-										<tbody>
-											<?php
-
-                                            echo $combobit;
-											?>
-										</tbody>
-									</table>
 								</div>
 								</br>
 							</center>

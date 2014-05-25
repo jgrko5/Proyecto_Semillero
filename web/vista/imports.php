@@ -7,7 +7,7 @@
 <html lang="es">
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8">
- 
+
 		<link href="../../css/style.css" rel="stylesheet">
 		<link href="../../css/panelSuperior.css" rel="stylesheet">
 		<link href="../../css/panelIzquierdo.css" rel="stylesheet">
@@ -15,6 +15,21 @@
 		<link href="../../css/calendario.css" rel="stylesheet">
 		<script>
 			!window.jQuery && document.write(unescape('%3Cscript src=”jquery-1.7.1.min.js”%3E%3C/script%3E'))
+		</script>
+		<script type="text/javascript">
+			function cambiacat(out) {
+				//var elem = document.id('respuesta');
+				var elem = document.id(out);
+
+				var conculta = new Request({
+					method : 'get',
+					url : '/../controlador/buscarEstudiante.php',
+					onSuccess : function(responseText) {
+						elem.set('html', responseText);
+					}
+				});
+				conculta.send();
+			}
 		</script>
 		<script type="text/javascript">
 			/*****************************************************************************
@@ -105,6 +120,9 @@
 			}
 
 		</script>
+
+		<script type="text/javascript" src="../../js/ajax.js"></script>
+
 		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -120,10 +138,10 @@
 		<title>Gestion de semilleros de investigacion</title>
 	</head>
 	<?php
-	}
+    }
 
-	function getImportsAdmin()
-	{
+    function getImportsAdmin()
+    {
 	?>
 
 <html lang="es">
@@ -150,6 +168,8 @@ Remove this if you use the .htaccess -->
 
 <!-- Editor de texto-->
 <script src="../../libs/ckeditor/ckeditor.js"></script>
+
+
 
 <!-- jQuery library (1.9.1) -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>

@@ -61,7 +61,7 @@ if($_SESSION['idFacultad']==83)
                     }
 					?>
 					<li>
-						<a href="listarEvento.php">Lista eventos</a>
+						<a href="buscarEvento.php">Lista eventos</a>
 					</li>
 					<?php
 if($_SESSION['idFacultad']==83)
