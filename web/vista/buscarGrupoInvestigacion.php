@@ -41,7 +41,6 @@ getImports();
 
 									<?php
                                     echo $tabla;
-                                    echo $emergenteGrupos;
 									?>
 								</div>
 								</br>
@@ -51,6 +50,9 @@ getImports();
 				</article>
 			</section>
 		</div>
+		<?php
+                                    echo $emergenteGrupos;
+                                    ?>
 		<?php
         getFooter();
 		?>

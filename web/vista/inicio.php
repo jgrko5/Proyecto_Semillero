@@ -2,16 +2,26 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
-include_once ("../controlador/listaEstudiante.php");
 getImports();
 ?>
-	<body>
-		<div id="main" class="wrapper">
-		<?php
-        getHeaderStart();
+<body onload="tunCalendario();">
+    <div id="main" class="wrapper">
+        <?php getheaderstart();
         getPanelSesion();
         getMenuIzquierdo();
-		?>
-		</div>
-	</body>
+        ?>
+        <div id="contenido">
+            <section id="premio">
+                <article>
+                </br>
+                </article>
+            </section>
+        </div>
+        <footer>
+        <?php
+        getFooter();
+        ?>
+        </footer>
+    </div>
+</body>
 </html>

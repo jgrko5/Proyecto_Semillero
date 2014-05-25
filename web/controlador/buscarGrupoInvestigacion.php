@@ -39,16 +39,20 @@ if ($_SESSION['seleccion'] == 1) {
 }
 oci_bind_by_name($stid, ':codigo', $codigo);
 
-oci_execute($stid);
+$r=oci_execute($stid);
+
 
 $combobit = "";
 $i = 0;
 $emergenteGrupos="";
-$emergenteGrupos .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=".'"modalDialogHeader"'."><h6>Grupo de investigación</h6></header>";
+$emergenteGrupos .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=".'"modalDialogHeader"';
+$emergenteGrupos .= "><h6>Grupo de investigación</h6></header>";
 $combobit .= "<table><thead><tr><th>Codigo</th><th>Nombre</th><th>Clasificacion</th><th>fecha de Creacion</th></tr></thead><tbody>";
 
+
+    
 if ($row = oci_fetch_array($stid)) {
-    $emergenteGrupos.= "</br><div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Codigo:</label></div>";
+    $emergenteGrupos.= "<div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Codigo:</label></div>";
     $emergenteGrupos.= "<div class=".'"etiquetaE"'."><label>".$row[0]."</label></div>";
     $emergenteGrupos.= "<div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Nombre:</label></div>".
     "<div class=".'"etiquetaE"'."><label>".$row[1]."</label></div></br>
@@ -66,7 +70,10 @@ if ($row = oci_fetch_array($stid)) {
     }
     
 }
-
+else
+{
+$emergenteGrupos.= "<div class=".'"etiquetaE"'."style=".'"font-weight: bold;font-size:16px"'."><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";    
+}
 $combobit .= "</tbody></table>";
 $emergenteGrupos.="</div></div>";
 

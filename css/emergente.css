@@ -35,15 +35,12 @@
 	background: #D3BB8D;
 }
 
-#openModal h6
-{
-	margin: 10 0 10 0;
-}
-.modalDialogHeader {
+
+.modalDialogHeader h6{
 	
 	background: rgba(101,167,57,1);
 	border-radius: 12 12 0 0;
-	
+	padding: 12;
 }
 
 .close {

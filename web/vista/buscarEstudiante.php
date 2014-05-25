@@ -38,8 +38,12 @@ getImports();
 
 								<div id="resultado" class="datagrid">
 								    
+<<<<<<< HEAD
 								    <?php include('../controlador/buscarEstudiante.php');?>
 									<table id="tablaEst" name = "tablaEst">
+=======
+									<table>
+>>>>>>> 564c7350ec61f0d6e0581d4502e1b762eac79f79
 										<thead>
 											<tr>
 												<th>Cedula</th><th>Tarjeta de Identidad</th><th>Nombres y apellidos</th><th>Modificar</th>
