@@ -117,20 +117,12 @@ if($_SESSION['idFacultad']==83)
 			<li class="last">
 				<a href="#"><span>Espacios académicos</span></a>
 				<ul>
-					<?php
-if($_SESSION['idFacultad']==83)
-{
-
-					?>
 					<li>
 						<a href="actualizarEspacioAcademico.php">Actualizar</a>
 					</li>
 					<?php
                     }
 					?>
-					<li class="lupper">
-						<a href="listarEspaciosAcademicos.php">Lista espacios académicos</a>
-					</li>
 					<?php
 if($_SESSION['idFacultad']==83)
 {
@@ -139,9 +131,6 @@ if($_SESSION['idFacultad']==83)
 					<li>
 					<a href="registrarEspaciosAcademicos.php">Registrar</a>
 					</li>
-					<?php
-                    }
-					?>
 				</ul>
 			</li>
 
@@ -196,7 +185,7 @@ if($_SESSION['idFacultad']==83)
                     }
 					?>
 					<li class="lupper">
-						<a href="asingarProyecto.php">Asignar estudiantes</a>
+						<a href="asingarProyectoEstudiante.php">Asignar estudiantes</a>
 					</li>
 
 					<li class="lupper">

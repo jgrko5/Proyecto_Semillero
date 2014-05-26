@@ -51,8 +51,6 @@ while ($row = oci_fetch_array($stid)) {
 }
 $combobit .= "</tbody></table>";
 
-
-
 oci_free_statement($stid);
 
 oci_close($conexion);
