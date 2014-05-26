@@ -46,13 +46,18 @@ $i = 0;
 $emergenteEst = "";
 $emergenteEst .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=" . '"modalDialogHeader"';
 $emergenteEst .= "><h6>Estudiantes</h6></header>";
+$texfield = "";
 if ($row = oci_fetch_array($stid)) {
 
     if ($row[0] == "") {
         $row[0] = "No registra";
+    } else {
+        $texfield .= "<div id=" . '"'.$row[0].'"' . " class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '"' . $row[2] . '"' . "></div>";
     }
     if ($row[1] == "") {
         $row[1] = "No registra";
+    } else {
+        $texfield .= "<div id=" . '"'.$row[1].'"' . " class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '"' . $row[2] . '"' . "></div>";
     }
     if ($row[3] == "") {
         $row[3] = "No registra";
@@ -64,6 +69,7 @@ if ($row = oci_fetch_array($stid)) {
         $row[5] = "No registra";
     }
 
+    
     $emergenteEst .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Cedula:</label></div>";
     $emergenteEst .= "<div class=" . '"etiquetaE"' . "><label>" . $row[0] . "</label></div>";
     $emergenteEst .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Tarjeta de identidad:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[1] . " " . "</label></div></br>
@@ -79,6 +85,7 @@ if ($row = oci_fetch_array($stid)) {
     <div class=" . '"etiquetaE"' . "><label>" . $row[8] . "</label></div></br></br></br>";
 } else {
     $emergenteEst .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;font-size:16px"' . "><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";
+    $texfield .= "<div class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '" "' . "></div>";
 }
 $emergenteEst .= "</div></div>";
 
