@@ -9,6 +9,7 @@ include_once ("menuDerecho.php");
 	<nav>
 		<ul>
 			<li class="mheader">
+				<a href="inicio.php">
 				<?php
                 if (isset($_SESSION)) {
                     echo "Facultad de " . $_SESSION['nomFacultad'];
@@ -16,7 +17,7 @@ include_once ("menuDerecho.php");
                         echo "Bienvenido";
                     }
                 }
-				?>
+				?></a>
 			</li>
 
 			<li>
@@ -28,7 +29,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-						<a href="actualizarEstudiante.php">Actualizar</a>
+					<a href="actualizarEstudiante.php">Actualizar</a>
 					</li>
 					<?php
                     }
@@ -51,11 +52,11 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-						<a href="actualizarEvento.php">Actualizar</a>
+					<a href="actualizarEvento.php">Actualizar</a>
 					</li>
 
 					<li>
-						<a href="asignarEvento.php">Asignar</a>
+					<a href="asignarEvento.php">Asignar</a>
 					</li>
 					<?php
                     }
@@ -69,7 +70,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li class="lupper">
-						<a href="registrarEvento.php">Registrar</a>
+					<a href="registrarEvento.php">Registrar</a>
 					</li>
 					<?php
                     }
@@ -89,7 +90,7 @@ if($_SESSION['idFacultad']==83)
 						<a href="actualizarGrupoInvestigacion.php">Actualizar</a>
 					</li>
 					<li class="lupper">
-						<a href="asigarGrupoInvestigacion.php">Asignar estudiante</a>
+					<a href="asigarGrupoInvestigacion.php">Asignar estudiante</a>
 					</li>
 					<?php
                     }
@@ -104,7 +105,7 @@ if($_SESSION['idFacultad']==83)
 					?>
 
 					<li class="lupper">
-						<a href="registrarGrupoInvestigacion.php">Registrar</a>
+					<a href="registrarGrupoInvestigacion.php">Registrar</a>
 					</li>
 					<?php
                     }
@@ -136,7 +137,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-						<a href="registrarEspaciosAcademicos.php">Registrar</a>
+					<a href="registrarEspaciosAcademicos.php">Registrar</a>
 					</li>
 					<?php
                     }
@@ -157,7 +158,7 @@ if($_SESSION['idFacultad']==83)
 					</li>
 
 					<li class="lupper">
-						<a href="asigarPremios.php">Asignar estudiante </a>
+					<a href="asigarPremios.php">Asignar estudiante </a>
 					</li>
 					<?php
                     }
@@ -171,7 +172,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-						<a href="registrarPremios.php">Registrar</a>
+					<a href="registrarPremios.php">Registrar</a>
 					</li>
 					<?php
                     }
@@ -230,7 +231,6 @@ if($_SESSION['idFacultad']==83)
 					<li class="lupper">
 						<a href="registrarSemilleroConsolidacion.php">Registrar</a>
 					</li>
-
 				</ul>
 			</li>
 
@@ -243,7 +243,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-						<a href="actualizarSemilleroEjecucion.php">Actualizar</a>
+					<a href="actualizarSemilleroEjecucion.php">Actualizar</a>
 					</li>
 					<?php
                     }
@@ -268,7 +268,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-						<a href="actualizarTutor.php">Actualizar</a>
+					<a href="actualizarTutor.php">Actualizar</a>
 					</li>
 					<?php
                     }
@@ -364,8 +364,8 @@ function getMenuIzquierdoVice()
 						<a href="asignarTutor.php">Asignar</a>
 					</li>
 					<li>
-						<a href="registrarTutor.php">Registrar</a>
-						<a href="enn.php">En cons...</a>
+					<a href="registrarTutor.php">Registrar</a>
+					<a href="enn.php">En cons...</a>
 					</li>
 				</ul>
 			</li>

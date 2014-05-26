@@ -3,6 +3,7 @@ include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
 include_once ('../controlador/listaProyecto.php');
+include_once ('../controlador/buscarProyecto.php');
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -19,7 +20,7 @@ getImports();
 						</br><h6>Buscar proyecto de investigación</h6>
 					</header>
 					<div id="formulario">
-						<form action="../controlador/buscarProyecto.php" method="post">
+						<form  method="post">
 							<center>
 								<div class="etiqueta">
 									<label>Ingrese el código</label>
@@ -30,7 +31,7 @@ getImports();
 								</div>
 
 								<div align="center">
-									<input class="button" type="submit" value="Buscar"/>
+									<input class="button" type="submit" value="Buscar" onclick="showService(codigoP.value,'buscarProyecto');location.href='#openModal'"/>
 								</div></br>
 
 								<header>
@@ -39,21 +40,8 @@ getImports();
 								<div id="resultado" class="datagrid">
 
 									<?php
-                                    include ('../controlador/buscarProyecto.php');
+                                    echo $combobit;
 									?>
-									<table>
-										<thead>
-											<tr>
-												<th>Código</th><th>Título</th><th>Gasto efectivo</th><th>Duración</th><th>Fecha inicio</th>
-											</tr>
-										</thead>
-										<tbody>
-											<?php
-
-                                            echo $combobit;
-											?>
-										</tbody>
-									</table>
 								</div>
 								</br>
 							</center>
@@ -63,6 +51,7 @@ getImports();
 			</section>
 		</div>
 		<?php
+		echo $emergentePro;
         getFooter();
 		?>
 	</div>

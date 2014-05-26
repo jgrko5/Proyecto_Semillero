@@ -9,7 +9,6 @@ error_reporting("E_ERROR && E_WARNING");
 header("Content-Type: text / html; charset =UTF-8");
 $conexion = conectar();
 
-
 if ($_SESSION['seleccion'] == 1) {
     $stid = oci_parse($conexion, 'select * from CRUD_PROYECTOS_INGENIERIA e order by e.titulo');
 } else {
@@ -40,20 +39,21 @@ if ($_SESSION['seleccion'] == 1) {
 
 oci_execute($stid);
 
-$combobit = "";
+$combobit = "<table><thead><tr><th>Código</th><th>Título</th></thead><tbody>";
 $i = 0;
 
 while ($row = oci_fetch_array($stid)) {
     $comboProyecto .= " <option value='" . $row[0] . "'>" . $row[1] . "</option>";
     if ($i == 1) {
-        $combobit .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td>" . $row[3] . "</td> <td>" . $row[4] . "</td></tr>";
+        $combobit .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td></tr>" ;
         $i = 0;
     } else {
-        $combobit .= " <tr ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td>" . $row[3] . "</td> <td>" . $row[4] . "</td></tr>";
+        $combobit .= " <tr ><td>" . $row[0] . "</td><td>" . $row[1] . "</td></tr>";
         $i++;
     }
 
 }
- oci_free_statement($stid);
+$combobit .= "</tbody></table>";
+oci_free_statement($stid);
 oci_close($conexion);
 ?>
