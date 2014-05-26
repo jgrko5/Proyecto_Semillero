@@ -31,7 +31,7 @@ getImports();
 								</div>
 
 								<div align="center">
-									<input class="button" type="submit" name="boton" onclick="showService(service.value);location.href='#openModal'" value="Buscar" />
+									<input class="button" type="submit" name="boton" onclick="showService(service.value,'buscarGrupoInvestigacion');location.href='#openModal'" value="Buscar" />
 								</div></br>
 
 								<header>
@@ -51,8 +51,8 @@ getImports();
 			</section>
 		</div>
 		<?php
-                                    echo $emergenteGrupos;
-                                    ?>
+        echo $emergenteGrupos;
+		?>
 		<?php
         getFooter();
 		?>

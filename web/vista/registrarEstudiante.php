@@ -2,8 +2,8 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
-// include_once ("../controlador/listaProgramasAcademicos.php");
-// include_once ("../controlador/listarSemestres.php");
+include_once ("../controlador/listaProgramasAcademicos.php");
+include_once ("../controlador/listarSemestres.php");
 getImports();
 ?>
 <body onload="tunCalendario();">

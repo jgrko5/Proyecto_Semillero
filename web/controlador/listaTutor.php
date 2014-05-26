@@ -39,7 +39,7 @@ if ($_SESSION['seleccion'] == 1) {
 
 oci_execute($stid);
 
-$combobit = "";
+$combobit = "<table><thead><tr><th>Cedula</th><th>Nombre</th><th>Apellidos</th></tr></thead><tbody>";
 $i = 0;
 
 while ($row = oci_fetch_array($stid)) {
@@ -52,6 +52,9 @@ while ($row = oci_fetch_array($stid)) {
     }
 
 }
+
+$combobit .= "</tbody></table>";
+oci_free_statement($stid);
 
 oci_close($conexion);
 ?>

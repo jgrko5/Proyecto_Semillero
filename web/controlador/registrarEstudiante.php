@@ -65,25 +65,25 @@ $programaEst = $_POST['programaEst'];
 
 $conexion = conectar();
 
-if ($_SESSION['idFacultad'] == 1) {
+if ($_SESSION['seleccion'] == 1) {
 	$stid = oci_parse($conexion, 'INSERT INTO crud_estudiantes_ingenieria(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
 } else {
-	if ($_SESSION['idFacultad'] == 2) {
+	if ($_SESSION['seleccion'] == 2) {
 		$stid = oci_parse($conexion, 'INSERT INTO crud_estudiantes_educacion(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
 	} else {
-		if ($_SESSION['idFacultad'] == 21) {
+		if ($_SESSION['seleccion'] == 21) {
 			$stid = oci_parse($conexion, 'INSERT INTO crud_estudiantes_salud(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
 		} else {
-			if ($_SESSION['idFacultad'] == 22) {
+			if ($_SESSION['seleccion'] == 22) {
 				$stid = oci_parse($conexion, 'INSERT INTO crud_estudiantes_basicas(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
 			} else {
-				if ($_SESSION['idFacultad'] == 23) {
+				if ($_SESSION['seleccion'] == 23) {
 					$stid = oci_parse($conexion, 'INSERT INTO crud_estudiantes_agroindustria(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
 				} else {
-					if ($_SESSION['idFacultad'] == 24) {
+					if ($_SESSION['seleccion'] == 24) {
 						$stid = oci_parse($conexion, 'INSERT INTO crud_estudiantes_bellas_artes(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
 					} else {
-						if ($_SESSION['idFacultad'] == 25) {
+						if ($_SESSION['seleccion'] == 25) {
 							$stid = oci_parse($conexion, 'INSERT INTO crud_estudiantes_economica(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
 						} 
 					}

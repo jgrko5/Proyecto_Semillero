@@ -1,5 +1,5 @@
 
-function showService(str) 
+function showService(str,buscar) 
 {
     if (str=="") {
       document.getElementById("txtHint").innerHTML="";
@@ -16,6 +16,6 @@ function showService(str)
         document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
       }
     }
-    xmlhttp.open("post","/Proyecto_Semillero/web/controlador/buscarGrupoInvestigacion.php?codigo="+str,true);
+    xmlhttp.open("post","/Proyecto_Semillero/web/controlador/"+buscar+".php?codigo="+str,true);
     xmlhttp.send();
 }

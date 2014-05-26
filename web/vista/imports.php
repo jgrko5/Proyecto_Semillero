@@ -13,9 +13,7 @@
 		<link href="../../css/panelIzquierdo.css" rel="stylesheet">
 		<link href="../../css/emergente.css" rel="stylesheet">
 		<link href="../../css/calendario.css" rel="stylesheet">
-		<script>
-			!window.jQuery && document.write(unescape('%3Cscript src=”jquery-1.7.1.min.js”%3E%3C/script%3E'))
-		</script>
+		
 		<script type="text/javascript">
 			function cambiacat(out) {
 				//var elem = document.id('respuesta');

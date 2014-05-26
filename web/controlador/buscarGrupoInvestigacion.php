@@ -52,6 +52,18 @@ $combobit .= "<table><thead><tr><th>Codigo</th><th>Nombre</th><th>Clasificacion<
 
     
 if ($row = oci_fetch_array($stid)) {
+    if ($row[0] == "") {
+        $row[0] = "No registra";
+    }
+    if ($row[1] == "") {
+        $row[1] = "No registra";
+    }
+    if ($row[2] == "") {
+        $row[2] = "No registra";
+    }
+    if ($row[3] == "") {
+        $row[3] = "No registra";
+    }
     $emergenteGrupos.= "<div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Codigo:</label></div>";
     $emergenteGrupos.= "<div class=".'"etiquetaE"'."><label>".$row[0]."</label></div>";
     $emergenteGrupos.= "<div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Nombre:</label></div>".
