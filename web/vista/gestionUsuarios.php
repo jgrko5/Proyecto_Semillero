@@ -22,14 +22,14 @@ getImports();
 							</br><h6>Gestión de contraseñas</h6></br>
 						</header>
 						<div id="formulario">
-							<form action="../controlador/gestionContraseñas.php" method="post">
+							<form action="../controlador/gestionContrasenas.php" method="post">
 								<div class="etiqueta">
 									<label> Usuario:</label>
 								</div>
 								<div class="componente">
-									<select class="select" title="gestion de contraseñas" name="gestionCon" onchange="showService(this.value,'gestionarContraseñas')">
+									<select class="select" title="gestion de contraseñas" name="gestionCon" onchange="showService(this.value,'gestionarContrasenas')">
 										<?php
-											$combobitUsuarios;
+											echo $combobitUsuarios;
 										?>
 									</select>							
 								</div>
