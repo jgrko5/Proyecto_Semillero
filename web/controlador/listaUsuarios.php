@@ -13,7 +13,7 @@ oci_execute($stid);
 
 $combobitUsuarios = "";
 
-while ($row = oci_fetch($stid))
+while ($row = oci_fetch_array($stid))
 {
 	$combobitUsuarios .= "<option value='". $row[0] . "'>" . $row[1] . "</option>";
 }
