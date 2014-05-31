@@ -32,13 +32,12 @@ getImports();
 										echo $combobitUsuarios;
 										?>
 									</select>
-								</div>
+								</div></br>
 								<?php
-									$textContrasena;
-								?>
+									echo $textContrasena;
+								?></br>
 							</form>
 						</div>
-
 					</div>
 				</article>
 			</section>
