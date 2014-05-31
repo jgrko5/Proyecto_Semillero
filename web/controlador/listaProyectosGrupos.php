@@ -18,8 +18,8 @@ LEFT JOIN SEMILLEROS_EJECUCION se
 ON se.ID = p.SEMILLEROS_EJECUCION_ID
 LEFT JOIN GRUPOS_INVESTIGACION g
 ON g.CODIGO  = sc.GRUPOS_INVESTIGACION_ID
-AND g.CODIGO = se.GRUPOS_INVESTIGACION_ID
-WHERE G.CODIGO = :codigo
+OR g.CODIGO = se.GRUPOS_INVESTIGACION_ID
+WHERE g.CODIGO = :codigo
 ORDER BY (p.TITULO)');
 
 oci_bind_by_name($consulta, ':codigo', $codigo);
@@ -31,6 +31,7 @@ $select="";
 $select.="<div class=".'"etiqueta"'."><label>Proyecto de investigación:</label></div></br><div class=".'"componente"'."><select class=".'"select"'." title=".'"Proyecto de investigación"'.">";
 while($row=oci_fetch_array($consulta))
 {
+    echo $row[0];
     $select.="<option value=".'"'.$row[1].'"'.">".$row[0]."</option>";
 }
 $select.="</select></div>";

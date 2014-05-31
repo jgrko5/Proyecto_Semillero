@@ -88,8 +88,8 @@ if ($row = oci_fetch_array($stid)) {
     <div class=" . '"etiquetaE"' . "><label>" . $row[8] . "</label></div></br></br></br>";
 } else {
     $emergenteEst .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;font-size:16px"' . "><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";
-    $texfield .= "<div class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '" "' . "></div>";
-    $textfieldCodigo .= "<div class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"codigo"' . "required=" . '"required"' . "value=" . '" "' . "readonly=".'"true"'."></div>";
+    $texfield .= "<div class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '""' ."readonly=".'"true"'. "placeholder=".'"Resultado de la busqueda"'."></div>";
+    $textfieldCodigo .= "<div class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"codigo"' . "required=" . '"required"' . "value=" . '""' . "readonly=".'"true"'."placeholder=".'"Resultado de la busqueda"'."></div>";
 }
 $emergenteEst .= "</div></div>";
 

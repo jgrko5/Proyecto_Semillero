@@ -20,14 +20,14 @@ getImports();
 						</br><h6>Registrar semillero en consolidación</h6>
 					</header>
 					<div id="formulario">
-						<form action="../controlador/registrarSemilleroConsolidacion.php" method="post">
+						<form method="post">
 
 							<div class="etiqueta">
 								<label>Grupo de investigación:</label>
 							</div></br>
 
 							<div class="componente">
-								<select class="select" title="Grupos de investigación" name="grupo" onchange="showService(this.value,'listaProyectosGrupos')">
+								<select class="select" title="Grupos de investigación" name="grupo" onchange="showService(grupo.value,'listaProyectosGrupos')">
 									<?php
                                     echo $comboGrupo;
 									?>
