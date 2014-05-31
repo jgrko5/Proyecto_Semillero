@@ -12,7 +12,7 @@ getImports();
 		?>
 		<div id="contenido">
 			<section id="proyecto">
-				<article>
+			<article>
 					<header>
 					</br><h6>Asignar proyecto de investigación</h6>
 					</header>

@@ -6,7 +6,6 @@ session_start();
 
 error_reporting("E_ERROR && E_WARNING");
 
-header("Content-Type: text / html; charset =UTF-8");
 $conexion = conectar();
 
 if ($_SESSION['seleccion'] == 1) {
