@@ -29,14 +29,15 @@ getImports();
 								<div class="componente">
 									<select class="select" title="gestion de contraseñas" name="gestionCon" onchange="showService(this.value,'gestionarContrasenas')">
 										<?php
-											echo $combobitUsuarios;
+										echo $combobitUsuarios;
 										?>
-									</select>							
+									</select>
 								</div>
-								
+								<?php
+									$textContrasena;
+								?>
 							</form>
 						</div>
-						
 
 					</div>
 				</article>

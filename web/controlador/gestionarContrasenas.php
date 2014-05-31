@@ -9,7 +9,7 @@ $stid = oci_parse($conexion, 'select contrasena from sesiones where id =:idsesio
 oci_bind_by_name($stid, ':idsesion', $codigo);
 
 oci_execute($stid);
-
+$textContrasena="";
 if($row = oci_fetch_array($stid))
 {
 	$textContrasena = "<div class=".'"etiqueta"'."><label>Contraseña:</label></div><div class=".'"componente"'.">< input class=".'"textfield"'."type=".'"text"'."value=".'"' . $row[0] . '"'."name=".'"contrasena"'."placeholder=" .'"Contraseña"'."/></div>";
