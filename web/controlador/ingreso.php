@@ -14,6 +14,13 @@ oci_bind_by_name($stid, ':pass', $contrasena);
 
 $r = oci_execute($stid);
 
+
+if (!$r) {
+    $e = oci_error($conn);
+    // Para errores de oci_parse, pase el gestor de conexión
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
+
 if ($row = oci_fetch_array($stid)) {
     if ($row[0] == 1) {
         $_SESSION['idFacultad'] = $row[1];

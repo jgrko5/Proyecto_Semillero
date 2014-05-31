@@ -31,11 +31,18 @@ getImports();
 							</div>
 						</form>
 						<form action="../controlador/asignarEstudianteProyecto.php"  method="post">
+						    <div class="etiqueta">
+                                <label>Código resultante:</label>
+                            </div></br>
+						    <?php
+						    echo $textfieldCodigo;
+						    ?>
 							<div class="etiqueta">
 								<label>Nombres y apellidos:</label>
 							</div></br>
 
 							<?php
+							
                             echo $texfield;
 							?>
 							</br>

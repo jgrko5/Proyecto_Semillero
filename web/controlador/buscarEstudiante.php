@@ -47,17 +47,20 @@ $emergenteEst = "";
 $emergenteEst .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=" . '"modalDialogHeader"';
 $emergenteEst .= "><h6>Estudiantes</h6></header>";
 $texfield = "";
+$textfieldCodigo = "";
 if ($row = oci_fetch_array($stid)) {
 
     if ($row[0] == "") {
         $row[0] = "No registra";
     } else {
-        $texfield .= "<div id=" . '"'.$row[0].'"' . " class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '"' . $row[2] . '"' . "></div>";
+        $textfieldCodigo .= "<div  class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"codigo"' . "required=" . '"required"' . "value=" . '"' . $row[0] . '"' ."readonly=".'"true"'. "></div>";
+        $texfield .= "<div id=" . '"'.$row[0].'"' . " class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '"' . $row[2] . '"' ."readonly=".'"true"' . "></div>";
     }
     if ($row[1] == "") {
         $row[1] = "No registra";
     } else {
-        $texfield .= "<div id=" . '"'.$row[1].'"' . " class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '"' . $row[2] . '"' . "></div>";
+        $textfieldCodigo .= "<div  class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"codigo"' . "required=" . '"required"' . "value=" . '"' . $row[1] . '"' . "readonly=".'"true"'."></div>";
+        $texfield .= "<div id=" . '"'.$row[1].'"' . " class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '"' . $row[2] . '"' ."readonly=".'"true"'. "></div>";
     }
     if ($row[3] == "") {
         $row[3] = "No registra";
@@ -86,6 +89,7 @@ if ($row = oci_fetch_array($stid)) {
 } else {
     $emergenteEst .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;font-size:16px"' . "><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";
     $texfield .= "<div class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '" "' . "></div>";
+    $textfieldCodigo .= "<div class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"codigo"' . "required=" . '"required"' . "value=" . '" "' . "readonly=".'"true"'."></div>";
 }
 $emergenteEst .= "</div></div>";
 

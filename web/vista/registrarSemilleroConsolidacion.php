@@ -3,15 +3,15 @@ include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
 include_once ("../controlador/listaGruposInvestigacion.php");
-include_once ("../controlador/listaProyecto.php");
+include_once ("../controlador/listaProyectosGrupos.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
 	<div id="main" class="wrapper">
 		<?php
-		getheaderstart();
-		getPanelSesion();
-		getMenuIzquierdo();
+        getheaderstart();
+        getPanelSesion();
+        getMenuIzquierdo();
 		?>
 		<div id="contenido">
 			<section id="consolidacion">
@@ -27,24 +27,17 @@ getImports();
 							</div></br>
 
 							<div class="componente">
-								<select class="select" title="Grupos de investigación" name="grupo">
-									 <?php
-                                        echo $comboGrupo;
-                                    ?>
+								<select class="select" title="Grupos de investigación" name="grupo" onchange="showService(this.value,'listaProyectosGrupos')">
+									<?php
+                                    echo $comboGrupo;
+									?>
 								</select>
 							</div></br>
 
-							<div class="etiqueta">
-								<label>Proyecto de investigación:</label>
-							</div></br>
-
-							<div class="componente">
-								<select class="select" title="Proyecto de investigación">
-									 <?php
-                                        echo $comboProyecto;
-                                    ?>
-								</select>
-							</div></br>
+							<?php
+                            echo $select;
+							?>
+							</br>
 
 							<div class="etiqueta">
 								<label>Año:</label>
@@ -71,14 +64,6 @@ getImports();
 							</div></br>
 
 							<div class="etiqueta">
-								<label>Horas empleadas del docente:</label>
-							</div></br>
-
-							<div class="componente">
-								<input class="textField" type="text" name="horasDocente" placeholder="Horas empleadas docente"/>
-							</div></br>
-
-							<div class="etiqueta">
 								<label>Homologación:</label>
 							</div></br>
 
@@ -95,7 +80,7 @@ getImports();
 			</section>
 		</div>
 		<?php
-		getFooter();
+        getFooter();
 		?>
 	</div>
 </body>

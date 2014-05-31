@@ -12,17 +12,9 @@
             echo $m['message'], "\n";
             exit;
 		}
-		else 
-		{
-		}
 		return $conn;
 	}
 	
-	function getInsertar($consulta)
-	{
-		$conexion=$conectar();
-		$statement=oci_parse($conexion, 'inser');
-		
-	}
+	
 	
 ?>

@@ -3,6 +3,7 @@ include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
 include_once ("../controlador/listaGruposInvestigacion.php");
+include_once ("../controlador/listaProyecto.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -13,104 +14,86 @@ getImports();
         getMenuIzquierdo();
 		?>
 		<div id="contenido">
-			<section id="ejecucion">
-				<article>
-					<header>
-						</br><h6>Registrar semillero en ejecución</h6>
-					</header>
-					<div id="formulario">
-						<form action="../controlador/registrarSemilleroEjecucion.php" method="post">
-							<div class="etiqueta">
-								<label>Grupo de investigación:</label>
-							</div></br>
+            <section id="consolidacion">
+                <article>
+                    <header>
+                        </br><h6>Registrar semillero en ejecución</h6>
+                    </header>
+                    <div id="formulario">
+                        <form action="../controlador/registrarSemilleroEjecucion.php" method="post">
 
-							<div class="componente">
-								<select class="select" title="Grupos de investigación" name="grupo">
-                                    <?php
+                            <div class="etiqueta">
+                                <label>Grupo de investigación:</label>
+                            </div></br>
+
+                            <div class="componente">
+                                <select class="select" title="Grupos de investigación" name="grupo">
+                                     <?php
                                         echo $comboGrupo;
                                     ?>
-								</select>
-							</div></br>
-								<div class="componente">
-									<input class="textField" type="text" name="codigoPE" placeholder="Código"/>
-								</div></br>
+                                </select>
+                            </div></br>
 
-							<div class="etiqueta">
-								<label>Fecha inicio:</label>
-							</div></br>
+                            <div class="etiqueta">
+                                <label>Proyecto de investigación:</label>
+                            </div></br>
 
-							<div class="componente">
-								<input type="date" class="textField" name="fecha"/>
-							</div></br>
-=======
-								<div class="componente">
-									<input class="textField" type="text" name="tituloPE" placeholder="Título"/>
-								</div></br>
->>>>>>> 6f6e1057c5ac308edd2c335d329f5325823600b7
+                            <div class="componente">
+                                <select class="select" title="Proyecto de investigación">
+                                     <?php
+                                        echo $comboProyecto;
+                                    ?>
+                                </select>
+                            </div></br>
+                            
+                              <div class="etiqueta">
+                                <label>Horas del docente:</label>
+                            </div></br>
 
-							<div class="etiqueta">
-								<label>Duración del proyecto de investigación:</label>
-							</div></br>
+                            <div class="componente">
+                                <input class="textField" type="text" name="horas" placeholder="Horas del docente"/>
+                            </div></br>
 
-<<<<<<< HEAD
-							<div class="componente">
-								<input class="textField" type="text" name="duracion" placeholder="Duración"/>
-							</div></br>
-=======
-								<div class="componente">
-									<input type="date" class="textField" name="fechaPE"/>
-								</div></br>
->>>>>>> 6f6e1057c5ac308edd2c335d329f5325823600b7
+                            <div class="etiqueta">
+                                <label>Año:</label>
+                            </div></br>
 
-							<div class="etiqueta">
-								<label>Gasto:</label>
-							</div></br>
+                            <div class="componente">
+                                <input class="textField" type="text" name="año" placeholder="Año"/>
+                            </div></br>
 
-<<<<<<< HEAD
-							<div class="componente">
-								<input class="textField" type="text" name="gasto" placeholder="Gasto"/>
-							</div></br>
-=======
-								<div class="componente">
-									<input class="textField" type="text" name="duracionPE" placeholder="Duración"/>
-								</div></br>
->>>>>>> 6f6e1057c5ac308edd2c335d329f5325823600b7
+                            <div class="etiqueta">
+                                <label>Período:</label>
+                            </div></br>
 
-							<div class="etiqueta">
-								<label>Nombre del estudiante:</label>
-							</div></br>
+                            <div class="componente">
+                                <input class="textField" type="text" name="periodo" placeholder="Período"/>
+                            </div></br>
 
-<<<<<<< HEAD
-							<div class="componente">
-								<input class="textField" type="text" name="nombre" placeholder="Nombre"/>
-							</div></br></br></br>
+                            <div class="etiqueta">
+                                <label>Nota:</label>
+                            </div></br>
 
-							<div aling="center">
-								<input class="button" type="submit" value="Registrar" />
-							</div></br>
-=======
-								<div class="componente">
-									<input class="textField" type="text" name="gastoPE" placeholder="Gasto"/>
-								</div></br>
-								
-								<div class="etiqueta">
-									<label>Nombre del estudiante:</label>
-								</div></br>
+                            <div class="componente">
+                                <input class="textField" type="text" name="nota" placeholder="Nota"/>
+                            </div></br>
 
-								<div class="componente">
-									<input class="textField" type="text" name="nombreestPE" placeholder="Nombre"/>
-								</div></br></br></br>
+                            <div class="etiqueta">
+                                <label>Homologación:</label>
+                            </div></br>
 
-								<div aling="center">
-									<input class="button" type="submit" value="Registrar" />
-								</div></br>
-							</center>
->>>>>>> 6f6e1057c5ac308edd2c335d329f5325823600b7
-						</form>
-					</div>
-				</article>
-			</section>
-		</div>
+                            <div class="componente">
+                                <input type="checkbox" id="homologacion" value="3" onChange="total()" name="valido" />
+                            </div></br></br>
+
+                            <div align="center">
+                                <input class="button" type="submit" value="Registrar" />
+                            </div></br>
+                        </form>
+                    </div>
+                </article>
+            </section>
+        </div>
 		<?php
         getFooter();
 		?>

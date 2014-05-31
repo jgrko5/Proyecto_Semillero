@@ -13,9 +13,10 @@ include_once ("menuDerecho.php");
 				<?php
                 if (isset($_SESSION)) {
                     echo "Facultad de " . $_SESSION['nomFacultad'];
-                } else { {
-                        echo "Bienvenido";
-                    }
+                } else {
+
+                    echo "Bienvenido";
+
                 }
 				?></a>
 			</li>
@@ -113,27 +114,28 @@ if($_SESSION['idFacultad']==83)
 				</ul>
 
 			</li>
+                <?php
+if($_SESSION['idFacultad']==83)
+{
 
+                    ?>
 			<li class="last">
 				<a href="#"><span>Espacios académicos</span></a>
 				<ul>
 					<li>
 						<a href="actualizarEspacioAcademico.php">Actualizar</a>
 					</li>
-					<?php
-                    }
-					?>
-					<?php
-if($_SESSION['idFacultad']==83)
-{
-
-					?>
+				
+	
 					<li>
 					<a href="registrarEspaciosAcademicos.php">Registrar</a>
 					</li>
+					
 				</ul>
 			</li>
-
+<?php
+}
+                    ?>
 			<li class="last">
 				<a href="#"><span>Premios</span></a>
 				<ul>
@@ -185,7 +187,7 @@ if($_SESSION['idFacultad']==83)
                     }
 					?>
 					<li class="lupper">
-						<a href="asingarProyectoEstudiante.php">Asignar estudiantes</a>
+						<a href="asignarProyectoEstudiante.php">Asignar estudiantes</a>
 					</li>
 
 					<li class="lupper">
