@@ -10,6 +10,9 @@ oci_bind_by_name($stid, ':idsesion', $codigo);
 
 oci_execute($stid);
 
-$textContrasena = "<div class=".'"etiqueta"'."><label>Contraseña:</label></div><div class=".'"componente"'.">< input class=".'"textfield"'."type=".'"text"'."name=".'"contrasena"'."placeholder=" .'"Contraseña"'."/></div>";                                             
-
+if($row = oci_fetch_array($stid))
+{
+	$textContrasena = "<div class=".'"etiqueta"'."><label>Contraseña:</label></div><div class=".'"componente"'.">< input class=".'"textfield"'."type=".'"text"'."value=".'"' . $row[0] . '"'."name=".'"contrasena"'."placeholder=" .'"Contraseña"'."/></div>";
+	                                             
+}
 ?>
