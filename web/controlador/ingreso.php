@@ -28,7 +28,6 @@ if ($row = oci_fetch_array($stid)) {
         if ($row[1] != 83) {
             $_SESSION['seleccion'] = $row[1];
         }
-        echo $_SESSION['seleccion'];
 
         if ($usuario == 'ingenieria') {
             echo "<script type='text/javascript'>

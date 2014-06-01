@@ -3,7 +3,7 @@ include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
 include_once ("../controlador/listaGruposInvestigacion.php");
-include_once ("../controlador/listaProyectosGrupos.php");
+include_once ("../controlador/listaProyecto.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -20,23 +20,31 @@ getImports();
 						</br><h6>Registrar semillero en consolidación</h6>
 					</header>
 					<div id="formulario">
-						<form method="post">
+						<form action="../controlador/registrarSemilleroConsolidacion.php" method="post">
 
 							<div class="etiqueta">
-								<label>Grupo de investigación:</label>
+								<label >Grupo de investigación:</label>
 							</div></br>
+							</br>
 
 							<div class="componente">
-								<select class="select" title="Grupos de investigación" name="grupo" onchange="showService(grupo.value,'listaProyectosGrupos')">
+								<select class="select" name="grupo"  >
 									<?php
                                     echo $comboGrupo;
 									?>
 								</select>
-							</div></br>
+								<!-- <?php
+								echo $text;
+								?> -->
 
-							<?php
-                            echo $select;
-							?>
+							</div>
+							<div class="componente">
+								<select class="select" title="Grupos de investigación" name="grupo">
+									<?php
+                                    echo $combobit;
+									?>
+								</select>
+							</div>
 							</br>
 
 							<div class="etiqueta">

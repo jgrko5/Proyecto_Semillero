@@ -26,7 +26,7 @@ getImports();
 							</div></br>
 
 							<div class="componente">
-								<input class="textField" type="text" name="documento" required="required" placeholder="Número de identificación" />
+								<input class="textField" type="text" name="documento" required="required" placeholder="Número de identificación" value="" />
 							</div>
 
 							<div align="center">

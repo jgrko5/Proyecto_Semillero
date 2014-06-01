@@ -155,7 +155,7 @@ if($_SESSION['idFacultad']==83)
                     }
 					?>
 					<li class="lupper">
-						<a href="listarPremios.php">Lista premios</a>
+						<a href="buscarPremios.php">Lista premios</a>
 					</li>
 					<?php
 if($_SESSION['idFacultad']==83)
