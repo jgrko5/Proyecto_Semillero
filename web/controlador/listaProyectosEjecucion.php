@@ -37,15 +37,16 @@ if ($_SESSION['seleccion'] == 1) {
 	   		 	}
 oci_execute($stid);
 
-$tablaEjecucion = "<table><thead><tr><th>Codigo</th><th>Titulo</th></thead><tbody>";
+$tablaEjecucion = "<table><thead><tr><th>Codigo</th><th>Titulo</th></tr></thead><tbody>";
 $i = 0;
 
 while ($row = oci_fetch_array($stid)){
 	if($i == 1){
-		$tablaEjecucion .= "tr class= " . '"alt"' . "><td>" . $row[0] . "</td><td>" . $row[1] . "</td></tr>";
+		$tablaEjecucion .= "<tr class= " . '"alt"' . "><td>" . $row[5] . "</td><td>" . $row[6] . "</td></tr>";
+        $i=0;
 	}
 	else {
-        $combobit .= " <tr ><td>" . $row[0] . "</td><td>" . $row[1] . "</td></tr>";
+        $tablaEjecucion .= " <tr ><td>" . $row[5] . "</td><td>" . $row[6] . "</td></tr>";
         $i++;
     }
 }
