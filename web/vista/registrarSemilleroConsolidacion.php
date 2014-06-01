@@ -25,27 +25,27 @@ getImports();
 							<div class="etiqueta">
 								<label >Grupo de investigación:</label>
 							</div></br>
-							</br>
 
 							<div class="componente">
-								<select class="select" name="grupo"  >
+								<select class="select" title="Grupos de investigación" name="grupo">
 									<?php
                                     echo $comboGrupo;
 									?>
 								</select>
-								<!-- <?php
-								echo $text;
-								?> -->
-
-							</div>
-							<div class="componente">
-								<select class="select" title="Grupos de investigación" name="grupo">
-									<?php
-                                    echo $combobit;
-									?>
-								</select>
 							</div>
 							</br>
+
+							<div class="etiqueta">
+								<label>Proyecto de investigación:</label>
+							</div></br>
+
+							<div class="componente">
+								<select class="select" title="Proyecto de investigación">
+									<?php
+                                    echo $comboProyecto;
+									?>
+								</select>
+							</div></br>
 
 							<div class="etiqueta">
 								<label>Año:</label>

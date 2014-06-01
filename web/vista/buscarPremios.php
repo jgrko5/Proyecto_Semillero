@@ -30,7 +30,7 @@ getImports();
 					</div>
 				</article>
 			</section>
-		</div
+		</div>
 
 		<?php
         getFooter();

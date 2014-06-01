@@ -6,25 +6,25 @@ session_start();
 $conexion = conectar();
 
 if ($_SESSION['seleccion'] == 1) {
-	$stid = oci_parse($conexion, 'select * from crud_premio_INGENIERIA e  ');
+	$stid = oci_parse($conexion, 'select * from crud_premios_INGENIERIA e  ');
 } else {
 	if ($_SESSION['seleccion'] == 2) {
-		$stid = oci_parse($conexion, 'select * from crud_premio_educacion e  ');
+		$stid = oci_parse($conexion, 'select * from crud_premios_educacion e  ');
 	} else {
 		if ($_SESSION['seleccion'] == 21) {
-			$stid = oci_parse($conexion, 'select * from crud_premio_salud e  ');
+			$stid = oci_parse($conexion, 'select * from crud_premios_salud e  ');
 		} else {
 			if ($_SESSION['seleccion'] == 22) {
-				$stid = oci_parse($conexion, 'select * from crud_premio_basicas e  ');
+				$stid = oci_parse($conexion, 'select * from crud_premios_basicas e  ');
 			} else {
 				if ($_SESSION['seleccion'] == 23) {
-					$stid = oci_parse($conexion, 'select * from crud_premio_agroindustria e  ');
+					$stid = oci_parse($conexion, 'select * from crud_premios_agroindustria e  ');
 				} else {
 					if ($_SESSION['seleccion'] == 24) {
-						$stid = oci_parse($conexion, 'select * from crud_premio_bellas_artes e  ');
+						$stid = oci_parse($conexion, 'select * from crud_premios_bellas_artes e  ');
 					} else {
 						if ($_SESSION['seleccion'] == 25) {
-							$stid = oci_parse($conexion, 'select * from crud_premio_economica e  ');
+							$stid = oci_parse($conexion, 'select * from crud_premios_economica e  ');
 						}
 					}
 				}
@@ -40,10 +40,10 @@ $i = 0;
 
 while ($row = oci_fetch_array($stid)) {
     if ($i == 1) {
-        $combobitPremio .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" ;
+        $combobitPremio .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td></tr>" ;
         $i = 0;
     } else {
-        $combobitPremio .= " <tr ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>";
+        $combobitPremio .= " <tr ><td>" . $row[0] . "</td><td>" . $row[1] . "</td></tr>";
         $i++;
     }
 }
