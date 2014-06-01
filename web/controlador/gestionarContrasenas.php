@@ -13,6 +13,5 @@ $textContrasena="";
 if($row = oci_fetch_array($stid))
 {
 	$textContrasena .= "<div class=".'"etiqueta"'."><label>Contraseña:</label></div><div class=".'"componente"'.">< input class=".'"textfield"'."type=".'"text"'."value=".'"' . $row[0] . '"'."name=".'"contrasena"'."placeholder=" .'"Contraseña"'."/></div>";
-	                                             
 }
 ?>

@@ -20,33 +20,32 @@ getImports();
 					</header>
 					<div id="formulario">
 							<center>
+								<div class="etiqueta">
+									<label>Ingrese el número de identificación:</label>
+								</div></br>
+								
+								<div class="componente">
+									<input class="textfield" type="text" name="docPE" required="required" placeholder="número de identificación"/>
+								</div>
+								
+								<div align="center">
+									<input class="button" type="submit" value="Buscar" onclick="showService(documento.value,'buscarEstudiante');location.href='#openModal'"/>
+								</div>
+								
+								<header>
+									<h1 style="color: #000000">Proyectos de investigación en ejecución</h1></br>
+								</header>
+								
 								<div id="resultado" class="datagrid">
 
-									<table>
-										<thead>
-											<tr>
-												<<th>Código</th><th>Título</th><th>Gasto efectivo</th><th>Duración</th><th>Fecha inicio</th>
-											</tr>
-										</thead>
-										<tbody>
-											<?php
-
-											echo $combobit;
-											?>
-										</tbody>
-									</table>
+									<?php
+										echo $tablaEjecucion;
+									?>
 								</div>
-
 							</center>
 					</div>
 				</article>
 			</section>
-		</div>
-
-		<div>
-
-		</div>
-
 		</div>
 </body>
 </html>

@@ -24,7 +24,7 @@ getImports();
 						<form  method="post" >
 							<center>
 								<div class="etiqueta">
-									<label>Ingrese el número de identificación</label>
+									<label>Ingrese el número de identificación:</label>
 								</div></br>
 
 								<div class="componente">
