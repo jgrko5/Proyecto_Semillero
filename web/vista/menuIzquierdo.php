@@ -216,7 +216,7 @@ if($_SESSION['idFacultad']==83)
 					?>
 
 					<li class="lupper">
-						<a href="listarSemilleroConsolidacion.php">Lista proyectos consolidación</a>
+						<a href="buscarProyectosConsolidacion.php">Lista proyectos consolidación</a>
 					</li>
 
 					<li class="lupper">
@@ -241,7 +241,7 @@ if($_SESSION['idFacultad']==83)
 					?>
 
 					<li class="lupper">
-						<a href="listarSemilleroEjecucion.php">Lista proyectos ejecución</a>
+						<a href="buscarProyectosEjecucion.php">Lista proyectos ejecución</a>
 					</li>
 
 					<li>

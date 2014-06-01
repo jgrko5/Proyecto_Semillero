@@ -12,27 +12,27 @@ $conexion = conectar();
 if ($_SESSION['seleccion'] == 1) {
 	$stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_INGENIERIA order by codigo');
 }else
-   if ($_SESSION['seleccion'] == 1) {
+   if ($_SESSION['seleccion'] == 2) {
 		$stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_EDUCACION order by codigo');
    }
    else
-	 if ($_SESSION['seleccion'] == 1) {
+	 if ($_SESSION['seleccion'] == 21) {
 		   $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_SALUD order by codigo');
 	 }
 	 else
-	   if ($_SESSION['seleccion'] == 1) {
+	   if ($_SESSION['seleccion'] == 22) {
 			$stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_BASICAS order by codigo');
 	   }
 	   else
-		 if ($_SESSION['seleccion'] == 1) {
+		 if ($_SESSION['seleccion'] == 23) {
 			  $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_AGROINDUSTRIA order by codigo');
 		 }
 		 else
-	  	   if ($_SESSION['seleccion'] == 1) {
+	  	   if ($_SESSION['seleccion'] == 24) {
 				$stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_BELLAS_ARTES order by codigo');
 	   	   }
 		   else
-	  		 if ($_SESSION['seleccion'] == 1) {
+	  		 if ($_SESSION['seleccion'] == 25) {
 				  $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_ECONOMICA order by codigo');
 	   		 	}
 oci_execute($stid);

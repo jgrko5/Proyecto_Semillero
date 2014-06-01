@@ -30,9 +30,10 @@ $i = 0;
 
 while ($row = oci_fetch_array($stid)) {
 	if ($i == 1) {
-		$tablaConsolidacion .= "tr class= " . '"alt"' . "><td>" . $row[0] . "</td><td>" . $row[1] . "</td></tr>";
+		$tablaConsolidacion .= "<tr class= " . '"alt"' . "><td>" . $row[5] . "</td><td>" . $row[6] . "</td></tr>";
+        $i=0;
 	} else {
-		$combobit .= " <tr ><td>" . $row[0] . "</td><td>" . $row[1] . "</td></tr>";
+		$tablaConsolidacion .= " <tr ><td>" . $row[5] . "</td><td>" . $row[6] . "</td></tr>";
 		$i++;
 	}
 }

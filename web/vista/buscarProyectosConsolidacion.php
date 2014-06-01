@@ -2,7 +2,7 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
-include_once ("../controlador/listarProyectosConsolidacion.php");
+include_once ("../controlador/listaProyectosConsolidacion.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -12,8 +12,8 @@ getImports();
 		getPanelSesion();
 		getMenuIzquierdo();
 		?>
-		<div>
-			<section id="consolidacion">
+		<div id="contenido">
+            <section id="proyecto">
 				<article>
 					<header>
 						<h6>Lista proyectos en consolidación</h6>
@@ -30,7 +30,7 @@ getImports();
 							</div>
 
 							<div align="center">
-								<input class="button" type="submit" value="Buscar" onclick="showService(codPC.value,'buscarProyectoConsolidacion');location.href='#openModal'"/>
+								<input class="button" type="submit" value="Buscar" onclick="showService(codPC.value,'buscarProyectoConsolidacion');"/>
 							</div>
 
 							<header>
@@ -43,6 +43,7 @@ getImports();
 									echo $tablaConsolidacion;
 								?>
 							</div>
+							</br>
 
 						</center>
 					</div>

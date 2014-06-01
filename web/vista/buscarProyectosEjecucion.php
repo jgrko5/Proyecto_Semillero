@@ -16,7 +16,7 @@ getImports();
 			<section id="proyecto">
 				<article>
 					<header>
-						<h6>Lista proyectos en ejecución</h6>
+						</br><h6>Lista proyectos en ejecución</h6>
 					</header>
 					<div id="formulario">
 						<form method="post">
@@ -30,7 +30,7 @@ getImports();
 								</div>
 
 								<div align="center">
-									<input class="button" type="submit" value="Buscar" onclick="showService(codPE.value,'buscarProyectoConsolidacion');location.href='#openModal'"/>
+									<input class="button" type="submit" value="Buscar" onclick="showService(codPE.value,'buscarProyectoEjecucion');location.href='#openModal'"/>
 								</div>
 
 								<header>
