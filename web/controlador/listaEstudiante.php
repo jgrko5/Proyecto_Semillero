@@ -16,7 +16,7 @@ if ($_SESSION['seleccion'] == 1) {
         $stid = oci_parse($conexion, 'select * from (
         											select ROWNUM, AUX.*
         													from(
-        															CRUD_ESTUDIANTES_educacion e order by nombre
+        															select * CRUD_ESTUDIANTES_educacion e order by nombre
 																)AUX
 																WHERE ROWNUM <= :last
 													)
