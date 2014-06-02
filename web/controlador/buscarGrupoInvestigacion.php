@@ -49,8 +49,7 @@ $emergenteGrupos .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "
 $emergenteGrupos .= "><h6>Grupo de investigación</h6></header>";
 $combobit .= "<table><thead><tr><th>Codigo</th><th>Nombre</th><th>Clasificacion</th><th>fecha de Creacion</th></tr></thead><tbody>";
 
-
-    
+   
 if ($row = oci_fetch_array($stid)) {
     if ($row[0] == "") {
         $row[0] = "No registra";
@@ -64,6 +63,11 @@ if ($row = oci_fetch_array($stid)) {
     if ($row[3] == "") {
         $row[3] = "No registra";
     }
+    $_SESSION['actualCodG']=$row[0];
+    $_SESSION['actualNombreG']=$row[1];
+    $_SESSION['actualClasG']=$row[2];
+    $_SESSION['actualFeG']=$row[3];
+    
     $emergenteGrupos.= "<div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Codigo:</label></div>";
     $emergenteGrupos.= "<div class=".'"etiquetaE"'."><label>".$row[0]."</label></div>";
     $emergenteGrupos.= "<div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Nombre:</label></div>".
@@ -71,7 +75,9 @@ if ($row = oci_fetch_array($stid)) {
     <div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Clasificacion:</label></div>
     <div class=".'"etiquetaE"'."><label>".$row[2]."</label></div></br>
     <div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Fecha de creación:</label></div>
-    <div class=".'"etiquetaE"'."><label>".$row[3]."</label></div></br></br></br>";
+    <div class=".'"etiquetaE"'."><label>".$row[3]."</label></div></br>
+    <div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'.">
+    <a href=".'"actualizarGrupoInvestigacion.php"'."><label>Actualizar</label></div></br></br></br>";
     if ($i == 1) {
         $combobit .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td><a href='" . "#openModal" . "'>Ver</a>  </td></tr>";
         $i = 0;
