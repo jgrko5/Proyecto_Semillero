@@ -10,17 +10,17 @@ header("Content-Type: text / html; charset =UTF-8");
 $conexion = conectar();
 
 if ($_SESSION['seleccion'] == 1) {
-    $stid = oci_parse($conexion, 'select * from (
-												select ROWNUM RNUM, AUX.*
-												from(
-														CRUD_ESTUDIANTES_INGENIERIA e order by nombre
-												    )AUX
-												    where ROWNUM <= :last
-												)
-    											where RNUM >= :first');
+    $stid = oci_parse($conexion, 'select * from CRUD_ESTUDIANTES_INGENIERIA e order by nombre');
 } else {
     if ($_SESSION['seleccion'] == 2) {
-        $stid = oci_parse($conexion, 'select * from CRUD_ESTUDIANTES_educacion e order by nombre');
+        $stid = oci_parse($conexion, 'select * from (
+        											select ROWNUM, AUX.*
+        													from(
+        															CRUD_ESTUDIANTES_educacion e order by nombre
+																)AUX
+																WHERE ROWNUM <= :last
+													)
+													WHERE ROWNUM >= :first');
     } else {
         if ($_SESSION['seleccion'] == 21) {
             $stid = oci_parse($conexion, 'select * from CRUD_ESTUDIANTES_salud e order by nombre');
