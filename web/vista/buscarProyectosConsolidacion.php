@@ -3,6 +3,7 @@ include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
 include_once ("../controlador/listaProyectosConsolidacion.php");
+include_once ("../controlador/buscarProyectoConsolidacion.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -49,7 +50,11 @@ getImports();
 					</div>
 				</article>
 			</section>
+		<?php
+			echo $emergenteProC;
+		?>
 		</div>
+		
 
 		<div>
 
