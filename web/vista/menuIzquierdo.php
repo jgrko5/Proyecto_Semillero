@@ -53,7 +53,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-					<a href="actualizarEvento.php">Actualizar</a>
+					<a href="actualizarEvento.php">Actualizar falta</a>
 					</li>
 
 					<li>
@@ -91,7 +91,7 @@ if($_SESSION['idFacultad']==83)
 						<a href="actualizarGrupoInvestigacion.php">Actualizar</a>
 					</li>
 					<li class="lupper">
-					<a href="asigarGrupoInvestigacion.php">Asignar estudiante</a>
+					<a href="asignarGrupoInvestigacion.php">Asignar estudiante falta</a>
 					</li>
 					<?php
                     }
@@ -123,12 +123,12 @@ if($_SESSION['idFacultad']==83)
 				<a href="#"><span>Espacios académicos</span></a>
 				<ul>
 					<li>
-						<a href="actualizarEspacioAcademico.php">Actualizar</a>
+						<a href="actualizarEspacioAcademico.php">Actualizar falta</a>
 					</li>
 				
 	
 					<li>
-					<a href="registrarEspaciosAcademicos.php">Registrar</a>
+					<a href="registrarEspaciosAcademicos.php">Registrar falta</a>
 					</li>
 					
 				</ul>
@@ -145,11 +145,11 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-						<a href="actualizarPremios.php">Actualizar</a>
+						<a href="actualizarPremios.php">Actualizar falta</a>
 					</li>
 
 					<li class="lupper">
-					<a href="asigarPremios.php">Asignar estudiante </a>
+					<a href="asignarPremio.php">Asignar estudiante falta</a>
 					</li>
 					<?php
                     }
@@ -163,7 +163,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-					<a href="registrarPremios.php">Registrar</a>
+					<a href="registrarPremios.php">Registrar falta</a>
 					</li>
 					<?php
                     }
@@ -209,7 +209,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-						<a href="actualizarSemilleroConsolidacion.php">Actualizar</a>
+						<a href="actualizarSemilleroConsolidacion.php">Actualizar falta</a>
 					</li>
 					<?php
                     }
@@ -234,7 +234,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-					<a href="actualizarSemilleroEjecucion.php">Actualizar</a>
+					<a href="actualizarSemilleroEjecucion.php">Actualizar falta</a>
 					</li>
 					<?php
                     }
@@ -266,7 +266,7 @@ if($_SESSION['idFacultad']==83)
 					?>
 
 					<li class="lupper">
-						<a href="asignartutor.php">Asignar proyecto de investigación</a>
+						<a href="asignartutorproyecto.php">Asignar proyecto de investigación</a>
 					</li>
 
 					<li class="lupper">
@@ -316,22 +316,22 @@ function getMenuIzquierdoVice()
 						<a href="inicioEconomicas.php" >Ciencias administrativas y económicas</a>
 					</li>
 					<li>
-						<a href="inicio.php">Ciencias agroindustriales</a>
+						<a href="inicioAgroindustria.php">Ciencias agroindustriales</a>
 					</li>
 					<li>
-						<a href="inicio.php">Ciencias básicas y tecnológicas</a>
+						<a href="inicioBasicas.php">Ciencias básicas y tecnológicas</a>
 					</li>
 					<li>
-						<a href="inicio.php">Ciencias de la salud</a>
+						<a href="inicioSalud.php">Ciencias de la salud</a>
 					</li>
 					<li>
-						<a href="inicio.php">Ciencias humanas y bellas artes</a>
+						<a href="inicioBellasArtes.php">Ciencias humanas y bellas artes</a>
 					</li>
 					<li>
-						<a href="inicio.php">Educación</a>
+						<a href="inicioEducacion.php">Educación</a>
 					</li>
 					<li >
-						<a href="inicio.php">Ingenieria</a>
+						<a href="inicioIngenieria.php">Ingenieria</a>
 					</li>
 				</ul>
 			</li>

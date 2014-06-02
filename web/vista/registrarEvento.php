@@ -10,7 +10,7 @@ getImports();
 		<?php
 		getHeaderStart();
 		getPanelSesion();
-		getMenuIzquierdo();
+		getMenuIzquierdoFacultad();
 		?>
 		<div id="contenido">
 

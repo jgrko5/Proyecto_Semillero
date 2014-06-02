@@ -8,7 +8,7 @@ getImports();
 	<div id="main" class="wrapper">
 		<?php getheaderstart();
 		getPanelSesion();
-		getMenuIzquierdo();
+		getMenuIzquierdoFacultad();
 		?>
 		<div id="contenido">
 			<section id="premio">

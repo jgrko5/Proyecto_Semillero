@@ -11,7 +11,7 @@ getImports();
 		<?php
 		getheaderstart();
 		getPanelSesion();
-		getMenuIzquierdo();
+		getMenuIzquierdoFacultad();
 		?>
 		<div id="contenido">
 		<section id="grupo">

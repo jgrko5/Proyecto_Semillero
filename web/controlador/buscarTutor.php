@@ -50,9 +50,16 @@ if ($row = oci_fetch_array($stid)) {
     if ($row[0] == "") {
         $row[0] = "No registra";
     }
+    else {
+        $textfieldCodigo .= "<div  class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"codigo"' . "required=" . '"required"' . "value=" . '"' . $row[0] . '"' . "readonly=".'"true"'."></div>";
+    }
     if ($row[1] == "") {
         $row[1] = "No registra";
     }
+    else
+        {
+            $texfield .= "<div id=" . '"'.$row[1].'"' . " class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '"' . $row[1] . '"' ."readonly=".'"true"'. "></div>";
+        }
     if ($row[3] == "") {
         $row[3] = "No registra";
     }
@@ -76,6 +83,8 @@ if ($row = oci_fetch_array($stid)) {
     <div class=" . '"etiquetaE"' . "><label>" . $row[5] . "</label></div></br></br></br>";
 } else {
     $emergenteTut .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;font-size:16px"' . "><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";
+     $texfield .= "<div class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '""' ."readonly=".'"true"'. "placeholder=".'"Resultado de la busqueda"'."></div>";
+    $textfieldCodigo .= "<div class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"codigo"' . "required=" . '"required"' . "value=" . '""' . "readonly=".'"true"'."placeholder=".'"Resultado de la busqueda"'."></div>";
 }
 $emergenteTut .= "</div></div>";
 

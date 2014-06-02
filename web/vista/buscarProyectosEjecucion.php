@@ -27,7 +27,7 @@ getImports();
 								</div></br>
 
 								<div class="componente">
-									<input class="textfield" type="text" name="codPE" required="required" placeholder="número de identificación"/>
+									<input class="textfield" type="text" name="codPE" required="required" placeholder="Código del proyecto"/>
 								</div>
 
 								<div align="center">
@@ -55,9 +55,7 @@ getImports();
 			echo $emergenteProE;
 			?>
 		</div>
-		<div>
-
-		</div>
+		
 
 		<?php
 		getFooter();

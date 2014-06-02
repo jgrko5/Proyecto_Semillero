@@ -13,14 +13,13 @@ if ($_SESSION['seleccion'] == 1) {
     $stid = oci_parse($conexion, 'select * from CRUD_ESTUDIANTES_INGENIERIA e order by nombre');
 } else {
     if ($_SESSION['seleccion'] == 2) {
-        $stid = oci_parse($conexion, 'select * from (
-        											select ROWNUM, AUX.*
-        													from(
-        															select * from CRUD_ESTUDIANTES_educacion e order by nombre
-																)AUX
-																WHERE ROWNUM <= :last
-													)
-													WHERE ROWNUM >= :first');
+        $stid = oci_parse($conexion, 'select * from (select a.*,rownum as rnum
+                                                            from(
+                                                                    select * from CRUD_ESTUDIANTES_educacion e order by e.NOMBRE
+                                                                )a
+                                                                WHERE ROWNUM <= :maxRow
+                                                    )
+                                                    WHERE rnum >= :minRow');
     } else {
         if ($_SESSION['seleccion'] == 21) {
             $stid = oci_parse($conexion, 'select * from CRUD_ESTUDIANTES_salud e order by nombre');
