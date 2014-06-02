@@ -3,6 +3,7 @@ include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
 include_once ("../controlador/listaProyectosEjecucion.php");
+include_once ('../controlador/buscarProyectoEjecucion.php');
 getImports();
 ?>
 <body onload="tunCalendario();">
