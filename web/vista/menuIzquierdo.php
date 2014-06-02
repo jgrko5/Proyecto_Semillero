@@ -8,10 +8,13 @@ include_once ("menuDerecho.php");
 <div id="indice" class="flyoutmenu" >
 	<nav>
 		<ul>
-			<li class="mheader">
+			<li class="mheader" style="color: #000000">
 				<a href="inicio.php">
 				<?php
-                if (isset($_SESSION)) {
+				if($_SESSION['idFacultad']==83)
+                {
+                    echo "Inicio";
+                }else if (isset($_SESSION)) {
                     echo "Facultad de " . $_SESSION['nomFacultad'];
                 } else {
 
