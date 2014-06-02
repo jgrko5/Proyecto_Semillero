@@ -10,7 +10,14 @@ header("Content-Type: text / html; charset =UTF-8");
 $conexion = conectar();
 
 if ($_SESSION['seleccion'] == 1) {
-    $stid = oci_parse($conexion, 'select * from CRUD_ESTUDIANTES_INGENIERIA e order by nombre');
+    $stid = oci_parse($conexion, 'select * from (
+												select ROWNUM RNUM, AUX.*
+												from(
+														CRUD_ESTUDIANTES_INGENIERIA e order by nombre
+												    )AUX
+												    where ROWNUM <= :last
+												)
+    											where RNUM >= :first');
 } else {
     if ($_SESSION['seleccion'] == 2) {
         $stid = oci_parse($conexion, 'select * from CRUD_ESTUDIANTES_educacion e order by nombre');
