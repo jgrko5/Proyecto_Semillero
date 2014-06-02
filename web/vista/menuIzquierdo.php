@@ -126,12 +126,12 @@ if($_SESSION['idFacultad']==83)
 				<a href="#"><span>Espacios académicos</span></a>
 				<ul>
 					<li>
-						<a href="actualizarEspacioAcademico.php">Actualizar falta</a>
+						<a href="actualizarMateria.php">Actualizar falta</a>
 					</li>
 				
 	
 					<li>
-					<a href="registrarEspaciosAcademicos.php">Registrar falta</a>
+					<a href="registrarMateria.php">Registrar falta</a>
 					</li>
 					
 				</ul>
