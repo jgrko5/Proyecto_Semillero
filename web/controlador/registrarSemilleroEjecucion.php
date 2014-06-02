@@ -57,7 +57,7 @@ if ($rowSE = oci_fetch_array($stid2)) {
 
 $stid = oci_parse($conexion, 'UPDATE proyectos_investigacion SET SEMILLEROS_ejecucion_ID = :idSE');
 
-oci_bind_by_name($stid, 'idSE', $idConso);
+oci_bind_by_name($stid, ':idSE', $idConso);
 oci_execute($stid);
 echo "<script type='text/javascript'>
     alert('Semillero registrado con exito'); 

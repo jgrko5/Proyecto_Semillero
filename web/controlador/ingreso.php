@@ -31,37 +31,37 @@ if ($row = oci_fetch_array($stid)) {
 
         if ($usuario == 'ingenieria') {
             echo "<script type='text/javascript'>
-            document.location.href='../vista/inicio.php';
+            document.location.href='../vista/inicioIngenieria.php';
             </script>";
         }
         if ($usuario == 'educacion') {
             echo "<script type='text/javascript'>
-            document.location.href='../vista/inicio.php';
+            document.location.href='../vista/inicioEducacion.php';
             </script>";
         }
         if ($usuario == 'salud') {
             echo "<script type='text/javascript'>
-            document.location.href='../vista/inicio.php';
+            document.location.href='../vista/inicioSalud.php';
             </script>";
         }
         if ($usuario == 'basicas') {
             echo "<script type='text/javascript'>
-            document.location.href='../vista/inicio.php';
+            document.location.href='../vista/inicioBasicas.php';
             </script>";
         }
         if ($usuario == 'agroindustria') {
             echo "<script type='text/javascript'>
-            document.location.href='../vista/inicio.php';
+            document.location.href='../vista/inicioAgroindustria.php';
             </script>";
         }
         if ($usuario == 'bellasartes') {
             echo "<script type='text/javascript'>
-            document.location.href='../vista/inicio.php';
+            document.location.href='../vista/inicioBellasArtes.php';
             </script>";
         }
         if ($usuario == 'economicas') {
             echo "<script type='text/javascript'>
-            document.location.href='../vista/inicio.php';
+            document.location.href='../vista/inicioEconomicas.php';
             </script>";
         }
         if ($usuario == 'vicerrectoria') {

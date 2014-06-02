@@ -312,26 +312,26 @@ function getMenuIzquierdoVice()
 			<li>
 				<a  href="#"><span >Facultades</span></a>
 				<ul>
-					<li>
-						<a href="inicioCienciasAdmin.php">Ciencias administrativas y económicas</a>
-					</li>
-					<li>
-						<a href="inicioCienciasAgro.php">Ciencias agroindustriales</a>
-					</li>
-					<li>
-						<a href="inicioCienciasBasicas.php">Ciencias básicas y tecnológicas</a>
-					</li>
-					<li>
-						<a href="inicioCienciasSalud.php">Ciencias de la salud</a>
-					</li>
-					<li>
-						<a href="inicioCienciasHumanas.php">Ciencias humanas y bellas artes</a>
-					</li>
-					<li>
-						<a href="inicioCienciasEducacion.php">Educación</a>
-					</li>
 					<li class="lupper">
-						<a href="inicioIngenieria.php">Ingenieria</a>
+						<a href="inicioEconomicas.php" >Ciencias administrativas y económicas</a>
+					</li>
+					<li>
+						<a href="inicio.php">Ciencias agroindustriales</a>
+					</li>
+					<li>
+						<a href="inicio.php">Ciencias básicas y tecnológicas</a>
+					</li>
+					<li>
+						<a href="inicio.php">Ciencias de la salud</a>
+					</li>
+					<li>
+						<a href="inicio.php">Ciencias humanas y bellas artes</a>
+					</li>
+					<li>
+						<a href="inicio.php">Educación</a>
+					</li>
+					<li >
+						<a href="inicio.php">Ingenieria</a>
 					</li>
 				</ul>
 			</li>
@@ -347,7 +347,7 @@ function getMenuIzquierdoVice()
 						<a href="actualizarTutor.php">Actualizar</a>
 					</li>
 
-					<li class="lupper">
+					<li >
 						<a href="enn.php" >En construcción</a>
 					</li>
 

@@ -9,13 +9,21 @@ getImports();
 	<div id="main" class="wrapper">
 		<?php getheaderstart();
         getPanelSesion();
-        getMenuIzquierdoVice();
+        getMenuIzquierdoFacultad();
+
         getMenuDerecho();
+        $_SESSION['seleccion'] = 25;
 		?>
 		<div id="contenido">
 			<section id="premio">
 				<article>
-					</br>
+					<center>
+						</br>
+						</br>
+						...... En construcción
+						</br>
+						</br>
+					</center>
 				</article>
 			</section>
 		</div>
