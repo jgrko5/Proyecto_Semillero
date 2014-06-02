@@ -32,7 +32,7 @@ getImports();
 						</form>
 						<form action="../controlador/asignarEstudianteProyecto.php"  method="post">
 						    <div class="etiqueta">
-                                <label>Código resultante:</label>
+                                <label>Código estudiante:</label>
                             </div></br>
 						    <?php
 						    echo $textfieldCodigo;

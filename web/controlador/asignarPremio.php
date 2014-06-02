@@ -5,16 +5,16 @@ session_start();
 
 error_reporting("E_ERROR && E_WARNING");
 
+header("Content-Type: text / html; charset =UTF-8");
 
-$codigo = $_POST['proEstudiante'];
+$codigo = $_POST['premiosA'];
 $documento = $_POST['codigo'];
 
 $conexion = conectar();
-$stid = oci_parse($conexion, 'UPDATE estudiantes SET PROYECTOS_INVESTIGACION_CODIGO = :codigo WHERE cedula=:codigoDoc or tarjetaidentidad=:tarjeta');
+$stid = oci_parse($conexion, 'INSERT  INTO PREMIOS_ESTUDIANTES(ESTUDIANTE_ID, PREMIOS_ID) values (:codigo,:premiosA)');
 
 oci_bind_by_name($stid, ':codigo', $codigo);
-oci_bind_by_name($stid, ':codigoDoc', $documento);
-oci_bind_by_name($stid, ':tarjeta', $documento);
+oci_bind_by_name($stid, ':premiosA', $documentoS);
 
 $r = oci_execute($stid);
 
