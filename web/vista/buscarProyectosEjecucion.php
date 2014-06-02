@@ -9,9 +9,9 @@ getImports();
 <body onload="tunCalendario();">
 	<div id="main" class="wrapper">
 		<?php
-        getHeaderStart();
-        getPanelSesion();
-        getMenuIzquierdo();
+		getHeaderStart();
+		getPanelSesion();
+		getMenuIzquierdo();
 		?>
 		<div id="contenido">
 			<section id="proyecto">
@@ -41,7 +41,7 @@ getImports();
 								<div id="resultado" class="datagrid">
 
 									<?php
-                                    echo $tablaEjecucion;
+									echo $tablaEjecucion;
 									?>
 								</div>
 								</br>
@@ -50,13 +50,20 @@ getImports();
 					</div>
 				</article>
 			</section>
+
+			<?php
+			echo $emergenteProE;
+			?>
+			<?php
+			getFooter();
+			?>
 		</div>
 		<div>
 
 		</div>
 
 		<?php
-        getFooter();
+		getFooter();
 		?>
-		</div>
+	</div>
 </body>
