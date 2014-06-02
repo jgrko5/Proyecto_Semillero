@@ -373,11 +373,7 @@ function getMenuIzquierdoVice()
 
 <?php
 function getMenuIzquierdo() {
-    if ($_SESSION['idFacultad'] == 83) {
-        getMenuIzquierdoVice();
-    } else {
         getMenuIzquierdoFacultad();
-    }
     getMenuDerecho();
 }
 ?>
