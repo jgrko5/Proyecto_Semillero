@@ -1,15 +1,6 @@
 <?php
-include_once ('oracle.php');
 
-session_start();
-
-error_reporting("E_ERROR && E_WARNING");
-
-header("Content-Type: text / html; charset =UTF-8");
-
-$conexion = conectar();
-
-function paginatedQuery($conn, $query, $page_num, $page_size)
+function getPaginatedQuery($conn, $query, $page_num, $page_size)
 {
 	try
 	{
@@ -47,49 +38,3 @@ function totalQuery($conn, $query)
 
 ?>
 
-<?php
-$page_num = isset( $_GET[ "page_num" ])
-		  ? (int)$_GET[ "page_num" ] : 1;
-		  
-$page_size = isset( $_GET[ "page_size" ])
-		  ? (int)$_GET[ "page_size" ] : 10;
-		  
-if( $page_num <1) $page_num = 1;
-if( $page_size <1) $page_size = 10;		  
-		  
-?>
-
-<?php
-$total = totalQuery($conn, $query);
-$total_pages = ( $total / $page_size);
-
-
-if( $total % $page_size > 0)
-	$total_pages++;
-
-if( $page_num > $total_pages )
-	$page_num = 1;
-
-?>
-
-
-<?php
-for ($page = 1; $page <= $total_pages; $page++)
-{ 
-	if( $page == $page_num )
-	{
-?>
-	
-	<span class="current"><?=$page?></span>	
-<?php	
-	}
-	else 	{
-?>	
-	<a href="listaEstudiante.php=<?=$page?>&
-	page_size=<?=page?></a>
-
-<?php		
-	}	
-}
-?>
-?>
