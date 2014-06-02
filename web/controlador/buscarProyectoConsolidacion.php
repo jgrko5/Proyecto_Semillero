@@ -11,7 +11,7 @@ if ($_SESSION['seleccion'] == 1) {
 	$stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_INGENIERIA where(codigo =: codigoPC)');
 }else
    if ($_SESSION['seleccion'] == 2) {
-		$stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_EDUCACION where(codigo =: codigoPC)');
+		$stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_EDUCACION where(codigo =:codigoPC)');
    }
    else
 	 if ($_SESSION['seleccion'] == 21) {
