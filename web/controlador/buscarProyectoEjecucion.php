@@ -7,19 +7,19 @@ $codigoPE = $_POST['codPE'];
 $conexion = conectar();
 
 if ($_SESSION['seleccion'] == 1) {
-    $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_INGENIERIA where (codigo =: codigoPE)');
+    $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_INGENIERIA where (codigo =:codigoPE)');
 } else if ($_SESSION['seleccion'] == 2) {
     $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_EDUCACION where codigo =:codigoPE');
 } else if ($_SESSION['seleccion'] == 21) {
     $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_SALUD where(codigo =:codigoPE)');
 } else if ($_SESSION['seleccion'] == 22) {
-    $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_BASICAS where(codigo =: codigoPE)');
+    $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_BASICAS where(codigo =:codigoPE)');
 } else if ($_SESSION['seleccion'] == 23) {
-    $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_AGROINDUSTRIA where(codigo =: codigoPE)');
+    $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_AGROINDUSTRIA where(codigo =:codigoPE)');
 } else if ($_SESSION['seleccion'] == 24) {
-    $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_BELLAS_ARTES where(codigo =: codigoPE)');
+    $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_BELLAS_ARTES where(codigo =:codigoPE)');
 } else if ($_SESSION['seleccion'] == 25) {
-    $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_ECONOMICA where(codigo =: codigoPE)');
+    $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_ECONOMICA where(codigo =:codigoPE)');
 }
 oci_bind_by_name($stid, ':codigoPE', $codigoPE);
 

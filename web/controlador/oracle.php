@@ -4,7 +4,7 @@
  */
 	function conectar()
 	{
-		$conn = oci_connect("admin", "semillero", "xe");
+		$conn = oci_connect("admin", "semillero", "//192.168.1.16:1521/xe");
 		
 		if (!$conn)
 		{

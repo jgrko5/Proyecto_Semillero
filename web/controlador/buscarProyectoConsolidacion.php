@@ -5,40 +5,40 @@ session_start();
 
 $codigoPC = $_POST['codPC'];
 
-$conexio = conectar();
-
+$conexion = conectar();
+echo $codigoPC;
 if ($_SESSION['seleccion'] == 1) {
-	$stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_INGENIERIA where(codigo =: codigoPC)');
+	$stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_INGENIERIA where(codigo =:codigoPC)');
 }else
    if ($_SESSION['seleccion'] == 2) {
-		$stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_EDUCACION where(codigo =:codigoPC)');
+		$stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_EDUCACION where codigo =:codigoPC');
    }
    else
 	 if ($_SESSION['seleccion'] == 21) {
-		   $stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_SALUD where(codigo =: codigoPC)');
+		   $stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_SALUD where(codigo =:codigoPC)');
 	 }
 	 else
 	   if ($_SESSION['seleccion'] == 22) {
-			$stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_BASICAS where(codigo =: codigoPC)');
+			$stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_BASICAS where(codigo =:codigoPC)');
 	   }
 	   else
 		 if ($_SESSION['seleccion'] == 23) {
-			  $stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_AGROINDUSTRIA where(codigo =: codigoPC)');
+			  $stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_AGROINDUSTRIA where(codigo =:codigoPC)');
 		 }
 		 else
 	  	   if ($_SESSION['seleccion'] == 24) {
-				$stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_BELLAS_ARTES where(codigo =: codigoPC)');
+				$stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_BELLAS_ARTES where(codigo =:codigoPC)');
 	   	   }
 		   else
 	  		 if ($_SESSION['seleccion'] == 25) {
-				  $stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_ECONOMICA where(codigo =: codigoPC)');
+				  $stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_ECONOMICA where(codigo =:codigoPC)');
 	   		 	}
 oci_bind_by_name($stid, ':codigoPC', $codigoPC);
 
 oci_execute($stid);
 
-$emergenteProC .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=".'"modalDialogHeader"';
-$emergenteProC .= "><h6>Información de proyecto de investigación en ejecución</h6></header>";
+$emergenteProC = "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=".'"modalDialogHeader"';
+$emergenteProC .= "><h6>Información de proyecto de investigación en consolidacion</h6></header>";
 
 if ($row = oci_fetch_array($stid)) {
     if ($row[0] == "") {

@@ -54,9 +54,6 @@ getImports();
 			<?php
 			echo $emergenteProE;
 			?>
-			<?php
-			getFooter();
-			?>
 		</div>
 		<div>
 

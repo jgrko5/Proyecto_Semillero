@@ -9,12 +9,12 @@ getImports();
 <body onload="tunCalendario();">
 	<div id="main" class="wrapper">
 		<?php
-		getHeaderStart();
-		getPanelSesion();
-		getMenuIzquierdo();
+        getHeaderStart();
+        getPanelSesion();
+        getMenuIzquierdo();
 		?>
 		<div id="contenido">
-            <section id="proyecto">
+			<section id="proyecto">
 				<article>
 					<header>
 						<h6>Lista proyectos en consolidación</h6>
@@ -27,11 +27,11 @@ getImports();
 							</div></br>
 
 							<div class="componente">
-								<input class="textfield" type="text" name="codPC" required="required" placeholder="nCódigo del proyecto"/>
+								<input class="textfield" type="text" name="codPC" required="required" placeholder="Código del proyecto"/>
 							</div>
 
 							<div align="center">
-								<input class="button" type="submit" value="Buscar" onclick="showService(codPC.value,'buscarProyectoConsolidacion');"/>
+								<input class="button" type="submit" value="Buscar" onclick="showService(codPC.value,'buscarProyectoConsolidacion');location.href='#openModal'"/>
 							</div>
 
 							<header>
@@ -41,7 +41,7 @@ getImports();
 							<div id="resultado" class="datagrid">
 
 								<?php
-									echo $tablaConsolidacion;
+                                echo $tablaConsolidacion;
 								?>
 							</div>
 							</br>
@@ -50,16 +50,11 @@ getImports();
 					</div>
 				</article>
 			</section>
-		<?php
-			echo $emergenteProC;
-		?>
-		</div>
-		
-
-		<div>
-
+			<?php
+            echo $emergenteProC;
+			?>
 		</div>
 
-		</div>
+	</div>
 </body>
 </html>
