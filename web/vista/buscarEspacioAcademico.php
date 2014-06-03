@@ -2,7 +2,7 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
-include_once ("../controlador/listarEspaciosAcademicos.php");
+include_once ("../controlador/buscarEspaciosAcademicos.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
