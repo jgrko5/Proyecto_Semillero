@@ -7,14 +7,14 @@ error_reporting("E_ERROR && E_WARNING");
 
 header("Content-Type: text / html; charset =UTF-8");
 
-$codigo = $_POST['premiosA'];
+$codigo = $_POST['eventosA'];
 $documento = $_POST['codigo'];
 
 $conexion = conectar();
-$stid = oci_parse($conexion, 'INSERT  INTO PREMIOS_ESTUDIANTES(ESTUDIANTE_ID, PREMIOS_ID) values (:codigo,:premiosA)');
+$stid = oci_parse($conexion, 'INSERT  INTO EVENTO_ESTUDIANTES(ESTUDIANTE_ID, EVENTO_ID) values (:codigo,:eventosA)');
 
-oci_bind_by_name($stid, ':codigo', $codigo);
-oci_bind_by_name($stid, ':premiosA', $documento);
+oci_bind_by_name($stid, ':eventosA', $codigo);
+oci_bind_by_name($stid, ':codigo', $documento);
 
 $r = oci_execute($stid);
 
@@ -30,8 +30,8 @@ oci_close($conexion);
 
 
 echo "<script type='text/javascript'>
-    alert('Premio asignado con exito'); 
-    document.location.href='../vista/asignarPremio.php';
+    alert('evento asignado con exito'); 
+    document.location.href='../vista/asignarEvento.php';
     </script>";
 
 ?>

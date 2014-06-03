@@ -2,6 +2,8 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
+include_once ("../controlador/listarEventos.php");
+include_once ("../controlador/buscarEstudiante.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -20,30 +22,27 @@ getImports();
 						<form action="../controlador/asignarEvento.php" method="post">
 							<div class="etiqueta">
 								<label>Ingrese el código del estudiante:</label>
-							</div>
-
-							<div class="componente">
-								<input class="textField" type="text" name="tipo" required="required" placeholder="Código" />
-							</div>
-							<div align="left">
-								<input class="button" type="submit" value="Buscar" />
-							</div>
-
+							</div></br>
+							<?php
+							echo $textfieldCodigo;
+							?>
 							<div class="etiqueta">
 								<label>Nombres y apellidos:</label>
 							</div></br>
-
-							<div class="componente">
-								<input class="textField" type="text" name="tipo" required="required">
-							</div></br>
-
+							<?php
+							echo $textfield;
+							?>
+							
 							<div class="etiqueta">
 								<label>Eventos:</label>
 							</div></br>
 
 							<div class="componente">
-								<select class="select" title="Premios">
-									<option>congreso</option>
+								<select class="select" title="Eventos" name="eventosA">
+									<?php
+									echo $comboboxEventos;
+									?>
+									
 								</select>
 							</div></br></br>
 
