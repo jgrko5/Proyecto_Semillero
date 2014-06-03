@@ -2,6 +2,7 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
+require ("../controlador/buscarGrupoInvestigacion.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -10,6 +11,7 @@ getImports();
 		getHeaderStart();
 		getPanelSesion();
 		getMenuIzquierdoFacultad();
+        getMenuDerecho();
 		?>
 		<div id="contenido">
 			<section id="grupo">
@@ -18,38 +20,40 @@ getImports();
 						</br><h6>Actualizar grupo de investigación</h6>
 					</header>
 					<div id="formulario">
-						<form action="../controlador/modificarGrupoInvestigacion.php" method="post">
+						<form action="../controlador/actualizarGrupoInvestigacion.php" method="post">
 							<div class="etiqueta">
-								<label>Nombre:</label>
-							</div></br>
+                                <label>Codigo:</label>
+                            </div></br>
 
-							<div class="componente">
-								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese el nombre"/>
-							</div></br>
+                            <div class="componente" >
+                                <input class="textField" type="text" name="codigo" required="required" placeholder="Ingrese el codigo" readonly="true" value="<?php echo $_SESSION['actualCodG'];?>"  />
+                            </div></br>
+                            
+                            <div class="etiqueta">
+                                <label>Nombre:</label>
+                            </div></br>
+
+                            <div class="componente" >
+                                <input class="textField" type="text" name="nombre" required="required" placeholder="Ingrese el nombre" value="<?php echo $_SESSION['actualNombreG'];?>"/>
+                            </div></br>
 
 							<div class="etiqueta">
 								<label>Clasificación:</label>
 							</div></br>
 
 							<div class="componente">
-								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese la clasificación"/>
+								<input class="textField" type="text" name="clasificacion" required="required" placeholder="Ingrese la clasificación" value="<?php echo $_SESSION['actualClasG']; ?>"/>
 							</div></br>
-
+                           
 							<div class="etiqueta">
 								<label>Fecha conformación:</label>
 							</div></br>
 
 							<div class="componente">
-								<input  type="date" class="textField"/>
+								<input  type="date" class="textField" name="fecha" value="<?php echo date('Y-m-d',strtotime($_SESSION['actualFeG'])); ?>"/>
 							</div></br>
 
-							<div class="etiqueta">
-								<label>Facultad:</label>
-							</div></br>
-
-							<div class="componente">
-								<input class="textField" type="text" name="tipo" required="required" placeholder="Ingrese la facultad"/>
-							</div></br></br>
+							</br>
 
 							<div align="center">
 								<input class="button" type="submit" value="Actualizar" />

@@ -11,10 +11,9 @@ include_once ("menuDerecho.php");
 			<li class="mheader" style="color: #000000">
 				<a href="inicio.php">
 				<?php
-				if($_SESSION['idFacultad']==83)
-                {
+                if ($_SESSION['idFacultad'] == 83) {
                     echo "Inicio";
-                }else if (isset($_SESSION)) {
+                } else if (isset($_SESSION)) {
                     echo "Facultad de " . $_SESSION['nomFacultad'];
                 } else {
 
@@ -373,7 +372,7 @@ function getMenuIzquierdoVice()
 
 <?php
 function getMenuIzquierdo() {
-        getMenuIzquierdoFacultad();
+    getMenuIzquierdoFacultad();
     getMenuDerecho();
 }
 ?>

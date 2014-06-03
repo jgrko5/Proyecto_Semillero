@@ -33,6 +33,7 @@ if ($_SESSION['seleccion'] == 1) {
 	  		 if ($_SESSION['seleccion'] == 25) {
 				  $stid = oci_parse($conexion, 'select * from CRUD_CONSOLIDACION_ECONOMICA where(codigo =:codigoPC)');
 	   		 	}
+
 oci_bind_by_name($stid, ':codigoPC', $codigoPC);
 
 oci_execute($stid);
@@ -65,7 +66,8 @@ if ($row = oci_fetch_array($stid)) {
     <div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Duración:</label></div>
     <div class=".'"etiquetaE"'."><label>".$row[3]."</label></div></br>
     <div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Fecha de inicio:</label></div>
-    <div class=".'"etiquetaE"'."><label>".$row[4]."</label></div></br></br></br>";
+    <div class=".'"etiquetaE"'."><label>".$row[4]."</label></div></br>
+    <div class=".'"etiquetaE"'."><a hrfe=".'"actualizarSemilleroConsolidacion.php"'."</a></div></br></br></br>";
     
 }
 else

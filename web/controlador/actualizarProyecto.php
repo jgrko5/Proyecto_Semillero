@@ -13,10 +13,10 @@ $conexion = conectar();
 $stid = oci_parse($conexion, 'UPDATE PROYECTOS_INVESTIGACION SET (titulo values :tituloProyecto, gastoEfectivo values :gastoEProyecto, duracion values :duracionProyecto, 
 																  fechaInicio values :fechaIProyecto)');
 
-oci_bind_by_name($tid, ':tituloProyecto', $tituloP);
-oci_bind_by_name($tid, ':gastoEProyecto', $gastoEP);
-oci_bind_by_name($tid, ':duracionProyecto', $duracionP);
-oci_bind_by_name($tid, ':fechaIProyecto', $fechaIP);
+oci_bind_by_name($stid, ':tituloProyecto', $tituloP);
+oci_bind_by_name($stid, ':gastoEProyecto', $gastoEP);
+oci_bind_by_name($stid, ':duracionProyecto', $duracionP);
+oci_bind_by_name($stid, ':fechaIProyecto', $fechaIP);
 
 $r = oci_execute($stid);
 
