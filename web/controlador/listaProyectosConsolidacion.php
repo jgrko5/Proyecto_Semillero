@@ -5,7 +5,6 @@ session_start();
 
 error_reporting("E_ERROR && E_WARNING");
 
-header("Content-Type: text / html; charset =UFT-8");
 $conexion = conectar();
 
 if ($_SESSION['seleccion'] == 1) {
@@ -30,10 +29,10 @@ $i = 0;
 
 while ($row = oci_fetch_array($stid)) {
 	if ($i == 1) {
-		$tablaConsolidacion .= "<tr class= " . '"alt"' . "><td>" . $row[5] . "</td><td>" . $row[6] . "</td></tr>";
+		$tablaConsolidacion .= "<tr class= " . '"alt"' . "><td>" . $row[6] . "</td><td>" . $row[7] . "</td></tr>";
         $i=0;
 	} else {
-		$tablaConsolidacion .= " <tr ><td>" . $row[5] . "</td><td>" . $row[6] . "</td></tr>";
+		$tablaConsolidacion .= " <tr ><td>" . $row[6] . "</td><td>" . $row[7] . "</td></tr>";
 		$i++;
 	}
 }

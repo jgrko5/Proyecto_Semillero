@@ -42,11 +42,11 @@ $i = 0;
 
 while ($row = oci_fetch_array($stid)){
 	if($i == 1){
-		$tablaEjecucion .= "<tr class= " . '"alt"' . "><td>" . $row[5] . "</td><td>" . $row[6] . "</td></tr>";
+		$tablaEjecucion .= "<tr class= " . '"alt"' . "><td>" . $row[6] . "</td><td>" . $row[7] . "</td></tr>";
         $i=0;
 	}
 	else {
-        $tablaEjecucion .= " <tr ><td>" . $row[5] . "</td><td>" . $row[6] . "</td></tr>";
+        $tablaEjecucion .= " <tr ><td>" . $row[6] . "</td><td>" . $row[7] . "</td></tr>";
         $i++;
     }
 }

@@ -11,6 +11,7 @@ getImports();
 		getHeaderStart();
 		getPanelSesion();
 		getMenuIzquierdoFacultad();
+        getMenuDerecho();
 		?>
 		<div id="contenido">
 			<section id="grupo">
