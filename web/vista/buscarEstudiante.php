@@ -5,13 +5,11 @@ include_once ("footer.php");
 include_once ("../controlador/listaEstudiante.php");
 include_once ("../controlador/buscarEstudiante.php");
 include_once ("../controlador/paginacion.php");
-
 getImports();
 ?>
 <body onload="tunCalendario();">
 	<div id="main" class="wrapper">
 		<?php
-		
         getHeaderStart();
         getPanelSesion();
         getMenuIzquierdo();
@@ -44,17 +42,12 @@ getImports();
 
 									<?php
 									
-									foreach ($filas as $fila)
 	                                    echo $combobit;
 									?>
 								</div>
 								</br>
 							</center>
-							<input id="page_num" name="page_num" type="hidden" value="<?=$page_num?>"/> 
-							Mostrando 
-							<input id="page_size" name="page_size" type="number" min="1" max="<?=$total?>" value="<?=$page_size?>" autofocus="autofocus" /> 
-							entradas de <?=$total?>
-							<input type="submit" value="Cambiar" />
+							
 						</form>
 					</div>
 				</article>

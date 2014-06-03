@@ -52,14 +52,14 @@ if ($row = oci_fetch_array($stid)) {
     if ($row[0] == "") {
         $row[0] = "No registra";
     } else {
-        $textfieldCodigo .= "<div  class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"codigo"' . "required=" . '"required"' . "value=" . '"' . $row[0] . '"' ."readonly=".'"true"'. "></div>";
-        $texfield .= "<div id=" . '"'.$row[0].'"' . " class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '"' . $row[2] . '"' ."readonly=".'"true"' . "></div>";
+        $textfieldCodigo .= "<div  class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"codigo"' . "required=" . '"required"' . "value=" . '"' . $row[0] . '"' . "readonly=" . '"true"' . "></div>";
+        $texfield .= "<div id=" . '"' . $row[0] . '"' . " class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '"' . $row[2] . '"' . "readonly=" . '"true"' . "></div>";
     }
     if ($row[1] == "") {
         $row[1] = "No registra";
     } else {
-        $textfieldCodigo .= "<div  class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"codigo"' . "required=" . '"required"' . "value=" . '"' . $row[1] . '"' . "readonly=".'"true"'."></div>";
-        $texfield .= "<div id=" . '"'.$row[1].'"' . " class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '"' . $row[2] . '"' ."readonly=".'"true"'. "></div>";
+        $textfieldCodigo .= "<div  class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"codigo"' . "required=" . '"required"' . "value=" . '"' . $row[1] . '"' . "readonly=" . '"true"' . "></div>";
+        $texfield .= "<div id=" . '"' . $row[1] . '"' . " class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '"' . $row[2] . '"' . "readonly=" . '"true"' . "></div>";
     }
     if ($row[3] == "") {
         $row[3] = "No registra";
@@ -71,7 +71,13 @@ if ($row = oci_fetch_array($stid)) {
         $row[5] = "No registra";
     }
 
-    
+    $_SESSION['actCedula'] = $row[0];
+    $_SESSION['actTarjeta'] = $row[1];
+    $_SESSION['actNombre'] = $row[2];
+    $_SESSION['actDireccion'] = $row[3];
+    $_SESSION['actCorreo'] = $row[4];
+    $_SESSION['actTelefono'] = $row[5];
+
     $emergenteEst .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Cedula:</label></div>";
     $emergenteEst .= "<div class=" . '"etiquetaE"' . "><label>" . $row[0] . "</label></div>";
     $emergenteEst .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Tarjeta de identidad:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[1] . " " . "</label></div></br>
@@ -84,11 +90,15 @@ if ($row = oci_fetch_array($stid)) {
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Telefono:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[5] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Semestre:</label></div>
-    <div class=" . '"etiquetaE"' . "><label>" . $row[8] . "</label></div></br></br></br>";
+    <div class=" . '"etiquetaE"' . "><label>" . $row[8] . "</label></div>";
+    if ($_SESSION['idFacultad'] == 83) {
+        $emergenteEst .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarEstudiante.php"' . ">Actualizar informacion</a></div></br>";
+    }
+    $emergenteEst .= "</br></br>";
 } else {
     $emergenteEst .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;font-size:16px"' . "><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";
-    $texfield .= "<div class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '""' ."readonly=".'"true"'. "placeholder=".'"Resultado de la busqueda"'."></div>";
-    $textfieldCodigo .= "<div class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"codigo"' . "required=" . '"required"' . "value=" . '""' . "readonly=".'"true"'."placeholder=".'"Resultado de la busqueda"'."></div>";
+    $texfield .= "<div class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '""' . "readonly=" . '"true"' . "placeholder=" . '"Resultado de la busqueda"' . "></div>";
+    $textfieldCodigo .= "<div class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"codigo"' . "required=" . '"required"' . "value=" . '""' . "readonly=" . '"true"' . "placeholder=" . '"Resultado de la busqueda"' . "></div>";
 }
 $emergenteEst .= "</div></div>";
 

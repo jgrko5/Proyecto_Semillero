@@ -75,18 +75,11 @@ if ($row = oci_fetch_array($stid)) {
     <div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Clasificacion:</label></div>
     <div class=".'"etiquetaE"'."><label>".$row[2]."</label></div></br>
     <div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Fecha de creación:</label></div>
-    <div class=".'"etiquetaE"'."><label>".$row[3]."</label></div></br>
-    <div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'.">
-    <a href=".'"actualizarGrupoInvestigacion.php"'."><label>Actualizar</label></div></br></br></br>";
-    if ($i == 1) {
-        $combobit .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td><a href='" . "#openModal" . "'>Ver</a>  </td></tr>";
-        $i = 0;
-    } else {
-        $combobit .= " <tr ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td><a href='" . "#openModal" . "'>Ver</a>  </td></tr>";
-        $i++;
-
+    <div class=".'"etiquetaE"'."><label>".$row[3]."</label></div></br>";
+     if ($_SESSION['idFacultad'] == 83) {
+        $emergenteGrupos .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarGrupoInvestigacion.php"' . ">Actualizar informacion</a></div></br>";
     }
-    
+    $emergenteGrupos .= "</br></br>";   
 }
 else
 {

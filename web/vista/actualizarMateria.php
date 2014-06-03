@@ -23,16 +23,21 @@ getImports();
 						<form action="../controlador/actualizarMateria.php" method="post">
 							<center>
 								<div class="etiqueta">
-									<label>Nombre:</label>
-								</div>
-								</br>
-								<div class="componente">
-									<input class="textField" type="text" name="nombreMateria" required="required" placeholder="Nuevo nombre del espacio académico"/>
-								</div>
-								</br>
-								<div class="componente">
-									<textarea rows="3" cols="5" class="textArea" type="text" name="observaciones"/>
-								</div>
+                                    <label>Código:</label>
+                                </div>
+                                </br>
+                                <div class="componente">
+                                    <input class="textField" type="text" name="codigo" readonly="true" required="required" value="<?php echo $_SESSION['codMateria'] ?>" placeholder="Código del espacio académico"/>
+                                </div>
+                                </br>
+                                <div class="etiqueta">
+                                    <label>Nombre:</label>
+                                </div>
+                                </br>
+                                <div class="componente">
+                                    <input class="textField" type="text" name="nombre" value="<?php echo $_SESSION['nomMateria'] ?>" required="required" placeholder="Nombre del espacio académico"/>
+                                </div>
+                                </br>
 								<div align="center">
 									<input class="button" type="submit" value="Actualizar" />
 								</div>

@@ -26,17 +26,7 @@ include_once ("menuDerecho.php");
 			<li>
 				<a href="#"><span>Estudiante</span></a>
 				<ul>
-					<?php
-if($_SESSION['idFacultad']==83)
-{
-
-					?>
-					<li>
-					<a href="actualizarEstudiante.php">Actualizar</a>
-					</li>
-					<?php
-                    }
-					?>
+					
 					<li>
 						<a href="buscarEstudiante.php">Buscar</a>
 					</li>
@@ -84,20 +74,6 @@ if($_SESSION['idFacultad']==83)
 			<li>
 				<a href="#"><span>Grupo de investigación</span></a>
 				<ul>
-					<?php
-if($_SESSION['idFacultad']==83)
-{
-
-					?>
-					<li>
-						<a href="actualizarGrupoInvestigacion.php">Actualizar</a>
-					</li>
-					<li class="lupper">
-					<a href="asignarGrupoInvestigacion.php">Asignar estudiante falta</a>
-					</li>
-					<?php
-                    }
-					?>
 					<li class="lupper">
 						<a href="buscarGrupoInvestigacion.php">Buscar</a>
 					</li>
@@ -124,13 +100,13 @@ if($_SESSION['idFacultad']==83)
 			<li class="last">
 				<a href="#"><span>Espacios académicos</span></a>
 				<ul>
-					<li>
-						<a href="actualizarMateria.php">Actualizar falta</a>
+					<li class="lupper">
+						<a href="buscarEspacioAcademico.php">Buscar</a>
 					</li>
 				
 	
 					<li>
-					<a href="registrarMateria.php">Registrar falta</a>
+					<a href="registrarMateria.php">Registrar</a>
 					</li>
 					
 				</ul>
@@ -147,7 +123,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-						<a href="actualizarPremios.php">Actualizar falta</a>
+						<a href="actualizarPremio.php">Actualizar falta</a>
 					</li>
 
 					<li class="lupper">

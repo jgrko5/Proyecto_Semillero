@@ -2,6 +2,7 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
+include_once ("../controlador/buscarEstudiante.php");
 getImports();
 ?>
 
@@ -20,27 +21,24 @@ getImports();
 						</br><h6>Modificar datos del estudiante</h6>
 					</header>
 					<div id="formulario">
-						<form action="../controlador/modificarEstudiante.php" method="post">
+						<form action="../controlador/actualizarEstudiante.php" method="post">
 							<center>
 								<div class="etiqueta">
-									<label>Tipo de documento:</label>
+									<label>Cedula:</label>
 								</div>
 								</br>
 								<div class="componente">
-									<select class="select" title="Tipo de documento">
-										<option>Cédula de ciudadania</option>
-										<option>Tarjeta de identidad</option>
-									</select>
+									<input class="textField" type="text" value="<?php echo $_SESSION['actCedula'] ?>" name="cedula"  placeholder="Modifique documento del estudiante"/>
 								</div>
 
 								</br>
 
 								<div class="etiqueta">
-									<label>Documento:</label>
+									<label>Tarjeta de identidad:</label>
 								</div>
 								</br>
 								<div class="componente">
-									<input class="textField" type="text" name="tipoEst" required="required" placeholder="Modifique documento del estudiante"/>
+									<input class="textField" type="text" value="<?php echo $_SESSION['actTarjeta'] ?>" name="tarjeta"  placeholder="Modifique documento del estudiante"/>
 								</div>
 								</br>
 
@@ -49,16 +47,7 @@ getImports();
 								</div>
 								</br>
 								<div class="componente">
-									<input class="textField" type="text" name="nombreEst" required="required" placeholder="Modifique los nombres del estudiante" readonly="true"/>
-								</div>
-								</br>
-
-								<div class="etiqueta">
-									<label>Apellidos:</label>
-								</div>
-								</br>
-								<div class="componente">
-									<input class="textField" type="text" name="apellidoEst" required="required" placeholder="Modifique los apellidos del estudiante" readonly="true"/>
+									<input class="textField" type="text" name="nombre" value="<?php echo $_SESSION['actNombre'] ?>"  placeholder="Modifique los nombres del estudiante" readonly="true"/>
 								</div>
 								</br>
 
@@ -67,7 +56,17 @@ getImports();
 								</div>
 								</br>
 								<div class="componente">
-									<input class="textField" type="text" name="direccionEst" required="required" placeholder="Modifique la direccion de residencia"/>
+									<input class="textField" type="text" name="direccion" value="<?php echo $_SESSION['actDireccion'] ?>"  placeholder="Modifique la direccion de residencia"/>
+								</div>
+								</br>
+
+
+								<div class="etiqueta">
+									<label>Correo:</label>
+								</div>
+								</br>
+								<div class="componente">
+									<input class="textField" type="text" name="correo" value="<?php echo $_SESSION['actCorreo'] ?>"  placeholder="Modifique el correo electronico"/>
 								</div>
 								</br>
 
@@ -76,41 +75,12 @@ getImports();
 								</div>
 								</br>
 								<div class="componente">
-									<input class="textField" type="text" name="telefonoEst" required="required" placeholder="Modifique el telefono de contacto" />
+									<input class="textField" type="text" name="telefono"  value="<?php echo $_SESSION['actTelefono'] ?>" placeholder="Modifique el telefono de contacto" />
 								</div>
-								</br>
+								</br></br>
 
-								<div class="etiqueta">
-									<label>Correo:</label>
-								</div>
-								</br>
-								<div class="componente">
-									<input class="textField" type="text" name="correoEst" required="required" placeholder="Modifique el correo electronico"/>
-								</div>
-								</br>
-
-								<div class="etiqueta">
-									<label>Semestre:</label>
-								</div>
-								</br>
-								<div class="componente">
-									<select class="select" title="Semestre">
-										<option>Primero</option>
-										<option>Segundo</option>
-										<option>Tercero</option>
-										<option>Cuarto</option>
-										<option>Quinto</option>
-										<option>Sexto</option>
-										<option>Septimo</option>
-										<option>Octavo</option>
-										<option>Noveno</option>
-										<option>Decimo</option>
-									</select>
-								</div>
-								</br>
-								</br>
 								<div align="center">
-									<input class="button" type="submit" value="Registrar" />
+									<input class="button" type="submit" value="Actualizar" />
 								</div>
 								</br>
 							</center>
