@@ -3,16 +3,11 @@
 include_once ('oracle.php');
 
 
-<<<<<<< HEAD
-$conectar = conectar();
-$nombre = $_POST['nombreE'];
-=======
 error_reporting("E_ERROR && E_WARNING");
 
 $conexion = conectar();
 $codigo = $_POST['premioNombre'];
 
->>>>>>> 956f2debc89fe00ad40a55859ae3cab5b8f40674
 if ($_SESSION['seleccion'] == 1) {
 	$stid = oci_parse($conexion, 'select * from crud_premios_INGENIERIA e where nombre=:nombrePremio');
 } else {
