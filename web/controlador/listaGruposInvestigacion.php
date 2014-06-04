@@ -38,7 +38,7 @@ if ($_SESSION['seleccion'] == 1) {
 
 oci_execute($stid);
 
-$tabla = "<table><thead><tr><th>Codigo</th><th>Nombre</th><th>Clasificacion</th><th>fecha de Creacion</th></tr></thead><tbody>";
+$tabla = "<table><thead><tr><th>Código</th><th>Nombre</th><th>Clasificacion</th><th>fecha de Creacion</th></tr></thead><tbody>";
 $i = 0;
 $comboGrupo = "";
 while ($row = oci_fetch_array($stid)) 

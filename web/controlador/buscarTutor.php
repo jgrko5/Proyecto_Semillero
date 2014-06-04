@@ -11,25 +11,25 @@ $conexion = conectar();
 $codigo = $_POST['documento'];
 
 if ($_SESSION['seleccion'] == 1) {
-    $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_INGENIERIA e where documento=:codigo order by e.nombre');
+    $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_INGENIERIA e where documento=:codigo');
 } else {
     if ($_SESSION['seleccion'] == 2) {
-        $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_educacion e where documento=:codigo order by e.nombre');
+        $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_educacion e where documento=:codigo');
     } else {
         if ($_SESSION['seleccion'] == 21) {
-            $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_salud e where documento=:codigo order by e.nombre');
+            $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_salud e where documento=:codigo');
         } else {
             if ($_SESSION['seleccion'] == 22) {
-                $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_basicas e where documento=:codigo order by e.nombre');
+                $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_basicas e where documento=:codigo');
             } else {
                 if ($_SESSION['seleccion'] == 23) {
-                    $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_agroindustria e where documento=:codigo order by e.nombre');
+                    $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_agroindustria e where documento=:codigo');
                 } else {
                     if ($_SESSION['seleccion'] == 24) {
-                        $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_bellas_artes e where documento=:codigo order by e.nombre');
+                        $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_bellas_artes e where documento=:codigo');
                     } else {
                         if ($_SESSION['seleccion'] == 25) {
-                            $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_economica e where documento=:codigo order by e.nombre');
+                            $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_economica e where documento=:codigo');
                         }
                     }
                 }

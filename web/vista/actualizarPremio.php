@@ -28,7 +28,7 @@ getImports();
 								</div>
 								</br>
 								<div class="componente">
-									<input class="textField" type="text" name="nombreMateria" required="required" placeholder="Nuevo nombre del espacio académico"/>
+									<input class="textField" type="text" name="nombrePremio" required="required" placeholder="Nuevo nombre del espacio académico"/>
 								</div>
 								</br>
 								
@@ -37,7 +37,7 @@ getImports();
 								</div>
 								</br>
 								<div class="componente">
-									<input class="textField" type="text" name="nombreMateria" required="required" placeholder="Nuevo nombre del espacio académico"/>
+									<input class="textField" type="text" name="observacionesP" required="required" placeholder="Nuevo nombre del espacio académico"/>
 								</div>
 								</br>
 

@@ -2,7 +2,7 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
-include_once ("../controlador/listarPremios.php");
+include_once ("../controlador/listaPremios.php");
 include_once ("../controlador/buscarEstudiante.php");
 getImports();
 ?>

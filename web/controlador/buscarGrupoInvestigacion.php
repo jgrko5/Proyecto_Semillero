@@ -42,8 +42,6 @@ oci_bind_by_name($stid, ':codigo', $codigo);
 $r=oci_execute($stid);
 
 
-$combobit = "";
-$i = 0;
 $emergenteGrupos="";
 $emergenteGrupos .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=".'"modalDialogHeader"';
 $emergenteGrupos .= "><h6>Grupo de investigación</h6></header>";
@@ -85,7 +83,6 @@ else
 {
 $emergenteGrupos.= "<div class=".'"etiquetaE"'."style=".'"font-weight: bold;font-size:16px"'."><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";    
 }
-$combobit .= "</tbody></table>";
 $emergenteGrupos.="</div></div>";
 
 oci_free_statement($stid);
