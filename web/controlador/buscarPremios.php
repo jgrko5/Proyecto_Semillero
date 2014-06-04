@@ -4,7 +4,7 @@ include_once ('oracle.php');
 session_start();
 
 $conectar = conectar();
-$nombre = $_POST['nombreP'];
+$nombre = $_POST['nombreE'];
 if ($_SESSION['seleccion'] == 1) {
 	$stid = oci_parse($conexion, 'select * from crud_premios_INGENIERIA e where nombre=:nombrePremio');
 } else {

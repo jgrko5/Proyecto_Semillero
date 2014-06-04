@@ -16,6 +16,17 @@ getImports();
 			<section id="estudiante">
 				<article>
 					<div id="formulario">
+						<div class="etiqueta">
+							<label>Ingrese el nombre del evento:</label>
+						</div></br>
+
+						<div class="componente">
+							<input class="textField" type="text" name="nombreE" required="required" placeholder="nombre del premio" value="" />
+						</div>
+
+						<div align="center">
+							<input class="button" type="submit" value="Buscar" onclick="showService(documento.value,'buscarevento');location.href='#openModal'"/>
+						</div></br>
 						<header>
 							</br><h6>Lista de eventos</h6></br>
 						</header>
