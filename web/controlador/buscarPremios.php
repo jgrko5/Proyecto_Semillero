@@ -1,10 +1,13 @@
 <?php
+
 include_once ('oracle.php');
 
-session_start();
 
-$conectar = conectar();
-$nombre = $_POST['nombreP'];
+error_reporting("E_ERROR && E_WARNING");
+
+$conexion = conectar();
+$codigo = $_POST['premioNombre'];
+
 if ($_SESSION['seleccion'] == 1) {
 	$stid = oci_parse($conexion, 'select * from crud_premios_INGENIERIA e where nombre=:nombrePremio');
 } else {
@@ -33,7 +36,7 @@ if ($_SESSION['seleccion'] == 1) {
 	}
 }
 
-oci_bind_by_name($stid, ':nombrePremio', $nombre);
+oci_bind_by_name($stid, ':nombrePremio', $codigo);
 oci_execute($stid);
 
 $i = 0;
@@ -42,6 +45,7 @@ $emergentePremio .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "
 $emergentePremio .= "><h6>Información del premio</h6></header>";
 if ($row = oci_fetch_array($stid)) {
 
+    $_SESSION['codP'] = $row[0];
     $_SESSION['nombreP'] = $row[1];
     $_SESSION['observacionesP'] = $row[2];
     
@@ -61,6 +65,6 @@ $emergentePremio .= "</div></div>";
 
 oci_free_statement($stid);
 
-oci_close($conectar);
+oci_close($conexion);
 
 ?>
