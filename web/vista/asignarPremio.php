@@ -2,15 +2,15 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
-include_once ("../controlador/listaPremios.php");
 include_once ("../controlador/buscarEstudiante.php");
+include_once ("../controlador/listaPremios.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
 	<div id="main" class="wrapper">
 		<?php getheaderstart();
-		getPanelSesion();
-		getMenuIzquierdoFacultad();
+        getPanelSesion();
+        getMenuIzquierdoFacultad();
 		?>
 		<div id="contenido">
 			<section id="premio">
@@ -25,25 +25,25 @@ getImports();
 							</div>
 
 							<div class="componente">
-								<input class="textField" type="text" name="codigoE" required="required" placeholder="Código"/>
+								<input class="textField" type="text" name="documento" required="required" placeholder="Código"/>
 							</div>
 
 							<div align="left">
-								<input class="button" type="submit" value="Buscar" />
+								<input class="button" type="submit" value="Buscar" onclick="showService(documento.value,'buscarEstudiante');location.href='#openModal'" />
 							</div>
 						</form>
-						<form action="../controlador/asirnarPremio.php" method="post">
+						<form action="../controlador/asignarPremio.php" method="post">
 							<div class="etiqueta">
-                                <label>Código estudiante:</label>
-                            </div></br>
-						    <?php
-						    	echo $textfieldCodigo;
-						    ?>
+								<label>Código estudiante:</label>
+							</div></br>
+							<?php
+                            echo $textfieldCodigo;
+							?>
 							<div class="etiqueta">
 								<label>Nombres y apellidos:</label>
 							</div></br>
 							<?php
-							echo $textfield;
+                            echo $texfield;
 							?>
 							<div class="etiqueta">
 								<label>Premios:</label>
@@ -52,10 +52,10 @@ getImports();
 							<div class="componente">
 								<select class="select" title="Premios" name="premiosA">
 									<?php
-									echo $comboboxPremios;
+                                    echo $comboboxPremios;
 									?>
 								</select>
-							</div></br></br>
+							</div></br></br></br>
 
 							<div align="center">
 								<input class="button" type="submit" value="Asignar" />
@@ -67,7 +67,7 @@ getImports();
 			</section>
 		</div>
 		<?php
-		getFooter();
+        getFooter();
 		?>
 	</div>
 </body>

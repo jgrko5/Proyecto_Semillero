@@ -1,8 +1,6 @@
 <?php
 include_once ('oracle.php');
 
-session_start();
-
 $conexion = conectar();
 
 if ($_SESSION['seleccion'] == 1) {

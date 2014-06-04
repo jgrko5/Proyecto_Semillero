@@ -122,10 +122,6 @@ if($_SESSION['idFacultad']==83)
 {
 
 					?>
-					<li>
-						<a href="actualizarPremio.php">Actualizar falta</a>
-					</li>
-
 					<li class="lupper">
 					<a href="asignarPremio.php">Asignar estudiante falta</a>
 					</li>
@@ -181,18 +177,7 @@ if($_SESSION['idFacultad']==83)
 			<li>
 				<a href="#"><span>Semillero en consolidación</span></a>
 				<ul>
-					<?php
-if($_SESSION['idFacultad']==83)
-{
-
-					?>
-					<li>
-						<a href="actualizarSemilleroConsolidacion.php">Actualizar falta</a>
-					</li>
-					<?php
-                    }
-					?>
-
+					
 					<li class="lupper">
 						<a href="buscarProyectosConsolidacion.php">Lista proyectos consolidación</a>
 					</li>
@@ -206,17 +191,7 @@ if($_SESSION['idFacultad']==83)
 			<li class="last">
 				<a href="#"><span>Semillero en ejecución</span></a>
 				<ul>
-					<?php
-if($_SESSION['idFacultad']==83)
-{
-
-					?>
-					<li>
-					<a href="actualizarSemilleroEjecucion.php">Actualizar falta</a>
-					</li>
-					<?php
-                    }
-					?>
+					
 
 					<li class="lupper">
 						<a href="buscarProyectosEjecucion.php">Lista proyectos ejecución</a>

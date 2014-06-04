@@ -2,6 +2,9 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
+
+session_start();
+
 include_once ("../controlador/listaPremios.php");
 include_once ("../controlador/buscarPremios.php");
 
@@ -17,6 +20,9 @@ getImports();
 		<div id="contenido">
 			<section id="estudiante">
 				<article>
+				    <header>
+                        </br><h6>Buscar premio</h6>
+                    </header>
 					<div id="formulario">
 						<form  method="post" >
 							<div class="etiqueta">
@@ -27,7 +33,7 @@ getImports();
 								<input class="textField" type="text" required="required" placeholder="nombre del premio" name="premioNombre" />
 							</div>
 
-							<div align="center">
+							<div align="left">
 								<input class="button" type="submit" value="Buscar" onclick="showService(premioNombre.value,'buscarPremios');location.href='#openModal';"/>
 							</div></br>
 							<header>

@@ -1,6 +1,6 @@
 <?php
 include_once ('oracle.php');
-
+error_reporting("E_ERROR && E_WARNING");
 session_start();
 
 $nombre = $_POST['nombrePremio'];
