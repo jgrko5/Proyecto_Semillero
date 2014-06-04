@@ -41,10 +41,10 @@ $i = 0;
 while ($row = oci_fetch_array($stid)) {
 	$comboboxPremios .= " <option value='" . $row[0] . "'>" . $row[1] . "</option>";
     if ($i == 1) {
-        $combobitPremio .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td></tr>" ;
+        $combobitPremio .= " <tr class= " . '"alt"' . " ><td>" . $row[1] . "</td><td>" . $row[2] . "</td></tr>" ;
         $i = 0;
     } else {
-        $combobitPremio .= " <tr ><td>" . $row[0] . "</td><td>" . $row[1] . "</td></tr>";
+        $combobitPremio .= " <tr ><td>" . $row[1] . "</td><td>" . $row[2] . "</td></tr>";
         $i++;
     }
 }

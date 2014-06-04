@@ -44,6 +44,16 @@ if ($row = oci_fetch_array($stid)) {
     if ($row[4] == "") {
         $row[4] = "No registra";
     }
+    
+    $_SESSION['idSE']=$row[8];
+    $_SESSION['codProSE']=$row[6];
+    $_SESSION['proyectoSE']=$row[7];
+    $_SESSION['anioSE']=$row[5];
+    $_SESSION['periodoSE']=$row[3];
+    $_SESSION['notaSE']=$row[0];
+    $_SESSION['horasSE']=$row[9];
+    
+    
     $emergenteProE .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Codigo:</label></div>";
     $emergenteProE .= "<div class=" . '"etiquetaE"' . "><label>" . $row[6] . "</label></div>";
     $emergenteProE .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Titulo:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[7] . "</label></div></br>
@@ -53,7 +63,7 @@ if ($row = oci_fetch_array($stid)) {
     <div class=" . '"etiquetaE"' . "><label>" . $row[3] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Fecha de inicio:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[4] . "</label></div></br></br>";
-    if ($_SESSION['idFacultad == 83']) {
+    if ($_SESSION['idFacultad'] == 83) {
         $emergenteProE .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarSemilleroEjecucion.php"' . ">Actualizar informacion</a></div></br>";
     }
     $emergenteProE .="</br></br>";

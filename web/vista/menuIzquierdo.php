@@ -141,7 +141,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-					<a href="registrarPremios.php">Registrar falta</a>
+					<a href="registrarPremio.php">Registrar falta</a>
 					</li>
 					<?php
                     }

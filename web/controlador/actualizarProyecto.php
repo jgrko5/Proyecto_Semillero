@@ -10,8 +10,8 @@ $fechaIP = $_POST['fechaIProyecto'];
 
 $conexion = conectar();
 
-$stid = oci_parse($conexion, 'UPDATE PROYECTOS_INVESTIGACION SET (titulo values :tituloProyecto, gastoEfectivo values :gastoEProyecto, duracion values :duracionProyecto, 
-																  fechaInicio values :fechaIProyecto)');
+$stid = oci_parse($conexion, 'UPDATE PROYECTOS_INVESTIGACION SET (titulo = :tituloProyecto, gastoEfectivo = :gastoEProyecto, duracion = :duracionProyecto, 
+																  fechaInicio = :fechaIProyecto)');
 
 oci_bind_by_name($stid, ':tituloProyecto', $tituloP);
 oci_bind_by_name($stid, ':gastoEProyecto', $gastoEP);

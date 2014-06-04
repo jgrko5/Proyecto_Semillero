@@ -20,33 +20,35 @@ getImports();
 						<h6>Lista proyectos en consolidación</h6>
 					</header>
 					<div id="formulario">
-						<center>
+						<form method="post">
+							<center>
 
-							<div class="etiqueta">
-								<label>Ingrese el código del proyecto:</label>
-							</div></br>
+								<div class="etiqueta">
+									<label>Ingrese el código del proyecto:</label>
+								</div></br>
 
-							<div class="componente">
-								<input class="textfield" type="text" name="codPC" required="required" placeholder="Código del proyecto"/>
-							</div>
+								<div class="componente">
+									<input class="textfield" type="text" name="codPC" required="required" placeholder="Código del proyecto"/>
+								</div>
 
-							<div align="center">
-								<input class="button" type="submit" value="Buscar" onclick="showService(codPC.value,'buscarProyectoConsolidacion');location.href='#openModal'"/>
-							</div>
+								<div align="center">
+									<input class="button" type="submit" value="Buscar" onclick="showService(codPC.value,'buscarProyectoConsolidacion');location.href='#openModal'"/>
+								</div>
 
-							<header>
-								<h1 style="color: #000000">Proyectos de investigación en consolidación</h1></br>
-							</header>
+								<header>
+									<h1 style="color: #000000">Proyectos de investigación en consolidación</h1></br>
+								</header>
 
-							<div id="resultado" class="datagrid">
+								<div id="resultado" class="datagrid">
 
-								<?php
-                                echo $tablaConsolidacion;
-								?>
-							</div>
-							</br>
+									<?php
+                                    echo $tablaConsolidacion;
+									?>
+								</div>
+								</br>
 
-						</center>
+							</center>
+						</form>
 					</div>
 				</article>
 			</section>

@@ -2,8 +2,7 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
-include_once ("../controlador/listaGruposInvestigacion.php");
-include_once ("../controlador/listaProyecto.php");
+include_once ("../controlador/buscarProyectoConsolidacion.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -14,31 +13,20 @@ getImports();
         getMenuIzquierdo();
         ?>
         <div id="contenido">
-            <section id="consolidacion">
+            <section id="estudiante">
                 <article>
                     <header>
-                        </br><h6>Registrar semillero en consolidación</h6>
+                        </br><h6>Actualizar proyecto en consolidacion</h6>
                     </header>
                     <div id="formulario">
-                        <form action="../controlador/registrarSemilleroConsolidacion.php" method="post">
-
-                            <div class="etiqueta">
-                                <label >Grupo de investigación:</label>
-                            </div></br>
-
-                            <div class="componente">
-                                <input class="textField" type="text" name="grupo" placeholder="grupo de investigación"/>
-                            </div>
-                            </br>
+                        <form action="../controlador/actualizarSemilleroConsolidacion.php" method="post">
 
                             <div class="etiqueta">
                                 <label>Proyecto de investigación:</label>
                             </div></br>
 
                             <div class="componente">
-                                <select class="select" title="Proyecto de investigación">
-                                    <input class="textField" type="text" name="proyecto" placeholder="proyecto de investigación"/>
-                                </select>
+                                <input class="textField" type="text" readonly="true" name="proyecto" placeholder="Nombre del proyecto de investigación" value="<?php echo $_SESSION['proyectoSE'] ?>" />
                             </div></br>
 
                             <div class="etiqueta">
@@ -46,7 +34,7 @@ getImports();
                             </div></br>
 
                             <div class="componente">
-                                <input class="textField" type="text" name="año" placeholder="Año"/>
+                                <input class="textField" type="text" name="anio" placeholder="Año" value="<?php echo $_SESSION['anioSE'] ?>" />
                             </div></br>
 
                             <div class="etiqueta">
@@ -54,7 +42,7 @@ getImports();
                             </div></br>
 
                             <div class="componente">
-                                <input class="textField" type="text" name="periodo" placeholder="Período"/>
+                                <input class="textField" type="text" name="periodo" placeholder="Período" value="<?php echo $_SESSION['periodoSE'] ?>" />
                             </div></br>
 
                             <div class="etiqueta">
@@ -62,19 +50,14 @@ getImports();
                             </div></br>
 
                             <div class="componente">
-                                <input class="textField" type="text" name="nota" placeholder="Nota"/>
-                            </div></br>
+                                <input class="textField" type="text" name="nota" placeholder="Nota" value="<?php echo $_SESSION['notaSE'] ?>"/>
+                            </div>
 
-                            <div class="etiqueta">
-                                <label>Homologación:</label>
-                            </div></br>
 
-                            <div class="componente">
-                                <input type="checkbox" id="homologacion" value="3" onChange="total()" name="valido" />
-                            </div></br></br>
+                            </br></br>
 
                             <div align="center">
-                                <input class="button" type="submit" value="Registrar" />
+                                <input class="button" type="submit" value="Actualizar" />
                             </div></br>
                         </form>
                     </div>

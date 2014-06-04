@@ -19,14 +19,14 @@ getImports();
 						</br><h6>Actualizar proyecto en ejecución</h6>
 					</header>
 					<div id="formulario">
-						<form action="../controlador/registrarSemilleroEjecucion.php" method="post">
+						<form action="../controlador/actualizarSemilleroEjecucion.php" method="post">
 
 							<div class="etiqueta">
 								<label>Proyecto de investigación:</label>
 							</div></br>
 
 							<div class="componente">
-								<input class="textField" type="text" name="proyecto" placeholder="Nombre del proyecto de investigación" value="<?php echo $_SESSION['proyectoSE'] ?>" />
+								<input class="textField" type="text" readonly="true" name="proyecto" placeholder="Nombre del proyecto de investigación" value="<?php echo $_SESSION['proyectoSE'] ?>" />
 							</div></br>
 
 							<div class="etiqueta">
@@ -42,7 +42,7 @@ getImports();
 							</div></br>
 
 							<div class="componente">
-								<input class="textField" type="text" name="año" placeholder="Año" value="<?php echo $_SESSION['anioSE'] ?>" />
+								<input class="textField" type="text" name="anio" placeholder="Año" value="<?php echo $_SESSION['anioSE'] ?>" />
 							</div></br>
 
 							<div class="etiqueta">
