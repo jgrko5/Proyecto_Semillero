@@ -52,8 +52,11 @@ if ($row = oci_fetch_array($stid)) {
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Periodo:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[3] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Fecha de inicio:</label></div>
-    <div class=" . '"etiquetaE"' . "><label>" . $row[4] . "</label></div></br></br>
-    <div class=" . '"etiquetaE"' . "><a href=" . '"actualizarSemilleroEjecucion.php"' . ">Actualizar informacion</a></div></br>";
+    <div class=" . '"etiquetaE"' . "><label>" . $row[4] . "</label></div></br></br>";
+    if ($_SESSION['idFacultad == 83']) {
+        $emergenteProE .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarSemilleroEjecucion.php"' . ">Actualizar informacion</a></div></br>";
+    }
+    $emergenteProE .="</br></br>";
 
 } else {
     $emergenteProE .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;font-size:16px"' . "><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";

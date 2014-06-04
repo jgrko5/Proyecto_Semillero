@@ -231,17 +231,7 @@ if($_SESSION['idFacultad']==83)
 			<li class="last">
 				<a href="#"><span>Tutor</span></a>
 				<ul>
-					<?php
-if($_SESSION['idFacultad']==83)
-{
-
-					?>
-					<li>
-					<a href="actualizarTutor.php">Actualizar</a>
-					</li>
-					<?php
-                    }
-					?>
+					
 
 					<li class="lupper">
 						<a href="asignartutorproyecto.php">Asignar proyecto de investigación</a>

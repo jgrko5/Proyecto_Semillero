@@ -41,6 +41,8 @@ oci_bind_by_name($stid, ':codigo', $codigo);
 
 oci_execute($stid);
 
+
+
 $i = 0;
 $emergenteTut = "";
 $emergenteTut .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=" . '"modalDialogHeader"';
@@ -69,6 +71,12 @@ if ($row = oci_fetch_array($stid)) {
     if ($row[5] == "") {
         $row[5] = "No registra";
     }
+    
+    $_SESSION['documentoT'] = $row[0];
+    $_SESSION['nombreT'] = $row[1];
+    $_SESSION['apellidoT'] = $row[2];
+    $_SESSION['generoT'] = $row[3];
+    
 
     $emergenteTut .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Cedula:</label></div>";
     $emergenteTut .= "<div class=" . '"etiquetaE"' . "><label>" . $row[0] . "</label></div>";
@@ -80,7 +88,11 @@ if ($row = oci_fetch_array($stid)) {
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Categoria:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[4] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Grupo:</label></div>
-    <div class=" . '"etiquetaE"' . "><label>" . $row[5] . "</label></div></br></br></br>";
+    <div class=" . '"etiquetaE"' . "><label>" . $row[5] . "</label></div></br>";
+     if ($_SESSION['idFacultad'] == 83) {
+        $emergenteTut .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarTutor.php"' . ">Actualizar informacion</a></div></br>";
+    }
+    $emergenteTut .= "</br></br>";
 } else {
     $emergenteTut .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;font-size:16px"' . "><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";
      $texfield .= "<div class=" . '"componente"' . "><input class=" . '"textField"' . "type=" . '"text"' . "name=" . '"tipo"' . "required=" . '"required"' . "value=" . '""' ."readonly=".'"true"'. "placeholder=".'"Resultado de la busqueda"'."></div>";
