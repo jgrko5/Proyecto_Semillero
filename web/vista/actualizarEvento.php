@@ -38,7 +38,7 @@ getImports();
 								</div>
 								</br>
 								<div class="componente">
-									<input class="textField" type="text" name="ciudadEvento" required="required" placeholder="Nuevo ciudad del eveto"  value="<?php echo $_SESSION['ciudadE']; ?>"/>
+									<input class="textField" type="text" name="ciudadEvento" required="required" placeholder="Nuevo ciudad del evento"  value="<?php echo $_SESSION['ciudadE']; ?>"/>
 								</div>
 								</br></br>
 								

@@ -118,12 +118,12 @@ if($_SESSION['idFacultad']==83)
 				<a href="#"><span>Premios</span></a>
 				<ul>
 					<?php
-if($_SESSION['idFacultad']==83)
-{
+                    if($_SESSION['idFacultad']==83)
+                    {
 
 					?>
 					<li class="lupper">
-					<a href="asignarPremio.php">Asignar estudiante falta</a>
+					<a href="asignarPremio.php">Asignar premio a estudiante</a>
 					</li>
 					<?php
                     }
@@ -148,18 +148,6 @@ if($_SESSION['idFacultad']==83)
 			<li>
 				<a href="#"><span>Proyecto de investigación</span></a>
 				<ul>
-					<?php
-if($_SESSION['idFacultad']==83)
-{
-
-					?>
-					<li>
-						<a href="actualizarProyecto.php">Actualizar</a>
-					</li>
-
-					<?php
-                    }
-					?>
 					<li class="lupper">
 						<a href="asignarProyectoEstudiante.php">Asignar estudiantes</a>
 					</li>

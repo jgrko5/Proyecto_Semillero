@@ -2,7 +2,8 @@
 include_once ("imports.php");
 include_once ("header.php");
 include_once ("footer.php");
-include_once ("../controlador/buscarEvento.php");
+include_once ("../controlador/buscarEventos.php");
+include_once ("../controlador/listaEventos.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -15,6 +16,9 @@ getImports();
 		<div id="contenido">
 			<section id="estudiante">
 				<article>
+					<header>
+						</br><h6>Buscar evento</h6>
+					</header>
 					<div id="formulario">
 						<div class="etiqueta">
 							<label>Ingrese el nombre del evento:</label>
@@ -41,7 +45,11 @@ getImports();
 					</div>
 				</article>
 			</section>
-</div>
+		</div>
+		<?php
+
+        echo $emergenteEvento;
+		?>
 
 		<?php
         getFooter();

@@ -8,9 +8,9 @@ getImports();
 <body onload="tunCalendario();">
 	<div id="main"  class="wrapper">
 		<?php
-		getHeaderStart();
-		getPanelSesion();
-		getMenuIzquierdoFacultad();
+        getHeaderStart();
+        getPanelSesion();
+        getMenuIzquierdoFacultad();
 		?>
 		<div id="contenido">
 			<section id="proyecto">
@@ -20,7 +20,7 @@ getImports();
 						</br><h6>Actualizar proyecto</h6>
 					</header>
 					<div id="formulario">
-						<form action="../controlador/registrarProyecto.php" method="post">
+						<form action="../controlador/actualizarProyecto.php" method="post">
 
 							<div class="etiqueta">
 								<label>Título:</label>
@@ -60,9 +60,9 @@ getImports();
 				</article>
 			</section>
 		</div>
-			<?php
-			getFooter();
-			?>
+		<?php
+        getFooter();
+		?>
 	</div>
 </body>
 </html>
