@@ -24,8 +24,11 @@ if ($_SESSION['seleccion'] == 1) {
 
 oci_bind_by_name($stid, ':codigoPC', $codigoPC);
 
-oci_execute($stid);
-
+$r = oci_execute($stid);
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
 $emergenteProC = "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=" . '"modalDialogHeader"';
 $emergenteProC .= "><h6>Información de proyecto de investigación en consolidacion</h6></header>";
 
@@ -45,14 +48,14 @@ if ($row = oci_fetch_array($stid)) {
     if ($row[4] == "") {
         $row[4] = "No registra";
     }
-    
-    $_SESSION['idSE']=$row[8];
-    $_SESSION['codProSE']=$row[6];
-    $_SESSION['proyectoSE']=$row[7];
-    $_SESSION['anioSE']=$row[5];
-    $_SESSION['periodoSE']=$row[3];
-    $_SESSION['notaSE']=$row[0];
-    
+
+    $_SESSION['idSE'] = $row[8];
+    $_SESSION['codProSE'] = $row[6];
+    $_SESSION['proyectoSE'] = $row[7];
+    $_SESSION['anioSE'] = $row[5];
+    $_SESSION['periodoSE'] = $row[3];
+    $_SESSION['notaSE'] = $row[0];
+
     $emergenteProC .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Codigo:</label></div>";
     $emergenteProC .= "<div class=" . '"etiquetaE"' . "><label>" . $row[6] . "</label></div>";
     $emergenteProC .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Titulo:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[7] . "</label></div></br>
@@ -69,7 +72,7 @@ if ($row = oci_fetch_array($stid)) {
     $emergenteProC .= "</br></br>";
 
 } else {
-    $emergenteProC .= $codigoPC."<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;font-size:16px"' . "><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";
+    $emergenteProC .= $codigoPC . "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;font-size:16px"' . "><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";
 }
 $emergenteProC .= "</div></div>";
 

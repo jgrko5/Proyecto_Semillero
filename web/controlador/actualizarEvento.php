@@ -16,8 +16,11 @@ oci_bind_by_name($stid, ':nombreE', $nombre);
 oci_bind_by_name($stid, ':ciudadE', $ciudad);
 
 $r = oci_execute($stid);
-
-unset($_SESSION['nombreE'], $_SESSION['ciudadE'], $_SESSION['aniE'],$_SESSION['codE'] );
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
+unset($_SESSION['nombreE'], $_SESSION['ciudadE'], $_SESSION['aniE'], $_SESSION['codE']);
 
 oci_free_statement($stid);
 

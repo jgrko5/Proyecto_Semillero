@@ -9,7 +9,6 @@ $apellido = $_POST['apellido'];
 $genero = $_POST['genero'];
 $categoria = $_POST['categoria'];
 
-
 $conexion = conectar();
 
 $stid = oci_parse($conexion, "UPDATE TUTORES SET nombre = :nombre, apellido = :apellido, genero = :genero, categorias_id = :categoria WHERE documento = :cedula");
@@ -37,5 +36,4 @@ echo "<script type='text/javascript'>
     alert('Tutor actualizado con exito'); 
     document.location.href='../vista/buscarTutor.php';
     </script>";
-
 ?>

@@ -20,17 +20,19 @@ oci_bind_by_name($stid, ':periodo', $periodo);
 oci_bind_by_name($stid, ':id', $_SESSION['idSE']);
 
 $r = oci_execute($stid);
-
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
 
 oci_free_statement($stid);
 
 oci_close($conexion);
 
-unset($_SESSION['idSE'],$_SESSION['codProSE'],$_SESSION['proyectoSE'],$_SESSION['anioSE'],$_SESSION['periodoSE'],$_SESSION['notaSE'],$_SESSION['horasSE']);
+unset($_SESSION['idSE'], $_SESSION['codProSE'], $_SESSION['proyectoSE'], $_SESSION['anioSE'], $_SESSION['periodoSE'], $_SESSION['notaSE'], $_SESSION['horasSE']);
 
 echo "<script type='text/javascript'>
     alert('Proyecto en ejecución actualizado con exito'); 
     document.location.href='../vista/buscarSemilleroEjecucion.php';
     </script>";
-
 ?>

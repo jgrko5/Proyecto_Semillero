@@ -10,25 +10,20 @@ $direccion = $_POST['direccion'];
 $telefono = $_POST['telefono'];
 $correo = $_POST['correo'];
 
-if($direccion =="No registra")
-{
-    $direccion="";
+if ($direccion == "No registra") {
+    $direccion = "";
 }
-if($correo =="No registra")
-{
-    $correo="";
+if ($correo == "No registra") {
+    $correo = "";
 }
-if($telefono =="No registra")
-{
-    $telefono="";
+if ($telefono == "No registra") {
+    $telefono = "";
 }
-if($cedula =="No registra")
-{
-    $cedula="";
+if ($cedula == "No registra") {
+    $cedula = "";
 }
-if($tarjeta =="No registra")
-{
-    $tarjeta="";
+if ($tarjeta == "No registra") {
+    $tarjeta = "";
 }
 
 $conexion = conectar();
@@ -58,5 +53,4 @@ echo "<script type='text/javascript'>
     alert('Estudiante actualizado con exito'); 
     document.location.href='../vista/buscarEstudiante.php';
     </script>";
-
 ?>

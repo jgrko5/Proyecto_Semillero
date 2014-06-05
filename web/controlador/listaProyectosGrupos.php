@@ -35,7 +35,7 @@ if ($_SESSION['seleccion'] == 1) {
         }
     }
 }
-$consulta=oci_parse($conexion, 'SELECT DISTINCT p.TITULO,p.CODIGO
+$consulta = oci_parse($conexion, 'SELECT DISTINCT p.TITULO,p.CODIGO
 FROM PROYECTOS_INVESTIGACION p
 LEFT JOIN SEMILLEROS_CONSOLIDACION sc
 ON sc.ID = p.SEMILLEROS_CONSOLIDACION_ID
@@ -46,33 +46,27 @@ ON g.CODIGO  = sc.GRUPOS_INVESTIGACION_ID
 and g.CODIGO = se.GRUPOS_INVESTIGACION_ID
 ORDER BY (p.TITULO)');
 
+$r = oci_execute($consulta);
 
-$r=oci_execute($consulta);
-
-if(!$r)
-{
+if (!$r) {
     $m = oci_error();
-            echo $m['message'], "\n";
-            exit;
+    echo $m['message'], "\n";
+    exit ;
 }
 
-$select="";
+$select = "";
 
-$select.="<div class=".'"etiqueta"'.">
+$select .= "<div class=" . '"etiqueta"' . ">
 <label>Proyecto de investigación:</label>
 </div></br>
-<div class=".'"componente"'.">
-<select class=".'"select"'." title=".'"Proyecto de investigación"'.">";
+<div class=" . '"componente"' . ">
+<select class=" . '"select"' . " title=" . '"Proyecto de investigación"' . ">";
 
-while($row=oci_fetch_array($consulta))
-{
-    $select.="<option value=".'"'.$row[1].'"'.">".$row[0]."</option>";
+while ($row = oci_fetch_array($consulta)) {
+    $select .= "<option value=" . '"' . $row[1] . '"' . ">" . $row[0] . "</option>";
 }
-$select.="</select></div>";
-
+$select .= "</select></div>";
 
 oci_free_statement($consulta);
 oci_close($consulta);
-
-
 ?>

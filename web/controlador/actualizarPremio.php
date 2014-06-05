@@ -15,8 +15,11 @@ oci_bind_by_name($stid, ':nombrePremio', $nombre);
 oci_bind_by_name($stid, ':observacionesP', $observaciones);
 
 $r = oci_execute($stid);
-
-unset($_SESSION['nombreP'], $_SESSION['observacionesP'], $_SESSION['codP'] );
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
+unset($_SESSION['nombreP'], $_SESSION['observacionesP'], $_SESSION['codP']);
 
 oci_free_statement($stid);
 

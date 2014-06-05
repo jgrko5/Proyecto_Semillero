@@ -37,8 +37,11 @@ if ($_SESSION['seleccion'] == 1) {
     }
 }
 
-oci_execute($stid);
-
+$r = oci_execute($stid);
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
 $combobit = "";
 $i = 0;
 

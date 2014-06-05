@@ -2,42 +2,46 @@
 
 include_once ('oracle.php');
 
-
 error_reporting("E_ERROR && E_WARNING");
 
 $conexion = conectar();
 $codigo = $_POST['premioNombre'];
 
 if ($_SESSION['seleccion'] == 1) {
-	$stid = oci_parse($conexion, 'select * from crud_premios_INGENIERIA e where nombre=:nombrePremio');
+    $stid = oci_parse($conexion, 'select * from crud_premios_INGENIERIA e where nombre=:nombrePremio');
 } else {
-	if ($_SESSION['seleccion'] == 2) {
-		$stid = oci_parse($conexion, 'select * from crud_premios_educacion e where nombre=:nombrePremio');
-	} else {
-		if ($_SESSION['seleccion'] == 21) {
-			$stid = oci_parse($conexion, 'select * from crud_premios_salud e where nombre=:nombrePremio');
-		} else {
-			if ($_SESSION['seleccion'] == 22) {
-				$stid = oci_parse($conexion, 'select * from crud_premios_basicas e where nombre=:nombrePremio');
-			} else {
-				if ($_SESSION['seleccion'] == 23) {
-					$stid = oci_parse($conexion, 'select * from crud_premios_agroindustria e where nombre=:nombrePremio');
-				} else {
-					if ($_SESSION['seleccion'] == 24) {
-						$stid = oci_parse($conexion, 'select * from crud_premios_bellas_artes e where nombre=:nombrePremio');
-					} else {
-						if ($_SESSION['seleccion'] == 25) {
-							$stid = oci_parse($conexion, 'select * from crud_premios_economica e where nombre=:nombrePremio');
-						}
-					}
-				}
-			}
-		}
-	}
+    if ($_SESSION['seleccion'] == 2) {
+        $stid = oci_parse($conexion, 'select * from crud_premios_educacion e where nombre=:nombrePremio');
+    } else {
+        if ($_SESSION['seleccion'] == 21) {
+            $stid = oci_parse($conexion, 'select * from crud_premios_salud e where nombre=:nombrePremio');
+        } else {
+            if ($_SESSION['seleccion'] == 22) {
+                $stid = oci_parse($conexion, 'select * from crud_premios_basicas e where nombre=:nombrePremio');
+            } else {
+                if ($_SESSION['seleccion'] == 23) {
+                    $stid = oci_parse($conexion, 'select * from crud_premios_agroindustria e where nombre=:nombrePremio');
+                } else {
+                    if ($_SESSION['seleccion'] == 24) {
+                        $stid = oci_parse($conexion, 'select * from crud_premios_bellas_artes e where nombre=:nombrePremio');
+                    } else {
+                        if ($_SESSION['seleccion'] == 25) {
+                            $stid = oci_parse($conexion, 'select * from crud_premios_economica e where nombre=:nombrePremio');
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 oci_bind_by_name($stid, ':nombrePremio', $codigo);
-oci_execute($stid);
+$r = oci_execute($stid);
+
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
 
 $i = 0;
 $emergentePremio = "";
@@ -48,13 +52,12 @@ if ($row = oci_fetch_array($stid)) {
     $_SESSION['codP'] = $row[0];
     $_SESSION['nombreP'] = $row[1];
     $_SESSION['observacionesP'] = $row[2];
-    
 
     $emergentePremio .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Nombre:</label></div>";
     $emergentePremio .= "<div class=" . '"etiquetaE"' . "><label>" . $row[1] . "</label></div>";
     $emergentePremio .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Observaciones:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[2] . " " . "</label></div></br>";
-	
-     if ($_SESSION['idFacultad'] == 83) {
+
+    if ($_SESSION['idFacultad'] == 83) {
         $emergentePremio .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarPremio.php"' . ">Actualizar información</a></div></br>";
     }
     $emergentePremio .= "</br></br>";
@@ -66,5 +69,4 @@ $emergentePremio .= "</div></div>";
 oci_free_statement($stid);
 
 oci_close($conexion);
-
 ?>

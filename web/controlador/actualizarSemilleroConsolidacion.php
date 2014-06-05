@@ -7,8 +7,7 @@ $anio = $_POST['anio'];
 $periodo = $_POST['periodo'];
 $nota = $_POST['nota'];
 
-if(is_numeric($nota) == false)
-{
+if (is_numeric($nota) == false) {
     $nota = 0.0;
 }
 
@@ -31,11 +30,10 @@ oci_free_statement($stid);
 
 oci_close($conexion);
 
-unset($_SESSION['idSE'],$_SESSION['codProSE'],$_SESSION['proyectoSE'],$_SESSION['anioSE'],$_SESSION['periodoSE'],$_SESSION['notaSE']);
+unset($_SESSION['idSE'], $_SESSION['codProSE'], $_SESSION['proyectoSE'], $_SESSION['anioSE'], $_SESSION['periodoSE'], $_SESSION['notaSE']);
 
 echo "<script type='text/javascript'>
     alert('Proyecto en consolidacion actualizado con exito'); 
     document.location.href='../vista/buscarProyectosConsolidacion.php';
     </script>";
-
 ?>

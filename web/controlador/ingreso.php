@@ -14,7 +14,6 @@ oci_bind_by_name($stid, ':pass', $contrasena);
 
 $r = oci_execute($stid);
 
-
 if (!$r) {
     $e = oci_error($conn);
     // Para errores de oci_parse, pase el gestor de conexión

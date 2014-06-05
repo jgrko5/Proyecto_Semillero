@@ -3,7 +3,7 @@ include_once ('oracle.php');
 
 session_start();
 
-$codigo= $_POST['codigoP'];
+$codigo = $_POST['codigoP'];
 
 $conexion = conectar();
 
@@ -35,12 +35,14 @@ if ($_SESSION['seleccion'] == 1) {
     }
 }
 
-
 oci_bind_by_name($stid, ':codigoProyecto', $codigo);
 
 $r = oci_execute($stid);
-
-$emergentePro .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=".'"modalDialogHeader"';
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
+$emergentePro .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=" . '"modalDialogHeader"';
 $emergentePro .= "><h6>Información de proyecto de investigación</h6></header>";
 
 if ($row = oci_fetch_array($stid)) {
@@ -59,26 +61,29 @@ if ($row = oci_fetch_array($stid)) {
     if ($row[4] == "") {
         $row[4] = "No registra";
     }
-    $emergentePro.= "<div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Codigo:</label></div>";
-    $emergentePro.= "<div class=".'"etiquetaE"'."><label>".$row[0]."</label></div>";
-    $emergentePro.= "<div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Titulo:</label></div>".
-    "<div class=".'"etiquetaE"'."><label>".$row[1]."</label></div></br>
-    <div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Gasto efectivo:</label></div>
-    <div class=".'"etiquetaE"'."><label>".$row[2]."</label></div></br>
-    <div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Duración:</label></div>
-    <div class=".'"etiquetaE"'."><label>".$row[3]."</label></div></br>
-    <div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Fecha de inicio:</label></div>
-    <div class=".'"etiquetaE"'."><label>".$row[4]."</label></div></br></br></br>";
-    
+
+    $_SESSION['codigo'] = $row[0];
+    $_SESSION['titulo'] = $row[1];
+    $_SESSION['gasto'] = $row[2];
+    $_SESSION['duracion'] = $row[3];
+    $_SESSION['fechaInicio'] = $row[4];
+
+    $emergentePro .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Codigo:</label></div>";
+    $emergentePro .= "<div class=" . '"etiquetaE"' . "><label>" . $row[0] . "</label></div>";
+    $emergentePro .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Titulo:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[1] . "</label></div></br>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Gasto efectivo:</label></div>
+    <div class=" . '"etiquetaE"' . "><label>" . $row[2] . "</label></div></br>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Duración:</label></div>
+    <div class=" . '"etiquetaE"' . "><label>" . $row[3] . "</label></div></br>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Fecha de inicio:</label></div>
+    <div class=" . '"etiquetaE"' . "><label>" . $row[4] . "</label></div></br></br></br>";
+
+} else {
+    $emergentePro .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;font-size:16px"' . "><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";
 }
-else
-{
-$emergentePro.= "<div class=".'"etiquetaE"'."style=".'"font-weight: bold;font-size:16px"'."><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";    
-}
-$emergentePro.="</div></div>";
+$emergentePro .= "</div></div>";
 
 oci_free_statement($stid);
 
 oci_close($conexion);
-
 ?>

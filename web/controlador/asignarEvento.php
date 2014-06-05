@@ -28,10 +28,8 @@ oci_free_statement($stid);
 
 oci_close($conexion);
 
-
 echo "<script type='text/javascript'>
     alert('evento asignado con exito'); 
     document.location.href='../vista/asignarEvento.php';
     </script>";
-
 ?>

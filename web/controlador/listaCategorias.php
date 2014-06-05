@@ -7,7 +7,11 @@ $conexion = conectar();
 
 $stid = oci_parse($conexion, 'select id, nombre from Categorias t order by nombre ');
 
-oci_execute($stid);
+$r = oci_execute($stid);
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
 
 $comboCate = "";
 

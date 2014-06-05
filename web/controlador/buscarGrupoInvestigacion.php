@@ -39,15 +39,18 @@ if ($_SESSION['seleccion'] == 1) {
 }
 oci_bind_by_name($stid, ':codigo', $codigo);
 
-$r=oci_execute($stid);
+$r = oci_execute($stid);
 
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
 
-$emergenteGrupos="";
-$emergenteGrupos .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=".'"modalDialogHeader"';
+$emergenteGrupos = "";
+$emergenteGrupos .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=" . '"modalDialogHeader"';
 $emergenteGrupos .= "><h6>Grupo de investigación</h6></header>";
 $combobit .= "<table><thead><tr><th>Codigo</th><th>Nombre</th><th>Clasificacion</th><th>fecha de Creacion</th></tr></thead><tbody>";
 
-   
 if ($row = oci_fetch_array($stid)) {
     if ($row[0] == "") {
         $row[0] = "No registra";
@@ -61,29 +64,26 @@ if ($row = oci_fetch_array($stid)) {
     if ($row[3] == "") {
         $row[3] = "No registra";
     }
-    $_SESSION['actualCodG']=$row[0];
-    $_SESSION['actualNombreG']=$row[1];
-    $_SESSION['actualClasG']=$row[2];
-    $_SESSION['actualFeG']=$row[3];
-    
-    $emergenteGrupos.= "<div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Codigo:</label></div>";
-    $emergenteGrupos.= "<div class=".'"etiquetaE"'."><label>".$row[0]."</label></div>";
-    $emergenteGrupos.= "<div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Nombre:</label></div>".
-    "<div class=".'"etiquetaE"'."><label>".$row[1]."</label></div></br>
-    <div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Clasificacion:</label></div>
-    <div class=".'"etiquetaE"'."><label>".$row[2]."</label></div></br>
-    <div class=".'"etiquetaE"'."style=".'"font-weight: bold;"'."><label>Fecha de creación:</label></div>
-    <div class=".'"etiquetaE"'."><label>".$row[3]."</label></div></br>";
-     if ($_SESSION['idFacultad'] == 83) {
+    $_SESSION['actualCodG'] = $row[0];
+    $_SESSION['actualNombreG'] = $row[1];
+    $_SESSION['actualClasG'] = $row[2];
+    $_SESSION['actualFeG'] = $row[3];
+
+    $emergenteGrupos .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Codigo:</label></div>";
+    $emergenteGrupos .= "<div class=" . '"etiquetaE"' . "><label>" . $row[0] . "</label></div>";
+    $emergenteGrupos .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Nombre:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[1] . "</label></div></br>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Clasificacion:</label></div>
+    <div class=" . '"etiquetaE"' . "><label>" . $row[2] . "</label></div></br>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Fecha de creación:</label></div>
+    <div class=" . '"etiquetaE"' . "><label>" . $row[3] . "</label></div></br>";
+    if ($_SESSION['idFacultad'] == 83) {
         $emergenteGrupos .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarGrupoInvestigacion.php"' . ">Actualizar informacion</a></div></br>";
     }
-    $emergenteGrupos .= "</br></br>";   
+    $emergenteGrupos .= "</br></br>";
+} else {
+    $emergenteGrupos .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;font-size:16px"' . "><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";
 }
-else
-{
-$emergenteGrupos.= "<div class=".'"etiquetaE"'."style=".'"font-weight: bold;font-size:16px"'."><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";    
-}
-$emergenteGrupos.="</div></div>";
+$emergenteGrupos .= "</div></div>";
 
 oci_free_statement($stid);
 

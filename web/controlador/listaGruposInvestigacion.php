@@ -36,16 +36,20 @@ if ($_SESSION['seleccion'] == 1) {
     }
 }
 
-oci_execute($stid);
+$r = oci_execute($stid);
+
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
 
 $tabla = "<table><thead><tr><th>Código</th><th>Nombre</th><th>Clasificacion</th><th>fecha de Creacion</th></tr></thead><tbody>";
 $i = 0;
 $comboGrupo = "";
-while ($row = oci_fetch_array($stid)) 
-{
-    
+while ($row = oci_fetch_array($stid)) {
+
     if ($row[0] != '0019') {
-        
+
         $comboGrupo .= " <option value='" . $row[0] . "'>" . $row[1] . "</option>";
         if ($i == 1) {
             $tabla .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td>" . $row[3] . "</td></tr>";
@@ -54,13 +58,12 @@ while ($row = oci_fetch_array($stid))
             $tabla .= " <tr ><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td> <td>" . $row[3] . "</td></tr>";
             $i++;
         }
-    }
-    else {
+    } else {
         continue;
     }
 
 }
 
-$tabla.="</tbody></table>";
+$tabla .= "</tbody></table>";
 oci_close($conexion);
 ?>

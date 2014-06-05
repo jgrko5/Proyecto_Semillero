@@ -1,7 +1,7 @@
 <?php
-include_once ("imports.php");
-include_once ("header.php");
-include_once ("footer.php");	
+include ("imports.php");
+include ("header.php");
+include ("footer.php");	
 include_once ("../controlador/listaProgramasAcademicos.php");
 include_once ("../controlador/listarSemestres.php");
 getImports();

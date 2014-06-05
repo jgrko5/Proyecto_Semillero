@@ -39,7 +39,7 @@ if ($_SESSION['seleccion'] == 1) {
 oci_bind_by_name($stid, ':codigo', $codigo);
 oci_bind_by_name($stid, ':tarjeta', $codigo);
 
-$r=oci_execute($stid);
+$r = oci_execute($stid);
 if (!$r) {
     $e = oci_error($conn);
     trigger_error(htmlentities($e['message']), E_USER_ERROR);

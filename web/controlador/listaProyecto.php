@@ -37,7 +37,11 @@ if ($_SESSION['seleccion'] == 1) {
     }
 }
 
-oci_execute($stid);
+$r = oci_execute($stid);
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
 
 $combobit = "<table><thead><tr><th>Código</th><th>Título</th></thead><tbody>";
 $i = 0;
@@ -45,7 +49,7 @@ $i = 0;
 while ($row = oci_fetch_array($stid)) {
     $comboProyecto .= " <option value='" . $row[0] . "'>" . $row[1] . "</option>";
     if ($i == 1) {
-        $combobit .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td></tr>" ;
+        $combobit .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td></tr>";
         $i = 0;
     } else {
         $combobit .= " <tr ><td>" . $row[0] . "</td><td>" . $row[1] . "</td></tr>";

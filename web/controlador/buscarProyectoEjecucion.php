@@ -23,7 +23,11 @@ if ($_SESSION['seleccion'] == 1) {
 }
 oci_bind_by_name($stid, ':codigoPE', $codigoPE);
 
-oci_execute($stid);
+$r = oci_execute($stid);
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
 
 $emergenteProE .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=" . '"modalDialogHeader"';
 $emergenteProE .= "><h6>Información de proyecto de investigación en ejecución</h6></header>";
@@ -44,16 +48,15 @@ if ($row = oci_fetch_array($stid)) {
     if ($row[4] == "") {
         $row[4] = "No registra";
     }
-    
-    $_SESSION['idSE']=$row[8];
-    $_SESSION['codProSE']=$row[6];
-    $_SESSION['proyectoSE']=$row[7];
-    $_SESSION['anioSE']=$row[5];
-    $_SESSION['periodoSE']=$row[3];
-    $_SESSION['notaSE']=$row[0];
-    $_SESSION['horasSE']=$row[9];
-    
-    
+
+    $_SESSION['idSE'] = $row[8];
+    $_SESSION['codProSE'] = $row[6];
+    $_SESSION['proyectoSE'] = $row[7];
+    $_SESSION['anioSE'] = $row[5];
+    $_SESSION['periodoSE'] = $row[3];
+    $_SESSION['notaSE'] = $row[0];
+    $_SESSION['horasSE'] = $row[9];
+
     $emergenteProE .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Codigo:</label></div>";
     $emergenteProE .= "<div class=" . '"etiquetaE"' . "><label>" . $row[6] . "</label></div>";
     $emergenteProE .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Titulo:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[7] . "</label></div></br>
@@ -66,7 +69,7 @@ if ($row = oci_fetch_array($stid)) {
     if ($_SESSION['idFacultad'] == 83) {
         $emergenteProE .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarSemilleroEjecucion.php"' . ">Actualizar informacion</a></div></br>";
     }
-    $emergenteProE .="</br></br>";
+    $emergenteProE .= "</br></br>";
 
 } else {
     $emergenteProE .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;font-size:16px"' . "><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";

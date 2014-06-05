@@ -1,5 +1,5 @@
 <?php
-include_once('oracle.php'); 
+include_once ('oracle.php');
 
 session_start();
 
@@ -12,22 +12,22 @@ $fechaIP = $_POST['fechaIProyecto'];
 $conexion = conectar();
 
 if ($_SESSION['seleccion'] == 1) {
-   $stid = oci_parse($conexion, 'INSERT INTO PROYECTOS_INVESTIGACION (codigo, titulo, gastoEfectivo, duracion, fechaInicio) VALUES (:codigoProyecto, :tituloProyecto, :gastoEProyecto, :duracionProyecto, :fechaIProyecto)');
+    $stid = oci_parse($conexion, 'INSERT INTO PROYECTOS_INVESTIGACION (codigo, titulo, gastoEfectivo, duracion, fechaInicio) VALUES (:codigoProyecto, :tituloProyecto, :gastoEProyecto, :duracionProyecto, :fechaIProyecto)');
 } else {
     if ($_SESSION['seleccion'] == 2) {
         $stid = oci_parse($conexion, 'INSERT INTO PROYECTOS_INVESTIGACION (codigo, titulo, gastoEfectivo, duracion, fechaInicio) VALUES (:codigoProyecto, :tituloProyecto, :gastoEProyecto, :duracionProyecto, :fechaIProyecto)');
     } else {
         if ($_SESSION['seleccion'] == 21) {
-           $stid = oci_parse($conexion, 'INSERT INTO PROYECTOS_INVESTIGACION (codigo, titulo, gastoEfectivo, duracion, fechaInicio) VALUES (:codigoProyecto, :tituloProyecto, :gastoEProyecto, :duracionProyecto, :fechaIProyecto)');
+            $stid = oci_parse($conexion, 'INSERT INTO PROYECTOS_INVESTIGACION (codigo, titulo, gastoEfectivo, duracion, fechaInicio) VALUES (:codigoProyecto, :tituloProyecto, :gastoEProyecto, :duracionProyecto, :fechaIProyecto)');
         } else {
             if ($_SESSION['seleccion'] == 22) {
-               $stid = oci_parse($conexion, 'INSERT INTO PROYECTOS_INVESTIGACION (codigo, titulo, gastoEfectivo, duracion, fechaInicio) VALUES (:codigoProyecto, :tituloProyecto, :gastoEProyecto, :duracionProyecto, :fechaIProyecto)');
+                $stid = oci_parse($conexion, 'INSERT INTO PROYECTOS_INVESTIGACION (codigo, titulo, gastoEfectivo, duracion, fechaInicio) VALUES (:codigoProyecto, :tituloProyecto, :gastoEProyecto, :duracionProyecto, :fechaIProyecto)');
             } else {
                 if ($_SESSION['seleccion'] == 23) {
                     $stid = oci_parse($conexion, 'INSERT INTO PROYECTOS_INVESTIGACION (codigo, titulo, gastoEfectivo, duracion, fechaInicio) VALUES (:codigoProyecto, :tituloProyecto, :gastoEProyecto, :duracionProyecto, :fechaIProyecto)');
                 } else {
                     if ($_SESSION['seleccion'] == 24) {
-                      $stid = oci_parse($conexion, 'INSERT INTO PROYECTOS_INVESTIGACION (codigo, titulo, gastoEfectivo, duracion, fechaInicio) VALUES (:codigoProyecto, :tituloProyecto, :gastoEProyecto, :duracionProyecto, :fechaIProyecto)');
+                        $stid = oci_parse($conexion, 'INSERT INTO PROYECTOS_INVESTIGACION (codigo, titulo, gastoEfectivo, duracion, fechaInicio) VALUES (:codigoProyecto, :tituloProyecto, :gastoEProyecto, :duracionProyecto, :fechaIProyecto)');
                     } else {
                         if ($_SESSION['seleccion'] == 25) {
                             $stid = oci_parse($conexion, 'INSERT INTO PROYECTOS_INVESTIGACION (codigo, titulo, gastoEfectivo, duracion, fechaInicio) VALUES (:codigoProyecto, :tituloProyecto, :gastoEProyecto, :duracionProyecto, :fechaIProyecto)');
@@ -39,7 +39,6 @@ if ($_SESSION['seleccion'] == 1) {
     }
 }
 
-
 oci_bind_by_name($tid, ':codigoProyecto', $codigoP);
 oci_bind_by_name($tid, ':tituloProyecto', $tituloP);
 oci_bind_by_name($tid, ':gastoEProyecto', $gastoEP);
@@ -47,9 +46,11 @@ oci_bind_by_name($tid, ':duracionProyecto', $duracionP);
 oci_bind_by_name($tid, ':fechaIProyecto', $fechaIP);
 
 $r = oci_execute($stid);
-
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
 oci_free_statement($stid);
 
 oci_close($conexion);
-
 ?>

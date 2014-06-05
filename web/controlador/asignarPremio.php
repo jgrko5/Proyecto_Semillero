@@ -13,8 +13,8 @@ $documento = $_POST['codigo'];
 $conexion = conectar();
 $stid = oci_parse($conexion, 'INSERT  INTO PREMIOS_ESTUDIANTES(ESTUDIANTE_ID, PREMIOS_ID) values (:documento,:premiosA)');
 
-oci_bind_by_name($stid, ':documento',  $documento);
-oci_bind_by_name($stid, ':premiosA',$codigo);
+oci_bind_by_name($stid, ':documento', $documento);
+oci_bind_by_name($stid, ':premiosA', $codigo);
 
 $r = oci_execute($stid);
 
@@ -31,7 +31,4 @@ echo "<script type='text/javascript'>
 oci_free_statement($stid);
 
 oci_close($conexion);
-
-
-
 ?>

@@ -21,7 +21,10 @@ oci_bind_by_name($stid, ':fecha', $fecha);
 oci_bind_by_name($stid, ':facultad', $facultad);
 
 $r = oci_execute($stid);
-
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
 echo "<script type='text/javascript'>
     alert('Estudiante registrado con exito'); 
     document.location.href='../vista/registrarGrupoInvestigacion.php';
@@ -30,6 +33,4 @@ echo "<script type='text/javascript'>
 oci_free_statement($stid);
 
 oci_close($conexion);
-
-
 ?>

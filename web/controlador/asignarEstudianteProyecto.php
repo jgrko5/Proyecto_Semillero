@@ -5,7 +5,6 @@ session_start();
 
 error_reporting("E_ERROR && E_WARNING");
 
-
 $codigo = $_POST['proEstudiante'];
 $documento = $_POST['codigo'];
 
@@ -28,10 +27,8 @@ oci_free_statement($stid);
 
 oci_close($conexion);
 
-
 echo "<script type='text/javascript'>
     alert('Semillero registrado con exito'); 
     document.location.href='../vista/asignarEstudianteProyecto.php';
     </script>";
-
 ?>

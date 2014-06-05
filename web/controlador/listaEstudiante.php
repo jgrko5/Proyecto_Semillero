@@ -36,8 +36,11 @@ if ($_SESSION['seleccion'] == 1) {
     }
 }
 
-oci_execute($stid);
-
+$r = oci_execute($stid);
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
 $combobit = "<table><thead><tr><th>Cedula</th><th>Tarjeta de Identidad</th><th>Nombres y apellidos</th></tr></thead><tbody>";
 $i = 0;
 

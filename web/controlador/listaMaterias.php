@@ -39,7 +39,10 @@ if ($_SESSION['seleccion'] == 1) {
 oci_bind_by_name($stid, ':codigo', $codigo);
 
 $r = oci_execute($stid);
-
+if (!$r) {
+    $e = oci_error($conexion);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
 $combobit = "";
 $i = 0;
 $combobit .= "<table><thead><tr><th>Codigo</th><th>Nombre</th></tr></thead><tbody>";
