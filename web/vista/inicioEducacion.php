@@ -17,12 +17,11 @@ getImports();
         <div id="contenido">
             <section id="premio">
                 <article>
-                    <center>
-                        </br>
-                        </br>
-                        ...... En construcción
-                        </br>
-                        </br>
+                   <center>
+                    </br>
+                        <img style="width: 80%;position: relative; z-index: 2;margin-bottom: 0; border-radius: 26px" src="../../web/imagenes/udelquindio.jpg" >
+                    </br>
+                    </br>
                     </center>
                 </article>
             </section>

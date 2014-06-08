@@ -2,7 +2,7 @@
 include ("imports.php");
 include ("header.php");
 include ("footer.php");
-include_once ("../controlador/listaProyectosEjecucion.php");
+include_once ("../controlador/listadoEjecucionPaginacion.php");
 include_once ('../controlador/buscarProyectoEjecucion.php');
 getImports();
 ?>
@@ -41,7 +41,8 @@ getImports();
 								<div id="resultado" class="datagrid">
 
 									<?php
-									echo $tablaEjecucion;
+									echo $tabla;
+                                    echo $navegador;
 									?>
 								</div>
 								</br>

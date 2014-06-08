@@ -2,9 +2,8 @@
 include ("imports.php");
 include ("header.php");
 include ("footer.php");
-include_once ("../controlador/listaEstudiante.php");
+include_once ("../controlador/listadoEstudiantesPaginacion.php");
 include_once ("../controlador/buscarEstudiante.php");
-include_once ("../controlador/paginacion.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -33,21 +32,26 @@ getImports();
 
 								<div align="center">
 									<input class="button" type="submit" value="Buscar" onclick="showService(documento.value,'buscarEstudiante');location.href='#openModal'"/>
-								</div></br>
+								</div>
+							</center>
+
+						</form>
+						<form  method="GET"  >
+							<center>
 								<header>
 									<h1 style="color: #000000">Estudiantes</h1></br>
 								</header>
 
-								<div id="resultado" class="datagrid">
-
+								<div  id="resultado" class="datagrid" >
 									<?php
 									
-	                                    echo $combobit;
+									echo $tabla;
+                                    echo $navegador; 
 									?>
 								</div>
 								</br>
 							</center>
-							
+
 						</form>
 					</div>
 				</article>

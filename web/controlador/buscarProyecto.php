@@ -1,9 +1,11 @@
 <?php
 include_once ('oracle.php');
 
-session_start();
+$codigo = "";
+if (isset($_POST['codigoP'])) {
+    $codigo = $_POST['codigoP'];
 
-$codigo = $_POST['codigoP'];
+}
 
 $conexion = conectar();
 
@@ -42,6 +44,7 @@ if (!$r) {
     $e = oci_error($conexion);
     trigger_error(htmlentities($e['message']), E_USER_ERROR);
 }
+$emergentePro ="";
 $emergentePro .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=" . '"modalDialogHeader"';
 $emergentePro .= "><h6>Información de proyecto de investigación</h6></header>";
 

@@ -27,7 +27,7 @@ if ($_SESSION['seleccion'] == 1) {
                         $stid = oci_parse($conexion, 'select * from CRUD_GRUPOS_bellas_artes e');
                     } else {
                         if ($_SESSION['seleccion'] == 25) {
-                            $stid = oci_parse($conexion, 'select * from CRUD_GRUPOS_economica e');
+                            $stid = oci_parse($conexion, 'select * from CRUD_GRUPOS_economia e');
                         }
                     }
                 }
@@ -38,9 +38,9 @@ if ($_SESSION['seleccion'] == 1) {
 
 $r = oci_execute($stid);
 
-if (!$r) {
+if ($r == false) {
     $e = oci_error($conexion);
-    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+    trigger_error(htmlentities($e['offset']), E_USER_ERROR);
 }
 
 $tabla = "<table><thead><tr><th>Código</th><th>Nombre</th><th>Clasificacion</th><th>fecha de Creacion</th></tr></thead><tbody>";

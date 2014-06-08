@@ -1,9 +1,11 @@
 <?php
-include ("imports.php");
+
+include_once ("imports.php");
 include ("header.php");
 include ("footer.php");
-include_once ("../controlador/listaGruposInvestigacion.php");
+
 include_once ("../controlador/buscarGrupoInvestigacion.php");
+include_once ("../controlador/listaGruposInvestigacion.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -12,7 +14,9 @@ getImports();
         getHeaderStart();
         getPanelSesion();
         getMenuIzquierdo();
+       
 		?>
+
 		<div id="contenido">
 			<section id="grupo">
 				<article>

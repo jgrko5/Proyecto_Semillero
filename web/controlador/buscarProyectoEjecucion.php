@@ -1,12 +1,15 @@
 <?php
 include_once ('oracle.php');
+$codigoPE="";
+if(isset($_POST['codPE' ]))
+    {
 
-session_start();
+    $codigoPE = $_POST['codPE'];
+    }
+    $conexion = conectar();
 
-$codigoPE = $_POST['codPE'];
-$conexion = conectar();
-
-if ($_SESSION['seleccion'] == 1) {
+    if ($_SESSION[
+'seleccion'] == 1) {
     $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_INGENIERIA where (codigo =:codigoPE)');
 } else if ($_SESSION['seleccion'] == 2) {
     $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_EDUCACION where codigo =:codigoPE');
@@ -28,7 +31,7 @@ if (!$r) {
     $e = oci_error($conexion);
     trigger_error(htmlentities($e['message']), E_USER_ERROR);
 }
-
+$emergenteProE ="";
 $emergenteProE .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=" . '"modalDialogHeader"';
 $emergenteProE .= "><h6>Información de proyecto de investigación en ejecución</h6></header>";
 

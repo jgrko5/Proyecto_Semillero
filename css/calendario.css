@@ -1,5 +1,5 @@
 #calendario {
-	color: #FFFFFF;;
+	color: #000000;;
 	font-size: 10px;
 	text-align: center;
 	margin-left: auto;
@@ -22,12 +22,12 @@
 	font-size: 110%;
 }
 #calendario th {
-	color: #FFFFFF;
+	color: #000000;
 }
 
 /*.Hoy para configurar aspectos de la caja que muestra el día actual*/
 .Hoy {
-	color: #ffffff;
+	color: #000000;
 	background-color: #666666;
 	font-weight: normal;
 }

@@ -45,6 +45,7 @@ oci_bind_by_name($stid, ':grupo', $grupor);
 oci_bind_by_name($stid, ':homologo', $homologacionSC);
 
 $r = oci_execute($stid);
+oci_free_statement($stid);
 
 $stid2 = oci_parse($conexion, "(select max(id) from SEMILLEROS_CONSOLIDACION)");
 $r2 = oci_execute($stid2);

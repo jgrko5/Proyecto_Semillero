@@ -29,7 +29,7 @@ if ($_SESSION['seleccion'] == 1) {
                         $stid = oci_parse($conexion, 'select * from CRUD_GRUPOS_bellas_artes e where codigo=:codigo  ');
                     } else {
                         if ($_SESSION['seleccion'] == 25) {
-                            $stid = oci_parse($conexion, 'select * from CRUD_GRUPOS_economica e where codigo=:codigo  ');
+                            $stid = oci_parse($conexion, 'select * from CRUD_GRUPOS_economia e where codigo=:codigo  ');
                         }
                     }
                 }
@@ -41,10 +41,6 @@ oci_bind_by_name($stid, ':codigo', $codigo);
 
 $r = oci_execute($stid);
 
-if (!$r) {
-    $e = oci_error($conexion);
-    trigger_error(htmlentities($e['message']), E_USER_ERROR);
-}
 
 $emergenteGrupos = "";
 $emergenteGrupos .= "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=" . '"modalDialogHeader"';

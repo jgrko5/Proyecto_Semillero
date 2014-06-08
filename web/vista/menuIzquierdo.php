@@ -170,9 +170,7 @@ if($_SESSION['idFacultad']==83)
 						<a href="buscarProyectosConsolidacion.php">Lista proyectos consolidación</a>
 					</li>
 
-					<li class="lupper">
-						<a href="registrarSemilleroConsolidacion.php">Registrar</a>
-					</li>
+					
 				</ul>
 			</li>
 

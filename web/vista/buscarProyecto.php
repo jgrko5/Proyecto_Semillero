@@ -2,7 +2,7 @@
 include ("imports.php");
 include ("header.php");
 include ("footer.php");
-include_once ('../controlador/listaProyecto.php');
+include_once ('../controlador/listadoProyectosPaginacion.php');
 include_once ('../controlador/buscarProyecto.php');
 getImports();
 ?>
@@ -33,14 +33,18 @@ getImports();
 								<div align="center">
 									<input class="button" type="submit" value="Buscar" onclick="showService(codigoP.value,'buscarProyecto');location.href='#openModal'"/>
 								</div></br>
-
+							</center>
+						</form>
+						<form  method="get">
+							<center>
 								<header>
 									<h1>Proyectos de investigación</h1></br>
 								</header>
 								<div id="resultado" class="datagrid">
 
 									<?php
-                                    echo $combobit;
+                                    echo $tabla;
+                                    echo $navegador;
 									?>
 								</div>
 								</br>
@@ -51,7 +55,7 @@ getImports();
 			</section>
 		</div>
 		<?php
-		echo $emergentePro;
+        echo $emergentePro;
         getFooter();
 		?>
 	</div>

@@ -2,7 +2,7 @@
 include ("imports.php");
 include ("header.php");
 include ("footer.php");
-include_once ("../controlador/listaProyectosConsolidacion.php");
+include_once ("../controlador/listadoConsolidacionPaginacion.php");
 include_once ("../controlador/buscarProyectoConsolidacion.php");
 getImports();
 ?>
@@ -34,7 +34,10 @@ getImports();
 								<div align="center">
 									<input class="button" type="submit" value="Buscar" onclick="showService(codPC.value,'buscarProyectoConsolidacion');location.href='#openModal'"/>
 								</div>
-
+							</center>
+						</form>
+						<form method="get">
+							<center>
 								<header>
 									<h1 style="color: #000000">Proyectos de investigación en consolidación</h1></br>
 								</header>
@@ -42,7 +45,8 @@ getImports();
 								<div id="resultado" class="datagrid">
 
 									<?php
-                                    echo $tablaConsolidacion;
+                                    echo $tabla;
+                                    echo $navegador;
 									?>
 								</div>
 								</br>

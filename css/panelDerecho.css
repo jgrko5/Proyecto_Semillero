@@ -54,7 +54,7 @@
 .flyoutmenuDer li a {
   display:block;							/* the link works for the whole width of li, not just the text */
   text-decoration:none;				/* no underline wanted */
-  color:#FFFFFF;
+  color:#000000;
 }
 
 .flyoutmenuDer a:hover {color:#868686;}	    /* fade text when hovering */
