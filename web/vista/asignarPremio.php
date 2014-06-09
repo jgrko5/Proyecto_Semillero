@@ -33,12 +33,13 @@ getImports();
 							</div>
 						</form>
 						<form action="../controlador/asignarPremio.php" method="post">
-							<div class="etiqueta">
-								<label>Código estudiante:</label>
-							</div></br>
-							<?php
+							
+                            <div class="etiqueta">
+                                <label>Código estudiante:</label>
+                            </div></br>
+                            <?php
                             echo $textfieldCodigo;
-							?>
+                            ?>
 							<div class="etiqueta">
 								<label>Nombres y apellidos:</label>
 							</div></br>

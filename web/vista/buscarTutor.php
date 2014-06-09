@@ -2,7 +2,7 @@
 include ("imports.php");
 include ("header.php");
 include ("footer.php");
-include_once ("../controlador/listaTutor.php");
+include_once ("../controlador/listadoTutoresPaginacion.php");
 include_once ("../controlador/buscarTutor.php");
 getImports();
 ?>
@@ -32,6 +32,8 @@ getImports();
 							<div align="center">
 								<input class="button" type="submit" value="Buscar" onclick="showService(documento.value,'buscarTutor');location.href='#openModal'"/>
 							</div></br>
+						</form>
+						<form  method="get">
 							<header>
 								<h6>Tutores</h6></br>
 							</header>
@@ -39,7 +41,8 @@ getImports();
 
 								<?php
 
-                                echo $combobit;
+                                echo $tabla;
+                                echo $navegador;
 								?>
 							</div></br>
 						</form>

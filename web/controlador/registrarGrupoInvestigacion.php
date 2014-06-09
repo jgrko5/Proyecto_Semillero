@@ -12,12 +12,11 @@ $facultad = $_POST['facultad'];
 
 $conexion = conectar();
 
-$stid = oci_parse($conexion, "INSERT INTO grupos_Investigacion(codigo, nombre,clasificacioncolciencias,fechaconformacion,facultades_id) values ( :codigo, :nombre, :clasificacion, :fecha,  :facultad)");
+$stid = oci_parse($conexion, "INSERT INTO grupos_Investigacion(codigo, nombre,clasificacioncolciencias,fechaconformacion,facultades_id) values ( :codigo, :nombre, :clasificacion, TO_DATE('$fecha','yy-mm-dd'),  :facultad)");
 
 oci_bind_by_name($stid, ':codigo', $codigo);
 oci_bind_by_name($stid, ':nombre', $normal);
 oci_bind_by_name($stid, ':clasificacion', $clasificacion);
-oci_bind_by_name($stid, ':fecha', $fecha);
 oci_bind_by_name($stid, ':facultad', $facultad);
 
 $r = oci_execute($stid);

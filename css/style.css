@@ -29,7 +29,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 #login article {
 	width: 60%;
 	margin: 70px auto 70px auto;
-	background-color: rgba(101,167,57,0.4);
+	background-color: rgba(101,167,57,0.5);
 	padding: 10px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -58,7 +58,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgba(101,167,57,0.4);
+	background-color: rgba(101,167,57,0.5);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -88,7 +88,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgba(101,167,57,0.4);
+	background-color: rgba(101,167,57,0.5);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -117,7 +117,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgba(101,167,57,0.4);
+	background-color: rgba(101,167,57,0.5);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -145,7 +145,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 	width: 80%;
 	margin: 80px 0 20px 0px;
 	padding: 0px;
-	background-color: rgba(101,167,57,0.4);
+	background-color: rgba(101,167,57,0.5);
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
 	border-radius: 26px;
@@ -173,7 +173,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgba(101,167,57,0.4);
+	background-color: rgba(101,167,57,0.5);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -212,7 +212,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgba(101,167,57,0.4);
+	background-color: rgba(101,167,57,0.5);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -235,7 +235,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgba(101,167,57,0.4);
+	background-color: rgba(101,167,57,0.5);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -268,7 +268,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgba(101,167,57,0.4);
+	background-color: rgba(101,167,57,0.5);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -298,7 +298,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgba(101,167,57,0.4);
+	background-color: rgba(101,167,57,0.5);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -328,7 +328,7 @@ article, aside, details, figcaption, figure, footer, header, nav, hgroup, sectio
 
 	width: 80%;
 	margin: 80px 0 20px 0px;
-	background-color: rgba(101,167,57,0.4);
+	background-color: rgba(101,167,57,0.5);
 	padding: 0px;
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
@@ -359,7 +359,7 @@ h6 h5 {
 	box-shadow: 0px 0px 5px #fff;
 	-webkit-box-shadow: 0px 0px 10px #ccc;
 	-moz-box-shadow: 0px 0px 5px #fff;
-	background: #f0e0c0;
+	background: #EBEBEB;
 }
 
 .textArea {
@@ -606,7 +606,7 @@ section#posts aside {
 {
 	
 	width: 100%;
-	background-color: rgba(101,167,57,0.4);
+	background-color: rgba(101,167,57,0.5);
 	-webkit-border-radius: 26px;
 	-moz-border-radius: 26px;
 	border-radius: 26px;

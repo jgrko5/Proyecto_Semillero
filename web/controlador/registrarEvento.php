@@ -9,11 +9,11 @@ $añoEv = $_POST['añoEv'];
 
 $conexion = conectar();
 
-$stid = oci_parse($conexion, 'INSERT INTO (nombre, ciudad, año) values (:nombreEv, :ciudadEv, :añoEv)');
+$stid = oci_parse($conexion, 'INSERT INTO EVENTOS(nombre, ciudad, anio) values (:nombreEv, :ciudadEv, :anioEv)');
 
-oci_bind_by_name($tid, ':nombreEv', $nombreEv);
-oci_bind_by_name($tid, ':ciudadEv', $ciudadEv);
-oci_bind_by_name($tid, ':añoEv', $añoEv);
+oci_bind_by_name($stid, ':nombreEv', $nombreEv);
+oci_bind_by_name($stid, ':ciudadEv', $ciudadEv);
+oci_bind_by_name($stid, ':anioEv', $añoEv);
 
 $r = oci_execute($stid);
 if (!$r) {
@@ -23,4 +23,8 @@ if (!$r) {
 oci_free_statement($stid);
 
 oci_close($conexion);
+echo "<script type='text/javascript'>
+    alert('Registrado con exito'); 
+    document.location.href='../vista/registrarEvento.php';
+    </script>";
 ?>

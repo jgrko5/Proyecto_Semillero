@@ -40,7 +40,7 @@ getImports();
 								<div class="componente">
 									<input class="textField" type="text" name="ciudadEvento" required="required" placeholder="Nuevo ciudad del evento"  value="<?php echo $_SESSION['ciudadE']; ?>"/>
 								</div>
-								</br></br>
+								</br>
 								
 								<div class="etiqueta">
 									<label>Año:</label>
@@ -49,7 +49,7 @@ getImports();
 								<div class="componente">
 									<input class="textField" type="text" name="anioEvento" required="required" placeholder="Nuevo año del evento" value="<?php echo $_SESSION['anioE']; ?>"/>
 								</div>
-								</br>
+							 </br>   </br>
 
 								<div align="center">
 									<input class="button" type="submit" value="Actualizar" />

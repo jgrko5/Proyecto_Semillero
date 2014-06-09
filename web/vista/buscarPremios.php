@@ -3,7 +3,6 @@ include ("imports.php");
 include ("header.php");
 include ("footer.php");
 
-session_start();
 
 include_once ("../controlador/listaPremios.php");
 include_once ("../controlador/buscarPremios.php");

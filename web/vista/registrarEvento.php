@@ -2,6 +2,7 @@
 include ("imports.php");
 include ("header.php");
 include ("footer.php");
+session_start();
 getImports();
 ?>
 

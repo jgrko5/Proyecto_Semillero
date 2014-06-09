@@ -4,7 +4,11 @@ include_once ('oracle.php');
 session_start();
 
 $cant_reg = 20;
-$num_pag = $_GET["pagina"];
+$num_pag = 0;
+if (isset($_GET["pagina"])) {
+
+    $num_pag = $_GET["pagina"];
+}
 
 if (!$num_pag) {
     $comienzo = 0;
@@ -136,5 +140,4 @@ if (($num_pag + 1) <= $total_paginas) {
     $navegador .= " <a href='buscarEstudiante.php?pagina=" . ($num_pag + 1) . "'>Siguiente ></a>";
 }
 $navegador .= "</div></center>";
-
 ?>

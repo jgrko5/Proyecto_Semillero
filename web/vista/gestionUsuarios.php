@@ -10,9 +10,9 @@ getImports();
 <body onload="tunCalendario();">
 	<div id="main" class="wrapper">
 		<?php
-		getHeaderStart();
-		getPanelSesion();
-		getMenuIzquierdo();
+        getHeaderStart();
+        getPanelSesion();
+        getMenuIzquierdo();
 		?>
 		<div id="contenido">
 			<section id="estudiante">
@@ -22,28 +22,38 @@ getImports();
 							</br><h6>Gestión de contraseñas</h6></br>
 						</header>
 						<div id="formulario">
-							<form action="../controlador/gestionContrasenas.php" method="post">
+							<form method="post">
 								<div class="etiqueta">
 									<label> Usuario:</label>
 								</div>
 								<div class="componente">
-									<select class="select" title="gestion de contraseñas" name="gestionCon" onchange="showService(this.value,'gestionarContrasenas')">
+									<select class="select" title="gestion de contraseñas" name="gestionCon" >
 										<?php
-										echo $combobitUsuarios;
+                                        echo $combobitUsuarios;
 										?>
 									</select>
-								</div></br>
-								<?php
-									echo $textContrasena;
-								?></br>
+								</div>
+								<div align="left">
+									<input type="submit" style="background-image:url(../imagenes/buscar.png);background-size: 100%" class="button" value="" onclick="showService(gestionCon.value,'gestionarContrasenas')" />
+								</div>
 							</form>
+							<form action="../controlador/cambioContrasena.php" method="post">
+								<?php
+                                echo $textContrasena;
+								?> </br>
+								<div align="center">
+									<input type="submit" class="button" value="Cambiar"  />
+								</div>
+								</br>
+							</form>
+
 						</div>
 					</div>
 				</article>
 			</section>
 		</div>
 		<?php
-		getFooter();
+        getFooter();
 		?>
 	</div>
 </body>

@@ -7,33 +7,7 @@ error_reporting("E_ERROR && E_WARNING");
 $conexion = conectar();
 $codigo = $_POST['premioNombre'];
 
-if ($_SESSION['seleccion'] == 1) {
-    $stid = oci_parse($conexion, 'select * from crud_premios_INGENIERIA e where nombre=:nombrePremio');
-} else {
-    if ($_SESSION['seleccion'] == 2) {
-        $stid = oci_parse($conexion, 'select * from crud_premios_educacion e where nombre=:nombrePremio');
-    } else {
-        if ($_SESSION['seleccion'] == 21) {
-            $stid = oci_parse($conexion, 'select * from crud_premios_salud e where nombre=:nombrePremio');
-        } else {
-            if ($_SESSION['seleccion'] == 22) {
-                $stid = oci_parse($conexion, 'select * from crud_premios_basicas e where nombre=:nombrePremio');
-            } else {
-                if ($_SESSION['seleccion'] == 23) {
-                    $stid = oci_parse($conexion, 'select * from crud_premios_agroindustria e where nombre=:nombrePremio');
-                } else {
-                    if ($_SESSION['seleccion'] == 24) {
-                        $stid = oci_parse($conexion, 'select * from crud_premios_bellas_artes e where nombre=:nombrePremio');
-                    } else {
-                        if ($_SESSION['seleccion'] == 25) {
-                            $stid = oci_parse($conexion, 'select * from crud_premios_economica e where nombre=:nombrePremio');
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+    $stid = oci_parse($conexion, 'select * from Premios e where nombre=:nombrePremio');
 
 oci_bind_by_name($stid, ':nombrePremio', $codigo);
 $r = oci_execute($stid);

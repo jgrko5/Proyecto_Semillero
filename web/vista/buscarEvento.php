@@ -20,6 +20,7 @@ getImports();
 						</br><h6>Buscar evento</h6>
 					</header>
 					<div id="formulario">
+					    <form method="post">
 						<div class="etiqueta">
 							<label>Ingrese el nombre del evento:</label>
 						</div></br>
@@ -29,7 +30,7 @@ getImports();
 						</div>
 
 						<div align="center">
-							<input class="button" type="submit" value="Buscar" onclick="showService(documento.value,'buscarevento');location.href='#openModal'"/>
+							<input class="button" type="submit" value="Buscar" onclick="showService(nombreE.value,'buscarEventos');location.href='#openModal'"/>
 						</div></br>
 						<header>
 							</br><h6>Lista de eventos</h6></br>
@@ -42,6 +43,7 @@ getImports();
 							?>
 						</div>
 						</br>
+						</form>
 					</div>
 				</article>
 			</section>

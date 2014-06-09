@@ -2,13 +2,15 @@
 
 include_once ('oracle.php');
 
-session_start();
-
 error_reporting("E_ERROR && E_WARNING");
 
 header("Content-Type: text / html; charset =UTF-8");
 $conexion = conectar();
-$codigo = $_POST['documento'];
+$codigo = "";
+if (isset($_POST['documento'])) {
+    $codigo = $_POST['documento'];
+
+}
 
 if ($_SESSION['seleccion'] == 1) {
     $stid = oci_parse($conexion, 'select * from CRUD_TUTORES_INGENIERIA e where documento=:codigo');

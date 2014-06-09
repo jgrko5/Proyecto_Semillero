@@ -23,12 +23,13 @@ if (!$r) {
     trigger_error(htmlentities($e['message']), E_USER_ERROR);
 }
 
+
 oci_free_statement($stid);
 
 oci_close($conexion);
 
 echo "<script type='text/javascript'>
     alert('Semillero registrado con exito'); 
-    document.location.href='../vista/asignarEstudianteProyecto.php';
+    document.location.href='../vista/asignarProyectoEstudiante.php';
     </script>";
 ?>

@@ -45,7 +45,7 @@ if (!$r) {
 
 $combobit = "<table><thead><tr><th>Código</th><th>Título</th></thead><tbody>";
 $i = 0;
-
+$comboProyecto ="";
 while ($row = oci_fetch_array($stid)) {
     $comboProyecto .= " <option value='" . $row[0] . "'>" . $row[1] . "</option>";
     if ($i == 1) {

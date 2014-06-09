@@ -1,6 +1,5 @@
 <?php
 include_once ('oracle.php');
-
 $codigo = "";
 if (isset($_POST['codigoP'])) {
     $codigo = $_POST['codigoP'];
@@ -79,7 +78,11 @@ if ($row = oci_fetch_array($stid)) {
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Duración:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[3] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Fecha de inicio:</label></div>
-    <div class=" . '"etiquetaE"' . "><label>" . $row[4] . "</label></div></br></br></br>";
+    <div class=" . '"etiquetaE"' . "><label>" . $row[4] . "</label></div></br>";
+     if ($_SESSION['idFacultad'] == 83) {
+            $emergentePro .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarProyecto.php"' . ">Actualizar informacion</a></div></br>";
+        }
+        $emergentePro .= "</br></br>";
 
 } else {
     $emergentePro .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;font-size:16px"' . "><label>No se encontraron coincidencias, por favor intente nuevamente</label></div></br>";

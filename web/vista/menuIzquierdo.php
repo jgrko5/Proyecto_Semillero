@@ -44,10 +44,7 @@ if($_SESSION['idFacultad']==83)
 {
 
 					?>
-					<li>
-					<a href="actualizarEvento.php">Actualizar falta</a>
-					</li>
-
+					
 					<li>
 					<a href="asignarEvento.php">Asignar</a>
 					</li>
@@ -231,10 +228,7 @@ function getMenuIzquierdoVice()
 				<a href="#"><span>Administración de cuentas</span></a>
 				<ul>
 					<li class="lupper">
-						<a href="enn.php" >En construcción</a>
-					</li>
-					<li>
-						<a href="enn.php">En cons...</a>
+						<a href="gestionUsuarios.php" >Gestion de contraseñas</a>
 					</li>
 				</ul>
 			</li>
@@ -272,21 +266,11 @@ function getMenuIzquierdoVice()
 
                     }
 					?>
-					<li class="lupper">
-						<a href="actualizarTutor.php">Actualizar</a>
-					</li>
-
 					<li >
-						<a href="enn.php" >En construcción</a>
+						<a href="reporteAnio.php" >Reporte por año</a>
 					</li>
 
-					<li>
-						<a href="asignarTutor.php">Asignar</a>
-					</li>
-					<li>
-					<a href="registrarTutor.php">Registrar</a>
-					<a href="enn.php">En cons...</a>
-					</li>
+					
 				</ul>
 			</li>
 		</ul>

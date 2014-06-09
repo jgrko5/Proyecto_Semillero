@@ -11,9 +11,23 @@ $codigo = $_POST['premiosA'];
 $documento = $_POST['codigo'];
 
 $conexion = conectar();
+
+$stid = oci_parse($conexion, 'select id from estudiantes where cedula= :cedula or tarjetaidentidad= :tarjeta');
+
+oci_bind_by_name($stid, ':cedula', $documento);
+oci_bind_by_name($stid, ':tarjeta', $documento);
+
+$r = oci_execute($stid);
+$id="";
+if($row = oci_fetch_array($stid))
+{
+    $id=$row[0];
+}
+
+
 $stid = oci_parse($conexion, 'INSERT  INTO PREMIOS_ESTUDIANTES(ESTUDIANTE_ID, PREMIOS_ID) values (:documento,:premiosA)');
 
-oci_bind_by_name($stid, ':documento', $documento);
+oci_bind_by_name($stid, ':documento', $id);
 oci_bind_by_name($stid, ':premiosA', $codigo);
 
 $r = oci_execute($stid);
@@ -26,7 +40,7 @@ if (!$r) {
 
 echo "<script type='text/javascript'>
     alert('Premio asignado con exito'); 
-    document.location.href='../vista/buscarPremio.php';
+    document.location.href='../vista/asignarPremio.php';
     </script>";
 oci_free_statement($stid);
 

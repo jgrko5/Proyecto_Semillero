@@ -1,35 +1,9 @@
 <?php
 include_once ('oracle.php');
-
+session_start();
 $conexion = conectar();
 
-if ($_SESSION['seleccion'] == 1) {
-    $stid = oci_parse($conexion, 'select * from crud_premios_INGENIERIA e order by nombre');
-} else {
-    if ($_SESSION['seleccion'] == 2) {
-        $stid = oci_parse($conexion, 'select * from crud_premios_educacion e order by nombre');
-    } else {
-        if ($_SESSION['seleccion'] == 21) {
-            $stid = oci_parse($conexion, 'select * from crud_premios_salud e order by nombre');
-        } else {
-            if ($_SESSION['seleccion'] == 22) {
-                $stid = oci_parse($conexion, 'select * from crud_premios_basicas e order by nombre');
-            } else {
-                if ($_SESSION['seleccion'] == 23) {
-                    $stid = oci_parse($conexion, 'select * from crud_premios_agroindustria e order by nombre');
-                } else {
-                    if ($_SESSION['seleccion'] == 24) {
-                        $stid = oci_parse($conexion, 'select * from crud_premios_bellas_artes e order by nombre');
-                    } else {
-                        if ($_SESSION['seleccion'] == 25) {
-                            $stid = oci_parse($conexion, 'select * from crud_premios_economica e order by nombre');
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+$stid = oci_parse($conexion, 'select * from Premios e order by nombre');
 
 $r = oci_execute($stid);
 if (!$r) {
