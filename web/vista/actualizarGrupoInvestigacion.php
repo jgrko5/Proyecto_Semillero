@@ -22,7 +22,7 @@ getImports();
 					<div id="formulario">
 						<form action="../controlador/actualizarGrupoInvestigacion.php" method="post">
 							<div class="etiqueta">
-                                <label>Codigo:</label>
+                                <label>Código:</label>
                             </div></br>
 
                             <div class="componente" >

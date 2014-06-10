@@ -35,7 +35,7 @@ getImports();
 							</div>
 							</br>
 							<div class="componente">
-								<input class="textField" type="text" name="cedulaEst"   placeholder="Ingrese la cedula del estudiante"/>
+								<input class="textField" type="text" name="cedulaEst"   placeholder="Ingrese la cédula del estudiante"/>
 							</div>
 							</br>
 
@@ -62,7 +62,7 @@ getImports();
 							</div>
 							</br>
 							<div class="componente">
-								<input class="textField" type="text" name="direccionEst" placeholder="Ingrese la direccion de residencia"/>
+								<input class="textField" type="text" name="direccionEst" placeholder="Ingrese la dirección de residencia"/>
 							</div>
 							</br>
 
@@ -70,7 +70,7 @@ getImports();
 								<label>Teléfono:</label>
 							</div></br>
 							<div class="componente">
-								<input class="textField" type="text" name="telefonoEst"  placeholder="Ingrese el telefono de contacto" />
+								<input class="textField" type="text" name="telefonoEst"  placeholder="Ingrese el teléfono de contacto" />
 							</div>
 							</br>
 

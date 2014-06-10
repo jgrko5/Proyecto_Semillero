@@ -86,7 +86,7 @@ if (isset($_POST['documento'])) {
         $_SESSION['actCorreo'] = $row[4];
         $_SESSION['actTelefono'] = $row[5];
 
-        $emergenteEst .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Cedula:</label></div>";
+        $emergenteEst .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Cédula:</label></div>";
         $emergenteEst .= "<div class=" . '"etiquetaE"' . "><label>" . $row[0] . "</label></div>";
         $emergenteEst .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Tarjeta de identidad:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[1] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Nombre:</label></div>

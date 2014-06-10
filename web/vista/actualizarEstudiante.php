@@ -24,7 +24,7 @@ getImports();
 						<form action="../controlador/actualizarEstudiante.php" method="post">
 							<center>
 								<div class="etiqueta">
-									<label>Cedula:</label>
+									<label>Cédula:</label>
 								</div>
 								</br>
 								<div class="componente">
@@ -52,7 +52,7 @@ getImports();
 								</br>
 
 								<div class="etiqueta">
-									<label>Direccion:</label>
+									<label>Dirección:</label>
 								</div>
 								</br>
 								<div class="componente">
@@ -71,7 +71,7 @@ getImports();
 								</br>
 
 								<div class="etiqueta">
-									<label>Telefono:</label>
+									<label>Teléfono:</label>
 								</div>
 								</br>
 								<div class="componente">

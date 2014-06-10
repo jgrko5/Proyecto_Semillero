@@ -57,6 +57,7 @@ if ($row = oci_fetch_array($stid)) {
     $_SESSION['anioSE'] = $row[4];
     $_SESSION['periodoSE'] = $row[2];
 
+<<<<<<< HEAD
     $emergenteProE .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Codigo:</label></div>";
     $emergenteProE .= "<div class=" . '"etiquetaE"' . "><label>" . $row[5] . "</label></div>";
     $emergenteProE .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Titulo:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[6] . "</label></div></br>
@@ -64,6 +65,17 @@ if ($row = oci_fetch_array($stid)) {
     <div class=" . '"etiquetaE"' . "><label>" . $row[4] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Periodo:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[2] . "</label></div></br></br></br>";
+=======
+    $emergenteProE .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Código:</label></div>";
+    $emergenteProE .= "<div class=" . '"etiquetaE"' . "><label>" . $row[6] . "</label></div>";
+    $emergenteProE .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Título:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[7] . "</label></div></br>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Año:</label></div>
+    <div class=" . '"etiquetaE"' . "><label>" . $row[2] . "</label></div></br>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Período:</label></div>
+    <div class=" . '"etiquetaE"' . "><label>" . $row[3] . "</label></div></br>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Fecha de inicio:</label></div>
+    <div class=" . '"etiquetaE"' . "><label>" . $row[4] . "</label></div></br></br>";
+>>>>>>> origin/master
     if ($_SESSION['idFacultad'] == 83) {
         $emergenteProE .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarSemilleroEjecucion.php"' . ">Actualizar informacion</a></div></br>";
     }

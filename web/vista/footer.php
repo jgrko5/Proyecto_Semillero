@@ -20,7 +20,7 @@
 				<a class="enlace" href="#"
 				target="_blank">
 				<div class="textItemPanelFooter">
-					(6) 7460158 ó 7460159 Fax: (6)7460158
+					 (6) - 7359300 ext 305
 				</div> </a>
 			</p>
 			<p>
