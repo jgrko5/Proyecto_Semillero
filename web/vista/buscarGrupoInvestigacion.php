@@ -27,7 +27,7 @@ getImports();
 						<form method="post">
 							<center>
 								<div class="etiqueta">
-									<label>Ingrese el código</label>
+									<label>Ingrese el código:</label>
 								</div></br>
 
 								<div class="componente">

@@ -120,7 +120,7 @@ if (isset($_POST['documento'])) {
     <div class=" . '"etiquetaE"' . "><label>" . $row[3] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Correo:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[4] . "</label></div></br>
-    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Telefono:</label></div>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Teléfono:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[5] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Semestre:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[8] . "</label></div>

@@ -70,9 +70,9 @@ if ($row = oci_fetch_array($stid)) {
     $_SESSION['duracion'] = $row[3];
     $_SESSION['fechaInicio'] = $row[4];
 
-    $emergentePro .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Codigo:</label></div>";
+    $emergentePro .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Código:</label></div>";
     $emergentePro .= "<div class=" . '"etiquetaE"' . "><label>" . $row[0] . "</label></div>";
-    $emergentePro .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Titulo:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[1] . "</label></div></br>
+    $emergentePro .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Título:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[1] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Gasto efectivo:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[2] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Duración:</label></div>
@@ -80,7 +80,7 @@ if ($row = oci_fetch_array($stid)) {
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Fecha de inicio:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[4] . "</label></div></br>";
      if ($_SESSION['idFacultad'] == 83) {
-            $emergentePro .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarProyecto.php"' . ">Actualizar informacion</a></div></br>";
+            $emergentePro .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarProyecto.php"' . ">Actualizar información</a></div></br>";
         }
         $emergentePro .= "</br></br>";
 

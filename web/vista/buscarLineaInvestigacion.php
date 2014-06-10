@@ -22,7 +22,7 @@ getImports();
 						<form action="../controlador/buscarLineaInvestigacion.php" method="post">
 							<center>
 								<div class="etiqueta">
-									<label>Ingrese el código</label>
+									<label>Ingrese el código:</label>
 								</div></br>
 
 								<div class="componente">
@@ -32,7 +32,7 @@ getImports();
 									<input class="button" type="submit" value="Buscar"/>
 								</div></br>
 								<header>
-									<h1>Líneas de investigación</h1>
+									<h1>Líneas de investigación:</h1>
 								</header>
 
 								<div class="tabla">

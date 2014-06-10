@@ -91,7 +91,7 @@ if ($row = oci_fetch_array($stid)) {
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Grupo:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[5] . "</label></div></br>";
     if ($_SESSION['idFacultad'] == 83) {
-        $emergenteTut .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarTutor.php"' . ">Actualizar informacion</a></div></br>";
+        $emergenteTut .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarTutor.php"' . ">Actualizar información</a></div></br>";
     }
     $emergenteTut .= "</br></br>";
 } else {

@@ -56,7 +56,7 @@ getImports();
 								</div>
 								</br>
 								<div class="componente">
-									<input class="textField" type="text" name="direccion" value="<?php echo $_SESSION['actDireccion'] ?>"  placeholder="Modifique la direccion de residencia"/>
+									<input class="textField" type="text" name="direccion" value="<?php echo $_SESSION['actDireccion'] ?>"  placeholder="Modifique la dirección de residencia"/>
 								</div>
 								</br>
 
@@ -66,7 +66,7 @@ getImports();
 								</div>
 								</br>
 								<div class="componente">
-									<input class="textField" type="text" name="correo" value="<?php echo $_SESSION['actCorreo'] ?>"  placeholder="Modifique el correo electronico"/>
+									<input class="textField" type="text" name="correo" value="<?php echo $_SESSION['actCorreo'] ?>"  placeholder="Modifique el correo electrónico"/>
 								</div>
 								</br>
 
@@ -75,7 +75,7 @@ getImports();
 								</div>
 								</br>
 								<div class="componente">
-									<input class="textField" type="text" name="telefono"  value="<?php echo $_SESSION['actTelefono'] ?>" placeholder="Modifique el telefono de contacto" />
+									<input class="textField" type="text" name="telefono"  value="<?php echo $_SESSION['actTelefono'] ?>" placeholder="Modifique el teléfono de contacto" />
 								</div>
 								</br></br>
 
