@@ -68,7 +68,7 @@ if ($row = oci_fetch_array($stid)) {
     $emergenteGrupos .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Codigo:</label></div>";
     $emergenteGrupos .= "<div class=" . '"etiquetaE"' . "><label>" . $row[0] . "</label></div>";
     $emergenteGrupos .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Nombre:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[1] . "</label></div></br>
-    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Clasificacion:</label></div>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Clasificación:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[2] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Fecha de creación:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[3] . "</label></div></br>";

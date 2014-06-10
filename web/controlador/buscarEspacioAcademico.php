@@ -62,7 +62,7 @@ if ($row = oci_fetch_array($stid)) {
     $_SESSION['codMateria'] = $row[0];
     $_SESSION['nomMateria'] = $row[1];
 
-    $emergenteMaterias .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Codigo:</label></div>";
+    $emergenteMaterias .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Código:</label></div>";
     $emergenteMaterias .= "<div class=" . '"etiquetaE"' . "><label>" . $row[0] . "</label></div>";
     $emergenteMaterias .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Nombre:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[1] . "</label></div></br>";
 

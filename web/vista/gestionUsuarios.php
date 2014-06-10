@@ -27,7 +27,7 @@ getImports();
 									<label> Usuario:</label>
 								</div>
 								<div class="componente">
-									<select class="select" title="gestion de contraseñas" name="gestionCon" >
+									<select class="select" title="gestión de contraseñas" name="gestionCon" >
 										<?php
                                         echo $combobitUsuarios;
 										?>

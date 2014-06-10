@@ -79,14 +79,14 @@ if ($row = oci_fetch_array($stid)) {
     $_SESSION['apellidoT'] = $row[2];
     $_SESSION['generoT'] = $row[3];
 
-    $emergenteTut .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Cedula:</label></div>";
+    $emergenteTut .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Cédula:</label></div>";
     $emergenteTut .= "<div class=" . '"etiquetaE"' . "><label>" . $row[0] . "</label></div>";
     $emergenteTut .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Nombre:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[1] . " " . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Apellido:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[2] . "</label></div></br>
-    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Genero:</label></div>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Género:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[3] . "</label></div></br>
-    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Categoria:</label></div>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Categoría:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[4] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Grupo:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[5] . "</label></div></br>";

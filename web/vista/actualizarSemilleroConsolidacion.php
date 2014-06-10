@@ -16,7 +16,7 @@ getImports();
             <section id="estudiante">
                 <article>
                     <header>
-                        </br><h6>Actualizar proyecto en consolidacion</h6>
+                        </br><h6>Actualizar proyecto en consolidación</h6>
                     </header>
                     <div id="formulario">
                         <form action="../controlador/actualizarSemilleroConsolidacion.php" method="post">

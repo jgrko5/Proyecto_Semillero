@@ -134,7 +134,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-					<a href="registrarPremio.php">Registrar falta</a>
+					<a href="registrarPremio.php">Registrar</a>
 					</li>
 					<?php
                     }
@@ -146,7 +146,7 @@ if($_SESSION['idFacultad']==83)
 				<a href="#"><span>Proyecto de investigación</span></a>
 				<ul>
 					<li class="lupper">
-						<a href="asignarProyectoEstudiante.php">Asignar estudiantes</a>
+						<a href="asignarProyectoEstudiante.php">Asignar estudiante</a>
 					</li>
 
 					<li class="lupper">
@@ -228,7 +228,7 @@ function getMenuIzquierdoVice()
 				<a href="#"><span>Administración de cuentas</span></a>
 				<ul>
 					<li class="lupper">
-						<a href="gestionUsuarios.php" >Gestion de contraseñas</a>
+						<a href="gestionUsuarios.php" >Gestión de contraseñas</a>
 					</li>
 				</ul>
 			</li>
@@ -254,7 +254,7 @@ function getMenuIzquierdoVice()
 						<a href="inicioEducacion.php">Educación</a>
 					</li>
 					<li >
-						<a href="inicioIngenieria.php">Ingenieria</a>
+						<a href="inicioIngenieria.php">Ingeniería</a>
 					</li>
 				</ul>
 			</li>

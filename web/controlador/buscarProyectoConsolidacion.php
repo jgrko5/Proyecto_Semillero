@@ -55,14 +55,14 @@ if ($row = oci_fetch_array($stid)) {
     $_SESSION['periodoSE'] = $row[3];
     $_SESSION['notaSE'] = $row[0];
 
-    $emergenteProC .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Codigo:</label></div>";
+    $emergenteProC .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Código:</label></div>";
     $emergenteProC .= "<div class=" . '"etiquetaE"' . "><label>" . $row[6] . "</label></div>";
-    $emergenteProC .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Titulo:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[7] . "</label></div></br>
+    $emergenteProC .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Título:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[7] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Año:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[5] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Nota:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[0] . "</label></div></br>
-    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Periodo:</label></div>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Período:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[3] . "</label></div></br>";
 
     if ($_SESSION['idFacultad'] == 83) {

@@ -25,11 +25,11 @@ getImports();
 						<form  method="post" >
 							<center>
 								<div class="etiqueta">
-									<label>Ingrese el código del espacio academico:</label>
+									<label>Ingrese el código del espacio académico:</label>
 								</div></br>
 
 								<div class="componente">
-									<input class="textfield" type="text" name="documento" required="required" placeholder="Código del espacio academico" />
+									<input class="textfield" type="text" name="documento" required="required" placeholder="Código del espacio académico" />
 								</div>
 
 								<div align="center">

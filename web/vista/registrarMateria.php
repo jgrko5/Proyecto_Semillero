@@ -16,16 +16,16 @@ getImports();
 			<section id="materia">
 				<article>
 					<header>
-						</br><h6>Registrar espacio academico</h6>
+						</br><h6>Registrar espacio académico</h6>
 					</header>
 					<div id="formulario">
 						<form action="../controlador/registrarMateria.php" method="post">
 							<div class="etiqueta">
-								<label>Codigo:</label>
+								<label>Código:</label>
 							</div>
 							<br/>
 							<div class="componente">
-								<input class="textfield" type="text" name="codigo" required="required" placeholder="Ingrese el codigo" />
+								<input class="textfield" type="text" name="codigo" required="required" placeholder="Ingrese el código" />
 							</div>
 							<br/>
 
