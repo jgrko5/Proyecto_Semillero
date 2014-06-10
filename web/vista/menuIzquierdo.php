@@ -12,11 +12,9 @@ include_once ("menuDerecho.php");
 
 				<?php
 if ($_SESSION['idFacultad'] == 83) {
-?>     <a href="inicio.php">
-				<?php
+				?>     <a href="inicio.php"> <?php
                 echo "Inicio";
-				?>
-				</a>
+				?> </a>
 				<?php
                 } else if (isset($_SESSION)) {
                 echo "Facultad de " . $_SESSION['nomFacultad'];
@@ -147,19 +145,12 @@ if($_SESSION['idFacultad']==83)
 			</li>
 
 			<li>
-<<<<<<< HEAD
+
 			<a href="#"><span>Proyecto de investigación</span></a>
 			<ul>
 			<li class="lupper">
-			<a href="asignarProyectoEstudiante.php">Asignar estudiantes</a>
+			<a href="asignarProyectoEstudiante.php">Asignar estudiante</a>
 			</li>
-=======
-				<a href="#"><span>Proyecto de investigación</span></a>
-				<ul>
-					<li class="lupper">
-						<a href="asignarProyectoEstudiante.php">Asignar estudiante</a>
-					</li>
->>>>>>> origin/master
 
 			<li class="lupper">
 			<a href="buscarProyecto.php">Buscar</a>
