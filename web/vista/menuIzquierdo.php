@@ -111,6 +111,29 @@ if($_SESSION['idFacultad']==83)
 <?php
 }
                     ?>
+                    
+            <?php
+if($_SESSION['idFacultad']==83)
+{
+
+                    ?>
+			<li class="last">
+				<a href="#"><span>Lineas de investigación</span></a>
+				<ul>
+					<li class="lupper">
+						<a href="buscarLineaInvestigacion.php">Buscar</a>
+					</li>
+				
+	
+					<li>
+					<a href="registrarLineaInvestigacion.php">Registrar</a>
+					</li>
+					
+				</ul>
+			</li>
+<?php
+}
+                    ?>        
 			<li class="last">
 				<a href="#"><span>Premios</span></a>
 				<ul>
