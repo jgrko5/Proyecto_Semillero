@@ -85,6 +85,31 @@ if (isset($_POST['documento'])) {
         $_SESSION['actDireccion'] = $row[3];
         $_SESSION['actCorreo'] = $row[4];
         $_SESSION['actTelefono'] = $row[5];
+        
+        if(($row[6])=="")
+        {
+            $row[6]= "No completado";
+        }
+        else
+        {
+            $row[6]= "Completado";
+        }
+        if(($row[8])=="")
+        {
+            $row[8]= "No completado";
+        }
+        else
+        {
+            $row[8]= "Completado";
+        }
+        if(($row[9]==""))
+        {
+            $row[9]= "No completado";
+        }
+        else
+        {
+            $row[9]= "Completado";
+        }
 
         $emergenteEst .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Cédula:</label></div>";
         $emergenteEst .= "<div class=" . '"etiquetaE"' . "><label>" . $row[0] . "</label></div>";
@@ -98,7 +123,13 @@ if (isset($_POST['documento'])) {
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Telefono:</label></div>
     <div class=" . '"etiquetaE"' . "><label>" . $row[5] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Semestre:</label></div>
-    <div class=" . '"etiquetaE"' . "><label>" . $row[8] . "</label></div>";
+    <div class=" . '"etiquetaE"' . "><label>" . $row[8] . "</label></div>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Fase de formación:</label></div>
+    <div class=" . '"etiquetaE"' . "><label>" . $row[6] . "</label></div>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Fase de consolidación:</label></div>
+    <div class=" . '"etiquetaE"' . "><label>" . $row[8] . "</label></div>
+    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Fase de ejecución:</label></div>
+    <div class=" . '"etiquetaE"' . "><label>" . $row[9] . "</label></div></br></br>";
         if ($_SESSION['idFacultad'] == 83) {
             $emergenteEst .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarEstudiante.php"' . ">Actualizar informacion</a></div></br>";
         }
