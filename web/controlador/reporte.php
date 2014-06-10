@@ -6,11 +6,11 @@ require_once ("jpgraph/jpgraph_pie.php");
 require_once ("jpgraph/jpgraph_bar.php");
 require_once ("jpgraph/jpgraph_pie3d.php");
 
+$anio = 2008;
 if (isset($_POST['anio'])) {
 
     $anio = $_POST['anio'];
 }
-$anio = 2009;
 
 class PDF extends FPDF {
     public function __construct($orientation = 'P', $unit = 'cm', $format = 'A4') {
@@ -328,7 +328,6 @@ while ($row = oci_fetch_array($stid)) {
     $valores[$i] = $row[0];
     $i++;
 }
-
 $temp = array('Licenciatura en biologia' => array($valores[0], 'red'), 'Licenciatura en educacion fisica y deporte' => array($valores[1], 'blue'), 'Licenciatura en español y literatura' => array($valores[2], 'green'), 'Licenciatura en lenguas modernas' => array($valores[3], 'white'), 'Licenciatura en matematicas' => array($valores[4], 'pink'), 'Licenciatura en pedagogia social' => array($valores[5], 'green'), 'Licenciatura en sociales' => array($valores[6], 'white'), 'Licenciatura en pedagogia infantil' => array($valores[7], 'pink'));
 try {
     $pdf -> graficoPDF($temp, 'Educacion', array(6, 15, 10, 10), 'Estudiantes por programa academico facultad de educación');
@@ -344,23 +343,26 @@ $pdf -> SetFont("times", 'B', 12);
 $pdf -> Ln();
 $pdf -> MultiCell(18, 0.5, utf8_decode("SEMILLEROS EN CONSOLIDACIÓN"), 0, 'C');
 $pdf -> SetFont("times", '', 12);
-$pdf -> Ln();
 
-$stid = oci_parse($conexion, "select count(*) from ESTUDIANTES e join PROYECTOS_INVESTIGACION p on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO join SEMILLEROS_CONSOLIDACION sc on sc.ID = p.SEMILLEROS_CONSOLIDACION_ID where p.anio=:anio");
-oci_bind_by_name($stid, ':anio',$anio);
+$stid = oci_parse($conexion, "select count(*) from ESTUDIANTES e join PROYECTOS_INVESTIGACION p on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO join SEMILLEROS_CONSOLIDACION sc on sc.ID = p.SEMILLEROS_CONSOLIDACION_ID where sc.anio=:anio");
+oci_bind_by_name($stid, ':anio', $anio);
 oci_execute($stid);
 $cant = 0;
 if ($row = oci_fetch_array($stid)) {
     $cant = $row[0];
 }
 
+$pdf -> ln();
 $pdf -> MultiCell(15, 0.5, utf8_decode("Hasta la fecha se ha encontrado registro de $cant estudiantes que hicieron o hacen parte de semilleros en fase de consolidación para el año $anio."));
-
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////      CONSOLIDACION         ////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
+$pdf -> Ln();
+$pdf -> SetFont("times", 'B', 12);
+$pdf -> MultiCell(15, 0.5, utf8_decode("Estudiantes en consolidacion por facultad"), 0, 'C');
+$pdf -> Ln();
 
 $stid = oci_parse($conexion, "SELECT COUNT(*), f.ID, f.NOMBRE FROM ESTUDIANTES e JOIN PROYECTOS_INVESTIGACION p ON p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO
 JOIN SEMILLEROS_CONSOLIDACION sc ON sc.ID = p.SEMILLEROS_CONSOLIDACION_ID JOIN GRUPOS_INVESTIGACION g ON g.CODIGO = sc.GRUPOS_INVESTIGACION_ID
@@ -373,30 +375,125 @@ $nombre = array();
 $facultades = array();
 $arreglo = oci_fetch_all($stid, $res1, null, null, OCI_FETCHSTATEMENT_BY_ROW + OCI_NUM);
 
-for ($i = 0; $i < $arreglo; $i++) 
-{
-    $valores1[$i] = $res1[$i][0]+0;
+for ($i = 0; $i < $arreglo; $i++) {
+    $valores1[$i] = $res1[$i][0] + 0;
     $nombre[$i] = $anio;
     $facultades[$i] = $res1[$i][2];
 }
-
-$pdf -> Ln();
-$pdf -> SetFont("times", 'B', 12);
-$pdf -> MultiCell(15, 0.5, utf8_decode("Estudiantes en consolidacion por facultad"), 0, 'C');
-
 $pdf -> gaficoPDFBarra($valores1, $nombre, utf8_decode('año'), 'Estudiantes', $facultades, utf8_decode("Número de estudiantes por facultad"), array(4, 6, 13, 13));
 
-$pdf -> SetFont("times", '', 12);
 $pdf -> Ln();
+$pdf -> SetFont("times", '', 12);
 
-$stid = oci_parse($conexion, "select count(*) from PROYECTOS_INVESTIGACION p join SEMILLEROS_CONSOLIDACION sc ON sc.ID = p.SEMILLEROS_CONSOLIDACION_ID JOIN GRUPOS_INVESTIGACION g ON g.CODIGO = sc.GRUPOS_INVESTIGACION_ID JOIN FACULTADES f ON f.ID = g.FACULTADES_ID where sc.ANIO=:anio");
+$stid = oci_parse($conexion, "select count(*) from PROYECTOS_INVESTIGACION p join SEMILLEROS_CONSOLIDACION sc ON sc.ID = p.SEMILLEROS_CONSOLIDACION_ID  where sc.ANIO=:anio");
+oci_bind_by_name($stid, ':anio', $anio);
 oci_execute($stid);
 $cant = 0;
 if ($row = oci_fetch_array($stid)) {
     $cant = $row[0];
 }
+$pdf -> MultiCell(15, 0.5, utf8_decode("Se presentaron aproximadamente $cant proyectos durante el año."));
 
-$pdf -> MultiCell(15, 0.5, utf8_decode("Se presentaron aproximadamente $cant poryectos durante el año."));
+
+
+//////////////////////////////////////////////////////////////////////////////////
+///////////////////////// TUTORES CONSOLIDACION /////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+$pdf -> AddPage();
+$pdf -> SetFont("times", 'B', 12);
+$pdf -> MultiCell(15, 0.5, utf8_decode("Tutores en consolidación"), 0, 'C');
+
+$pdf -> SetFont("times", '', 12);
+
+$stid = oci_parse($conexion, "select DISTINCT t.NOMBRE||' '||t.APELLIDO as nombre from tutores t join PROYECTOS_TUTORES pt on pt.TUTORES_ID2 = t.ID 
+join PROYECTOS_INVESTIGACION pi on pi.CODIGO = pt.PROYECTOS_INVESTIGACION_CODIGO
+join SEMILLEROS_CONSOLIDACION sc on pi.SEMILLEROS_CONSOLIDACION_ID = sc.ID where sc.ANIO=:anio order by NOMBRE");
+oci_bind_by_name($stid, ':anio', $anio);
+oci_execute($stid);
+$cant = 0;
+$i=1;
+
+$pdf -> ln();
+
+while ($row = oci_fetch_array($stid)) {
+    $pdf -> MultiCell(15, 0.5, $i.". ".$row[0]);
+    $i++;
+
+}
+
+/////////////////////////////////////////////////////////////////
+///////////////////// Grupos consolidacion /////////////////////
+///////////////////////////////////////////////////////////////
+
+$pdf -> AddPage();
+$pdf -> SetFont("times", 'B', 12);
+$pdf -> MultiCell(15, 0.5, utf8_decode("Grupos de investigacion en consolidación"), 0, 'C');
+
+$pdf -> SetFont("times", '', 12);
+
+$stid = oci_parse($conexion, "select DISTINCT g.nombre from grupos_investigacion g join SEMILLEROS_CONSOLIDACION sc on g.CODIGO = sc.GRUPOS_INVESTIGACION_ID where sc.ANIO=:anio order by NOMBRE");
+oci_bind_by_name($stid, ':anio', $anio);
+oci_execute($stid);
+$cant = 0;
+$i=1;
+
+$pdf -> ln();
+
+while ($row = oci_fetch_array($stid)) {
+    $pdf -> MultiCell(15, 0.5, $i.". ".$row[0]);
+    $i++;
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+///////////////////////// TUTORES EJECUCION     /////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+$pdf -> AddPage();
+$pdf -> SetFont("times", 'B', 12);
+$pdf -> MultiCell(15, 0.5, utf8_decode("Tutores en ejecución"), 0, 'C');
+
+$pdf -> SetFont("times", '', 12);
+
+$stid = oci_parse($conexion, "select DISTINCT t.NOMBRE||' '||t.APELLIDO as nombre from tutores t join PROYECTOS_TUTORES pt on pt.TUTORES_ID2 = t.ID 
+join PROYECTOS_INVESTIGACION pi on pi.CODIGO = pt.PROYECTOS_INVESTIGACION_CODIGO
+join SEMILLEROS_ejecucion sc on pi.SEMILLEROS_ejecucion_ID = sc.ID where sc.AniO=:anio order by NOMBRE");
+oci_bind_by_name($stid, ':anio', $anio);
+oci_execute($stid);
+$cant = 0;
+$i=1;
+
+$pdf -> ln();
+
+while ($row = oci_fetch_array($stid)) {
+    $pdf -> MultiCell(15, 0.5, $i.". ".$row[0]);
+    $i++;
+
+}
+
+/////////////////////////////////////////////////////////////////
+///////////////////// GRUPOS EJECUCION     /////////////////////
+///////////////////////////////////////////////////////////////
+
+$pdf -> AddPage();
+$pdf -> SetFont("times", 'B', 12);
+$pdf -> MultiCell(15, 0.5, utf8_decode("Grupos de investigacion en ejecución"), 0, 'C');
+
+$pdf -> SetFont("times", '', 12);
+
+$stid = oci_parse($conexion, "select DISTINCT g.nombre from grupos_investigacion g join SEMILLEROS_ejecucion sc on g.CODIGO = sc.GRUPOS_INVESTIGACION_ID where sc.AniO=:anio order by NOMBRE");
+oci_bind_by_name($stid, ':anio', $anio);
+oci_execute($stid);
+$cant = 0;
+$i=1;
+
+$pdf -> ln();
+
+while ($row = oci_fetch_array($stid)) {
+    $pdf -> MultiCell(15, 0.5, $i.". ".$row[0]);
+    $i++;
+}
+
+
 
 $pdf -> Output();
 ?>

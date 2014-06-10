@@ -8,8 +8,7 @@ if(isset($_POST['codPE' ]))
     }
     $conexion = conectar();
 
-    if ($_SESSION[
-'seleccion'] == 1) {
+    if ($_SESSION['seleccion'] == 1) {
     $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_INGENIERIA where (codigo =:codigoPE)');
 } else if ($_SESSION['seleccion'] == 2) {
     $stid = oci_parse($conexion, 'select * from CRUD_EJECUCION_EDUCACION where codigo =:codigoPE');
@@ -52,23 +51,19 @@ if ($row = oci_fetch_array($stid)) {
         $row[4] = "No registra";
     }
 
-    $_SESSION['idSE'] = $row[8];
-    $_SESSION['codProSE'] = $row[6];
-    $_SESSION['proyectoSE'] = $row[7];
-    $_SESSION['anioSE'] = $row[5];
-    $_SESSION['periodoSE'] = $row[3];
-    $_SESSION['notaSE'] = $row[0];
-    $_SESSION['horasSE'] = $row[9];
+    $_SESSION['idSE'] = $row[7];
+    $_SESSI5ON['codProSE'] = $row[5];
+    $_SESSION['proyectoSE'] = $row[6];
+    $_SESSION['anioSE'] = $row[4];
+    $_SESSION['periodoSE'] = $row[2];
 
     $emergenteProE .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Codigo:</label></div>";
-    $emergenteProE .= "<div class=" . '"etiquetaE"' . "><label>" . $row[6] . "</label></div>";
-    $emergenteProE .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Titulo:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[7] . "</label></div></br>
+    $emergenteProE .= "<div class=" . '"etiquetaE"' . "><label>" . $row[5] . "</label></div>";
+    $emergenteProE .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Titulo:</label></div>" . "<div class=" . '"etiquetaE"' . "><label>" . $row[6] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Año:</label></div>
-    <div class=" . '"etiquetaE"' . "><label>" . $row[2] . "</label></div></br>
+    <div class=" . '"etiquetaE"' . "><label>" . $row[4] . "</label></div></br>
     <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Periodo:</label></div>
-    <div class=" . '"etiquetaE"' . "><label>" . $row[3] . "</label></div></br>
-    <div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Fecha de inicio:</label></div>
-    <div class=" . '"etiquetaE"' . "><label>" . $row[4] . "</label></div></br></br>";
+    <div class=" . '"etiquetaE"' . "><label>" . $row[2] . "</label></div></br></br></br>";
     if ($_SESSION['idFacultad'] == 83) {
         $emergenteProE .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarSemilleroEjecucion.php"' . ">Actualizar informacion</a></div></br>";
     }
