@@ -52,7 +52,7 @@ getImports();
 							</div></br>
 
 							<div class="componente">
-								<input class="textField" type="text" name="año" placeholder="Año"/>
+								<input class="textField" type="text" name="anio" placeholder="Año"/>
 							</div></br>
 
 							<div class="etiqueta">

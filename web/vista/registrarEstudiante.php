@@ -31,7 +31,7 @@ getImports();
 							</br>
 
 							<div class="etiqueta">
-								<label>Cedula de ciudadania:</label>
+								<label>Cédula de ciudadania:</label>
 							</div>
 							</br>
 							<div class="componente">
@@ -58,7 +58,7 @@ getImports();
 							</br>
 
 							<div class="etiqueta">
-								<label>Direccion:</label>
+								<label>Dirección:</label>
 							</div>
 							</br>
 							<div class="componente">
@@ -67,7 +67,7 @@ getImports();
 							</br>
 
 							<div class="etiqueta">
-								<label>Telefono:</label>
+								<label>Teléfono:</label>
 							</div></br>
 							<div class="componente">
 								<input class="textField" type="text" name="telefonoEst"  placeholder="Ingrese el telefono de contacto" />
@@ -83,7 +83,7 @@ getImports();
 							</div>
 							</br>
 							<div class="etiqueta">
-								<label>Programa academico:</label>
+								<label>Programa académico:</label>
 							</div>
 							</br>
 							<div class="componente">
@@ -114,7 +114,7 @@ getImports();
 								<input class="textField" type="text" name="nota"  placeholder="Nota de la fase de formacion"/>
 							</div>
 							<div class="etiqueta">
-								<label>Homologo:</label>
+								<label>Homólogo:</label>
 							</div></br>
 
 							<div class="componente">
