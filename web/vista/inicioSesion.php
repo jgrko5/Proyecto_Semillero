@@ -17,7 +17,7 @@ getImports();
 			<article >
 				<header>
 					</br><h6>¡Bienvenido!</h6>
-					<h6><label>Sistema de gestion de semilleros de investigación</label></h6>
+					<h6><label>Sistema de gestión de semilleros de investigación</label></h6>
 				</header>
 
 				<div id="formulario" align="right">

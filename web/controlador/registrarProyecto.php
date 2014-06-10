@@ -28,7 +28,7 @@ oci_free_statement($stid);
 
 // INSERCION DE EL SEMILLERO EN CONSOLIDACION EN LA BD
 
-$anioSC = $_POST['año'] + 0;
+$anioSC = $_POST['anio'] + 0;
 $periodoSC = $_POST['periodo'];
 $notaSC = $_POST['nota'];
 
@@ -40,10 +40,10 @@ else {
 }
 $grupo = $_POST['grupo'];
 
-#$stid = oci_parse($conexion, 'INSERT INTO SEMILLEROS_CONSOLIDACION(año, periodos_id, nota, grupos_investigacion_id, homologo) values (:anio, :periodo,:nota, :grupo, :homologo)');
-$stid = oci_parse($conexion, 'INSERT INTO SEMILLEROS_CONSOLIDACION( periodos_id, grupos_investigacion_id,homologo, nota) values (:periodo, :grupo,:homologo, :nota)');
+$stid = oci_parse($conexion, 'INSERT INTO SEMILLEROS_CONSOLIDACION(anio, periodos_id, nota, grupos_investigacion_id, homologo) values (:anio, :periodo,:nota, :grupo, :homologo)');
+// $stid = oci_parse($conexion, 'INSERT INTO SEMILLEROS_CONSOLIDACION( periodos_id, grupos_investigacion_id,homologo, nota) values (:periodo, :grupo,:homologo, :nota)');
 
-// oci_bind_by_name($stid, ':anio', $anioSC);
+oci_bind_by_name($stid, ':anio', $anioSC);
 oci_bind_by_name($stid, ':periodo', $periodoSC);
 oci_bind_by_name($stid, ':nota', $notaSC);
 oci_bind_by_name($stid, ':grupo', $grupo);

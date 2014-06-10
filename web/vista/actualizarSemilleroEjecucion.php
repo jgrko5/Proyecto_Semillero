@@ -2,6 +2,7 @@
 include ("imports.php");
 include ("header.php");
 include ("footer.php");
+session_start();
 include_once ("../controlador/buscarProyectoEjecucion.php");
 getImports();
 ?>
@@ -27,14 +28,6 @@ getImports();
 
 							<div class="componente">
 								<input class="textField" type="text" readonly="true" name="proyecto" placeholder="Nombre del proyecto de investigación" value="<?php echo $_SESSION['proyectoSE'] ?>" />
-							</div></br>
-
-							<div class="etiqueta">
-								<label>Horas del docente:</label>
-							</div></br>
-
-							<div class="componente">
-								<input class="textField" type="text" name="horas" placeholder="Horas del docente" value="<?php echo $_SESSION['horasSE'] ?>" />
 							</div></br>
 
 							<div class="etiqueta">
