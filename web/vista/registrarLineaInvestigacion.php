@@ -2,17 +2,18 @@
 include ("imports.php");
 include ("header.php");
 include ("footer.php");
+include ("../controlador/listaGruposInvestigacion.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
 	<div id="main" class="wrapper">
 		<?php
-		getheaderstart();
-		getPanelSesion();
-		getMenuIzquierdo();
+        getheaderstart();
+        getPanelSesion();
+        getMenuIzquierdo();
 		?>
 		<div id="contenido">
-			<section id="linea">
+			<section id="estudiante">
 				<article>
 					<header>
 						</br><h6>Registrar línea investigación</h6>
@@ -20,14 +21,7 @@ getImports();
 					<div id="formulario">
 						<form action="../controlador/registrarLineaInvestigacion.php" method="post">
 							<center>
-								<div class="etiqueta">
-									<label>Código:</label>
-								</div></br>
-
-								<div class="componente">
-									<input class="textField" type="text" name="codigoLI" required="required" placeholder="Ingrese el código"/>
-								</div></br>
-
+								
 								<div class="etiqueta">
 									<label>Nombre:</label>
 								</div></br>
@@ -42,7 +36,9 @@ getImports();
 
 								<div class="componente">
 									<select class="select" title="Grupo de investigación" name="gruposI"/>
-									<option>Sinfoci</option>
+									<?php
+									echo $comboGrupo;
+									?>
 									</select>
 								</div></br></br>
 
@@ -54,10 +50,10 @@ getImports();
 					</div>
 				</article>
 			</section>
-			<?php
-			getFooter();
-			?>
 		</div>
+		<?php
+        getFooter();
+		?>
 	</div>
 </body>
 </html>

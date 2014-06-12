@@ -380,7 +380,14 @@ for ($i = 0; $i < $arreglo; $i++) {
     $nombre[$i] = $anio;
     $facultades[$i] = $res1[$i][2];
 }
+try{
+    
 $pdf -> gaficoPDFBarra($valores1, $nombre, utf8_decode('año'), 'Estudiantes', $facultades, utf8_decode("Número de estudiantes por facultad"), array(4, 6, 13, 13));
+}
+catch(exception $e)
+{
+    
+}
 
 $pdf -> Ln();
 $pdf -> SetFont("times", '', 12);

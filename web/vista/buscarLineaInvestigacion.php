@@ -8,52 +8,37 @@ getImports();
 <body onload="tunCalendario();">
 	<div id="main" class="wrapper">
 		<?php
-		getHeaderStart();
-		getPanelSesion();
-		getMenuIzquierdo();
+        getHeaderStart();
+        getPanelSesion();
+        getMenuIzquierdo();
 		?>
 		<div id="contenido">
-			<section id="linea">
+			<section id="estudiante">
 				<article>
 					<header>
-						</br><h6>Buscar línea de investigación</h6>
+						</br><h6>Buscar línea de investigación</h6></br>
 					</header>
 					<div id="formulario">
-						<form action="../controlador/buscarLineaInvestigacion.php" method="post">
+						<form  method="get">
 							<center>
-								<div class="etiqueta">
-									<label>Ingrese el código</label>
-								</div></br>
+								
+								<div id="resultado" class="datagrid">
 
-								<div class="componente">
-									<input class="textfield" type="text" name="tipo" required="required" placeholder="Código" />
+									<?php
+                                    echo $tabla;
+                                    echo $navegador;
+									?>
 								</div>
-								<div align="center">
-									<input class="button" type="submit" value="Buscar"/>
-								</div></br>
-								<header>
-									<h1>Líneas de investigación</h1>
-								</header>
-
-								<div class="tabla">
-									<table style="border:1px solid #666;">
-										<tr>
-											<td style="border:1px inset #666;">Código</td><td style="border:1px inset #666;">Nombre</td>
-											<td style="border:1px inset #666;">Clasificación</td><td style="border:1px inset #666;">Fecha conformación</td>
-											<td style="border:1px inset #666;">Facultad</td>
-										</tr>
-									</table>
-								</div></br>
+								</br>
 							</center>
 						</form>
 					</div>
 				</article>
 			</section>
 		</div>
-			<?php
-			getFooter();
-			?>
-		
+		<?php
+        getFooter();
+		?>
 	</div>
 </body>
 </html>

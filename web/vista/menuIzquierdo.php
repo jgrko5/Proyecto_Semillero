@@ -14,7 +14,7 @@ include_once ("menuDerecho.php");
 if ($_SESSION['idFacultad'] == 83) {
 				?>     <a href="inicio.php"> <?php
                 echo "Inicio";
-				?> </a>
+				?></a>
 				<?php
                 } else if (isset($_SESSION)) {
                 echo "Facultad de " . $_SESSION['nomFacultad'];
@@ -40,56 +40,56 @@ if ($_SESSION['idFacultad'] == 83) {
 				</ul>
 			</li>
 			<li>
-			<a href="#"><span>Eventos</span></a>
-			<ul>
-			<?php
+				<a href="#"><span>Eventos</span></a>
+				<ul>
+					<?php
 if($_SESSION['idFacultad']==83)
 {
 
-			?>
+					?>
 
-			<li>
-			<a href="asignarEvento.php">Asignar</a>
-			</li>
-			<?php
-            }
-			?>
-			<li>
-			<a href="buscarEvento.php">Lista eventos</a>
-			</li>
-			<?php
+					<li>
+						<a href="asignarEvento.php">Asignar</a>
+					</li>
+					<?php
+                    }
+					?>
+					<li>
+						<a href="buscarEvento.php">Lista eventos</a>
+					</li>
+					<?php
 if($_SESSION['idFacultad']==83)
 {
 
-			?>
-			<li class="lupper">
-			<a href="registrarEvento.php">Registrar</a>
-			</li>
-			<?php
-            }
-			?>
-			</ul>
+					?>
+					<li class="lupper">
+						<a href="registrarEvento.php">Registrar</a>
+					</li>
+					<?php
+                    }
+					?>
+				</ul>
 			</li>
 
 			<li>
-			<a href="#"><span>Grupo de investigación</span></a>
-			<ul>
-			<li class="lupper">
-			<a href="buscarGrupoInvestigacion.php">Buscar</a>
-			</li>
-			<?php
+				<a href="#"><span>Grupo de investigación</span></a>
+				<ul>
+					<li class="lupper">
+						<a href="buscarGrupoInvestigacion.php">Buscar</a>
+					</li>
+					<?php
 if($_SESSION['idFacultad']==83)
 {
 
-			?>
+					?>
 
-			<li class="lupper">
-			<a href="registrarGrupoInvestigacion.php">Registrar</a>
-			</li>
-			<?php
-            }
-			?>
-			</ul>
+					<li class="lupper">
+						<a href="registrarGrupoInvestigacion.php">Registrar</a>
+					</li>
+					<?php
+                    }
+					?>
+				</ul>
 
 			</li>
 			<?php
@@ -110,38 +110,32 @@ if($_SESSION['idFacultad']==83)
 
 				</ul>
 			</li>
-<<<<<<< HEAD
-<?php
-}
-                    ?>
-                    
-            <?php
-if($_SESSION['idFacultad']==83)
-{
+			<?php
+            }
+			?>
 
-                    ?>
 			<li class="last">
 				<a href="#"><span>Lineas de investigación</span></a>
 				<ul>
 					<li class="lupper">
 						<a href="buscarLineaInvestigacion.php">Buscar</a>
 					</li>
-				
-	
+
+			<?php
+if($_SESSION['idFacultad']==83)
+{
+
+			?>
 					<li>
-					<a href="registrarLineaInvestigacion.php">Registrar</a>
+						<a href="registrarLineaInvestigacion.php">Registrar</a>
 					</li>
-					
-				</ul>
-			</li>
-<?php
-}
-                    ?>        
-=======
+
 			<?php
             }
 			?>
->>>>>>> 2075dfcdefe226080e88a433e3d474ff1ee3d8c9
+				</ul>
+			</li>
+
 			<li class="last">
 				<a href="#"><span>Premios</span></a>
 				<ul>
@@ -165,7 +159,7 @@ if($_SESSION['idFacultad']==83)
 
 					?>
 					<li>
-					<a href="registrarPremio.php">Registrar</a>
+						<a href="registrarPremio.php">Registrar</a>
 					</li>
 					<?php
                     }
@@ -175,31 +169,31 @@ if($_SESSION['idFacultad']==83)
 
 			<li>
 
-			<a href="#"><span>Proyecto de investigación</span></a>
-			<ul>
-			<li class="lupper">
-			<a href="asignarProyectoEstudiante.php">Asignar estudiante</a>
-			</li>
+				<a href="#"><span>Proyecto de investigación</span></a>
+				<ul>
+					<li class="lupper">
+						<a href="asignarProyectoEstudiante.php">Asignar estudiante</a>
+					</li>
 
-			<li class="lupper">
-			<a href="buscarProyecto.php">Buscar</a>
-			</li>
+					<li class="lupper">
+						<a href="buscarProyecto.php">Buscar</a>
+					</li>
 
-			<li class="lupper">
-			<a href="registrarProyecto.php">Registrar</a>
-			</li>
-			</ul>
+					<li class="lupper">
+						<a href="registrarProyecto.php">Registrar</a>
+					</li>
+				</ul>
 			</li>
 
 			<li>
-			<a href="#"><span>Semillero en consolidación</span></a>
-			<ul>
+				<a href="#"><span>Semillero en consolidación</span></a>
+				<ul>
 
-			<li class="lupper">
-			<a href="buscarProyectosConsolidacion.php">Lista proyectos consolidación</a>
-			</li>
+					<li class="lupper">
+						<a href="buscarProyectosConsolidacion.php">Lista proyectos consolidación</a>
+					</li>
 
-			</ul>
+				</ul>
 			</li>
 
 			<li class="last">
@@ -236,7 +230,6 @@ if($_SESSION['idFacultad']==83)
 		</ul>
 	</nav>
 </div>
-
 <?php
 }
 ?>
@@ -289,11 +282,7 @@ function getMenuIzquierdoVice()
 			<li>
 				<a href="#"><span>Reportes</span></a>
 				<ul>
-					<?php
-                    if (true) {
 
-                    }
-					?>
 					<li >
 						<a href="reporteAnio.php" >Reporte por año</a>
 					</li>
@@ -307,7 +296,6 @@ function getMenuIzquierdoVice()
 <?php
 }
 ?>
-
 <?php
 function getMenuIzquierdo() {
     getMenuIzquierdoFacultad();
