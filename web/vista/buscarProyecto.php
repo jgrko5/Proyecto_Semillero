@@ -23,7 +23,7 @@ getImports();
 						<form  method="post">
 							<center>
 								<div class="etiqueta">
-									<label>Ingrese el código</label>
+									<label>Ingrese el código:</label>
 								</div>
 
 								<div class="componente">
@@ -38,7 +38,7 @@ getImports();
 						<form  method="get">
 							<center>
 								<header>
-									<h1>Proyectos de investigación</h1></br>
+									<h1>Proyectos de investigación:</h1></br>
 								</header>
 								<div id="resultado" class="datagrid">
 

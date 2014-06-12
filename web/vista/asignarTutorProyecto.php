@@ -21,7 +21,7 @@ getImports();
                     <div id="formulario">
                         <form method="post">
                             <div class="etiqueta">
-                                <label>Ingrese el código del Tutor</label>
+                                <label>Ingrese el código del Tutor:</label>
                             </div>
                             <div class="componente">
                                 <input class="textField"  type="text" name="documento" required="required" placeholder="Código"  />

@@ -25,7 +25,7 @@ getImports();
 					<div id="formulario">
 						<form  method="post" >
 							<div class="etiqueta">
-								<label>Ingrese el nombre del premio</label>
+								<label>Ingrese el nombre del premio:</label>
 							</div></br>
 
 							<div class="componente">

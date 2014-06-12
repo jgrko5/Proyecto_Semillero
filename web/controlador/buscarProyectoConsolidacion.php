@@ -29,7 +29,7 @@ if (!$r) {
     trigger_error(htmlentities($e['message']), E_USER_ERROR);
 }
 $emergenteProC = "<div id=" . '"openModal"' . " class=" . '"modalDialog"' . "><div><a href=" . '"#close"' . " title=" . '"Close"' . " class=" . '"close"' . ">X</a><header class=" . '"modalDialogHeader"';
-$emergenteProC .= "><h6>Información de proyecto de investigación en consolidacion</h6></header>";
+$emergenteProC .= "><h6>Información de proyecto de investigación en consolidación</h6></header>";
 
 if ($row = oci_fetch_array($stid)) {
     if ($row[0] == "") {
@@ -66,7 +66,7 @@ if ($row = oci_fetch_array($stid)) {
     <div class=" . '"etiquetaE"' . "><label>" . $row[3] . "</label></div></br>";
 
     if ($_SESSION['idFacultad'] == 83) {
-        $emergenteProC .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarSemilleroConsolidacion.php"' . ">Actualizar informacion</a></div></br>";
+        $emergenteProC .= "<div class=" . '"etiquetaE"' . "><a href=" . '"actualizarSemilleroConsolidacion.php"' . ">Actualizar información</a></div></br>";
     }
     $emergenteProC .= "</br></br>";
 

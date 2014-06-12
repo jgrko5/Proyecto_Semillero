@@ -26,7 +26,7 @@ getImports();
 						</div></br>
 
 						<div class="componente">
-							<input class="textField" type="text" name="nombreE" required="required" placeholder="nombre del premio" value="" />
+							<input class="textField" type="text" name="nombreE" required="required" placeholder="nombre del evento" value="" />
 						</div>
 
 						<div align="center">
