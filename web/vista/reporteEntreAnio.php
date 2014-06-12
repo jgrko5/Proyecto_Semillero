@@ -10,7 +10,7 @@ getImports();
         <?php
         getHeaderStart();
         getPanelSesion();
-        getMenuIzquierdo();
+        getMenuIzquierdoVice();
         ?>
         <div id="contenido">
             <section id="estudiante">
@@ -27,7 +27,7 @@ getImports();
 
                         <div class="componente">
                             <input class="textField" type="text" name="anio" required="required" placeholder="Año 1" value="" />
-                        </div>
+                        </div></br></br>
                         <div class="componente">
                             <input class="textField" type="text" name="anio1" required="required" placeholder="Año 2" value="" />
                         </div>
