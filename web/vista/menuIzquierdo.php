@@ -9,12 +9,15 @@ include_once ("menuDerecho.php");
 	<nav>
 		<ul>
 			<li class="mheader" style="color: #000000">
-
+                                                
 				<?php
 if ($_SESSION['idFacultad'] == 83) {
-				?>     <a href="inicio.php"> <?php
-                echo "Inicio";
-				?></a>
+				?>     
+				<a href="inicio.php"> 
+				<?php
+                    echo "Inicio";
+				?>
+				</a>
 				<?php
                 } else if (isset($_SESSION)) {
                 echo "Facultad de " . $_SESSION['nomFacultad'];
@@ -282,8 +285,11 @@ function getMenuIzquierdoVice()
 				<ul>
 
 					<li >
-						<a href="reporteAnio.php" >Reporte por año</a>
-					</li>
+                        <a href="reporteAnio.php" >Reporte por año</a>
+                    </li>
+                    <li >
+                        <a href="reporteEntreAnio.php" >Reporte entre años</a>
+                    </li>
 
 				</ul>
 			</li>
