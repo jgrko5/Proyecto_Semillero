@@ -231,7 +231,7 @@ if($_SESSION['idFacultad']==83)
 	</nav>
 </div>
 <?php
-
+}
 function getMenuIzquierdoVice()
 {
 

@@ -17,7 +17,6 @@ include_once ("menuDerecho.php");
 			</center>
 			</div>
 		</div>
-
 	</div>
 </header>
 

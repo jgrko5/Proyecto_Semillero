@@ -28,6 +28,9 @@
 				});
 				conculta.send();
 			}
+			function ventana(var){
+				window.open(var,"reporte");
+			}
 		</script>
 		<script type="text/javascript">
 			/*****************************************************************************
