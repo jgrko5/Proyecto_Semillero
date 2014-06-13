@@ -122,6 +122,7 @@ getImports();
 			</section>
 		</div>
 		<?php
+		
 		getFooter();
 		?>
 	</div>
