@@ -45,31 +45,12 @@ if (!$r) {
 }
 $combobit = "";
 $i = 0;
-$combobit .= "<table><thead><tr><th>Codigo</th><th>Nombre</th></tr></thead><tbody>";
+$combobit .= "";
 
-if ($row = oci_fetch_array($stid)) {
-    if ($row[0] == "") {
-        $row[0] = "No registra";
-    }
-    if ($row[1] == "") {
-        $row[1] = "No registra";
-    }
-    if ($row[2] == "") {
-        $row[2] = "No registra";
-    }
-    if ($i == 1) {
-        $combobit .= " <tr class= " . '"alt"' . " ><td>" . $row[0] . "</td><td>" . $row[1] . "</td> <td><a href='" . "#openModal" . "'>Ver</a>  </td></tr>";
-        $i = 0;
-    } else {
-        $combobit .= " <tr ><td>" . $row[0] . "</td><td>" . $row[1] . "</td> <td><a href='" . "#openModal" . "'>Ver</a>  </td></tr>";
-        $i++;
-
-    }
-
+while ($row = oci_fetch_array($stid))
+{
+	$combobit .= " <option value='" . $row[0] . "'>" . $row[1] . "</option>";
 }
-else
-
-$combobit .= "</tbody></table>";
 
 oci_free_statement($stid);
 

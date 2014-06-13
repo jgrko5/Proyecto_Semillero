@@ -2,7 +2,8 @@
 include ("imports.php");
 include ("header.php");
 include ("footer.php");
-include_once ("../controlador/listaGruposInvestigacion.php");
+include ("../controlador/listaGruposInvestigacion.php");
+include ("../conrolador/listaMaterias.php");
 session_start();
 getImports();
 ?>
@@ -10,9 +11,9 @@ getImports();
 <body onload="tunCalendario();">
 	<div id="main"  class="wrapper">
 		<?php
-        getHeaderStart();
-        getPanelSesion();
-        getMenuIzquierdo();
+		getHeaderStart();
+		getPanelSesion();
+		getMenuIzquierdo();
 		?>
 		<div id="contenido">
 
@@ -33,7 +34,7 @@ getImports();
 								<div class="componente">
 									<select class="select" title="Grupos de investigación" name="grupo">
 										<?php
-                                        echo $comboGrupo;
+										echo $comboGrupo;
 										?>
 									</select>
 								</div>
@@ -100,7 +101,17 @@ getImports();
 
 								<div class="componente">
 									<input type="checkbox" id="homologacion" value="1" name="valido" />
-								</div></br>
+								</div>
+								<div class="etiqueta">
+									<label>Materia:</label>
+								</div>
+								<div class="componente">
+									<select class="select" title="Materias" name="materia">
+										<?php
+											echo $combobit;
+										?>
+									</select>
+								</div></br></br></br></br>
 								<div align="center">
 									<input class="button" type="submit" value="Registrar"/>
 								</div></br>
@@ -111,7 +122,7 @@ getImports();
 			</section>
 		</div>
 		<?php
-        getFooter();
+		getFooter();
 		?>
 	</div>
 </body>
