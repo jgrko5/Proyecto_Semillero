@@ -30,7 +30,7 @@ getImports();
                         </div>
 </br></br>
                         <div align="center">
-                            <input class="button" type="submit" value="Buscar" onclick="window.open("../controlador/reporteAnio.php")"/>
+                            <input class="button" type="submit" value="Buscar"/>
                         </div></br></br>
                         </form>
                     

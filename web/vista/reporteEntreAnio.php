@@ -20,7 +20,7 @@ getImports();
                     </header>
                 
                     <div id="formulario">
-                        <form action="../controlador/reporte.php" method="post">
+                        <form action="../controlador/reporteAnios.php" method="post">
                         <div class="etiqueta">
                             <label>Ingrese el rango de años a consultar:</label>
                         </div></br>
