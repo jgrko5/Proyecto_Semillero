@@ -3,7 +3,7 @@ include ("imports.php");
 include ("header.php");
 include ("footer.php");
 include ("../controlador/listaGruposInvestigacion.php");
-include ("../conrolador/listaMaterias.php");
+include ("../controlador/listaMaterias.php");
 session_start();
 getImports();
 ?>

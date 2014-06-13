@@ -21,8 +21,8 @@ oci_bind_by_name($stid, ':duracionProyecto', $duracionP);
 
 $r = oci_execute($stid);
 if (!$r) {
-    $e = oci_error($conexion);
-    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+	$e = oci_error($conexion);
+	trigger_error(htmlentities($e['message']), E_USER_ERROR);
 }
 oci_free_statement($stid);
 
@@ -31,35 +31,36 @@ oci_free_statement($stid);
 $anioSC = $_POST['anio'] + 0;
 $periodoSC = $_POST['periodo'];
 $notaSC = $_POST['nota'];
- $homologacionSC	 = 'V';
+$homologacionSC = $_POST['homologacion'];
+$codigoM = $_POST['materia'];
 if (isset($_POST['valido']) && $_POST['valido'] == '1') {
-    $homologacionSC	 = 'V';
-}
-else {
-	$homologacionSC ='F';
+	$homologacionSC = 'V';
+} else {
+	$homologacionSC = 'F';
 }
 $grupo = $_POST['grupo'];
-if($homologacionS ='F')
-{
-	$stid = oci_parse($conexion, 'INSERT INTO SEMILLEROS_CONSOLIDACION(anio, periodos_id, nota, grupos_investigacion_id, homologo) values (:anio, :periodo,:nota, :grupo, :homologo)');
+if ($homologacionS = 'F') {
+	$stid = oci_parse($conexion, 'INSERT INTO SEMILLEROS_CONSOLIDACION(anio, periodos_id, nota, grupos_investigacion_id) values (:anio, :periodo,:nota, :grupo)');
+	oci_bind_by_name($stid, ':anio', $anioSC);
+	oci_bind_by_name($stid, ':periodo', $periodoSC);
+	oci_bind_by_name($stid, ':nota', $notaSC);
+	oci_bind_by_name($stid, ':grupo', $grupo);
+} else {
+	$stid = oci_parse($conexion, 'INSERT INTO SEMILLEROS_CONSOLIDACION(anio, periodos_id, nota, grupos_investigacion_id, homologo,codigo_materias) values (:anio, :periodo,:nota, :grupo, :homologo, :codigoM)');
+	oci_bind_by_name($stid, ':anio', $anioSC);
+	oci_bind_by_name($stid, ':periodo', $periodoSC);
+	oci_bind_by_name($stid, ':nota', $notaSC);
+	oci_bind_by_name($stid, ':grupo', $grupo);
+	oci_bind_by_name($stid, ':homologo', $homologacionSc);
+	oci_bind_by_name($stid, ':homologo', $codigoM);
 }
-else 
-{
-	$stid = oci_parse($conexion, 'INSERT INTO SEMILLEROS_CONSOLIDACION(anio, periodos_id, nota, grupos_investigacion_id, homologo) values (:anio, :periodo,:nota, :grupo, :homologo)');
-}
-// $stid = oci_parse($conexion, 'INSERT INTO SEMILLEROS_CONSOLIDACION( periodos_id, grupos_investigacion_id,homologo, nota) values (:periodo, :grupo,:homologo, :nota)');
-oci_bind_by_name($stid, ':anio', $anioSC);
-oci_bind_by_name($stid, ':periodo', $periodoSC);
-oci_bind_by_name($stid, ':nota', $notaSC);
-oci_bind_by_name($stid, ':grupo', $grupo);
-oci_bind_by_name($stid, ':homologo', $homologacionSc);
 
 $r = oci_execute($stid);
 if (!$r) {
-    $e = oci_error($conexion);
-   
-    print htmlentities($e['sqltext']);
-    print htmlentities($e['offset']);
+	$e = oci_error($conexion);
+
+	print htmlentities($e['sqltext']);
+	print htmlentities($e['offset']);
 }
 oci_free_statement($stid);
 
@@ -69,7 +70,7 @@ $stid2 = oci_parse($conexion, "(select max(id) from SEMILLEROS_CONSOLIDACION)");
 $r2 = oci_execute($stid2);
 $idConso = 0;
 if ($rowSE = oci_fetch_array($stid2)) {
-    $idConso = $rowSE[0];
+	$idConso = $rowSE[0];
 }
 oci_free_statement($stid2);
 
@@ -79,11 +80,10 @@ $stid = oci_parse($conexion, 'UPDATE proyectos_investigacion p SET p.SEMILLEROS_
 
 oci_bind_by_name($stid, ':idSE', $idConso);
 oci_bind_by_name($stid, ':codigoP', $codigoP);
-
 $r = oci_execute($stid);
 if (!$r) {
-    $e = oci_error($conexion);
-    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+	$e = oci_error($conexion);
+	trigger_error(htmlentities($e['message']), E_USER_ERROR);
 }
 
 oci_free_statement($stid);
