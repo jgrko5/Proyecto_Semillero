@@ -88,27 +88,27 @@ if (isset($_POST['documento'])) {
         
         if(($row[6])=="")
         {
-            $row[6]= "No completado";
+            $row[6]= "No cursado";
         }
         else
         {
-            $row[6]= "Completado";
+            $row[6]= "Cursado";
         }
         if(($row[8])=="")
         {
-            $row[8]= "No completado";
+            $row[8]= "No cursado";
         }
         else
         {
-            $row[8]= "Completado";
+            $row[8]= "Cursado";
         }
         if(($row[9]==""))
         {
-            $row[9]= "No completado";
+            $row[9]= "No cursado";
         }
         else
         {
-            $row[9]= "Completado";
+            $row[9]= "Cursado";
         }
 
         $emergenteEst .= "<div class=" . '"etiquetaE"' . "style=" . '"font-weight: bold;"' . "><label>Cédula:</label></div>";

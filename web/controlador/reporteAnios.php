@@ -41,6 +41,7 @@ class PDF extends FPDF {
 			$altura = $ubicacionTamamo[3];
 			#Creamos un grafico vacio
 			$graph = new PieGraph(500, 400);
+            $graph -> legend -> SetColumns(2);
 			#indicamos titulo del grafico si lo indicamos como parametro
 			if (!empty($titulo)) {
 				// $graph -> title -> Set($titulo);
@@ -50,8 +51,8 @@ class PDF extends FPDF {
 			$p1 -> SetSliceColors($color);
 			#indicamos la leyenda para cada porcion de la tarta
 			$p1 -> SetLegends($nombres);
-
-			$p1 -> SetSize(140);
+             
+            $p1 -> SetSize(140);
 			//Añadirmos el plot al grafico
 			$graph -> Add($p1);
 			//mostramos el grafico en pantalla
@@ -225,7 +226,7 @@ try {
 	$pdf -> SetFont("times", 'B', 12);
 	$pdf -> MultiCell(15, 0.5, utf8_decode("Estudiantes en semilleros de formación según programa académico y facultad entre el año $anio y $anio1"), 0, 'C');
 	$pdf -> ln(1);
-	$pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de ciencias básicas", 0, "L");
+	$pdf -> MultiCell(15, 0.5, utf8_decode("Estudiantes por programa académico facultad de ciencias básicas"), 0, "L");
 	$pdf -> ln(8);
 	$pdf -> SetFont("times", '', 12);
 	$pdf -> MultiCell(15, 0.5, utf8_decode("Física: " . $valores[1]));
@@ -294,8 +295,7 @@ try {
 	$pdf -> graficoPDF($temp, 'Ciencias de la salud', array(6, 4, 10, 10), 'Estudiantes por programa académico facultad de ciencias de la salud');
 	$pdf -> ln(1);
 	$pdf -> SetFont("times", 'B', 12);
-	$pdf -> MultiCell(15, 0.5, "Estudiantes por programa acadéS
-	mico facultad de facultad de ciencias de la salud", 0, "L");
+	$pdf -> MultiCell(15, 0.5, utf8_decode("Estudiantes por programa académico facultad de ciencias de la salud"), 0, "L");
 	$pdf -> ln(8);
 	$pdf -> SetFont("times", '', 12);
 	$pdf -> MultiCell(15, 0.5, utf8_decode("Enfermeria: " . $valores[0]));
@@ -324,10 +324,10 @@ while ($row = oci_fetch_array($stid)) {
 
 $temp = array('Artes visuales' => array($valores[0], 'red'), 'Archivistica' => array($valores[1], 'blue'), 'Comunicacion social y periodismo' => array($valores[2], 'green'), 'Filosofia' => array($valores[3], 'white'), 'Gerontologia' => array($valores[4], 'pink'), 'Trabajo social' => array($valores[5], 'pink'));
 try {
-	$pdf -> graficoPDF($temp, 'Ciencias humanas y bellas artes', array(6, 15, 10, 10), 'Estudiantes por programa académico facultad de ciencias humanas y bellas artes');
-	$pdf -> ln(1);
+	$pdf -> graficoPDF($temp, 'Ciencias humanas y bellas artes', array(6, 14, 10, 10), 'Estudiantes por programa académico facultad de ciencias humanas y bellas artes');
+	$pdf -> ln();
 	$pdf -> SetFont("times", 'B', 12);
-	$pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de facultad de ciencias humanas y bellas artes", 0, "L");
+	$pdf -> MultiCell(15, 0.5, utf8_decode("Estudiantes por programa académico facultad de ciencias humanas y bellas artes"), 0, "L");
 	$pdf -> ln(8);
 	$pdf -> SetFont("times", '', 12);
 	$pdf -> MultiCell(15, 0.5, utf8_decode("Artes visuales: " . $valores[0]));
@@ -389,25 +389,61 @@ $valores = array(0, 0, 0, 0, 0, 0, 0, 0);
 $i = 0;
 $cant = 0;
 while ($row = oci_fetch_array($stid)) {
-	$valores[$i] = $row[0];
-	$i++;
+    $valores[$i] = $row[0];
+    $i++;
 }
 $temp = array('Licenciatura en biología' => array($valores[0], 'red'), 'Licenciatura en educación física y deporte' => array($valores[1], 'blue'), 'Licenciatura en español y literatura' => array($valores[2], 'green'), 'Licenciatura en lenguas modernas' => array($valores[3], 'white'), 'Licenciatura en matematicas' => array($valores[4], 'pink'), 'Licenciatura en pedagogia social' => array($valores[5], 'green'), 'Licenciatura en sociales' => array($valores[6], 'white'), 'Licenciatura en pedagogia infantil' => array($valores[7], 'pink'));
 try {
-	$pdf -> graficoPDF($temp, 'Educacion', array(6, 12, 10, 10), utf8_decode("Estudiantes por programa académico facultad de educación"));
-	$pdf -> ln(1);
-	$pdf -> SetFont("times", 'B', 12);
-	$pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de educación", 0, "L");
-	$pdf -> ln(8);
-	$pdf -> SetFont("times", '', 12);
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en biología: " . $valores[0]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en educación física y deporte: " . $valores[1]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en español y literatura: " . $valores[2]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en lenguas modernas: " . $valores[3]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en matemáticas: " . $valores[4]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en pedagogia social: " . $valores[5]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en sociales: " . $valores[6]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en pedagogia infantil: " . $valores[7]));
+    $pdf -> graficoPDF($temp, 'Educacion', array(6, 12, 10, 10), utf8_decode("Estudiantes por programa académico facultad de educación"));
+    $pdf -> ln(1);
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de educación", 0, "L");
+    $pdf -> ln(8);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en biología: " . $valores[0]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en educación física y deporte: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en español y literatura: " . $valores[2]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en lenguas modernas: " . $valores[3]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en matemáticas: " . $valores[4]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en pedagogia social: " . $valores[5]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en sociales: " . $valores[6]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en pedagogia infantil: " . $valores[7]));
+    
+
+} catch(Exception $e) {
+
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////   Ciencias economicas      ////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+$pdf -> AddPage();
+$stid = oci_parse($conexion, "select count(*) as cantidad,p.NOMBRE,fa.NOMBRE from SEMILLEROS_FORMACION f join ESTUDIANTES e on e.SEMILLEROS_FORMACION_FK = f.ID join PROGRAMAS_ACADEMICOS p on 
+e.PROGRAMAS_ACADEMICOS_ID=p.ID JOIN FACULTADES fa on p.FACULTADES_ID = fa.ID where f.anio BETWEEN :anio and :anio1 and p.FACULTADES_ID=25   GROUP by p.FACULTADES_ID, fa.NOMBRE,p.NOMBRE ORDER by p.NOMBRE");
+oci_bind_by_name($stid, ':anio', $anio);
+oci_bind_by_name($stid, ':anio1', $anio1);
+oci_execute($stid);
+$cant = 0.0;
+$valores = array(0, 0, 0, 0, 0);
+$i = 0;
+$cant = 0;
+while ($row = oci_fetch_array($stid)) {
+    $valores[$i] = $row[0];
+    $i++;
+}
+$temp1 = array('Administracion de negocios' => array($valores[0], 'red'), 'Administración financiera' => array($valores[1], 'blue'), 'Contaduria publica' => array($valores[2], 'green'), 'Economia' => array($valores[3], 'white'), 'Tecnologia en gestion financiera' => array($valores[4], 'pink'));
+try {
+    $pdf -> graficoPDF($temp1, 'Ciencias economicas y administrativas', array(6, 1, 10, 10), utf8_decode("Estudiantes por programa académico facultad de Ciencias economicas y administrativas"));
+    $pdf -> ln(1);
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de ciencias economicas", 0, "L");
+    $pdf -> ln(9);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Administracion de negocios: " . $valores[0]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Administracion financiera: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Contaduria publica: " . $valores[2]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Economia: " . $valores[3]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Tecnologia en gestion financiera: " . $valores[4]));
 
 } catch(Exception $e) {
 
@@ -439,9 +475,10 @@ $pdf -> MultiCell(15, 0.5, utf8_decode("Hasta la fecha se ha encontrado registro
 // //////////////////////////////////      CONSOLIDACION         ////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////////////////////////
 
+// $pdf -> AddPage();
 $pdf -> Ln();
 $pdf -> SetFont("times", 'B', 12);
-$pdf -> MultiCell(15, 0.5, utf8_decode("Estudiantes en consolidacion por facultad"), 0, 'C');
+$pdf -> MultiCell(15, 0.5, utf8_decode("Estudiantes en ejecución por facultad"), 0, 'C');
 $pdf -> Ln();
 
 $stid = oci_parse($conexion, "SELECT COUNT(*), f.ID, f.NOMBRE FROM ESTUDIANTES e JOIN PROYECTOS_INVESTIGACION p ON p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO
@@ -452,19 +489,20 @@ oci_bind_by_name($stid, ':anio1', $anio1);
 oci_execute($stid);
 
 $valores1 = array();
-$nombre = array();
+$nombre1 = array();
 $facultades = array();
 $anioCo = $anio - 1;
 $arreglo = oci_fetch_all($stid, $res1, null, null, OCI_FETCHSTATEMENT_BY_ROW + OCI_NUM);
-
+$cant1=0;
 for ($i = 0; $i < $arreglo; $i++) {
 	$valores1[$i] = $res1[$i][0] + 0;
-	$nombre[$i] = $anioCo + 1;
+	$nombre1[$i] = $anioCo + 1;
 	$facultades[$i] = $res1[$i][2];
+    $cant1++;
 }
 try {
-
-	$pdf -> gaficoPDFBarra($valores1, $nombre, utf8_decode('año'), 'Estudiantes', $facultades, utf8_decode("Número de estudiantes por facultad"), array(4, 7, 13, 13));
+    
+	$pdf -> gaficoPDFBarra($valores1, $facultades, utf8_decode('año'), 'Estudiantes', $facultades, utf8_decode("Número de estudiantes por facultad"), array(4, 8, 13, 13));    
 } catch(exception $e) {
 
 }
@@ -472,7 +510,7 @@ try {
 $pdf -> Ln();
 $pdf -> SetFont("times", '', 12);
 
-$stid = oci_parse($conexion, "select count(*) from PROYECTOS_INVESTIGACION p join SEMILLEROS_CONSOLIDACION sc ON sc.ID = p.SEMILLEROS_CONSOLIDACION_ID  where sc.ANIO between :anio and :anio1");
+$stid = oci_parse($conexion, "select count(*) from PROYECTOS_INVESTIGACION p join semilleros_ejecucion sc ON sc.ID = p.SEMILLEROS_EJECUCION_ID  where sc.ANIO between :anio and :anio1");
 oci_bind_by_name($stid, ':anio', $anio);
 oci_bind_by_name($stid, ':anio1', $anio1);
 oci_execute($stid);
@@ -481,6 +519,278 @@ if ($row = oci_fetch_array($stid)) {
 	$cant = $row[0];
 }
 $pdf -> MultiCell(15, 0.5, utf8_decode("Se presentaron aproximadamente $cant proyectos entre el año $anio y $anio1."));
+$pdf -> ln(15);
+for ($i=0; $i < $arreglo; $i++) 
+    {
+        $pdf -> MultiCell(15, 0.5, utf8_decode($res[$i][2].": ".$valores1[$i]));
+    }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////   CIENCIAS básicas     ////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+$pdf -> AddPage();
+$pdf -> LN();
+
+$stid = oci_parse($conexion, "select count(*), pr.NOMBRE from SEMILLEROS_CONSOLIDACION sc join PROYECTOS_INVESTIGACION p on sc.ID = p.SEMILLEROS_CONSOLIDACION_ID
+JOIN ESTUDIANTES e on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO 
+JOIN PROGRAMAS_ACADEMICOS pr on pr.ID = e.PROGRAMAS_ACADEMICOS_ID
+where sc.anio BETWEEN :anio and :anio1 and pr.FACULTADES_ID=22 group by pr.ID, pr.NOMBRE order by pr.NOMBRE");
+oci_bind_by_name($stid, ':anio', $anio);
+oci_bind_by_name($stid, ':anio1', $anio1);
+oci_execute($stid);
+$cant = 0.0;
+$valores = array(0, 0, 0, 0, 0);
+$i = 0;
+$cant = 0;
+while ($row = oci_fetch_array($stid)) {
+    $valores[$i] = $row[0];
+    $i++;
+}
+
+$temp = array('Física' => array($valores[1], 'red'), 'IIC' => array($valores[4], 'blue'), 'Tecnología en electrónica' => array($valores[3], 'green'), 'QuíSmica' => array($valores[2], 'white'), 'Biología' => array($valores[0], 'pink'));
+try {
+    
+    $pdf -> graficoPDF($temp, 'Ciencias básicas', array(6, 1, 10, 10), 'Estudiantes por programa académico facultad de ciencias básicas');
+   $pdf -> ln(1);
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de iencias basicas", 0, "L");
+    $pdf -> ln(9);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Física: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Intituto interdisciplinario de las ciencias: " . $valores[4]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología en electrónica: " . $valores[3]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Química: " . $valores[2]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Biología: " . $valores[0]));
+} catch(Exception $e) {
+
+}
+// ///////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////   ingeniería           ////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////
+
+$stid = oci_parse($conexion, "select count(*), pr.NOMBRE from SEMILLEROS_CONSOLIDACION sc join PROYECTOS_INVESTIGACION p on sc.ID = p.SEMILLEROS_CONSOLIDACION_ID
+JOIN ESTUDIANTES e on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO 
+JOIN PROGRAMAS_ACADEMICOS pr on pr.ID = e.PROGRAMAS_ACADEMICOS_ID
+where sc.anio BETWEEN :anio and :anio1 and pr.FACULTADES_ID=1 group by pr.ID, pr.NOMBRE order by pr.NOMBRE");
+oci_bind_by_name($stid, ':anio', $anio);
+oci_bind_by_name($stid, ':anio1', $anio1);
+oci_execute($stid);
+$cant = 0.0;
+$valores = array(0, 0, 0, 0, 0);
+$i = 0;
+while ($row = oci_fetch_array($stid)) {
+    $valores[$i] = $row[0];
+    $i++;
+}
+
+$temp = array('ingeniería civil' => array($valores[0], 'red'), 'ingeniería de sistemas y computación' => array($valores[1], 'blue'), 'ingeniería electrónica' => array($valores[2], 'green'), 'Tecnología en obras civiles' => array($valores[4], 'white'), 'Tecnología en topografía' => array($valores[3], 'pink'));
+try {
+    $pdf -> graficoPDF($temp, 'ingeniería', array(6, 15, 10, 10), 'Estudiantes por programa académico facultad de ingeniería');
+    $pdf -> ln(1);
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de facultad de ingeniería", 0, "L");
+    $pdf -> ln(8);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("ingeniería civil: " . $valores[0]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("ingeniería de sistemas y computación: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("ingeniería electrónica: " . $valores[2]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología en obras civiles: " . $valores[4]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología en topografía: " . $valores[3]));
+} catch(Exception $e) {
+
+}
+
+// ///////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////   CIENCIAS DE LA SALUD ////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////
+
+$pdf -> AddPage();
+$stid = oci_parse($conexion, "select count(*), pr.NOMBRE from SEMILLEROS_CONSOLIDACION sc join PROYECTOS_INVESTIGACION p on sc.ID = p.SEMILLEROS_CONSOLIDACION_ID
+JOIN ESTUDIANTES e on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO 
+JOIN PROGRAMAS_ACADEMICOS pr on pr.ID = e.PROGRAMAS_ACADEMICOS_ID
+where sc.anio BETWEEN :anio and :anio1 and pr.FACULTADES_ID=21 group by pr.ID, pr.NOMBRE order by pr.NOMBRE");
+oci_bind_by_name($stid, ':anio', $anio);
+oci_bind_by_name($stid, ':anio1', $anio1);
+oci_execute($stid);
+$cant = 0.0;
+$valores = array(0, 0, 0);
+$i = 0;
+$cant = 0;
+while ($row = oci_fetch_array($stid)) {
+    $valores[$i] = $row[0];
+    $i++;
+}
+
+$temp = array('Enfermeria' => array($valores[0], 'red'), 'Medicina' => array($valores[1], 'blue'), 'Salud ocupacional' => array($valores[2], 'green'));
+try {
+    $pdf -> graficoPDF($temp, 'Ciencias de la salud', array(6, 2, 10, 10), 'Estudiantes por programa académico facultad de ciencias de la salud');
+    $pdf -> ln(1);
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Estudiantes por programa académico facultad de ciencias de la salud"), 0, "L");
+    $pdf -> ln(8);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Enfermeria: " . $valores[0]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Medicina: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Salud ocupacional: " . $valores[2]));
+} catch(Exception $e) {
+
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////   CIENCIAS HUMANAS Y BELLAS ARTES     /////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+$stid = oci_parse($conexion, "select count(*), pr.NOMBRE from SEMILLEROS_CONSOLIDACION sc join PROYECTOS_INVESTIGACION p on sc.ID = p.SEMILLEROS_CONSOLIDACION_ID
+JOIN ESTUDIANTES e on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO 
+JOIN PROGRAMAS_ACADEMICOS pr on pr.ID = e.PROGRAMAS_ACADEMICOS_ID
+where sc.anio BETWEEN :anio and :anio1 and pr.FACULTADES_ID=24 group by pr.ID, pr.NOMBRE order by pr.NOMBRE");
+oci_bind_by_name($stid, ':anio', $anio);
+oci_bind_by_name($stid, ':anio1', $anio1);
+oci_execute($stid);
+$cant = 0.0;
+$valores = array(0, 0, 0, 0, 0, 0);
+$i = 0;
+$cant = 0;
+while ($row = oci_fetch_array($stid)) {
+    $valores[$i] = $row[0];
+    $i++;
+}
+
+$temp = array('Artes visuales' => array($valores[0], 'red'), 'Archivistica' => array($valores[1], 'blue'), 'Comunicacion social y periodismo' => array($valores[2], 'green'), 'Filosofia' => array($valores[3], 'white'), 'Gerontologia' => array($valores[4], 'pink'), 'Trabajo social' => array($valores[5], 'pink'));
+try {
+    $pdf -> graficoPDF($temp, 'Ciencias humanas y bellas artes', array(6, 12, 10, 10), 'Estudiantes por programa académico facultad de ciencias humanas y bellas artes');
+    $pdf -> ln();
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Estudiantes por programa académico facultad de ciencias humanas y bellas artes"), 0, "L");
+    $pdf -> ln(8);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Artes visuales: " . $valores[0]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Ciencias de la informacion, la documentacion, bibliotecologia y archivistica: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Comunicacion social y periodismo: " . $valores[2]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Filosofia: " . $valores[3]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Gerontologia: " . $valores[4]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Trabajo social: " . $valores[5]));
+} catch(Exception $e) {
+
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////   CIENCIAS AGROINDUSTRIALES           /////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+$pdf -> AddPage();
+
+$stid = oci_parse($conexion, "select count(*), pr.NOMBRE from SEMILLEROS_CONSOLIDACION sc join PROYECTOS_INVESTIGACION p on sc.ID = p.SEMILLEROS_CONSOLIDACION_ID
+JOIN ESTUDIANTES e on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO 
+JOIN PROGRAMAS_ACADEMICOS pr on pr.ID = e.PROGRAMAS_ACADEMICOS_ID
+where sc.anio BETWEEN :anio and :anio1 and pr.FACULTADES_ID=23 group by pr.ID, pr.NOMBRE order by pr.NOMBRE");
+oci_bind_by_name($stid, ':anio', $anio);
+oci_bind_by_name($stid, ':anio1', $anio1);
+oci_execute($stid);
+$cant = 0.0;
+$valores = array(0, 0, 0, 0);
+$i = 0;
+$cant = 0;
+while ($row = oci_fetch_array($stid)) {
+    $valores[$i] = $row[0];
+    $i++;
+}
+
+$temp = array('ingeniería de alimentos' => array($valores[0], 'red'), 'Administracion de empresas agropecuarias' => array($valores[1], 'blue'), 'Tecnología agropecuaria' => array($valores[2], 'blue'), 'Tecnología agroindustrial' => array($valores[3], 'green'));
+try {
+    $pdf -> graficoPDF($temp, 'Ciencias agroindustriales', array(6, 1, 10, 10), 'Estudiantes por programa académico facultad de ciencias agroindustriales');
+    $pdf -> ln(1);
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de ciencias agroindustriales", 0, "L");
+    $pdf -> ln(8);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("ingeniería de alimentos: " . $valores[0]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Administración de empresas agropecuarias: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología agropecuaria: " . $valores[2]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología agroindustrial: " . $valores[3]));
+
+} catch(Exception $e) {
+
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////   EDUCACION                ////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+$stid = oci_parse($conexion, "select count(*), pr.NOMBRE from SEMILLEROS_CONSOLIDACION sc join PROYECTOS_INVESTIGACION p on sc.ID = p.SEMILLEROS_CONSOLIDACION_ID
+JOIN ESTUDIANTES e on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO 
+JOIN PROGRAMAS_ACADEMICOS pr on pr.ID = e.PROGRAMAS_ACADEMICOS_ID
+where sc.anio BETWEEN :anio and :anio1 and pr.FACULTADES_ID=2 group by pr.ID, pr.NOMBRE order by pr.NOMBRE");
+oci_bind_by_name($stid, ':anio', $anio);
+oci_bind_by_name($stid, ':anio1', $anio1);
+oci_execute($stid);
+$valores = array(0, 0, 0, 0, 0, 0, 0, 0);
+$i = 0;
+$cant = 0;
+while ($row = oci_fetch_array($stid)) {
+    $valores[$i] = $row[0];
+    $i++;
+}
+$temp = array('Licenciatura en biología' => array($valores[0], 'red'), 'Licenciatura en educación física y deporte' => array($valores[1], 'blue'), 'Licenciatura en español y literatura' => array($valores[2], 'green'), 'Licenciatura en lenguas modernas' => array($valores[3], 'white'), 'Licenciatura en matematicas' => array($valores[4], 'pink'), 'Licenciatura en pedagogia social' => array($valores[5], 'green'), 'Licenciatura en sociales' => array($valores[6], 'white'), 'Licenciatura en pedagogia infantil' => array($valores[7], 'pink'));
+try {
+    $pdf -> graficoPDF($temp, 'Educacion', array(6, 12, 10, 10), utf8_decode("Estudiantes por programa académico facultad de educación"));
+    $pdf -> ln(1);
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de educación", 0, "L");
+    $pdf -> ln(8);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en biología: " . $valores[0]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en educación física y deporte: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en español y literatura: " . $valores[2]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en lenguas modernas: " . $valores[3]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en matemáticas: " . $valores[4]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en pedagogia social: " . $valores[5]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en sociales: " . $valores[6]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en pedagogia infantil: " . $valores[7]));
+    
+
+} catch(Exception $e) {
+
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////   Ciencias economicas      ////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+$pdf -> AddPage();
+$stid = oci_parse($conexion, "select count(*), pr.NOMBRE from SEMILLEROS_CONSOLIDACION sc join PROYECTOS_INVESTIGACION p on sc.ID = p.SEMILLEROS_CONSOLIDACION_ID
+JOIN ESTUDIANTES e on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO 
+JOIN PROGRAMAS_ACADEMICOS pr on pr.ID = e.PROGRAMAS_ACADEMICOS_ID
+where sc.anio BETWEEN :anio and :anio1 and pr.FACULTADES_ID=25 group by pr.ID, pr.NOMBRE order by pr.NOMBRE");
+
+oci_bind_by_name($stid, ':anio', $anio);
+oci_bind_by_name($stid, ':anio1', $anio1);
+oci_execute($stid);
+$cant = 0.0;
+$valores = array(0, 0, 0, 0, 0);
+$i = 0;
+$cant = 0;
+while ($row = oci_fetch_array($stid)) {
+    $valores[$i] = $row[0];
+    $i++;
+}
+$temp1 = array('Administracion de negocios' => array($valores[0], 'red'), 'Administración financiera' => array($valores[1], 'blue'), 'Contaduria publica' => array($valores[2], 'green'), 'Economia' => array($valores[3], 'white'), 'Tecnologia en gestion financiera' => array($valores[4], 'pink'));
+try {
+    $pdf -> graficoPDF($temp1, 'Ciencias economicas y administrativas', array(6, 1, 10, 10), utf8_decode("Estudiantes por programa académico facultad de Ciencias economicas y administrativas"));
+    $pdf -> ln(1);
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de ciencias economicas", 0, "L");
+    $pdf -> ln(9);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Administracion de negocios: " . $valores[0]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Administracion financiera: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Contaduria publica: " . $valores[2]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Economia: " . $valores[3]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Tecnologia en gestion financiera: " . $valores[4]));
+
+} catch(Exception $e) {
+
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////      FIN FACULTADES        ////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 // //////////////////////////////////////////////////////////////////////////////////
 // ///////////////////////// TUTORES CONSOLIDACION /////////////////////////////////
@@ -533,14 +843,89 @@ while ($row = oci_fetch_array($stid)) {
 	$i++;
 }
 
+
+  /////////////////////////////////////////////////////////////////////////////////
+ ///////////////////////////     EJECUCIÓN     ///////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+// $pdf -> AddPage();
+
+$pdf -> AddPage();
+$pdf -> SetFont("times", 'B', 12);
+$pdf -> Ln();
+$pdf -> MultiCell(15, 0.5, utf8_decode("SEMILLEROS EN EJECUCIÓN"), 0, 'C');
+$pdf->ln();
+$pdf -> SetFont("times", '', 12);
+
+$stid = oci_parse($conexion, "select count(*) from ESTUDIANTES e join PROYECTOS_INVESTIGACION p on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO join SEMILLEROS_ejecucion sc on sc.ID = p.SEMILLEROS_ejecucion_ID where sc.anio between :anio and :anio1");
+oci_bind_by_name($stid, ':anio', $anio);
+oci_bind_by_name($stid, ':anio1', $anio1);
+oci_execute($stid);
+$cant = 0;
+if ($row = oci_fetch_array($stid)) {
+    $cant = $row[0];
+}
+
+$pdf -> ln();
+$pdf -> MultiCell(15, 0.5, utf8_decode("Hasta la fecha se ha encontrado registro de $cant estudiantes que hicieron o hacen parte de semilleros en fase de ejecución entre el año $anio y $anio1."));
+$pdf -> Ln();
+$pdf -> SetFont("times", 'B', 12);
+$pdf -> MultiCell(15, 0.5, utf8_decode("Estudiantes en ejecución por facultad"), 0, 'C');
+$pdf -> Ln();
+
+$stid = oci_parse($conexion, "SELECT COUNT(*), f.ID, f.NOMBRE FROM ESTUDIANTES e JOIN PROYECTOS_INVESTIGACION p ON p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO
+JOIN SEMILLEROS_ejecucion sc ON sc.ID = p.SEMILLEROS_ejecucion_ID JOIN GRUPOS_INVESTIGACION g ON g.CODIGO = sc.GRUPOS_INVESTIGACION_ID
+JOIN FACULTADES f ON f.ID = g.FACULTADES_ID where sc.ANIO between :anio and :anio1 GROUP BY f.ID,f.NOMBRE");
+oci_bind_by_name($stid, ':anio', $anio);
+oci_bind_by_name($stid, ':anio1', $anio1);
+oci_execute($stid);
+
+$valores1 = array();
+$nombre1 = array();
+$facultades = array();
+$anioCo = $anio - 1;
+$arreglo = oci_fetch_all($stid, $res1, null, null, OCI_FETCHSTATEMENT_BY_ROW + OCI_NUM);
+$cant1=0;
+for ($i = 0; $i < $arreglo; $i++) {
+    $valores1[$i] = $res1[$i][0] + 0;
+    $nombre1[$i] = $anioCo + 1;
+    $facultades[$i] = $res1[$i][2];
+    $cant1++;
+}
+try {
+    
+    $pdf -> gaficoPDFBarra($valores1, $facultades, utf8_decode('año'), 'Estudiantes', $facultades, utf8_decode("Número de estudiantes por facultad"), array(4, 8, 13, 13));    
+} catch(exception $e) {
+
+}
+
+$pdf -> Ln();
+$pdf -> SetFont("times", '', 12);
+
+$stid = oci_parse($conexion, "select count(*) from PROYECTOS_INVESTIGACION p join SEMILLEROS_CONSOLIDACION sc ON sc.ID = p.SEMILLEROS_CONSOLIDACION_ID  where sc.ANIO between :anio and :anio1");
+oci_bind_by_name($stid, ':anio', $anio);
+oci_bind_by_name($stid, ':anio1', $anio1);
+oci_execute($stid);
+$cant = 0;
+if ($row = oci_fetch_array($stid)) {
+    $cant = $row[0];
+}
+$pdf -> MultiCell(15, 0.5, utf8_decode("Se presentaron aproximadamente $cant proyectos entre el año $anio y $anio1."));
+$pdf -> ln(15);
+for ($i=0; $i < $arreglo; $i++) 
+    {
+        $pdf -> MultiCell(15, 0.5, utf8_decode($res[$i][2].": ".$valores1[$i]));
+    }
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////   CIENCIAS básicas     ////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////
 $pdf -> AddPage();
 $pdf -> LN();
 
-$stid = oci_parse($conexion, "select count(*) as cantidad,p.NOMBRE,fa.NOMBRE from SEMILLEROS_FORMACION f join ESTUDIANTES e on e.SEMILLEROS_FORMACION_FK = f.ID join PROGRAMAS_ACADEMICOS p on 
-e.PROGRAMAS_ACADEMICOS_ID=p.ID JOIN FACULTADES fa on p.FACULTADES_ID = fa.ID where  p.FACULTADES_ID=22 and f.anio BETWEEN :anio and :anio1   GROUP by p.FACULTADES_ID, fa.NOMBRE,p.NOMBRE ORDER by p.NOMBRE");
+$stid = oci_parse($conexion, "select count(*), pr.NOMBRE from SEMILLEROS_EJECUCION sc join PROYECTOS_INVESTIGACION p on sc.ID = p.SEMILLEROS_EJECUCION_ID
+JOIN ESTUDIANTES e on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO 
+JOIN PROGRAMAS_ACADEMICOS pr on pr.ID = e.PROGRAMAS_ACADEMICOS_ID
+where sc.anio BETWEEN :anio and :anio1 and pr.FACULTADES_ID=22 group by pr.ID, pr.NOMBRE order by pr.NOMBRE");
 oci_bind_by_name($stid, ':anio', $anio);
 oci_bind_by_name($stid, ':anio1', $anio1);
 oci_execute($stid);
@@ -549,25 +934,24 @@ $valores = array(0, 0, 0, 0, 0);
 $i = 0;
 $cant = 0;
 while ($row = oci_fetch_array($stid)) {
-	$valores[$i] = $row[0];
-	$i++;
+    $valores[$i] = $row[0];
+    $i++;
 }
 
-$temp = array('Física' => array($valores[1], 'red'), 'IIC' => array($valores[4], 'blue'), 'Tecnología en electrónica' => array($valores[3], 'green'), 'Química' => array($valores[2], 'white'), 'Biología' => array($valores[0], 'pink'));
+$temp = array('Física' => array($valores[1], 'red'), 'IIC' => array($valores[4], 'blue'), 'Tecnología en electrónica' => array($valores[3], 'green'), 'QuíSmica' => array($valores[2], 'white'), 'Biología' => array($valores[0], 'pink'));
 try {
-	$pdf -> graficoPDF($temp, 'Ciencias básicas', array(6, 3, 10, 10), 'Estudiantes por programa académico facultad de ciencias básicas');
-	$pdf -> ln(1);
-	$pdf -> SetFont("times", 'B', 12);
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Estudiantes en semilleros de formación según programa académico y facultad entre el año $anio y $anio1"), 0, 'C');
-	$pdf->ln(1);
-	$pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de ciencias básicas", 0, "L");
-	$pdf -> ln(8);
-	$pdf -> SetFont("times", '', 12);
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Física: " . $valores[1]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Intituto interdisciplinario de las ciencias: " . $valores[4]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología en electrónica: " . $valores[3]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Química: " . $valores[2]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Biología: " . $valores[0]));
+    
+    $pdf -> graficoPDF($temp, 'Ciencias básicas', array(6, 1, 10, 10), 'Estudiantes por programa académico facultad de ciencias básicas');
+   $pdf -> ln(1);
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de iencias basicas", 0, "L");
+    $pdf -> ln(9);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Física: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Intituto interdisciplinario de las ciencias: " . $valores[4]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología en electrónica: " . $valores[3]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Química: " . $valores[2]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Biología: " . $valores[0]));
 } catch(Exception $e) {
 
 }
@@ -575,34 +959,35 @@ try {
 // //////////////////////////////////   ingeniería           ////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////////////////////////
 
-$stid = oci_parse($conexion, "select count(*) as cantidad,p.id,p.NOMBRE,fa.NOMBRE from SEMILLEROS_FORMACION f join ESTUDIANTES e on e.SEMILLEROS_FORMACION_FK = f.ID join PROGRAMAS_ACADEMICOS p on 
-e.PROGRAMAS_ACADEMICOS_ID=p.ID JOIN FACULTADES fa on p.FACULTADES_ID = fa.ID where f.anio BETWEEN :anio and :anio1 and p.FACULTADES_ID=1   GROUP by p.id,p.FACULTADES_ID, fa.NOMBRE,p.NOMBRE ORDER by p.NOMBRE");
+$stid = oci_parse($conexion, "select count(*), pr.NOMBRE from SEMILLEROS_EJECUCION sc join PROYECTOS_INVESTIGACION p on sc.ID = p.SEMILLEROS_EJECUCION_ID
+JOIN ESTUDIANTES e on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO 
+JOIN PROGRAMAS_ACADEMICOS pr on pr.ID = e.PROGRAMAS_ACADEMICOS_ID
+where sc.anio BETWEEN :anio and :anio1 and pr.FACULTADES_ID=1 group by pr.ID, pr.NOMBRE order by pr.NOMBRE");
 oci_bind_by_name($stid, ':anio', $anio);
 oci_bind_by_name($stid, ':anio1', $anio1);
 oci_execute($stid);
 $cant = 0.0;
-$valores = array(0, 0, 0, 0, 0);
+$valores = array(0, 0, 0, 0, 1);
 $i = 0;
 while ($row = oci_fetch_array($stid)) {
-	$valores[$i] = $row[0];
-	$i++;
+    $valores[$i] = $row[0];
+    $i++;
 }
 
 $temp = array('ingeniería civil' => array($valores[0], 'red'), 'ingeniería de sistemas y computación' => array($valores[1], 'blue'), 'ingeniería electrónica' => array($valores[2], 'green'), 'Tecnología en obras civiles' => array($valores[4], 'white'), 'Tecnología en topografía' => array($valores[3], 'pink'));
 try {
-	$pdf -> graficoPDF($temp, 'ingeniería', array(6, 15, 10, 10), 'Estudiantes por programa académico facultad de ingeniería');
-	$pdf -> ln(1);
-	$pdf -> SetFont("times", 'B', 12);
-	$pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de facultad de ingeniería", 0, "L");
-	$pdf -> ln(8);
-	$pdf -> SetFont("times", '', 12);
-	$pdf -> MultiCell(15, 0.5, utf8_decode("ingeniería civil: " . $valores[0]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("ingeniería de sistemas y computación: " . $valores[1]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("ingeniería electrónica: " . $valores[2]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología en obras civiles: " . $valores[4]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología en topografía: " . $valores[3]));
+    $pdf -> graficoPDF($temp, 'ingeniería', array(6, 15, 10, 10), 'Estudiantes por programa académico facultad de ingeniería');
+    $pdf -> ln(1);
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de facultad de ingeniería", 0, "L");
+    $pdf -> ln(8);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("ingeniería civil: " . $valores[0]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("ingeniería de sistemas y computación: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("ingeniería electrónica: " . $valores[2]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología en obras civiles: " . $valores[4]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología en topografía: " . $valores[3]));
 } catch(Exception $e) {
-
 }
 
 // ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -610,10 +995,10 @@ try {
 // /////////////////////////////////////////////////////////////////////////////////////////////////
 
 $pdf -> AddPage();
-$pdf -> LN();
-
-$stid = oci_parse($conexion, "select count(*) as cantidad,p.NOMBRE,fa.NOMBRE from SEMILLEROS_FORMACION f join ESTUDIANTES e on e.SEMILLEROS_FORMACION_FK = f.ID join PROGRAMAS_ACADEMICOS p on 
-e.PROGRAMAS_ACADEMICOS_ID=p.ID JOIN FACULTADES fa on p.FACULTADES_ID = fa.ID where f.anio BETWEEN :anio and :anio1 and p.FACULTADES_ID=21   GROUP by p.FACULTADES_ID, fa.NOMBRE,p.NOMBRE ORDER by p.NOMBRE");
+$stid = oci_parse($conexion, "select count(*), pr.NOMBRE from SEMILLEROS_EJECUCION sc join PROYECTOS_INVESTIGACION p on sc.ID = p.SEMILLEROS_EJECUCION_ID
+JOIN ESTUDIANTES e on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO 
+JOIN PROGRAMAS_ACADEMICOS pr on pr.ID = e.PROGRAMAS_ACADEMICOS_ID
+where sc.anio BETWEEN :anio and :anio1 and pr.FACULTADES_ID=21 group by pr.ID, pr.NOMBRE order by pr.NOMBRE");
 oci_bind_by_name($stid, ':anio', $anio);
 oci_bind_by_name($stid, ':anio1', $anio1);
 oci_execute($stid);
@@ -622,21 +1007,21 @@ $valores = array(0, 0, 0);
 $i = 0;
 $cant = 0;
 while ($row = oci_fetch_array($stid)) {
-	$valores[$i] = $row[0];
-	$i++;
+    $valores[$i] = $row[0];
+    $i++;
 }
 
 $temp = array('Enfermeria' => array($valores[0], 'red'), 'Medicina' => array($valores[1], 'blue'), 'Salud ocupacional' => array($valores[2], 'green'));
 try {
-	$pdf -> graficoPDF($temp, 'Ciencias de la salud', array(6, 2, 10, 10), 'Estudiantes por programa académico facultad de ciencias de la salud');
-	$pdf -> ln(1);
-	$pdf -> SetFont("times", 'B', 12);
-	$pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de facultad de ciencias de la salud", 0, "L");
-	$pdf -> ln(8);
-	$pdf -> SetFont("times", '', 12);
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Enfermeria: " . $valores[0]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Medicina: " . $valores[1]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Salud ocupacional: " . $valores[2]));
+    $pdf -> graficoPDF($temp, 'Ciencias de la salud', array(6, 2, 10, 10), 'Estudiantes por programa académico facultad de ciencias de la salud');
+    $pdf -> ln(1);
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Estudiantes por programa académico facultad de ciencias de la salud"), 0, "L");
+    $pdf -> ln(8);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Enfermeria: " . $valores[0]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Medicina: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Salud ocupacional: " . $valores[2]));
 } catch(Exception $e) {
 
 }
@@ -644,8 +1029,10 @@ try {
 ///////////////////////////////   CIENCIAS HUMANAS Y BELLAS ARTES     /////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
-$stid = oci_parse($conexion, "select count(*) as cantidad,p.NOMBRE,fa.NOMBRE from SEMILLEROS_FORMACION f join ESTUDIANTES e on e.SEMILLEROS_FORMACION_FK = f.ID join PROGRAMAS_ACADEMICOS p on 
-e.PROGRAMAS_ACADEMICOS_ID=p.ID JOIN FACULTADES fa on p.FACULTADES_ID = fa.ID where f.anio BETWEEN :anio and :anio1 and p.FACULTADES_ID=24   GROUP by p.FACULTADES_ID, fa.NOMBRE,p.NOMBRE ORDER by p.NOMBRE");
+$stid = oci_parse($conexion, "select count(*), pr.NOMBRE from SEMILLEROS_EJECUCION sc join PROYECTOS_INVESTIGACION p on sc.ID = p.SEMILLEROS_EJECUCION_ID
+JOIN ESTUDIANTES e on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO 
+JOIN PROGRAMAS_ACADEMICOS pr on pr.ID = e.PROGRAMAS_ACADEMICOS_ID
+where sc.anio BETWEEN :anio and :anio1 and pr.FACULTADES_ID=24 group by pr.ID, pr.NOMBRE order by pr.NOMBRE");
 oci_bind_by_name($stid, ':anio', $anio);
 oci_bind_by_name($stid, ':anio1', $anio1);
 oci_execute($stid);
@@ -654,25 +1041,24 @@ $valores = array(0, 0, 0, 0, 0, 0);
 $i = 0;
 $cant = 0;
 while ($row = oci_fetch_array($stid)) {
-	$valores[$i] = $row[0];
-	$i++;
+    $valores[$i] = $row[0];
+    $i++;
 }
 
 $temp = array('Artes visuales' => array($valores[0], 'red'), 'Archivistica' => array($valores[1], 'blue'), 'Comunicacion social y periodismo' => array($valores[2], 'green'), 'Filosofia' => array($valores[3], 'white'), 'Gerontologia' => array($valores[4], 'pink'), 'Trabajo social' => array($valores[5], 'pink'));
 try {
-	$pdf -> graficoPDF($temp, 'Ciencias humanas y bellas artes', array(6, 13, 10, 10), 'Estudiantes por programa académico facultad de ciencias humanas y bellas artes');
-	$pdf -> ln(1);
-	$pdf -> SetFont("times", 'B', 12);
-	$pdf -> MultiCell(15, 0.5, "Estudiantes por programa académicoo facultad de ciencias humanas y bellas artes", 0, "L");
-	$pdf -> MultiCell(15, 0.5, "Estudiantes por programa académic facultad de ciencias humanas y bellas artes", 0, "L");
-	$pdf -> ln(8);
-	$pdf -> SetFont("times", '', 12);
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Artes visuales: " . $valores[0]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Ciencias de la informacion, la documentacion, bibliotecologia y archivistica: " . $valores[1]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Comunicacion social y periodismo: " . $valores[2]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Filosofia: " . $valores[3]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Gerontologia: " . $valores[4]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Trabajo social: " . $valores[5]));
+    $pdf -> graficoPDF($temp, 'Ciencias humanas y bellas artes', array(6, 1, 10, 10), 'Estudiantes por programa académico facultad de ciencias humanas y bellas artes');
+    $pdf -> ln();
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Estudiantes por programa académico facultad de ciencias humanas y bellas artes"), 0, "L");
+    $pdf -> ln(8);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Artes visuales: " . $valores[0]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Ciencias de la informacion, la documentacion, bibliotecologia y archivistica: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Comunicacion social y periodismo: " . $valores[2]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Filosofia: " . $valores[3]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Gerontologia: " . $valores[4]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Trabajo social: " . $valores[5]));
 } catch(Exception $e) {
 
 }
@@ -681,10 +1067,11 @@ try {
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
 $pdf -> AddPage();
-$pdf -> LN();
 
-$stid = oci_parse($conexion, "select count(*) as cantidad,p.NOMBRE,fa.NOMBRE from SEMILLEROS_FORMACION f join ESTUDIANTES e on e.SEMILLEROS_FORMACION_FK = f.ID join PROGRAMAS_ACADEMICOS p on 
-e.PROGRAMAS_ACADEMICOS_ID=p.ID JOIN FACULTADES fa on p.FACULTADES_ID = fa.ID where f.anio BETWEEN :anio and :anio1 and p.FACULTADES_ID=23   GROUP by p.FACULTADES_ID, fa.NOMBRE,p.NOMBRE ORDER by p.NOMBRE");
+$stid = oci_parse($conexion, "select count(*), pr.NOMBRE from SEMILLEROS_EJECUCION sc join PROYECTOS_INVESTIGACION p on sc.ID = p.SEMILLEROS_EJECUCION_ID
+JOIN ESTUDIANTES e on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO 
+JOIN PROGRAMAS_ACADEMICOS pr on pr.ID = e.PROGRAMAS_ACADEMICOS_ID
+where sc.anio BETWEEN :anio and :anio1 and pr.FACULTADES_ID=23 group by pr.ID, pr.NOMBRE order by pr.NOMBRE");
 oci_bind_by_name($stid, ':anio', $anio);
 oci_bind_by_name($stid, ':anio1', $anio1);
 oci_execute($stid);
@@ -693,32 +1080,34 @@ $valores = array(0, 0, 0, 0);
 $i = 0;
 $cant = 0;
 while ($row = oci_fetch_array($stid)) {
-	$valores[$i] = $row[0];
-	$i++;
+    $valores[$i] = $row[0];
+    $i++;
 }
 
 $temp = array('ingeniería de alimentos' => array($valores[0], 'red'), 'Administracion de empresas agropecuarias' => array($valores[1], 'blue'), 'Tecnología agropecuaria' => array($valores[2], 'blue'), 'Tecnología agroindustrial' => array($valores[3], 'green'));
 try {
-	$pdf -> graficoPDF($temp, 'Ciencias agroindustriales', array(6, 2, 10, 10), 'Estudiantes por programa académico facultad de ciencias agroindustriales');
-	$pdf -> ln(1);
-	$pdf -> SetFont("times", 'B', 12);
-	$pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de ciencias agroindustriales", 0, "L");
-	$pdf -> ln(8);
-	$pdf -> SetFont("times", '', 12);
-	$pdf -> MultiCell(15, 0.5, utf8_decode("ingeniería de alimentos: " . $valores[0]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Administración de empresas agropecuarias: " . $valores[1]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología agropecuaria: " . $valores[2]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología agroindustrial: " . $valores[3]));
+    $pdf -> graficoPDF($temp, 'Ciencias agroindustriales', array(6, 1, 10, 10), 'Estudiantes por programa académico facultad de ciencias agroindustriales');
+    $pdf -> ln(1);
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de ciencias agroindustriales", 0, "L");
+    $pdf -> ln(8);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("ingeniería de alimentos: " . $valores[0]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Administración de empresas agropecuarias: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología agropecuaria: " . $valores[2]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Tecnología agroindustrial: " . $valores[3]));
 
 } catch(Exception $e) {
-
+$pdf -> graficoPDF($temp, 'Ciencias agroindustriales', array(6, 1, 10, 10), 'Estudiantes por programa académico facultad de ciencias agroindustriales');
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////   EDUCACION                ////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
-$stid = oci_parse($conexion, "select count(*) as cantidad,p.NOMBRE,fa.NOMBRE from SEMILLEROS_FORMACION f join ESTUDIANTES e on e.SEMILLEROS_FORMACION_FK = f.ID join PROGRAMAS_ACADEMICOS p on 
-e.PROGRAMAS_ACADEMICOS_ID=p.ID JOIN FACULTADES fa on p.FACULTADES_ID = fa.ID where f.anio BETWEEN :anio and :anio1 and p.FACULTADES_ID=24   GROUP by p.FACULTADES_ID, fa.NOMBRE,p.NOMBRE ORDER by p.NOMBRE");
+$stid = oci_parse($conexion, "select count(*), pr.NOMBRE from SEMILLEROS_EJECUCION sc join PROYECTOS_INVESTIGACION p on sc.ID = p.SEMILLEROS_EJECUCION_ID
+JOIN ESTUDIANTES e on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO 
+JOIN PROGRAMAS_ACADEMICOS pr on pr.ID = e.PROGRAMAS_ACADEMICOS_ID
+where sc.anio BETWEEN :anio and :anio1 and pr.FACULTADES_ID=2 group by pr.ID, pr.NOMBRE order by pr.NOMBRE");
 oci_bind_by_name($stid, ':anio', $anio);
 oci_bind_by_name($stid, ':anio1', $anio1);
 oci_execute($stid);
@@ -727,29 +1116,69 @@ $valores = array(0, 0, 0, 0, 0, 0, 0, 0);
 $i = 0;
 $cant = 0;
 while ($row = oci_fetch_array($stid)) {
-	$valores[$i] = $row[0];
-	$i++;
+    $valores[$i] = $row[0];
+    $i++;
 }
 $temp = array('Licenciatura en biología' => array($valores[0], 'red'), 'Licenciatura en educación física y deporte' => array($valores[1], 'blue'), 'Licenciatura en español y literatura' => array($valores[2], 'green'), 'Licenciatura en lenguas modernas' => array($valores[3], 'white'), 'Licenciatura en matematicas' => array($valores[4], 'pink'), 'Licenciatura en pedagogia social' => array($valores[5], 'green'), 'Licenciatura en sociales' => array($valores[6], 'white'), 'Licenciatura en pedagogia infantil' => array($valores[7], 'pink'));
 try {
-	$pdf -> graficoPDF($temp, 'Educacion', array(6, 13, 10, 10), 'Estudiantes por programa académico facultad de educación');
-	$pdf -> ln(1);
-	$pdf -> SetFont("times", 'B', 12);
-	$pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de educación", 0, "L");
-	$pdf -> ln(8);
-	$pdf -> SetFont("times", '', 12);
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en biología: " . $valores[0]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en educación física y deporte: " . $valores[1]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en español y literatura: " . $valores[2]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en lenguas modernas: " . $valores[3]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en matemáticas: " . $valores[4]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en pedagogia social: " . $valores[5]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en sociales: " . $valores[6]));
-	$pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en pedagogia infantil: " . $valores[7]));
+    $pdf -> graficoPDF($temp, 'Educacion', array(6, 12, 10, 10), utf8_decode("Estudiantes por programa académico facultad de educación"));
+    $pdf -> ln(1);
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de educación", 0, "L");
+    $pdf -> ln(8);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en biología: " . $valores[0]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en educación física y deporte: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en español y literatura: " . $valores[2]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en lenguas modernas: " . $valores[3]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en matemáticas: " . $valores[4]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en pedagogia social: " . $valores[5]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en sociales: " . $valores[6]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Licenciatura en pedagogia infantil: " . $valores[7]));
+    
 
 } catch(Exception $e) {
 
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////   Ciencias economicas      ////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+$pdf -> AddPage();
+$stid = oci_parse($conexion, "select count(*), pr.NOMBRE from SEMILLEROS_EJECUCION sc join PROYECTOS_INVESTIGACION p on sc.ID = p.SEMILLEROS_EJECUCION_ID
+JOIN ESTUDIANTES e on p.CODIGO = e.PROYECTOS_INVESTIGACION_CODIGO 
+JOIN PROGRAMAS_ACADEMICOS pr on pr.ID = e.PROGRAMAS_ACADEMICOS_ID
+where sc.anio BETWEEN :anio and :anio1 and pr.FACULTADES_ID=25 group by pr.ID, pr.NOMBRE order by pr.NOMBRE");
+
+oci_bind_by_name($stid, ':anio', $anio);
+oci_bind_by_name($stid, ':anio1', $anio1);
+oci_execute($stid);
+$cant = 0.0;
+$valores = array(0, 0, 0, 0, 0);
+$i = 0;
+$cant = 0;
+while ($row = oci_fetch_array($stid)) {
+    $valores[$i] = $row[0];
+    $i++;
+}
+$temp1 = array('Administracion de negocios' => array($valores[0], 'red'), 'Administración financiera' => array($valores[1], 'blue'), 'Contaduria publica' => array($valores[2], 'green'), 'Economia' => array($valores[3], 'white'), 'Tecnologia en gestion financiera' => array($valores[4], 'pink'));
+try {
+    $pdf -> graficoPDF($temp1, 'Ciencias economicas y administrativas', array(6, 1, 10, 10), utf8_decode("Estudiantes por programa académico facultad de Ciencias economicas y administrativas"));
+    $pdf -> ln(1);
+    $pdf -> SetFont("times", 'B', 12);
+    $pdf -> MultiCell(15, 0.5, "Estudiantes por programa académico facultad de ciencias economicas", 0, "L");
+    $pdf -> ln(9);
+    $pdf -> SetFont("times", '', 12);
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Administracion de negocios: " . $valores[0]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Administracion financiera: " . $valores[1]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Contaduria publica: " . $valores[2]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Economia: " . $valores[3]));
+    $pdf -> MultiCell(15, 0.5, utf8_decode("Tecnologia en gestion financiera: " . $valores[4]));
+
+} catch(Exception $e) {
+
+}
+
 
 //////////////////////////////////////////////////////////////////////////////////
 ///////////////////////// TUTORES EJECUCION     /////////////////////////////////
@@ -804,6 +1233,12 @@ while ($row = oci_fetch_array($stid)) {
 		$i++;
 	}
 }
+
+
+
+
+
+
 
 $pdf -> Output();
 ?>
