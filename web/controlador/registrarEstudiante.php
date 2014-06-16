@@ -6,7 +6,11 @@ session_start();
 // Registro de semillero en formacion
 
 $nota = $_POST['nota'];
-$homologo = $_POST['homologacion'];
+$homologo=0;
+if(isset($_REQUEST['valido']))
+{
+    $homologo=1;
+}
 $año = date("Y");
 $mes = date("m");
 
@@ -18,12 +22,12 @@ if (7 > $mes) {
 
 $conexion1 = conectar();
 
-$stid = oci_parse($conexion1, 'INSERT INTO SEMILLEROS_FORMACION(nota, homologo, año, periodos_id) values (:nota, :homologo, :año,:periodo )');
-
+$stid = oci_parse($conexion1, 'INSERT INTO SEMILLEROS_FORMACION(nota, homologo, anio, periodos_id) values (:nota, :homologo, :anio,:periodo )');
+$periodo = 1;
 ocibindbyname($stid, ':nota', $nota);
 ocibindbyname($stid, ':homologo', $homologo);
-ocibindbyname($stid, ':año', $añoa);
-ocibindbyname($stid, ':periodo', $periodoSC);
+ocibindbyname($stid, ':anio', $año);
+ocibindbyname($stid, ':periodo', $periodo);
 
 $r = oci_execute($stid);
 if (!$r) {
@@ -39,7 +43,8 @@ oci_close($conexion1);
 
 $conexion1 = conectar();
 
-$stid = oci_parse($conexion1, 'SELECT id  from SEMILLEROS_FORMACION order by id desc');
+$stid = oci_parse($conexion1, 'SELECT max(id)  from SEMILLEROS_FORMACION');
+oci_execute($stid);
 $id = "";
 if ($row = oci_fetch_array($stid)) {
     $id = $row[0];
@@ -68,33 +73,7 @@ $programaEst = $_POST['programaEst'];
 
 $conexion = conectar();
 
-if ($_SESSION['seleccion'] == 1) {
-    $stid = oci_parse($conexion, 'INSERT INTO crud_estudiantes_ingenieria(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
-} else {
-    if ($_SESSION['seleccion'] == 2) {
-        $stid = oci_parse($conexion, 'INSERT INTO crud_estudiantes_educacion(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
-    } else {
-        if ($_SESSION['seleccion'] == 21) {
-            $stid = oci_parse($conexion, 'INSERT INTO crud_estudiantes_salud(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
-        } else {
-            if ($_SESSION['seleccion'] == 22) {
-                $stid = oci_parse($conexion, 'INSERT INTO crud_estudiantes_basicas(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
-            } else {
-                if ($_SESSION['seleccion'] == 23) {
-                    $stid = oci_parse($conexion, 'INSERT INTO crud_estudiantes_agroindustria(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
-                } else {
-                    if ($_SESSION['seleccion'] == 24) {
-                        $stid = oci_parse($conexion, 'INSERT INTO crud_estudiantes_bellas_artes(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
-                    } else {
-                        if ($_SESSION['seleccion'] == 25) {
-                            $stid = oci_parse($conexion, 'INSERT INTO crud_estudiantes_economica(cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+$stid = oci_parse($conexion, 'INSERT INTO estudiantes (cedula, tarjetaidentidad,nombre,direccion,correo,telefono,semestre_id,programas_academicos_id, SEMILLEROS_FORMACION_FK) values ( :cedulaEst, :tarjetaEst, :nombreEst, :direccionEst,  :correoEst, :telefonoEst, :semestreEst, :programaEst,:id)');
 
 oci_bind_by_name($stid, ':tarjetaEst', $tarjetaEst);
 oci_bind_by_name($stid, ':cedulaEst', $cedulaEst);
@@ -104,6 +83,7 @@ oci_bind_by_name($stid, ':telefonoEst', $telefonoEst);
 oci_bind_by_name($stid, ':correoEst', $correoEst);
 oci_bind_by_name($stid, ':semestreEst', $semestreEst);
 oci_bind_by_name($stid, ':programaEst', $programaEst);
+oci_bind_by_name($stid, ':id', $id);
 
 $r = oci_execute($stid);
 if (!$r) {

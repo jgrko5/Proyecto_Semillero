@@ -16,11 +16,14 @@ getImports();
 		?>
 		<div id="contenido">
 			<section id="premio">
-				<center>
-                    </br>
-                        <img style="width: 80%;position: relative; z-index: 2;margin-bottom: 0; border-radius: 26px" src="../../web/imagenes/udelquindio.jpg" >
-                    </br>
-                    </center>
+				<article>
+					<center>
+						</br>
+						<img style="width: 80%;position: relative; z-index: 2;margin-bottom: 0; border-radius: 26px" src="../../web/imagenes/udelquindio.jpg" >
+						</br>
+						</br>
+					</center>
+				</article>
 			</section>
 		</div>
 		<footer>

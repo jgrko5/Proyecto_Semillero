@@ -1,7 +1,6 @@
 <?php
 include_once ('oracle.php');
 
-session_start();
 
 error_reporting("E_ERROR && E_WARNING");
 

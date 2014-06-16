@@ -4,6 +4,7 @@ include ("header.php");
 include ("footer.php");	
 include_once ("../controlador/listaProgramasAcademicos.php");
 include_once ("../controlador/listarSemestres.php");
+include ("../controlador/listaMaterias.php");
 getImports();
 ?>
 <body onload="tunCalendario();">
@@ -118,8 +119,18 @@ getImports();
 							</div></br>
 
 							<div class="componente">
-								<input type="checkbox" id="homologacion" value="3" onChange="total()" name="valido" />
-							</div></br>
+								<input type="checkbox" id="homologacion" value="1" name="valido" />
+							</div>
+							<div class="etiqueta">
+                                    <label>Materia:</label>
+                                </div>
+                                <div class="componente">
+                                    <select class="select" title="Materias" name="materia">
+                                        <?php
+                                            echo $combobit;
+                                        ?>
+                                    </select>
+                                </div></br></br></br>
 							</br>
 
 							<div align="center">
